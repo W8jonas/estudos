@@ -1,9 +1,9 @@
 import React from 'react';
-import Menu from './components/Menu/index'
-import dadosIniciais from './data/dados_iniciais.json'
-import BannerMain from './components/BannerMain/index'
-import Carousel from './components/Carousel/index'
-import Footer from './components/Footer/index'
+import Menu from '../../components/Menu/index'
+import dadosIniciais from '../../data/dados_iniciais.json'
+import BannerMain from '../../components/BannerMain/index'
+import Carousel from '../../components/Carousel/index'
+import Footer from '../../components/Footer/index'
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
       category={dadosIniciais.categorias[4]}
     />
 
-
+    <Footer />
 
     </div>
   );
