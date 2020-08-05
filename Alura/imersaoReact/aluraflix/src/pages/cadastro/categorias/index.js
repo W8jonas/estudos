@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import PageDefault from '../../../components/pageDefault/index'
+import FormField from '../../../components/FormField/index'
 import {Link} from 'react-router-dom'
 
 
@@ -28,14 +29,14 @@ function CadastroCategoria() {
       <form onSubmit={handleSubmit}>
 
         <div>
-          <label> 
-            Nome da Categoria: 
-            <input 
-              type='text'
-              value={category.name}
-              onChange={(e)=>setCategory({...category, name: e.target.value})}
-            />
-          </label>
+          <FormField
+            label="Nome da categoria"
+            type="Text"
+            name="name"
+            value={category.name}
+            onChange={(e)=>setCategory({...category, name: e.target.value})}
+          />
+          
 
           <label> 
             descrição: 
@@ -46,14 +47,22 @@ function CadastroCategoria() {
             />
           </label>
 
-          <label> 
+
+          <FormField
+            label="Cor"
+            type="color"
+            name="name"
+            value={category.color}
+            onChange={(e)=>setCategory({...category, color: e.target.value})}
+          />
+          {/* <label> 
             Cor: 
             <input 
               type='color'
               value={category.color}
               onChange={(e)=>setCategory({...category, color: e.target.value})}
             />
-          </label>
+          </label> */}
 
         </div>
 
