@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom'
+
+// Components
 import PageDefault from '../../../components/pageDefault/index'
 import FormField from '../../../components/FormField/index'
-import {Link} from 'react-router-dom'
+import Button from '../../../components/Button/index'
 
 
 function CadastroCategoria() {
@@ -36,17 +39,14 @@ function CadastroCategoria() {
             value={category.name}
             onChange={(e)=>setCategory({...category, name: e.target.value})}
           />
-          
 
-          <label> 
-            descrição: 
-            <textarea 
-              type='text'
-              value={category.desc}
-              onChange={(e)=>setCategory({...category, desc: e.target.value})}
-            />
-          </label>
-
+          <FormField
+            label="descrição"
+            type="textarea"
+            name="descrição"
+            value={category.desc}
+            onChange={(e)=>setCategory({...category, desc: e.target.value})}
+          />
 
           <FormField
             label="Cor"
@@ -55,20 +55,11 @@ function CadastroCategoria() {
             value={category.color}
             onChange={(e)=>setCategory({...category, color: e.target.value})}
           />
-          {/* <label> 
-            Cor: 
-            <input 
-              type='color'
-              value={category.color}
-              onChange={(e)=>setCategory({...category, color: e.target.value})}
-            />
-          </label> */}
-
         </div>
 
-        <button>
+        <Button>
           Cadastrar
-        </button>
+        </Button>
 
       </form>
 
