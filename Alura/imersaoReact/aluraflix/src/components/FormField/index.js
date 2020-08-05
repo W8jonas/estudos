@@ -1,29 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 
+import {FormFieldWrapper, Label, Input} from './styles'
 
 const FormField = ({label, name, value, type, onChange}) => {
+    
+    const tag = type === 'textarea' ? 'textarea' : 'input';
+  
   return (
-      <div>
-            <label> 
-               {label}: 
-                {
-                    type == "textarea" 
-                    ?<textarea 
-                        type={type}
-                        name={name}
-                        value={value}
-                        onChange={onChange}
-                    />
-                    :<input 
-                        type={type}
-                        name={name}
-                        value={value}
-                        onChange={onChange}
-                    />
-                }
-            </label>
-      </div>
+      <FormFieldWrapper>
+            <Label> 
+                <Input 
+                    as={tag}
+                    type={type}
+                    name={name}
+                    value={value}
+                    onChange={onChange}
+                />
+                <Label.Text>
+                {label}
+                :
+                </Label.Text>
+            </Label>
+      </FormFieldWrapper>
   )
 }
 
@@ -37,6 +36,6 @@ FormField.propTypes = {
     name: PropTypes.string.isRequired,
     value: PropTypes.string,
     type: PropTypes.string,
-    onChange: PropTypes.func,
+    onChange: PropTypes.func.isRequired,
 }
 export default FormField;   
