@@ -5,7 +5,7 @@ import {FormFieldWrapper, Label, Input} from './styles'
 
 const FormField = ({label, name, value, type, onChange}) => {
     
-    const tag = type === 'textarea' ? 'textarea' : 'input';
+  const tag = type === 'textarea' ? 'textarea' : 'input';
   
   return (
       <FormFieldWrapper>

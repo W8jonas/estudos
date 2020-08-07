@@ -116,7 +116,7 @@
     }
     .hero-image {
         grid-area: hero;
-        justify-content: end;
+        justify-self: end;
     }
     .buttons-container {
         grid-area: buttons;
