@@ -1,0 +1,97 @@
+
+.teachers-item {
+    background-color: var(--color-box-base);
+    border: 1px solid var(--color-line-in-white);
+    border-radius: 0.8rem;
+    margin-top: 2.4rem;
+    overflow: hidden;
+}
+
+.teachers-item header {
+    padding: 3.2rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.teachers-item header img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.teachers-item header div {
+    margin-left: 2.4rem;
+}
+
+.teachers-item header div strong {
+    font: 700 2.4rem Archivo;
+    display: block;
+    color: var(--color-text-title);
+}
+
+.teachers-item header div span {
+    font-size: 1.6rem;
+    display: block;
+    margin-top: 0.4rem;
+}
+
+.teachers-item > p {
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+
+.teachers-item footer {
+    padding: 3.2rem 2rem;
+    background-color: var(--color-box-footer);
+    border-top: 1px solid var(--color-color-line-in-white);
+    margin-top: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.teachers-item footer p strong {
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    display: block;
+}
+
+.teachers-item footer button {
+    width: 20rem;
+    height: 5.6rem;
+    background-color: var(--color-secondary);
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font: 700 1.4rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.2s;
+}
+.teachers-item footer button:hover {
+    background-color: var(--color-secondary-dark)
+}
+
+
+@media (min-width: 700px) {
+    
+    .teachers-item header,
+    .teachers-item footer {
+        padding: 3.2rem;
+    }
+
+    .teachers-item > p {
+        padding: 0 3.2rem;
+    }
+
+    .teachers-item footer p strong {
+        display: initial;
+        margin-left: 1.6rem;
+    }
+
+    .teachers-item footer button img {
+        margin-right: 1.6rem;
+    }
+}
