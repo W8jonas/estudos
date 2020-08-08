@@ -3,7 +3,7 @@ import React from 'react'
 // assets
 import backIcon from '../../assets/icons/back.svg'
 import logoImg from '../../assets/logo.svg'
-
+import './styles.css'
 
 // Funções
 import { Link } from 'react-router-dom'
