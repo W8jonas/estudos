@@ -1,0 +1,16 @@
+{
+    "categorias": [
+        {
+            "id": 1,
+            "nome": "Front aa",
+            "descricao": "Uma descricao",
+            "cor": "#9cd33b"
+        },
+        {
+            "id": 2,
+            "nome": "Nem sei disso bixo",
+            "descricao": "Uma descricao 2 ",
+            "cor": "#9cd33b"
+        }
+    ]
+}
