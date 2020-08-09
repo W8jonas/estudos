@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
 
 // Components
@@ -18,6 +18,15 @@ function CadastroCategoria() {
   const [category, setCategory] = useState(initialCategoryState)
   const [categories, setCategories] = useState([initialCategoryState])
 
+  useEffect(()=>{
+	  const URL = "http://localhost:8080/categorias"
+	  fetch(URL)
+		.then(async (response)=>{
+				const responseObj = await response.json()
+				setCategories([...responseObj])
+		})
+
+  }, [])
 
   function handleSubmit(event) {
       event.preventDefault()
@@ -66,7 +75,7 @@ function CadastroCategoria() {
       <ul>
         {categories.map((category, index)=>(
           <li key={index}>
-            {category.name}
+            {category.nome}
           </li>
         ))}
       </ul>
