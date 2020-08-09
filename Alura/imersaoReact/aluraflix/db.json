@@ -2,15 +2,15 @@
     "categorias": [
         {
             "id": 1,
-            "nome": "Front aa",
-            "descricao": "Uma descricao",
+            "nome": "Front End",
+            "descricao": "Front end trata-se do conteúdo de Frontend",
             "cor": "#9cd33b"
         },
         {
             "id": 2,
-            "nome": "Nem sei disso bixo",
-            "descricao": "Uma descricao 2 ",
-            "cor": "#9cd33b"
+            "nome": "Back End",
+            "descricao": "Back end trata-se do conteúdo de Backend",
+            "cor": "#2c133b"
         }
     ]
 }
