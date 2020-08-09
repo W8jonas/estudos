@@ -16,12 +16,13 @@
     "styled-components": "5.1.1"
   },
   "scripts": {
-    "server": "json-server --watch db.json --port 8080",
-    "dev": "concurrently \"react-scripts start\" \"npm run server\"",
-    "start": "react-scripts start",
+    "start": "npm run server",
+    "dev": "concurrently \"react-scripts start\" \"node ./server.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server:static": "json-server --watch ./src/data/db.json --port 8080",
+    "server": "node ./server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
