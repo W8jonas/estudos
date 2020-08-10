@@ -9,7 +9,7 @@
 
 
 ## `aulas`
- [-] Rota para criar uma aula;
+ [x] Rota para criar uma aula;
 
  [-] Rota para alterar aulas;
 
