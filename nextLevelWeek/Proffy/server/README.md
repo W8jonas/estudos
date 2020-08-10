@@ -13,6 +13,6 @@
 
  [-] Rota para alterar aulas;
 
- [-] Filtrar por matéria, dia da semana e horário;
+ [x] Filtrar por matéria, dia da semana e horário;
 
 
