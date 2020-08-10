@@ -1,11 +1,12 @@
 import React, {useState,useEffect} from 'react';
-import Menu from '../../components/Menu/index'
-import dadosIniciais from '../../data/dados_iniciais.json'
+
+// Components
 import BannerMain from '../../components/BannerMain/index'
 import Carousel from '../../components/Carousel/index'
-import Footer from '../../components/Footer/index'
-import {URL_BASE} from '../../config/server'
 import PageDefault from '../../components/pageDefault/index'
+
+// Extras
+import {URL_BASE} from '../../config/server'
 
 function Home() {
 
@@ -25,33 +26,28 @@ function Home() {
 
   return (
     <PageDefault paddingAll={0}>
-      <BannerMain
-        videoTitle={dadosIniciais[0].videos[0].titulo}
-        url={dadosIniciais[0].videos[0].url}
-        videoDescription={"O que é Front-end? Trabalhando na área de não sei o resto"}
-      />
 
-      <Carousel
-        ignoreFirstVideo
-        category={dadosIniciais[0]}
-      />
+      {
+        dadosIniciais.map((category, index)=> index === 0
+         ? <div key={category.id}>
+            <BannerMain
+              videoTitle={dadosIniciais[0].videos[0].titulo}
+              url={dadosIniciais[0].videos[0].url}
+              videoDescription={"O que é Front-end? Trabalhando na área de não sei o resto"}
+            />
 
-      <Carousel
-        category={dadosIniciais[1]}
-      />
-
-      <Carousel
-        category={dadosIniciais[2]}
-      />
-
-      <Carousel
-        category={dadosIniciais[3]}
-      />
-
-      <Carousel
-        category={dadosIniciais[4]}
-      />
-
+            <Carousel
+              ignoreFirstVideo
+              category={dadosIniciais[0]}
+            />
+         </div>
+         :  <Carousel
+              key={category.id}
+              category={dadosIniciais[index]}
+            />
+        )
+      }
+      
     </PageDefault>
   );
 }
