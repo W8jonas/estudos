@@ -53,7 +53,6 @@ export default class ClassesControllers {
             schedule
         } = request.body
     
-    
         const trx = await db.transaction()
     
         try {
@@ -87,6 +86,7 @@ export default class ClassesControllers {
             return response.status(201).send()
     
         } catch (error) {
+            console.log('error ClassesControllers create: ', error)
             await trx.rollback()
             return response.status(400).json({error: 'Deu ruim parceiro'})
         }
