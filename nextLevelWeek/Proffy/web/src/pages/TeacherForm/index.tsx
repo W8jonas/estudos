@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 // assets
 import './styles.css'
@@ -11,9 +11,21 @@ import Textarea from '../../components/Textarea'
 import Select from '../../components/Select'
 
 // functions
-
+import {subjectOptions} from '../../extras/index'
 
 function TeacherForm() {
+
+    const [scheduleItems, setScheduleItem] = useState([
+        { week_day: 0, from: "", to:"" }
+    ])
+
+    function addNewSheduleItem() {
+        setScheduleItem([
+            ...scheduleItems, 
+            { week_day: 0, from: "", to:"" }
+        ])
+    }
+
     return (
         <div id="page-teacher-form" className="container">
             <PageHeader 
@@ -35,25 +47,36 @@ function TeacherForm() {
                     <Select
                         name="subject"
                         label="Matéria"
-                        options={[
-                            {value: "Português", label: "Português"},
-                            {value: "Matemática", label: "Matemática"},
-                            {value: "Física", label: "Física"},
-                            {value: "Química", label: "Química"},
-                            {value: "Biologia", label: "Biologia"},
-                            {value: "História", label: "História"},
-                            {value: "Literatura", label: "Literatura"},
-                            {value: "Inglês", label: "Inglês"},
-                            {value: "Artes", label: "Artes"},
-                            {value: "Filosofia", label: "Filosofia"},
-                            {value: "Sociologia", label: "Sociologia"},
-                            {value: "Geografia", label: "Geografia"},
-                            {value: "Educação Física", label: "Educação Física"},
-                        ]}
+                        options={subjectOptions}
                     />
                     <Input name="cost" label="Custo da sua hora por aula"/>
 
                 </fieldset>
+
+                <fieldset>
+                    <legend>
+                        Horários disponíveis
+
+                        <button type="button" onClick={addNewSheduleItem}>
+                            + Novo horário
+                        </button>
+                    </legend>
+
+                    { scheduleItems.map((scheduleItem)=> (
+                        <div key={scheduleItem.week_day} className="schedule-item">
+                            <Select
+                                name="subject"
+                                label="Matéria"
+                                options={subjectOptions}
+                            />
+
+                            <Input name="from" label="Das" type="time" />
+                            <Input name="to" label="Até" type="time" />
+                        </div>
+                    ))
+                    }
+                </fieldset>
+
 
                 <footer>
                     <p>
