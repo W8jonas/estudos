@@ -5,7 +5,7 @@
 
 [x] - Estilizando Landing Page
 
-[ ] - Navegação da Landing Page
+[x] - Navegação da Landing Page
 
 [ ] - Página 'Dar aulas'
 

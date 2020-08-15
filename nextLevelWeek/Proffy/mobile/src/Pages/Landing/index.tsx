@@ -7,16 +7,23 @@ import StudyIcon from '../../assets/images/icons/study.png'
 import GiveClassesIcon from '../../assets/images/icons/give-classes.png'
 import HeartIcon from '../../assets/images/icons/heart.png'
 
-
 // components
-
+import {RectButton} from 'react-native-gesture-handler'
 
 // functions
+import {useNavigation} from '@react-navigation/native'
+
 
 import {View, Image, Text, TouchableOpacity} from 'react-native'
 
 
 function Landing() {
+    const navigation = useNavigation()
+
+    function handleNavigateToGiveClasses(){
+        navigation.navigate('GiveClasses')
+    }
+
     return (
         <View style={styles.container}>
             <Image 
@@ -31,17 +38,22 @@ function Landing() {
             </Text>
 
             <View style={styles.buttonsContainer}>
-                <TouchableOpacity style={[styles.button, styles.buttonPrimary]}>
+                <RectButton 
+                    style={[styles.button, styles.buttonPrimary]}
+                >
                     <Image source={StudyIcon}/>
 
                     <Text style={styles.buttonText}>Estudar</Text>
-                </TouchableOpacity>
+                </RectButton>
 
-                <TouchableOpacity style={[styles.button, styles.buttonSecondary]}>
+                <RectButton 
+                    onPress={handleNavigateToGiveClasses} 
+                    style={[styles.button, styles.buttonSecondary]}
+                >
                     <Image source={GiveClassesIcon}/>
 
                     <Text style={styles.buttonText}>Dar aulas</Text>
-                </TouchableOpacity>
+                </RectButton>
             </View>
 
             <Text style={styles.totalConnections}>
