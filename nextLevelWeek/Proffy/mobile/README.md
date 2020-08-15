@@ -1,7 +1,7 @@
 
 ## App mobile todo list
 
-[ ] - Estruturando Landing Page
+[x] - Estruturando Landing Page
 
 [ ] - Estilizando Landing Page
 
