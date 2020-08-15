@@ -7,7 +7,7 @@
 
 [x] - Navegação da Landing Page
 
-[ ] - Página 'Dar aulas'
+[x] - Página 'Dar aulas'
 
 [ ] - Páginas internas
 

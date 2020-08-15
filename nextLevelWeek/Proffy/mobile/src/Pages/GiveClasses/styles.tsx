@@ -8,51 +8,37 @@ const styles = StyleSheet.create({
         padding: 40,
         backgroundColor: '#8257E5',
     },
-    banner: {
-        width: '100%',
-        resizeMode: 'contain'
+    content: {
+        flex: 1,
+        justifyContent: 'center',
     },
     title: {
         color: '#FFF',
-        fontSize: 20,
-        lineHeight: 30,
-        marginTop: 80,
+        fontSize: 32,
+        lineHeight: 37,
+        fontWeight: 'bold',
+        maxWidth: 180,
     }, 
-    titleBold: {
-        fontWeight: 'bold'
-    },
-
-    buttonsContainer: {
-        flexDirection: 'row',
-         justifyContent: 'space-between',
-         marginTop: 40,
+    description: {
+        fontSize: 16,
+        lineHeight: 26,
+        marginTop: 24,
+        color: '#d4c2ff',
+        fontWeight: 'bold',
+        maxWidth: 240,
     },
     button: {
-        height: 150,
-        width: '48%',
-        backgroundColor: '#333',
+        height: 58,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#04d361',
         borderRadius: 8,
-        padding: 24,
-        justifyContent: 'space-between',
-    },
-    buttonPrimary: {
-        backgroundColor: '#9871F5'
-    },
-    buttonSecondary: {
-        backgroundColor: '#04d361'
+        marginVertical: 40,
     },
     buttonText: {
-        fontWeight: 'bold',
         color: '#fff',
-        fontSize: 20,
-    },
-    totalConnections: {
+        fontSize: 18,
         fontWeight: 'bold',
-        color: '#d4c2ff',
-        fontSize: 12,
-        lineHeight: 20,
-        maxWidth: 140,
-        marginTop: 40
     }
 })
 
