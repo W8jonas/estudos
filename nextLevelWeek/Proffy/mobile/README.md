@@ -9,9 +9,9 @@
 
 [x] - Página 'Dar aulas'
 
-[ ] - Páginas internas
+[x] - Navegação entre abas
 
-[ ] - Navegação entre abas
+[ ] - Páginas internas
 
 [ ] - Componente PageHeader
 
