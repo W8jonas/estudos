@@ -3,7 +3,7 @@
 
 [x] - Estruturando Landing Page
 
-[ ] - Estilizando Landing Page
+[x] - Estilizando Landing Page
 
 [ ] - Navegação da Landing Page
 
