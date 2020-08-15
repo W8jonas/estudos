@@ -24,6 +24,10 @@ function Landing() {
         navigation.navigate('GiveClasses')
     }
 
+    function handleNavigateToStudyTabs(){
+        navigation.navigate('Study')
+    }
+
     return (
         <View style={styles.container}>
             <Image 
@@ -39,6 +43,7 @@ function Landing() {
 
             <View style={styles.buttonsContainer}>
                 <RectButton 
+                    onPress={handleNavigateToStudyTabs}
                     style={[styles.button, styles.buttonPrimary]}
                 >
                     <Image source={StudyIcon}/>
