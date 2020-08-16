@@ -15,5 +15,15 @@
 
 [x] - Componente PageHeader
 
-[ ] - Lista de professores
+[x] - Lista de professores
+
+[ ] - Lista de favoritos
+
+[ ] - Filtro de professores
+
+[ ] - Conectando com a API
+
+[ ] - Adicionando e removendo favoritos
+
+[ ] - Listando favoritos
 
