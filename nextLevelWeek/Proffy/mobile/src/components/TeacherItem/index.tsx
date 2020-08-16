@@ -19,7 +19,7 @@ interface TeacherItem {
     title?: string
 }
   
-const TeacherItem: React.FC<TeacherItem> = ({title}) =>{
+const TeacherItem: React.FC<TeacherItem> = ({title }) =>{
     const navigation = useNavigation()
 
     function handleNavigateBack() {

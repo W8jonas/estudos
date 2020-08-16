@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     teacherList: {
-        marginTop: -60,
+        marginTop: -40,
     }
 })
 
