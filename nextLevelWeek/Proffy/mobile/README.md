@@ -19,7 +19,7 @@
 
 [x] - Lista de favoritos
 
-[ ] - Filtro de professores
+[x] - Filtro de professores
 
 [ ] - Conectando com a API
 
