@@ -11,9 +11,9 @@
 
 [x] - Navegação entre abas
 
-[ ] - Páginas internas
+[x] - Páginas internas
 
-[ ] - Componente PageHeader
+[x] - Componente PageHeader
 
 [ ] - Lista de professores
 
