@@ -6,40 +6,42 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#f0f0f7',
     },
-    content: {
-        flex: 1,
-        justifyContent: 'center',
+    teacherList: {
+        marginTop: -40,
     },
-    title: {
-        color: '#FFF',
-        fontSize: 32,
-        lineHeight: 37,
-        fontWeight: 'bold',
-        maxWidth: 180,
-    }, 
-    description: {
-        fontSize: 16,
-        lineHeight: 26,
-        marginTop: 24,
+    searchForm: {
+        marginBottom: 24,
+    },
+    label: {
         color: '#d4c2ff',
-        fontWeight: 'bold',
-        maxWidth: 240,
     },
-    button: {
-        height: 58,
+    inputGroup: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    inputBlock: {
+        width: '48%'
+    },
+    input: {
+        height: 54,
+        backgroundColor: '#FFF',
+        borderRadius: 8,
+        justifyContent: 'center',
+        paddingHorizontal: 16, 
+        marginTop: 4,
+        marginBottom: 16
+    },
+    submitButton: {
+        backgroundColor: '#04d361',
+        height: 56,
+        borderRadius: 8,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#04d361',
-        borderRadius: 8,
-        marginVertical: 40,
     },
-    buttonText: {
+    submitButtonText: {
         color: '#fff',
-        fontSize: 18,
         fontWeight: 'bold',
-    },
-    teacherList: {
-        marginTop: -60,
+        fontSize: 18,
     }
 })
 
