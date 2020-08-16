@@ -17,7 +17,7 @@
 
 [x] - Lista de professores
 
-[ ] - Lista de favoritos
+[x] - Lista de favoritos
 
 [ ] - Filtro de professores
 
