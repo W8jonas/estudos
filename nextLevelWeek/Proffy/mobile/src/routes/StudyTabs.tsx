@@ -4,11 +4,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Icon from 'react-native-vector-icons/Ionicons'
 
-
 const {Navigator, Screen} = createBottomTabNavigator()
 
 import TeacherList from '../Pages/TeacherList/index'
 import Favorites from '../Pages/Favorites/index'
+
 
 function StudyTabs() {
     return (

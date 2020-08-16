@@ -4,22 +4,21 @@ import React from 'react'
 import styles from './styles'
 
 // components
+import PageHeader from '../../components/PageHeader/index'
 
 // functions
 
 
 import {View, Image, ImageBackground,  Text, TouchableOpacity} from 'react-native'
 
-
+ 
 function TeacherList() {
 
     return (
         <View style={styles.container}>
-            
-            <Text style={styles.title}>
-                Quer ser um Proff?
-            </Text>
-
+            <PageHeader
+                title="Proffys disponíveis"
+            />
         </View>
     )
 }

@@ -4,6 +4,7 @@ import React from 'react'
 import styles from './styles'
 
 // components
+import PageHeader from '../../components/PageHeader'
 
 // functions
 
@@ -16,9 +17,9 @@ function Favorites() {
     return (
         <View style={styles.container}>
             
-            <Text style={styles.title}>
-                Quer ser um Proff?
-            </Text>
+            <PageHeader
+                title="Meus proffys favoritos"
+            />
 
         </View>
     )
