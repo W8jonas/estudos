@@ -12,7 +12,7 @@ import { RectButton } from 'react-native-gesture-handler'
 // functions
 import { useNavigation } from '@react-navigation/native'
 
-import {View, Image, Text} from 'react-native'
+import {View, Image, Text, Linking} from 'react-native'
 
 export interface Teacher {
     id: string;
@@ -32,8 +32,8 @@ interface TeacherItemProps {
 const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) =>{
     const navigation = useNavigation()
 
-    function handleNavigateBack() {
-        navigation.navigate('Landing')
+    function handleLinkToWhatsapp() {
+        Linking.openURL(`whatsapp://send?phone=${teacher.whatsapp}`)
     }
 
     return (
@@ -66,7 +66,10 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) =>{
                         <Image source={unfavoritIcon} />
                     </RectButton>
 
-                    <RectButton style={styles.contactButton}>
+                    <RectButton 
+                        style={styles.contactButton}
+                        onPress={handleLinkToWhatsapp}
+                    >
                         <Image source={whatsappIcon} />
                         <Text style={styles.contactButtonText}>Entrar em contato</Text>
                     </RectButton>

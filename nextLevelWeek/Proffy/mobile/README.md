@@ -23,7 +23,7 @@
 
 [x] - Conectando com a API
 
-[ ] - Conectando via whatsapp
+[x] - Conectando via whatsapp
 
 [ ] - Adicionando e removendo favoritos
 
