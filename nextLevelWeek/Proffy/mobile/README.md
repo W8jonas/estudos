@@ -21,7 +21,9 @@
 
 [x] - Filtro de professores
 
-[ ] - Conectando com a API
+[x] - Conectando com a API
+
+[ ] - Conectando via whatsapp
 
 [ ] - Adicionando e removendo favoritos
 

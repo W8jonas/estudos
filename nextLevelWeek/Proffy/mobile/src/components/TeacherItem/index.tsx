@@ -12,14 +12,24 @@ import { RectButton } from 'react-native-gesture-handler'
 // functions
 import { useNavigation } from '@react-navigation/native'
 
+import {View, Image, Text} from 'react-native'
 
-import {View, Image, ImageBackground,  Text, TouchableOpacity} from 'react-native'
+export interface Teacher {
+    id: string;
+    bio:string;
+    subject:string;
+    cost: number;
+    name:string;
+    avatar:string;
+    whatsapp:string;
+}
 
-interface TeacherItem {
-    title?: string
+
+interface TeacherItemProps {
+    teacher: Teacher
 }
   
-const TeacherItem: React.FC<TeacherItem> = ({title }) =>{
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) =>{
     const navigation = useNavigation()
 
     function handleNavigateBack() {
@@ -32,24 +42,22 @@ const TeacherItem: React.FC<TeacherItem> = ({title }) =>{
             <View style={styles.profile}>
                 <Image 
                     style={styles.avatar}
-                    source={{uri: 'https://github.com/w8jonas.png'}}
+                    source={{uri: teacher.avatar}}
                 />
                 <View style={styles.profileInfo}>
-                    <Text style={styles.name}> Jonas </Text>
-                    <Text style={styles.subject}> Geografia </Text>
+                    <Text style={styles.name}> {teacher.name} </Text>
+                    <Text style={styles.subject}> {teacher.subject} </Text>
                 </View>
             </View>
 
             <Text style={styles.bio}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti excepturi natus, 
-                {'\n\n'}
-                dolor sunt commodi iste nihil iure illo inventore aspernatur, adipisci laborum eos.
+                {teacher.bio}
             </Text>
 
             <View style={styles.footer}>
                 <Text style={styles.price}>
                     Preço/hora:
-                    <Text style={styles.priceValue}>   R$20,00</Text>
+                    <Text style={styles.priceValue}>   {teacher.cost}</Text>
                 </Text>
 
                 <View style={styles.buttonsContainer}>

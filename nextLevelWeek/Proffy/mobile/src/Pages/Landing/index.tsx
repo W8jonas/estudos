@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 // assets
 import styles from './styles'
@@ -12,6 +12,7 @@ import {RectButton} from 'react-native-gesture-handler'
 
 // functions
 import {useNavigation} from '@react-navigation/native'
+import api from '../../services/api'
 
 
 import {View, Image, Text, TouchableOpacity} from 'react-native'
@@ -27,6 +28,15 @@ function Landing() {
     function handleNavigateToStudyTabs(){
         navigation.navigate('Study')
     }
+
+    const [totalConnections, setTotalConnections] = useState(0)
+
+    useEffect(()=>{
+        api.get('connections').then(response => {
+            const {total} = response.data
+            setTotalConnections(total)
+        })
+    }, [])
 
     return (
         <View style={styles.container}>
@@ -62,7 +72,7 @@ function Landing() {
             </View>
 
             <Text style={styles.totalConnections}>
-                Total de 284 conexões já realizadas {' '}
+                Total de {totalConnections} conexões já realizadas {' '}
                 <Image source={HeartIcon} />
             </Text>
         </View>
