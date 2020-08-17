@@ -11,6 +11,7 @@ import Icon from 'react-native-vector-icons/Feather'
 // functions
 import api from '../../services/api'
 import AsyncStorage from '@react-native-community/async-storage'
+import { useFocusEffect } from '@react-navigation/native'
 
 
 import {View, Text, ScrollView} from 'react-native'
@@ -27,6 +28,11 @@ function TeacherList() {
     const [time, setTime] = useState('')
 
     const [teachers, setTeachers] = useState([])
+
+
+    useFocusEffect(()=>{
+        loadFavorites()
+    })
 
     function loadFavorites() {
         AsyncStorage.getItem('favorites').then((response)=>{
