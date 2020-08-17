@@ -13,6 +13,7 @@ import { RectButton } from 'react-native-gesture-handler'
 import AsyncStorage from '@react-native-community/async-storage'
 
 import {View, Image, Text, Linking} from 'react-native'
+import api from '../../services/api'
 
 export interface Teacher {
     id: number;
@@ -36,6 +37,9 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher, favorited }) => {
 
 
     function handleLinkToWhatsapp() {
+        api.post('connections', {
+            user_id: teacher.id
+        })
         Linking.openURL(`whatsapp://send?phone=${teacher.whatsapp}`)
     }
 
@@ -54,7 +58,7 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher, favorited }) => {
             ))
             favoritesArray.splice(favoriteIndex, 1)
             setIsFavorited(false)
-            
+
         }else {
             favoritesArray.push(teacher)
             setIsFavorited(true)
