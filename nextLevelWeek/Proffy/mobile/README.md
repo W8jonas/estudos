@@ -25,7 +25,7 @@
 
 [x] - Conectando via whatsapp
 
-[ ] - Adicionando e removendo favoritos
+[x] - Adicionando e removendo favoritos
 
 [ ] - Listando favoritos
 
