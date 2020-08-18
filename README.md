@@ -10,6 +10,7 @@ Alura - Imersão React - AluraFlix
 
 NextLevelWeek
  - Ecoleta
+ - Proffy
 
 SemanaOmniStack
  - Semana 11 - Be The Hero
