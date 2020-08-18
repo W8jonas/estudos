@@ -27,5 +27,5 @@
 
 [x] - Adicionando e removendo favoritos
 
-[ ] - Listando favoritos
+[x] - Listando favoritos
 
