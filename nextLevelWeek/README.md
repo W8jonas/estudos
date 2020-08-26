@@ -1,21 +1,21 @@
-#Repositorios Next Level Week
+## Repositorios Next Level Week
 
 # Ecoleta
-[x] server
+- [x] server
 
-[x] web
+- [x] web
 
-[x] mobile
+- [x] mobile
 
-[ ] funcionalidade avançadas
+- [ ] funcionalidade avançadas
 
 
 # Proffy
-[x] server
+- [x] server
 
-[x] web
+- [x] web
 
-[x] mobile
+- [x] mobile
 
-[x] funcionalidade avançadas
+- [x] funcionalidade avançadas
 
