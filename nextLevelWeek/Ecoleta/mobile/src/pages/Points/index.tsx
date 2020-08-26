@@ -44,17 +44,6 @@ const getPointsArrayFakeData = [
 	  "longitude": -20.6688576
 	},
 	{
-	  "id": 2,
-	  "image": "https://images.unsplash.com/photo-1591567967940-93c1efc6765c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-	  "name": "Clube Dom Pedro2",
-	  "email": "DomPedro2@gmail.com",
-	  "whatsapp": "31434992243",
-	  "city": "Lafaiete",
-	  "uf": "mg",
-	  "latitude": -43.7985712,
-	  "longitude": -20.6675476
-	},
-	{
 	  "id": 3,
 	  "image": "https://images.unsplash.com/photo-1591567967940-93c1efc6765c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
 	  "name": "Mercadão das Madeiras",
@@ -106,7 +95,7 @@ const Points = () => {
 		return await PermissionsAndroid.check( PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION );
 	}
 
-	if (!permissionForLocation()) {
+	if (permissionForLocation()) {
 		requestLocationPermission()
 	}
   }, [])
@@ -182,7 +171,7 @@ const Points = () => {
 				showsUserHeadingIndicator={true}
 			/>
 
-            {getPointsArrayFakeData.map((point)=>(
+            {points.map((point)=>(
               <MapboxGL.MarkerView
                 key={`${point.id}`}
 				id={`${point.id}`}
