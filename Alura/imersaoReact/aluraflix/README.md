@@ -16,3 +16,7 @@ ToDo List:
 Fazer validações dos formulários e das chamadas à API
 
 
+#### Abaixo seguem algumas prints de todo o projeto, você pode ver as restantes dentro da pasta screenshots
+
+![](screenshots/Screenshot_1.png)  |  ![](screenshots/Screenshot_6.png) 
+|:---------------:|:-----------------:|
