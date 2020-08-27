@@ -5,7 +5,7 @@ import 'echarts-gl'
 import ReactEcharts from "echarts-for-react";
 
 
-const database = require("./assets/data-gl/population.json")
+const database = require("./assets/data-gl/populationPreProcessed.json")
 
 const baseTexture = require('./assets/data-gl/asset/world_topo_bathy_200401.jpg')
 const heightTexture = baseTexture
@@ -26,6 +26,10 @@ function App() {
 		baseTexture: baseTexture,
 		heightTexture: heightTexture,
 		shading: 'lambert',
+
+		// displacementScale: 0.05,
+		// displacementQuality: 'medium',
+		
 		environment: environment,
 		light: {
 			main: {
