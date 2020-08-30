@@ -14,10 +14,12 @@ const environment = require('./assets/data-gl/asset/starfield.jpg')
 
 function App() {
   
-  const data = database.filter(function (dataItem) {
-		return dataItem[2] > 0;
-	}).map(function (dataItem) {
-		return [dataItem[0], dataItem[1], Math.sqrt(dataItem[2])];
+  const data = database
+  	.filter(function (dataItem) {
+		return dataItem[2] > 0
+	})
+	.map(function (dataItem) {
+		return [dataItem[0], dataItem[1], Math.sqrt(dataItem[2])]
 	})
   
   const GL_OPTION = {
