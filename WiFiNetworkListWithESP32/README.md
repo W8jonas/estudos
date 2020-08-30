@@ -3,5 +3,5 @@
 
 Abaixo segue uma print do serial monitor do Arduino:
 
-![](screenshots/Screenshot_1.png) 
+![](Screenshots/Screenshot_1.png) 
 
