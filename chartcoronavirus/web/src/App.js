@@ -4,6 +4,7 @@ import './App.css'
 import 'echarts-gl'
 import ReactEcharts from "echarts-for-react";
 import realData from './assets/data-gl/coronaVirusData1'
+import realData2 from './parte_1.js'
 
 
 const database = require("./assets/data-gl/populationPreProcessed.json")
@@ -28,7 +29,7 @@ function App() {
 		return [
 			dataItem["long"],
 			dataItem["lat"],
-			Number(dataItem["totalConfirmed"])
+			Math.sqrt(Number(dataItem["totalConfirmed"]))
 		]
 	})
 
