@@ -16,20 +16,32 @@ const environment = require('./assets/data-gl/asset/starfield.jpg')
 
 function App() {
   
+  let valueMaxFounded = 0
+
   const data = database
   	.filter(function (dataItem) {
 		return dataItem[2] > 0
 	})
 	.map(function (dataItem) {
-		return [dataItem[0], dataItem[1], Math.sqrt(dataItem[2])]
+		const totalConfirmed = dataItem[2]
+		if(totalConfirmed > valueMaxFounded) {
+			valueMaxFounded = totalConfirmed
+		}
+		return [dataItem[0], dataItem[1], Math.sqrt(totalConfirmed)]
 	})
 
   const data2 = realData
 	.map(function (dataItem) {
+		
+		const totalConfirmed = Number(dataItem["totalConfirmed"])
+		if(totalConfirmed > valueMaxFounded) {
+			valueMaxFounded = totalConfirmed
+		}
+
 		return [
 			dataItem["long"],
 			dataItem["lat"],
-			Math.sqrt(Number(dataItem["totalConfirmed"]))
+			Math.sqrt(totalConfirmed)
 		]
 	})
 
@@ -56,7 +68,7 @@ function App() {
 		}
 	},
 	visualMap: {
-		max: 40,
+		max: Math.sqrt(valueMaxFounded),
 		calculable: true,
 		realtime: false,
 		inRange: {
