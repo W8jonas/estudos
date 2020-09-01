@@ -3,6 +3,7 @@ import './App.css'
       
 import 'echarts-gl'
 import ReactEcharts from "echarts-for-react";
+import realData from './assets/data-gl/coronaVirusData1'
 
 
 const database = require("./assets/data-gl/populationPreProcessed.json")
@@ -21,7 +22,18 @@ function App() {
 	.map(function (dataItem) {
 		return [dataItem[0], dataItem[1], Math.sqrt(dataItem[2])]
 	})
-  
+
+  const data2 = realData
+	.map(function (dataItem) {
+		return [
+			dataItem["long"],
+			dataItem["lat"],
+			Number(dataItem["totalConfirmed"])
+		]
+	})
+
+
+
   const GL_OPTION = {
 	backgroundColor: '#000',
 	globe: {
@@ -64,7 +76,7 @@ function App() {
 	series: [{
 		type: 'bar3D',
 		coordinateSystem: 'globe',
-		data: data,
+		data: data2,
 		barSize: 0.6,
 		minHeight: 0.2,
 		silent: true,
@@ -79,7 +91,7 @@ function App() {
   return (
     <div className="App">
       <ReactEcharts
-	  	style={{height: '500px', width: '100%'}}
+	  	style={{height: '100vh', width: '100%'}}
         option={GL_OPTION}
       />
     </div>
