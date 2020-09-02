@@ -3,8 +3,9 @@ import './App.css'
       
 import 'echarts-gl'
 import ReactEcharts from "echarts-for-react";
-import realData from './assets/data-gl/coronaVirusData1'
-import realData2 from './parte_1.js'
+
+import realData1 from './assets/data-gl/separatedData/parte_1.json'
+import realData2 from './assets/data-gl/separatedData/parte_2.json'
 
 
 const database = require("./assets/data-gl/populationPreProcessed.json")
@@ -18,20 +19,8 @@ function App() {
   
   let valueMaxFounded = 0
 
-  const data = database
-  	.filter(function (dataItem) {
-		return dataItem[2] > 0
-	})
-	.map(function (dataItem) {
-		const totalConfirmed = dataItem[2]
-		if(totalConfirmed > valueMaxFounded) {
-			valueMaxFounded = totalConfirmed
-		}
-		return [dataItem[0], dataItem[1], Math.sqrt(totalConfirmed)]
-	})
-
-  const data2 = realData
-	.map(function (dataItem) {
+  const data1 = realData1
+	.map((dataItem) => {
 		
 		const totalConfirmed = Number(dataItem["totalConfirmed"])
 		if(totalConfirmed > valueMaxFounded) {
@@ -45,6 +34,23 @@ function App() {
 		]
 	})
 
+  const data2 = realData2
+	.map((dataItem) => {
+		
+		const totalConfirmed = Number(dataItem["totalConfirmed"])
+		if(totalConfirmed > valueMaxFounded) {
+			valueMaxFounded = totalConfirmed
+		}
+
+		return [
+			dataItem["long"],
+			dataItem["lat"],
+			Math.sqrt(totalConfirmed)
+		]
+	})
+
+	
+  const allData = [...data1, ...data2]
 
 
   const GL_OPTION = {
@@ -89,7 +95,7 @@ function App() {
 	series: [{
 		type: 'bar3D',
 		coordinateSystem: 'globe',
-		data: data2,
+		data: allData,
 		barSize: 0.6,
 		minHeight: 0.2,
 		silent: true,
