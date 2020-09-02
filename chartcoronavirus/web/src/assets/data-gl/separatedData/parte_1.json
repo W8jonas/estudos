@@ -1,4 +1,4 @@
-﻿export default [
+﻿[
     {
         "id":"riverside_california_unitedstates",
         "totalConfirmed":51918,
@@ -9,7 +9,7 @@
         "totalConfirmedDelta":408,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.7436408996582,
-        "long":-115.99372100830078,
+        "long":-115.99372100830078
     },
     {
         "id":"orange_california_unitedstates",
@@ -21,7 +21,7 @@
         "totalConfirmedDelta":311,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.70304870605469,
-        "long":-117.76130676269531,
+        "long":-117.76130676269531
     },
     {
         "id":"sanbernardino_california_unitedstates",
@@ -33,7 +33,7 @@
         "totalConfirmedDelta":296,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.84143829345703,
-        "long":-116.17852020263672,
+        "long":-116.17852020263672
     },
     {
         "id":"sandiego_california_unitedstates",
@@ -45,7 +45,7 @@
         "totalConfirmedDelta":263,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.0340576171875,
-        "long":-116.73527526855469,
+        "long":-116.73527526855469
     },
     {
         "id":"kern_california_unitedstates",
@@ -57,7 +57,7 @@
         "totalConfirmedDelta":203,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.34281539916992,
-        "long":-118.72994232177734,
+        "long":-118.72994232177734
     },
     {
         "id":"fresno_california_unitedstates",
@@ -69,7 +69,7 @@
         "totalConfirmedDelta":209,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":36.75827407836914,
-        "long":-119.6491928100586,
+        "long":-119.6491928100586
     },
     {
         "id":"alameda_california_unitedstates",
@@ -81,7 +81,7 @@
         "totalConfirmedDelta":159,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.6505126953125,
-        "long":-121.91814422607422,
+        "long":-121.91814422607422
     },
     {
         "id":"sacramento_california_unitedstates",
@@ -93,7 +93,7 @@
         "totalConfirmedDelta":469,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.449859619140625,
-        "long":-121.3438949584961,
+        "long":-121.3438949584961
     },
     {
         "id":"sanjoaquin_california_unitedstates",
@@ -105,7 +105,7 @@
         "totalConfirmedDelta":379,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.93478012084961,
-        "long":-121.27132415771484,
+        "long":-121.27132415771484
     },
     {
         "id":"santaclara_california_unitedstates",
@@ -117,7 +117,7 @@
         "totalConfirmedDelta":202,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.23236083984375,
-        "long":-121.69583892822266,
+        "long":-121.69583892822266
     },
     {
         "id":"stanislaus_california_unitedstates",
@@ -129,7 +129,7 @@
         "totalConfirmedDelta":303,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.559326171875,
-        "long":-120.99766540527344,
+        "long":-120.99766540527344
     },
     {
         "id":"tulare_california_unitedstates",
@@ -141,7 +141,7 @@
         "totalConfirmedDelta":114,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":36.22018814086914,
-        "long":-118.80032348632812,
+        "long":-118.80032348632812
     },
     {
         "id":"contracosta_california_unitedstates",
@@ -153,7 +153,7 @@
         "totalConfirmedDelta":141,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.92361831665039,
-        "long":-121.95048522949219,
+        "long":-121.95048522949219
     },
     {
         "id":"ventura_california_unitedstates",
@@ -165,7 +165,7 @@
         "totalConfirmedDelta":99,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.47162628173828,
-        "long":-119.07833862304688,
+        "long":-119.07833862304688
     },
     {
         "id":"imperial_california_unitedstates",
@@ -177,7 +177,7 @@
         "totalConfirmedDelta":42,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.0396842956543,
-        "long":-115.36530303955078,
+        "long":-115.36530303955078
     },
     {
         "id":"sanfrancisco_california_unitedstates",
@@ -189,7 +189,7 @@
         "totalConfirmedDelta":156,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.782405853271484,
-        "long":-122.4134292602539,
+        "long":-122.4134292602539
     },
     {
         "id":"santabarbara_california_unitedstates",
@@ -201,7 +201,7 @@
         "totalConfirmedDelta":51,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.72454833984375,
-        "long":-120.022705078125,
+        "long":-120.022705078125
     },
     {
         "id":"sanmateo_california_unitedstates",
@@ -213,7 +213,7 @@
         "totalConfirmedDelta":145,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.455448150634766,
-        "long":-122.3177719116211,
+        "long":-122.3177719116211
     },
     {
         "id":"merced_california_unitedstates",
@@ -225,7 +225,7 @@
         "totalConfirmedDelta":64,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.19187545776367,
-        "long":-120.71773529052734,
+        "long":-120.71773529052734
     },
     {
         "id":"monterey_california_unitedstates",
@@ -237,7 +237,7 @@
         "totalConfirmedDelta":89,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":36.21714782714844,
-        "long":-121.23902130126953,
+        "long":-121.23902130126953
     },
     {
         "id":"marin_california_unitedstates",
@@ -249,7 +249,7 @@
         "totalConfirmedDelta":16,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.064945220947266,
-        "long":-122.69337463378906,
+        "long":-122.69337463378906
     },
     {
         "id":"kings_california_unitedstates",
@@ -261,7 +261,7 @@
         "totalConfirmedDelta":77,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":36.07543182373047,
-        "long":-119.81535339355469,
+        "long":-119.81535339355469
     },
     {
         "id":"sonoma_california_unitedstates",
@@ -273,7 +273,7 @@
         "totalConfirmedDelta":112,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.524749755859375,
-        "long":-122.88333892822266,
+        "long":-122.88333892822266
     },
     {
         "id":"solano_california_unitedstates",
@@ -285,7 +285,7 @@
         "totalConfirmedDelta":84,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.266929626464844,
-        "long":-121.9396743774414,
+        "long":-121.9396743774414
     },
     {
         "id":"madera_california_unitedstates",
@@ -297,7 +297,7 @@
         "totalConfirmedDelta":53,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.21800994873047,
-        "long":-119.76272583007812,
+        "long":-119.76272583007812
     },
     {
         "id":"placer_california_unitedstates",
@@ -309,7 +309,7 @@
         "totalConfirmedDelta":44,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.06340789794922,
-        "long":-120.7178955078125,
+        "long":-120.7178955078125
     },
     {
         "id":"sanluisobispo_california_unitedstates",
@@ -321,7 +321,7 @@
         "totalConfirmedDelta":68,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.386775970458984,
-        "long":-120.40400695800781,
+        "long":-120.40400695800781
     },
     {
         "id":"yolo_california_unitedstates",
@@ -333,7 +333,7 @@
         "totalConfirmedDelta":34,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.68681335449219,
-        "long":-121.901611328125,
+        "long":-121.901611328125
     },
     {
         "id":"butte_california_unitedstates",
@@ -345,7 +345,7 @@
         "totalConfirmedDelta":62,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.66705322265625,
-        "long":-121.60089111328125,
+        "long":-121.60089111328125
     },
     {
         "id":"santacruz_california_unitedstates",
@@ -357,7 +357,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.05623245239258,
-        "long":-122.0016098022461,
+        "long":-122.0016098022461
     },
     {
         "id":"napa_california_unitedstates",
@@ -369,7 +369,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.5064697265625,
-        "long":-122.33061218261719,
+        "long":-122.33061218261719
     },
     {
         "id":"sutter_california_unitedstates",
@@ -381,7 +381,7 @@
         "totalConfirmedDelta":25,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.03467559814453,
-        "long":-121.6948471069336,
+        "long":-121.6948471069336
     },
     {
         "id":"sanbenito_california_unitedstates",
@@ -393,7 +393,7 @@
         "totalConfirmedDelta":29,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":36.60559844970703,
-        "long":-121.0749282836914,
+        "long":-121.0749282836914
     },
     {
         "id":"eldorado_california_unitedstates",
@@ -405,7 +405,7 @@
         "totalConfirmedDelta":9,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.77871322631836,
-        "long":-120.52447509765625,
+        "long":-120.52447509765625
     },
     {
         "id":"yuba_california_unitedstates",
@@ -417,7 +417,7 @@
         "totalConfirmedDelta":12,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.26918411254883,
-        "long":-121.35126495361328,
+        "long":-121.35126495361328
     },
     {
         "id":"lassen_california_unitedstates",
@@ -429,7 +429,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.67363357543945,
-        "long":-120.5943832397461,
+        "long":-120.5943832397461
     },
     {
         "id":"mendocino_california_unitedstates",
@@ -441,7 +441,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.440242767333984,
-        "long":-123.39128112792969,
+        "long":-123.39128112792969
     },
     {
         "id":"shasta_california_unitedstates",
@@ -453,7 +453,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.76372528076172,
-        "long":-122.04056549072266,
+        "long":-122.04056549072266
     },
     {
         "id":"nevada_california_unitedstates",
@@ -465,7 +465,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.30138397216797,
-        "long":-120.7686767578125,
+        "long":-120.7686767578125
     },
     {
         "id":"colusa_california_unitedstates",
@@ -477,7 +477,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.17759704589844,
-        "long":-122.23709869384766,
+        "long":-122.23709869384766
     },
     {
         "id":"glenn_california_unitedstates",
@@ -489,7 +489,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.59828186035156,
-        "long":-122.39238739013672,
+        "long":-122.39238739013672
     },
     {
         "id":"tehama_california_unitedstates",
@@ -501,7 +501,7 @@
         "totalConfirmedDelta":7,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.12569808959961,
-        "long":-122.23391723632812,
+        "long":-122.23391723632812
     },
     {
         "id":"humboldt_california_unitedstates",
@@ -513,7 +513,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.699424743652344,
-        "long":-123.87577819824219,
+        "long":-123.87577819824219
     },
     {
         "id":"lake_california_unitedstates",
@@ -525,7 +525,7 @@
         "totalConfirmedDelta":9,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.09975051879883,
-        "long":-122.75324249267578,
+        "long":-122.75324249267578
     },
     {
         "id":"amador_california_unitedstates",
@@ -537,7 +537,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.44606399536133,
-        "long":-120.6517562866211,
+        "long":-120.6517562866211
     },
     {
         "id":"calaveras_california_unitedstates",
@@ -549,7 +549,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.204734802246094,
-        "long":-120.55406188964844,
+        "long":-120.55406188964844
     },
     {
         "id":"tuolumne_california_unitedstates",
@@ -561,7 +561,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.027645111083984,
-        "long":-119.95465087890625,
+        "long":-119.95465087890625
     },
     {
         "id":"inyo_california_unitedstates",
@@ -573,7 +573,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":36.51105880737305,
-        "long":-117.41059875488281,
+        "long":-117.41059875488281
     },
     {
         "id":"mono_california_unitedstates",
@@ -585,7 +585,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.938804626464844,
-        "long":-118.88652038574219,
+        "long":-118.88652038574219
     },
     {
         "id":"siskiyou_california_unitedstates",
@@ -597,7 +597,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.59264373779297,
-        "long":-122.54042053222656,
+        "long":-122.54042053222656
     },
     {
         "id":"delnorte_california_unitedstates",
@@ -609,7 +609,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.7431755065918,
-        "long":-123.89710998535156,
+        "long":-123.89710998535156
     },
     {
         "id":"mariposa_california_unitedstates",
@@ -621,7 +621,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.58147048950195,
-        "long":-119.90544891357422,
+        "long":-119.90544891357422
     },
     {
         "id":"plumas_california_unitedstates",
@@ -633,7 +633,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.004669189453125,
-        "long":-120.83854675292969,
+        "long":-120.83854675292969
     },
     {
         "id":"trinity_california_unitedstates",
@@ -645,7 +645,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.650657653808594,
-        "long":-123.11263275146484,
+        "long":-123.11263275146484
     },
     {
         "id":"sierra_california_unitedstates",
@@ -657,7 +657,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.58038330078125,
-        "long":-120.51602172851562,
+        "long":-120.51602172851562
     },
     {
         "id":"alpine_california_unitedstates",
@@ -669,7 +669,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.59733200073242,
-        "long":-119.82041931152344,
+        "long":-119.82041931152344
     },
     {
         "totalConfirmed":699909,
@@ -680,7 +680,7 @@
         "totalConfirmedDelta":6070,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.25510025024414,
-        "long":-119.61752319335938,
+        "long":-119.61752319335938
     },
     {
         "id":"florida_unitedstates",
@@ -692,7 +692,7 @@
         "totalConfirmedDelta":521,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":25.60788917541504,
-        "long":-80.53448486328125,
+        "long":-80.53448486328125
     },
     {
         "id":"broward_florida_unitedstates",
@@ -704,7 +704,7 @@
         "totalConfirmedDelta":186,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":26.152246475219727,
-        "long":-80.48703002929688,
+        "long":-80.48703002929688
     },
     {
         "id":"palmbeach_florida_unitedstates",
@@ -716,7 +716,7 @@
         "totalConfirmedDelta":135,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":26.64753532409668,
-        "long":-80.4654312133789,
+        "long":-80.4654312133789
     },
     {
         "id":"hillsborough_florida_unitedstates",
@@ -728,7 +728,7 @@
         "totalConfirmedDelta":229,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.911405563354492,
-        "long":-82.33931732177734,
+        "long":-82.33931732177734
     },
     {
         "id":"orange_florida_unitedstates",
@@ -740,7 +740,7 @@
         "totalConfirmedDelta":157,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.514442443847656,
-        "long":-81.3234634399414,
+        "long":-81.3234634399414
     },
     {
         "id":"duval_florida_unitedstates",
@@ -752,7 +752,7 @@
         "totalConfirmedDelta":107,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.331594467163086,
-        "long":-81.67079162597656,
+        "long":-81.67079162597656
     },
     {
         "id":"pinellas_florida_unitedstates",
@@ -764,7 +764,7 @@
         "totalConfirmedDelta":75,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.9102840423584,
-        "long":-82.71943664550781,
+        "long":-82.71943664550781
     },
     {
         "id":"lee_florida_unitedstates",
@@ -776,7 +776,7 @@
         "totalConfirmedDelta":50,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":26.584827423095703,
-        "long":-81.880126953125,
+        "long":-81.880126953125
     },
     {
         "id":"polk_florida_unitedstates",
@@ -788,7 +788,7 @@
         "totalConfirmedDelta":91,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.948881149291992,
-        "long":-81.69776153564453,
+        "long":-81.69776153564453
     },
     {
         "id":"collier_florida_unitedstates",
@@ -800,7 +800,7 @@
         "totalConfirmedDelta":34,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":26.109399795532227,
-        "long":-81.34837341308594,
+        "long":-81.34837341308594
     },
     {
         "id":"escambia_florida_unitedstates",
@@ -812,7 +812,7 @@
         "totalConfirmedDelta":30,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.666954040527344,
-        "long":-87.36062622070312,
+        "long":-87.36062622070312
     },
     {
         "id":"osceola_florida_unitedstates",
@@ -824,7 +824,7 @@
         "totalConfirmedDelta":36,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.062538146972656,
-        "long":-81.1495361328125,
+        "long":-81.1495361328125
     },
     {
         "id":"manatee_florida_unitedstates",
@@ -836,7 +836,7 @@
         "totalConfirmedDelta":27,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.477310180664062,
-        "long":-82.3348388671875,
+        "long":-82.3348388671875
     },
     {
         "id":"volusia_florida_unitedstates",
@@ -848,7 +848,7 @@
         "totalConfirmedDelta":21,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.058382034301758,
-        "long":-81.18183135986328,
+        "long":-81.18183135986328
     },
     {
         "id":"marion_florida_unitedstates",
@@ -860,7 +860,7 @@
         "totalConfirmedDelta":45,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.210187911987305,
-        "long":-82.05662536621094,
+        "long":-82.05662536621094
     },
     {
         "id":"pasco_florida_unitedstates",
@@ -872,7 +872,7 @@
         "totalConfirmedDelta":39,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.307771682739258,
-        "long":-82.3968276977539,
+        "long":-82.3968276977539
     },
     {
         "id":"seminole_florida_unitedstates",
@@ -884,7 +884,7 @@
         "totalConfirmedDelta":27,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.71700096130371,
-        "long":-81.23632049560547,
+        "long":-81.23632049560547
     },
     {
         "id":"brevard_florida_unitedstates",
@@ -896,7 +896,7 @@
         "totalConfirmedDelta":19,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.293485641479492,
-        "long":-80.73235321044922,
+        "long":-80.73235321044922
     },
     {
         "id":"sarasota_florida_unitedstates",
@@ -908,7 +908,7 @@
         "totalConfirmedDelta":31,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.184507369995117,
-        "long":-82.33183288574219,
+        "long":-82.33183288574219
     },
     {
         "id":"stlucie_florida_unitedstates",
@@ -920,7 +920,7 @@
         "totalConfirmedDelta":36,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.377376556396484,
-        "long":-80.47196197509766,
+        "long":-80.47196197509766
     },
     {
         "id":"lake_florida_unitedstates",
@@ -932,7 +932,7 @@
         "totalConfirmedDelta":40,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.76155662536621,
-        "long":-81.71121978759766,
+        "long":-81.71121978759766
     },
     {
         "id":"leon_florida_unitedstates",
@@ -944,7 +944,7 @@
         "totalConfirmedDelta":100,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.45796775817871,
-        "long":-84.27794647216797,
+        "long":-84.27794647216797
     },
     {
         "id":"bay_florida_unitedstates",
@@ -956,7 +956,7 @@
         "totalConfirmedDelta":14,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.2648983001709,
-        "long":-85.62029266357422,
+        "long":-85.62029266357422
     },
     {
         "id":"alachua_florida_unitedstates",
@@ -968,7 +968,7 @@
         "totalConfirmedDelta":28,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.674819946289062,
-        "long":-82.35773468017578,
+        "long":-82.35773468017578
     },
     {
         "id":"santarosa_florida_unitedstates",
@@ -980,7 +980,7 @@
         "totalConfirmedDelta":25,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.701292037963867,
-        "long":-87.02233123779297,
+        "long":-87.02233123779297
     },
     {
         "id":"martin_florida_unitedstates",
@@ -992,7 +992,7 @@
         "totalConfirmedDelta":30,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.077486038208008,
-        "long":-80.43122863769531,
+        "long":-80.43122863769531
     },
     {
         "id":"stjohns_florida_unitedstates",
@@ -1004,7 +1004,7 @@
         "totalConfirmedDelta":35,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.901628494262695,
-        "long":-81.44029235839844,
+        "long":-81.44029235839844
     },
     {
         "id":"okaloosa_florida_unitedstates",
@@ -1016,7 +1016,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.69118881225586,
-        "long":-86.59171295166016,
+        "long":-86.59171295166016
     },
     {
         "id":"clay_florida_unitedstates",
@@ -1028,7 +1028,7 @@
         "totalConfirmedDelta":50,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.983055114746094,
-        "long":-81.85778045654297,
+        "long":-81.85778045654297
     },
     {
         "id":"columbia_florida_unitedstates",
@@ -1040,7 +1040,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.22449493408203,
-        "long":-82.62153625488281,
+        "long":-82.62153625488281
     },
     {
         "id":"indianriver_florida_unitedstates",
@@ -1052,7 +1052,7 @@
         "totalConfirmedDelta":7,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.694374084472656,
-        "long":-80.60608673095703,
+        "long":-80.60608673095703
     },
     {
         "id":"charlotte_florida_unitedstates",
@@ -1064,7 +1064,7 @@
         "totalConfirmedDelta":21,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":26.901477813720703,
-        "long":-81.92887115478516,
+        "long":-81.92887115478516
     },
     {
         "id":"hernando_florida_unitedstates",
@@ -1076,7 +1076,7 @@
         "totalConfirmedDelta":41,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.552366256713867,
-        "long":-82.4189682006836,
+        "long":-82.4189682006836
     },
     {
         "id":"suwannee_florida_unitedstates",
@@ -1088,7 +1088,7 @@
         "totalConfirmedDelta":7,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.195581436157227,
-        "long":-82.99149322509766,
+        "long":-82.99149322509766
     },
     {
         "id":"jackson_florida_unitedstates",
@@ -1100,7 +1100,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.795330047607422,
-        "long":-85.21537017822266,
+        "long":-85.21537017822266
     },
     {
         "id":"gadsden_florida_unitedstates",
@@ -1112,7 +1112,7 @@
         "totalConfirmedDelta":27,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.579498291015625,
-        "long":-84.61353302001953,
+        "long":-84.61353302001953
     },
     {
         "id":"citrus_florida_unitedstates",
@@ -1124,7 +1124,7 @@
         "totalConfirmedDelta":13,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.850418090820312,
-        "long":-82.46709442138672,
+        "long":-82.46709442138672
     },
     {
         "id":"hendry_florida_unitedstates",
@@ -1136,7 +1136,7 @@
         "totalConfirmedDelta":9,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":26.553348541259766,
-        "long":-81.16578674316406,
+        "long":-81.16578674316406
     },
     {
         "id":"sumter_florida_unitedstates",
@@ -1148,7 +1148,7 @@
         "totalConfirmedDelta":16,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.704744338989258,
-        "long":-82.08099365234375,
+        "long":-82.08099365234375
     },
     {
         "id":"highlands_florida_unitedstates",
@@ -1160,7 +1160,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.34333038330078,
-        "long":-81.34112548828125,
+        "long":-81.34112548828125
     },
     {
         "id":"putnam_florida_unitedstates",
@@ -1172,7 +1172,7 @@
         "totalConfirmedDelta":11,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.60860252380371,
-        "long":-81.74427032470703,
+        "long":-81.74427032470703
     },
     {
         "id":"monroe_florida_unitedstates",
@@ -1184,7 +1184,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":25.515178680419922,
-        "long":-81.0296630859375,
+        "long":-81.0296630859375
     },
     {
         "id":"nassau_florida_unitedstates",
@@ -1196,7 +1196,7 @@
         "totalConfirmedDelta":16,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.610706329345703,
-        "long":-81.80146789550781,
+        "long":-81.80146789550781
     },
     {
         "id":"walton_florida_unitedstates",
@@ -1208,7 +1208,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.64362335205078,
-        "long":-86.16960906982422,
+        "long":-86.16960906982422
     },
     {
         "id":"desoto_florida_unitedstates",
@@ -1220,7 +1220,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.18625831604004,
-        "long":-81.80950164794922,
+        "long":-81.80950164794922
     },
     {
         "id":"flagler_florida_unitedstates",
@@ -1232,7 +1232,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.4614200592041,
-        "long":-81.31356048583984,
+        "long":-81.31356048583984
     },
     {
         "id":"okeechobee_florida_unitedstates",
@@ -1244,7 +1244,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.38633918762207,
-        "long":-80.8885498046875,
+        "long":-80.8885498046875
     },
     {
         "id":"lafayette_florida_unitedstates",
@@ -1256,7 +1256,7 @@
         "totalConfirmedDelta":13,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.98546028137207,
-        "long":-83.1810531616211,
+        "long":-83.1810531616211
     },
     {
         "id":"taylor_florida_unitedstates",
@@ -1268,7 +1268,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.04717445373535,
-        "long":-83.60333251953125,
+        "long":-83.60333251953125
     },
     {
         "id":"baker_florida_unitedstates",
@@ -1280,7 +1280,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.331029891967773,
-        "long":-82.28459930419922,
+        "long":-82.28459930419922
     },
     {
         "id":"hardee_florida_unitedstates",
@@ -1292,7 +1292,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.492687225341797,
-        "long":-81.80992126464844,
+        "long":-81.80992126464844
     },
     {
         "id":"washington_florida_unitedstates",
@@ -1304,7 +1304,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.610525131225586,
-        "long":-85.66522216796875,
+        "long":-85.66522216796875
     },
     {
         "id":"levy_florida_unitedstates",
@@ -1316,7 +1316,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.31984519958496,
-        "long":-82.74244689941406,
+        "long":-82.74244689941406
     },
     {
         "id":"wakulla_florida_unitedstates",
@@ -1328,7 +1328,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.16672134399414,
-        "long":-84.39940643310547,
+        "long":-84.39940643310547
     },
     {
         "id":"madison_florida_unitedstates",
@@ -1340,7 +1340,7 @@
         "totalConfirmedDelta":7,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.444093704223633,
-        "long":-83.47013854980469,
+        "long":-83.47013854980469
     },
     {
         "id":"gulf_florida_unitedstates",
@@ -1352,7 +1352,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.937524795532227,
-        "long":-85.24040222167969,
+        "long":-85.24040222167969
     },
     {
         "id":"bradford_florida_unitedstates",
@@ -1364,7 +1364,7 @@
         "totalConfirmedDelta":12,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.94996452331543,
-        "long":-82.16877746582031,
+        "long":-82.16877746582031
     },
     {
         "id":"dixie_florida_unitedstates",
@@ -1376,7 +1376,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.60800552368164,
-        "long":-83.15953826904297,
+        "long":-83.15953826904297
     },
     {
         "id":"hamilton_florida_unitedstates",
@@ -1388,7 +1388,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.496458053588867,
-        "long":-82.9480209350586,
+        "long":-82.9480209350586
     },
     {
         "id":"holmes_florida_unitedstates",
@@ -1400,7 +1400,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.86792755126953,
-        "long":-85.8139877319336,
+        "long":-85.8139877319336
     },
     {
         "id":"union_florida_unitedstates",
@@ -1412,7 +1412,7 @@
         "totalConfirmedDelta":20,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.04381561279297,
-        "long":-82.37139892578125,
+        "long":-82.37139892578125
     },
     {
         "id":"calhoun_florida_unitedstates",
@@ -1424,7 +1424,7 @@
         "totalConfirmedDelta":9,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.405916213989258,
-        "long":-85.19725799560547,
+        "long":-85.19725799560547
     },
     {
         "id":"franklin_florida_unitedstates",
@@ -1436,7 +1436,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.83686065673828,
-        "long":-84.82843017578125,
+        "long":-84.82843017578125
     },
     {
         "id":"jefferson_florida_unitedstates",
@@ -1448,7 +1448,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.43766975402832,
-        "long":-83.89518737792969,
+        "long":-83.89518737792969
     },
     {
         "id":"gilchrist_florida_unitedstates",
@@ -1460,7 +1460,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.72589683532715,
-        "long":-82.80037689208984,
+        "long":-82.80037689208984
     },
     {
         "id":"glades_florida_unitedstates",
@@ -1472,7 +1472,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":26.95641326904297,
-        "long":-81.18888854980469,
+        "long":-81.18888854980469
     },
     {
         "id":"liberty_florida_unitedstates",
@@ -1484,7 +1484,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.2413387298584,
-        "long":-84.88288879394531,
+        "long":-84.88288879394531
     },
     {
         "totalConfirmed":621596,
@@ -1495,7 +1495,7 @@
         "totalConfirmedDelta":2593,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.49258041381836,
-        "long":-82.47222137451172,
+        "long":-82.47222137451172
     },
     {
         "id":"texas_unitedstates",
@@ -1507,7 +1507,7 @@
         "totalConfirmedDelta":1561,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.857332229614258,
-        "long":-95.39226531982422,
+        "long":-95.39226531982422
     },
     {
         "id":"dallas_texas_unitedstates",
@@ -1519,7 +1519,7 @@
         "totalConfirmedDelta":434,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.76658630371094,
-        "long":-96.77779388427734,
+        "long":-96.77779388427734
     },
     {
         "id":"tarrant_texas_unitedstates",
@@ -1531,7 +1531,7 @@
         "totalConfirmedDelta":202,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.77154541015625,
-        "long":-97.29119873046875,
+        "long":-97.29119873046875
     },
     {
         "id":"bexar_texas_unitedstates",
@@ -1543,7 +1543,7 @@
         "totalConfirmedDelta":173,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.44891929626465,
-        "long":-98.52000427246094,
+        "long":-98.52000427246094
     },
     {
         "id":"hidalgo_texas_unitedstates",
@@ -1555,7 +1555,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":26.396728515625,
-        "long":-98.18106842041016,
+        "long":-98.18106842041016
     },
     {
         "id":"travis_texas_unitedstates",
@@ -1567,7 +1567,7 @@
         "totalConfirmedDelta":9,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.334625244140625,
-        "long":-97.78219604492188,
+        "long":-97.78219604492188
     },
     {
         "id":"cameron_texas_unitedstates",
@@ -1579,7 +1579,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":26.147674560546875,
-        "long":-97.48125457763672,
+        "long":-97.48125457763672
     },
     {
         "id":"elpaso_texas_unitedstates",
@@ -1591,7 +1591,7 @@
         "totalConfirmedDelta":133,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.76868438720703,
-        "long":-106.2349853515625,
+        "long":-106.2349853515625
     },
     {
         "id":"nueces_texas_unitedstates",
@@ -1603,7 +1603,7 @@
         "totalConfirmedDelta":29,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.737178802490234,
-        "long":-97.54257202148438,
+        "long":-97.54257202148438
     },
     {
         "id":"fortbend_texas_unitedstates",
@@ -1615,7 +1615,7 @@
         "totalConfirmedDelta":88,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.527477264404297,
-        "long":-95.77073669433594,
+        "long":-95.77073669433594
     },
     {
         "id":"collin_texas_unitedstates",
@@ -1627,7 +1627,7 @@
         "totalConfirmedDelta":57,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.18803787231445,
-        "long":-96.57272338867188,
+        "long":-96.57272338867188
     },
     {
         "id":"webb_texas_unitedstates",
@@ -1639,7 +1639,7 @@
         "totalConfirmedDelta":251,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.761062622070312,
-        "long":-99.33158874511719,
+        "long":-99.33158874511719
     },
     {
         "id":"galveston_texas_unitedstates",
@@ -1651,7 +1651,7 @@
         "totalConfirmedDelta":34,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.398778915405273,
-        "long":-94.9048843383789,
+        "long":-94.9048843383789
     },
     {
         "id":"denton_texas_unitedstates",
@@ -1663,7 +1663,7 @@
         "totalConfirmedDelta":119,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.2051887512207,
-        "long":-97.11720275878906,
+        "long":-97.11720275878906
     },
     {
         "id":"brazoria_texas_unitedstates",
@@ -1675,7 +1675,7 @@
         "totalConfirmedDelta":89,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.188756942749023,
-        "long":-95.4459228515625,
+        "long":-95.4459228515625
     },
     {
         "id":"montgomery_texas_unitedstates",
@@ -1687,7 +1687,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.30020523071289,
-        "long":-95.5030517578125,
+        "long":-95.5030517578125
     },
     {
         "id":"williamson_texas_unitedstates",
@@ -1699,7 +1699,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.64806365966797,
-        "long":-97.60077667236328,
+        "long":-97.60077667236328
     },
     {
         "id":"lubbock_texas_unitedstates",
@@ -1711,7 +1711,7 @@
         "totalConfirmedDelta":102,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.610191345214844,
-        "long":-101.82044219970703,
+        "long":-101.82044219970703
     },
     {
         "id":"jefferson_texas_unitedstates",
@@ -1723,7 +1723,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.883760452270508,
-        "long":-94.16114044189453,
+        "long":-94.16114044189453
     },
     {
         "id":"mclennan_texas_unitedstates",
@@ -1735,7 +1735,7 @@
         "totalConfirmedDelta":66,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.552339553833008,
-        "long":-97.2018051147461,
+        "long":-97.2018051147461
     },
     {
         "id":"hays_texas_unitedstates",
@@ -1747,7 +1747,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.058046340942383,
-        "long":-98.03105926513672,
+        "long":-98.03105926513672
     },
     {
         "id":"bell_texas_unitedstates",
@@ -1759,7 +1759,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.03765869140625,
-        "long":-97.47807312011719,
+        "long":-97.47807312011719
     },
     {
         "id":"brazos_texas_unitedstates",
@@ -1771,7 +1771,7 @@
         "totalConfirmedDelta":50,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.660486221313477,
-        "long":-96.30207061767578,
+        "long":-96.30207061767578
     },
     {
         "id":"potter_texas_unitedstates",
@@ -1783,7 +1783,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.401275634765625,
-        "long":-101.89397430419922,
+        "long":-101.89397430419922
     },
     {
         "id":"victoria_texas_unitedstates",
@@ -1795,7 +1795,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.79633140563965,
-        "long":-96.97147369384766,
+        "long":-96.97147369384766
     },
     {
         "id":"ellis_texas_unitedstates",
@@ -1807,7 +1807,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.348392486572266,
-        "long":-96.79460144042969,
+        "long":-96.79460144042969
     },
     {
         "id":"walker_texas_unitedstates",
@@ -1819,7 +1819,7 @@
         "totalConfirmedDelta":20,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.738983154296875,
-        "long":-95.57222747802734,
+        "long":-95.57222747802734
     },
     {
         "id":"maverick_texas_unitedstates",
@@ -1831,7 +1831,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.7426700592041,
-        "long":-100.31448364257812,
+        "long":-100.31448364257812
     },
     {
         "id":"midland_texas_unitedstates",
@@ -1843,7 +1843,7 @@
         "totalConfirmedDelta":38,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.86932373046875,
-        "long":-102.03145599365234,
+        "long":-102.03145599365234
     },
     {
         "id":"smith_texas_unitedstates",
@@ -1855,7 +1855,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.375057220458984,
-        "long":-95.26910400390625,
+        "long":-95.26910400390625
     },
     {
         "id":"ector_texas_unitedstates",
@@ -1867,7 +1867,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.869115829467773,
-        "long":-102.5428466796875,
+        "long":-102.5428466796875
     },
     {
         "id":"starr_texas_unitedstates",
@@ -1879,7 +1879,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":26.5621395111084,
-        "long":-98.73841857910156,
+        "long":-98.73841857910156
     },
     {
         "id":"kaufman_texas_unitedstates",
@@ -1891,7 +1891,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.59918975830078,
-        "long":-96.2877197265625,
+        "long":-96.2877197265625
     },
     {
         "id":"anderson_texas_unitedstates",
@@ -1903,7 +1903,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.813201904296875,
-        "long":-95.65250396728516,
+        "long":-95.65250396728516
     },
     {
         "id":"johnson_texas_unitedstates",
@@ -1915,7 +1915,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.378990173339844,
-        "long":-97.36640930175781,
+        "long":-97.36640930175781
     },
     {
         "id":"comal_texas_unitedstates",
@@ -1927,7 +1927,7 @@
         "totalConfirmedDelta":14,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.808185577392578,
-        "long":-98.2781982421875,
+        "long":-98.2781982421875
     },
     {
         "id":"randall_texas_unitedstates",
@@ -1939,7 +1939,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.965965270996094,
-        "long":-101.89688873291016,
+        "long":-101.89688873291016
     },
     {
         "id":"tomgreen_texas_unitedstates",
@@ -1951,7 +1951,7 @@
         "totalConfirmedDelta":13,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.40442657470703,
-        "long":-100.46198272705078,
+        "long":-100.46198272705078
     },
     {
         "id":"angelina_texas_unitedstates",
@@ -1963,7 +1963,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.254764556884766,
-        "long":-94.61174774169922,
+        "long":-94.61174774169922
     },
     {
         "id":"valverde_texas_unitedstates",
@@ -1975,7 +1975,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.89305877685547,
-        "long":-101.1517333984375,
+        "long":-101.1517333984375
     },
     {
         "id":"guadalupe_texas_unitedstates",
@@ -1987,7 +1987,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.583097457885742,
-        "long":-97.94865417480469,
+        "long":-97.94865417480469
     },
     {
         "id":"gregg_texas_unitedstates",
@@ -1999,7 +1999,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.48062515258789,
-        "long":-94.8169937133789,
+        "long":-94.8169937133789
     },
     {
         "id":"liberty_texas_unitedstates",
@@ -2011,7 +2011,7 @@
         "totalConfirmedDelta":40,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.151689529418945,
-        "long":-94.81217193603516,
+        "long":-94.81217193603516
     },
     {
         "id":"orange_texas_unitedstates",
@@ -2023,7 +2023,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.124975204467773,
-        "long":-93.89521789550781,
+        "long":-93.89521789550781
     },
     {
         "id":"parker_texas_unitedstates",
@@ -2035,7 +2035,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.77771759033203,
-        "long":-97.80511474609375,
+        "long":-97.80511474609375
     },
     {
         "id":"hale_texas_unitedstates",
@@ -2047,7 +2047,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.070526123046875,
-        "long":-101.8268051147461,
+        "long":-101.8268051147461
     },
     {
         "id":"bee_texas_unitedstates",
@@ -2059,7 +2059,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.4173641204834,
-        "long":-97.74112701416016,
+        "long":-97.74112701416016
     },
     {
         "id":"bastrop_texas_unitedstates",
@@ -2071,7 +2071,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.103647232055664,
-        "long":-97.31201171875,
+        "long":-97.31201171875
     },
     {
         "id":"grayson_texas_unitedstates",
@@ -2083,7 +2083,7 @@
         "totalConfirmedDelta":22,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.62675476074219,
-        "long":-96.67752075195312,
+        "long":-96.67752075195312
     },
     {
         "id":"hunt_texas_unitedstates",
@@ -2095,7 +2095,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.123470306396484,
-        "long":-96.08544158935547,
+        "long":-96.08544158935547
     },
     {
         "id":"cherokee_texas_unitedstates",
@@ -2107,7 +2107,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.836977005004883,
-        "long":-95.16516876220703,
+        "long":-95.16516876220703
     },
     {
         "id":"titus_texas_unitedstates",
@@ -2119,7 +2119,7 @@
         "totalConfirmedDelta":7,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.2164192199707,
-        "long":-94.96537780761719,
+        "long":-94.96537780761719
     },
     {
         "id":"nacogdoches_texas_unitedstates",
@@ -2131,7 +2131,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.616043090820312,
-        "long":-94.61593627929688,
+        "long":-94.61593627929688
     },
     {
         "id":"taylor_texas_unitedstates",
@@ -2143,7 +2143,7 @@
         "totalConfirmedDelta":11,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.30139923095703,
-        "long":-99.88998413085938,
+        "long":-99.88998413085938
     },
     {
         "id":"rockwall_texas_unitedstates",
@@ -2155,7 +2155,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.89767074584961,
-        "long":-96.40784454345703,
+        "long":-96.40784454345703
     },
     {
         "id":"wichita_texas_unitedstates",
@@ -2167,7 +2167,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.984100341796875,
-        "long":-98.70169830322266,
+        "long":-98.70169830322266
     },
     {
         "id":"sanpatricio_texas_unitedstates",
@@ -2179,7 +2179,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.00899887084961,
-        "long":-97.51861572265625,
+        "long":-97.51861572265625
     },
     {
         "id":"hardin_texas_unitedstates",
@@ -2191,7 +2191,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.33236312866211,
-        "long":-94.39028930664062,
+        "long":-94.39028930664062
     },
     {
         "id":"caldwell_texas_unitedstates",
@@ -2203,7 +2203,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.83712387084961,
-        "long":-97.61996459960938,
+        "long":-97.61996459960938
     },
     {
         "id":"wharton_texas_unitedstates",
@@ -2215,7 +2215,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.277801513671875,
-        "long":-96.22208404541016,
+        "long":-96.22208404541016
     },
     {
         "id":"chambers_texas_unitedstates",
@@ -2227,7 +2227,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.708999633789062,
-        "long":-94.6727066040039,
+        "long":-94.6727066040039
     },
     {
         "id":"moore_texas_unitedstates",
@@ -2239,7 +2239,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.83767318725586,
-        "long":-101.89288330078125,
+        "long":-101.89288330078125
     },
     {
         "id":"medina_texas_unitedstates",
@@ -2251,7 +2251,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.35563850402832,
-        "long":-99.11002349853516,
+        "long":-99.11002349853516
     },
     {
         "id":"navarro_texas_unitedstates",
@@ -2263,7 +2263,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.04691696166992,
-        "long":-96.47244262695312,
+        "long":-96.47244262695312
     },
     {
         "id":"jimwells_texas_unitedstates",
@@ -2275,7 +2275,7 @@
         "totalConfirmedDelta":54,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.73131561279297,
-        "long":-98.0898208618164,
+        "long":-98.0898208618164
     },
     {
         "id":"bowie_texas_unitedstates",
@@ -2287,7 +2287,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.445701599121094,
-        "long":-94.42314910888672,
+        "long":-94.42314910888672
     },
     {
         "id":"grimes_texas_unitedstates",
@@ -2299,7 +2299,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.543655395507812,
-        "long":-95.98530578613281,
+        "long":-95.98530578613281
     },
     {
         "id":"matagorda_texas_unitedstates",
@@ -2311,7 +2311,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.820842742919922,
-        "long":-96.01067352294922,
+        "long":-96.01067352294922
     },
     {
         "id":"coryell_texas_unitedstates",
@@ -2323,7 +2323,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.390840530395508,
-        "long":-97.79914093017578,
+        "long":-97.79914093017578
     },
     {
         "id":"willacy_texas_unitedstates",
@@ -2335,7 +2335,7 @@
         "totalConfirmedDelta":30,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":26.474960327148438,
-        "long":-97.61544036865234,
+        "long":-97.61544036865234
     },
     {
         "id":"dewitt_texas_unitedstates",
@@ -2347,7 +2347,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.082059860229492,
-        "long":-97.35681915283203,
+        "long":-97.35681915283203
     },
     {
         "id":"madison_texas_unitedstates",
@@ -2359,7 +2359,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.965547561645508,
-        "long":-95.92832946777344,
+        "long":-95.92832946777344
     },
     {
         "id":"henderson_texas_unitedstates",
@@ -2371,7 +2371,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.21187210083008,
-        "long":-95.85365295410156,
+        "long":-95.85365295410156
     },
     {
         "id":"gonzales_texas_unitedstates",
@@ -2383,7 +2383,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.45673179626465,
-        "long":-97.4925765991211,
+        "long":-97.4925765991211
     },
     {
         "id":"deafsmith_texas_unitedstates",
@@ -2395,7 +2395,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.96599197387695,
-        "long":-102.60477447509766,
+        "long":-102.60477447509766
     },
     {
         "id":"harrison_texas_unitedstates",
@@ -2407,7 +2407,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.54811477661133,
-        "long":-94.37151336669922,
+        "long":-94.37151336669922
     },
     {
         "id":"lamar_texas_unitedstates",
@@ -2419,7 +2419,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.66741943359375,
-        "long":-95.57086944580078,
+        "long":-95.57086944580078
     },
     {
         "id":"polk_texas_unitedstates",
@@ -2431,7 +2431,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.79265594482422,
-        "long":-94.82996368408203,
+        "long":-94.82996368408203
     },
     {
         "id":"hood_texas_unitedstates",
@@ -2443,7 +2443,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.429988861083984,
-        "long":-97.8321762084961,
+        "long":-97.8321762084961
     },
     {
         "id":"karnes_texas_unitedstates",
@@ -2455,7 +2455,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.905630111694336,
-        "long":-97.85942077636719,
+        "long":-97.85942077636719
     },
     {
         "id":"rusk_texas_unitedstates",
@@ -2467,7 +2467,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.107879638671875,
-        "long":-94.76177978515625,
+        "long":-94.76177978515625
     },
     {
         "id":"uvalde_texas_unitedstates",
@@ -2479,7 +2479,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.357364654541016,
-        "long":-99.76219177246094,
+        "long":-99.76219177246094
     },
     {
         "id":"lavaca_texas_unitedstates",
@@ -2491,7 +2491,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.384328842163086,
-        "long":-96.93010711669922,
+        "long":-96.93010711669922
     },
     {
         "id":"waller_texas_unitedstates",
@@ -2503,7 +2503,7 @@
         "totalConfirmedDelta":7,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.01074981689453,
-        "long":-95.98760223388672,
+        "long":-95.98760223388672
     },
     {
         "id":"erath_texas_unitedstates",
@@ -2515,7 +2515,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.236263275146484,
-        "long":-98.21778869628906,
+        "long":-98.21778869628906
     },
     {
         "id":"burnet_texas_unitedstates",
@@ -2527,7 +2527,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.788511276245117,
-        "long":-98.18240356445312,
+        "long":-98.18240356445312
     },
     {
         "id":"wise_texas_unitedstates",
@@ -2539,7 +2539,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.21586227416992,
-        "long":-97.65438079833984,
+        "long":-97.65438079833984
     },
     {
         "id":"frio_texas_unitedstates",
@@ -2551,7 +2551,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.867708206176758,
-        "long":-99.10823059082031,
+        "long":-99.10823059082031
     },
     {
         "id":"kleberg_texas_unitedstates",
@@ -2563,7 +2563,7 @@
         "totalConfirmedDelta":28,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.426647186279297,
-        "long":-97.698974609375,
+        "long":-97.698974609375
     },
     {
         "id":"calhoun_texas_unitedstates",
@@ -2575,7 +2575,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.469755172729492,
-        "long":-96.61790466308594,
+        "long":-96.61790466308594
     },
     {
         "id":"jones_texas_unitedstates",
@@ -2587,7 +2587,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.73978042602539,
-        "long":-99.87857055664062,
+        "long":-99.87857055664062
     },
     {
         "id":"fannin_texas_unitedstates",
@@ -2599,7 +2599,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.59309387207031,
-        "long":-96.1069564819336,
+        "long":-96.1069564819336
     },
     {
         "id":"atascosa_texas_unitedstates",
@@ -2611,7 +2611,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.893535614013672,
-        "long":-98.52710723876953,
+        "long":-98.52710723876953
     },
     {
         "id":"washington_texas_unitedstates",
@@ -2623,7 +2623,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.214513778686523,
-        "long":-96.40331268310547,
+        "long":-96.40331268310547
     },
     {
         "id":"scurry_texas_unitedstates",
@@ -2635,7 +2635,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.746299743652344,
-        "long":-100.9164047241211,
+        "long":-100.9164047241211
     },
     {
         "id":"wilson_texas_unitedstates",
@@ -2647,7 +2647,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.174001693725586,
-        "long":-98.08650970458984,
+        "long":-98.08650970458984
     },
     {
         "id":"houston_texas_unitedstates",
@@ -2659,7 +2659,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.317651748657227,
-        "long":-95.42240905761719,
+        "long":-95.42240905761719
     },
     {
         "id":"vanzandt_texas_unitedstates",
@@ -2671,7 +2671,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.563636779785156,
-        "long":-95.83644104003906,
+        "long":-95.83644104003906
     },
     {
         "id":"jackson_texas_unitedstates",
@@ -2683,7 +2683,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.95406150817871,
-        "long":-96.57768249511719,
+        "long":-96.57768249511719
     },
     {
         "id":"brown_texas_unitedstates",
@@ -2695,7 +2695,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.774274826049805,
-        "long":-98.99984741210938,
+        "long":-98.99984741210938
     },
     {
         "id":"limestone_texas_unitedstates",
@@ -2707,7 +2707,7 @@
         "totalConfirmedDelta":24,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.545391082763672,
-        "long":-96.58049011230469,
+        "long":-96.58049011230469
     },
     {
         "id":"colorado_texas_unitedstates",
@@ -2719,7 +2719,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.620868682861328,
-        "long":-96.52629089355469,
+        "long":-96.52629089355469
     },
     {
         "id":"shelby_texas_unitedstates",
@@ -2731,7 +2731,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.79239845275879,
-        "long":-94.14497375488281,
+        "long":-94.14497375488281
     },
     {
         "id":"kerr_texas_unitedstates",
@@ -2743,7 +2743,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.06149673461914,
-        "long":-99.3502197265625,
+        "long":-99.3502197265625
     },
     {
         "id":"milam_texas_unitedstates",
@@ -2755,7 +2755,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.786300659179688,
-        "long":-96.97674560546875,
+        "long":-96.97674560546875
     },
     {
         "id":"palopinto_texas_unitedstates",
@@ -2767,7 +2767,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.75312042236328,
-        "long":-98.3129653930664,
+        "long":-98.3129653930664
     },
     {
         "id":"austin_texas_unitedstates",
@@ -2779,7 +2779,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.88681983947754,
-        "long":-96.27754974365234,
+        "long":-96.27754974365234
     },
     {
         "id":"wood_texas_unitedstates",
@@ -2791,7 +2791,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.78629684448242,
-        "long":-95.38201141357422,
+        "long":-95.38201141357422
     },
     {
         "id":"jasper_texas_unitedstates",
@@ -2803,7 +2803,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.743907928466797,
-        "long":-94.02501678466797,
+        "long":-94.02501678466797
     },
     {
         "id":"parmer_texas_unitedstates",
@@ -2815,7 +2815,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.530120849609375,
-        "long":-102.78453826904297,
+        "long":-102.78453826904297
     },
     {
         "id":"freestone_texas_unitedstates",
@@ -2827,7 +2827,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.704832077026367,
-        "long":-96.14915466308594,
+        "long":-96.14915466308594
     },
     {
         "id":"hill_texas_unitedstates",
@@ -2839,7 +2839,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.990690231323242,
-        "long":-97.1324462890625,
+        "long":-97.1324462890625
     },
     {
         "id":"fayette_texas_unitedstates",
@@ -2851,7 +2851,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.876855850219727,
-        "long":-96.91967010498047,
+        "long":-96.91967010498047
     },
     {
         "id":"lasalle_texas_unitedstates",
@@ -2863,7 +2863,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.345050811767578,
-        "long":-99.09981536865234,
+        "long":-99.09981536865234
     },
     {
         "id":"andrews_texas_unitedstates",
@@ -2875,7 +2875,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.305023193359375,
-        "long":-102.6378173828125,
+        "long":-102.6378173828125
     },
     {
         "id":"liveoak_texas_unitedstates",
@@ -2887,7 +2887,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.351360321044922,
-        "long":-98.12471771240234,
+        "long":-98.12471771240234
     },
     {
         "id":"upshur_texas_unitedstates",
@@ -2899,7 +2899,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.73631286621094,
-        "long":-94.94142150878906,
+        "long":-94.94142150878906
     },
     {
         "id":"cooke_texas_unitedstates",
@@ -2911,7 +2911,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.63842010498047,
-        "long":-97.21257019042969,
+        "long":-97.21257019042969
     },
     {
         "id":"panola_texas_unitedstates",
@@ -2923,7 +2923,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.16228485107422,
-        "long":-94.30557250976562,
+        "long":-94.30557250976562
     },
     {
         "id":"camp_texas_unitedstates",
@@ -2935,7 +2935,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.97320556640625,
-        "long":-94.97856903076172,
+        "long":-94.97856903076172
     },
     {
         "id":"pecos_texas_unitedstates",
@@ -2947,7 +2947,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.78101921081543,
-        "long":-102.72354125976562,
+        "long":-102.72354125976562
     },
     {
         "id":"burleson_texas_unitedstates",
@@ -2959,7 +2959,7 @@
         "totalConfirmedDelta":11,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.492435455322266,
-        "long":-96.62127685546875,
+        "long":-96.62127685546875
     },
     {
         "id":"howard_texas_unitedstates",
@@ -2971,7 +2971,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.30610656738281,
-        "long":-101.43546295166016,
+        "long":-101.43546295166016
     },
     {
         "id":"lamb_texas_unitedstates",
@@ -2983,7 +2983,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.068599700927734,
-        "long":-102.35163116455078,
+        "long":-102.35163116455078
     },
     {
         "id":"zapata_texas_unitedstates",
@@ -2995,7 +2995,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.000856399536133,
-        "long":-99.16853332519531,
+        "long":-99.16853332519531
     },
     {
         "id":"refugio_texas_unitedstates",
@@ -3007,7 +3007,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.320375442504883,
-        "long":-97.16448974609375,
+        "long":-97.16448974609375
     },
     {
         "id":"hockley_texas_unitedstates",
@@ -3019,7 +3019,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.60748291015625,
-        "long":-102.34303283691406,
+        "long":-102.34303283691406
     },
     {
         "id":"zavala_texas_unitedstates",
@@ -3031,7 +3031,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.866168975830078,
-        "long":-99.76052856445312,
+        "long":-99.76052856445312
     },
     {
         "id":"duval_texas_unitedstates",
@@ -3043,7 +3043,7 @@
         "totalConfirmedDelta":14,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.681278228759766,
-        "long":-98.50883483886719,
+        "long":-98.50883483886719
     },
     {
         "id":"cass_texas_unitedstates",
@@ -3055,7 +3055,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.07746124267578,
-        "long":-94.34355163574219,
+        "long":-94.34355163574219
     },
     {
         "id":"robertson_texas_unitedstates",
@@ -3067,7 +3067,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.02699851989746,
-        "long":-96.51276397705078,
+        "long":-96.51276397705078
     },
     {
         "id":"gaines_texas_unitedstates",
@@ -3079,7 +3079,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.740726470947266,
-        "long":-102.63499450683594,
+        "long":-102.63499450683594
     },
     {
         "id":"young_texas_unitedstates",
@@ -3091,7 +3091,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.176673889160156,
-        "long":-98.68775939941406,
+        "long":-98.68775939941406
     },
     {
         "id":"hopkins_texas_unitedstates",
@@ -3103,7 +3103,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.1491813659668,
-        "long":-95.56370544433594,
+        "long":-95.56370544433594
     },
     {
         "id":"gray_texas_unitedstates",
@@ -3115,7 +3115,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.40129470825195,
-        "long":-100.81242370605469,
+        "long":-100.81242370605469
     },
     {
         "id":"castro_texas_unitedstates",
@@ -3127,7 +3127,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.52999496459961,
-        "long":-102.26167297363281,
+        "long":-102.26167297363281
     },
     {
         "id":"bosque_texas_unitedstates",
@@ -3139,7 +3139,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.900426864624023,
-        "long":-97.63441467285156,
+        "long":-97.63441467285156
     },
     {
         "id":"brooks_texas_unitedstates",
@@ -3151,7 +3151,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.031526565551758,
-        "long":-98.21865844726562,
+        "long":-98.21865844726562
     },
     {
         "id":"comanche_texas_unitedstates",
@@ -3163,7 +3163,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.94808578491211,
-        "long":-98.5582504272461,
+        "long":-98.5582504272461
     },
     {
         "id":"aransas_texas_unitedstates",
@@ -3175,7 +3175,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.10732650756836,
-        "long":-96.99909210205078,
+        "long":-96.99909210205078
     },
     {
         "id":"dallam_texas_unitedstates",
@@ -3187,7 +3187,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":36.27778244018555,
-        "long":-102.60212707519531,
+        "long":-102.60212707519531
     },
     {
         "id":"dawson_texas_unitedstates",
@@ -3199,7 +3199,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.7425651550293,
-        "long":-101.9475326538086,
+        "long":-101.9475326538086
     },
     {
         "id":"bailey_texas_unitedstates",
@@ -3211,7 +3211,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.06851577758789,
-        "long":-102.82987213134766,
+        "long":-102.82987213134766
     },
     {
         "id":"sanjacinto_texas_unitedstates",
@@ -3223,7 +3223,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.57952117919922,
-        "long":-95.16686248779297,
+        "long":-95.16686248779297
     },
     {
         "id":"terry_texas_unitedstates",
@@ -3235,7 +3235,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.173709869384766,
-        "long":-102.33494567871094,
+        "long":-102.33494567871094
     },
     {
         "id":"gillespie_texas_unitedstates",
@@ -3247,7 +3247,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.318025588989258,
-        "long":-98.94627380371094,
+        "long":-98.94627380371094
     },
     {
         "id":"kendall_texas_unitedstates",
@@ -3259,7 +3259,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.944677352905273,
-        "long":-98.71160888671875,
+        "long":-98.71160888671875
     },
     {
         "id":"lee_texas_unitedstates",
@@ -3271,7 +3271,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.310665130615234,
-        "long":-96.9656753540039,
+        "long":-96.9656753540039
     },
     {
         "id":"brewster_texas_unitedstates",
@@ -3283,7 +3283,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.81205177307129,
-        "long":-103.25172424316406,
+        "long":-103.25172424316406
     },
     {
         "id":"runnels_texas_unitedstates",
@@ -3295,7 +3295,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.831130981445312,
-        "long":-99.97614288330078,
+        "long":-99.97614288330078
     },
     {
         "id":"sanaugustine_texas_unitedstates",
@@ -3307,7 +3307,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.394298553466797,
-        "long":-94.16807556152344,
+        "long":-94.16807556152344
     },
     {
         "id":"leon_texas_unitedstates",
@@ -3319,7 +3319,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.296466827392578,
-        "long":-95.99552154541016,
+        "long":-95.99552154541016
     },
     {
         "id":"dimmit_texas_unitedstates",
@@ -3331,7 +3331,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.422500610351562,
-        "long":-99.7568588256836,
+        "long":-99.7568588256836
     },
     {
         "id":"trinity_texas_unitedstates",
@@ -3343,7 +3343,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.0887393951416,
-        "long":-95.13548278808594,
+        "long":-95.13548278808594
     },
     {
         "id":"tyler_texas_unitedstates",
@@ -3355,7 +3355,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.77123260498047,
-        "long":-94.37653350830078,
+        "long":-94.37653350830078
     },
     {
         "id":"reeves_texas_unitedstates",
@@ -3367,7 +3367,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.32295036315918,
-        "long":-103.69304656982422,
+        "long":-103.69304656982422
     },
     {
         "id":"falls_texas_unitedstates",
@@ -3379,7 +3379,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.253183364868164,
-        "long":-96.93577575683594,
+        "long":-96.93577575683594
     },
     {
         "id":"newton_texas_unitedstates",
@@ -3391,7 +3391,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.786256790161133,
-        "long":-93.74465942382812,
+        "long":-93.74465942382812
     },
     {
         "id":"morris_texas_unitedstates",
@@ -3403,7 +3403,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.11341857910156,
-        "long":-94.73233795166016,
+        "long":-94.73233795166016
     },
     {
         "id":"lampasas_texas_unitedstates",
@@ -3415,7 +3415,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.19624137878418,
-        "long":-98.24140930175781,
+        "long":-98.24140930175781
     },
     {
         "id":"nolan_texas_unitedstates",
@@ -3427,7 +3427,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.30344772338867,
-        "long":-100.40604400634766,
+        "long":-100.40604400634766
     },
     {
         "id":"hutchinson_texas_unitedstates",
@@ -3439,7 +3439,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.8399772644043,
-        "long":-101.35465240478516,
+        "long":-101.35465240478516
     },
     {
         "id":"yoakum_texas_unitedstates",
@@ -3451,7 +3451,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.17292785644531,
-        "long":-102.82760620117188,
+        "long":-102.82760620117188
     },
     {
         "id":"redriver_texas_unitedstates",
@@ -3463,7 +3463,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.620521545410156,
-        "long":-95.0501708984375,
+        "long":-95.0501708984375
     },
     {
         "id":"marion_texas_unitedstates",
@@ -3475,7 +3475,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.79795455932617,
-        "long":-94.3572006225586,
+        "long":-94.3572006225586
     },
     {
         "id":"eastland_texas_unitedstates",
@@ -3487,7 +3487,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.32711410522461,
-        "long":-98.83235931396484,
+        "long":-98.83235931396484
     },
     {
         "id":"blanco_texas_unitedstates",
@@ -3499,7 +3499,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.266382217407227,
-        "long":-98.3997573852539,
+        "long":-98.3997573852539
     },
     {
         "id":"montague_texas_unitedstates",
@@ -3511,7 +3511,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.67461013793945,
-        "long":-97.72473907470703,
+        "long":-97.72473907470703
     },
     {
         "id":"goliad_texas_unitedstates",
@@ -3523,7 +3523,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":28.657058715820312,
-        "long":-97.42642211914062,
+        "long":-97.42642211914062
     },
     {
         "id":"jack_texas_unitedstates",
@@ -3535,7 +3535,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.23344802856445,
-        "long":-98.17250061035156,
+        "long":-98.17250061035156
     },
     {
         "id":"franklin_texas_unitedstates",
@@ -3547,7 +3547,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.17548751831055,
-        "long":-95.2183837890625,
+        "long":-95.2183837890625
     },
     {
         "id":"stephens_texas_unitedstates",
@@ -3559,7 +3559,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.73582077026367,
-        "long":-98.83606719970703,
+        "long":-98.83606719970703
     },
     {
         "id":"mcculloch_texas_unitedstates",
@@ -3571,7 +3571,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.19874382019043,
-        "long":-99.347412109375,
+        "long":-99.347412109375
     },
     {
         "id":"bandera_texas_unitedstates",
@@ -3583,7 +3583,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.747203826904297,
-        "long":-99.24626922607422,
+        "long":-99.24626922607422
     },
     {
         "id":"ochiltree_texas_unitedstates",
@@ -3595,7 +3595,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":36.278587341308594,
-        "long":-100.81559753417969,
+        "long":-100.81559753417969
     },
     {
         "id":"ward_texas_unitedstates",
@@ -3607,7 +3607,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.5093936920166,
-        "long":-103.10236358642578,
+        "long":-103.10236358642578
     },
     {
         "id":"wilbarger_texas_unitedstates",
@@ -3619,7 +3619,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.080177307128906,
-        "long":-99.24080657958984,
+        "long":-99.24080657958984
     },
     {
         "id":"hansford_texas_unitedstates",
@@ -3631,7 +3631,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":36.27750015258789,
-        "long":-101.3545150756836,
+        "long":-101.3545150756836
     },
     {
         "id":"garza_texas_unitedstates",
@@ -3643,7 +3643,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.17988204956055,
-        "long":-101.2984390258789,
+        "long":-101.2984390258789
     },
     {
         "id":"hartley_texas_unitedstates",
@@ -3655,7 +3655,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.839962005615234,
-        "long":-102.60279083251953,
+        "long":-102.60279083251953
     },
     {
         "id":"hamilton_texas_unitedstates",
@@ -3667,7 +3667,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.70475959777832,
-        "long":-98.1106185913086,
+        "long":-98.1106185913086
     },
     {
         "id":"llano_texas_unitedstates",
@@ -3679,7 +3679,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.7056827545166,
-        "long":-98.6839599609375,
+        "long":-98.6839599609375
     },
     {
         "id":"floyd_texas_unitedstates",
@@ -3691,7 +3691,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.07238006591797,
-        "long":-101.30321502685547,
+        "long":-101.30321502685547
     },
     {
         "id":"swisher_texas_unitedstates",
@@ -3703,7 +3703,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.53062438964844,
-        "long":-101.73487091064453,
+        "long":-101.73487091064453
     },
     {
         "id":"winkler_texas_unitedstates",
@@ -3715,7 +3715,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.850000381469727,
-        "long":-103.04827880859375,
+        "long":-103.04827880859375
     },
     {
         "id":"callahan_texas_unitedstates",
@@ -3727,7 +3727,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.29774856567383,
-        "long":-99.3735122680664,
+        "long":-99.3735122680664
     },
     {
         "id":"reagan_texas_unitedstates",
@@ -3739,7 +3739,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.36615753173828,
-        "long":-101.52291870117188,
+        "long":-101.52291870117188
     },
     {
         "id":"crosby_texas_unitedstates",
@@ -3751,7 +3751,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.61457443237305,
-        "long":-101.29984283447266,
+        "long":-101.29984283447266
     },
     {
         "id":"lynn_texas_unitedstates",
@@ -3763,7 +3763,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.17683410644531,
-        "long":-101.81599426269531,
+        "long":-101.81599426269531
     },
     {
         "id":"jimhogg_texas_unitedstates",
@@ -3775,7 +3775,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":27.043380737304688,
-        "long":-98.69722747802734,
+        "long":-98.69722747802734
     },
     {
         "id":"mason_texas_unitedstates",
@@ -3787,7 +3787,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.717729568481445,
-        "long":-99.22604370117188,
+        "long":-99.22604370117188
     },
     {
         "id":"mitchell_texas_unitedstates",
@@ -3799,7 +3799,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.306190490722656,
-        "long":-100.92118835449219,
+        "long":-100.92118835449219
     },
     {
         "id":"sabine_texas_unitedstates",
@@ -3811,7 +3811,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.34327507019043,
-        "long":-93.8516845703125,
+        "long":-93.8516845703125
     },
     {
         "id":"martin_texas_unitedstates",
@@ -3823,7 +3823,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.306068420410156,
-        "long":-101.95114135742188,
+        "long":-101.95114135742188
     },
     {
         "id":"crane_texas_unitedstates",
@@ -3835,7 +3835,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.428466796875,
-        "long":-102.51557159423828,
+        "long":-102.51557159423828
     },
     {
         "id":"knox_texas_unitedstates",
@@ -3847,7 +3847,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.60612106323242,
-        "long":-99.74137878417969,
+        "long":-99.74137878417969
     },
     {
         "id":"clay_texas_unitedstates",
@@ -3859,7 +3859,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.78376388549805,
-        "long":-98.20894622802734,
+        "long":-98.20894622802734
     },
     {
         "id":"rains_texas_unitedstates",
@@ -3871,7 +3871,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.870235443115234,
-        "long":-95.79327392578125,
+        "long":-95.79327392578125
     },
     {
         "id":"fisher_texas_unitedstates",
@@ -3883,7 +3883,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.74292755126953,
-        "long":-100.40203094482422,
+        "long":-100.40203094482422
     },
     {
         "id":"childress_texas_unitedstates",
@@ -3895,7 +3895,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.52925491333008,
-        "long":-100.2074966430664,
+        "long":-100.2074966430664
     },
     {
         "id":"hemphill_texas_unitedstates",
@@ -3907,7 +3907,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.83747863769531,
-        "long":-100.27041625976562,
+        "long":-100.27041625976562
     },
     {
         "id":"donley_texas_unitedstates",
@@ -3919,7 +3919,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.96538162231445,
-        "long":-100.81397247314453,
+        "long":-100.81397247314453
     },
     {
         "id":"haskell_texas_unitedstates",
@@ -3931,7 +3931,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.178199768066406,
-        "long":-99.73023986816406,
+        "long":-99.73023986816406
     },
     {
         "id":"sherman_texas_unitedstates",
@@ -3943,7 +3943,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":36.277645111083984,
-        "long":-101.89335632324219,
+        "long":-101.89335632324219
     },
     {
         "id":"concho_texas_unitedstates",
@@ -3955,7 +3955,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.326583862304688,
-        "long":-99.86393737792969,
+        "long":-99.86393737792969
     },
     {
         "id":"coleman_texas_unitedstates",
@@ -3967,7 +3967,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.773164749145508,
-        "long":-99.45352935791016,
+        "long":-99.45352935791016
     },
     {
         "id":"presidio_texas_unitedstates",
@@ -3979,7 +3979,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.99979019165039,
-        "long":-104.24063110351562,
+        "long":-104.24063110351562
     },
     {
         "id":"coke_texas_unitedstates",
@@ -3991,7 +3991,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.888477325439453,
-        "long":-100.5298080444336,
+        "long":-100.5298080444336
     },
     {
         "id":"archer_texas_unitedstates",
@@ -4003,7 +4003,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.615352630615234,
-        "long":-98.68771362304688,
+        "long":-98.68771362304688
     },
     {
         "id":"wheeler_texas_unitedstates",
@@ -4015,7 +4015,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.40126037597656,
-        "long":-100.26966857910156,
+        "long":-100.26966857910156
     },
     {
         "id":"sansaba_texas_unitedstates",
@@ -4027,7 +4027,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.155200958251953,
-        "long":-98.8175277709961,
+        "long":-98.8175277709961
     },
     {
         "id":"hudspeth_texas_unitedstates",
@@ -4039,7 +4039,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.456113815307617,
-        "long":-105.38656616210938,
+        "long":-105.38656616210938
     },
     {
         "id":"cochran_texas_unitedstates",
@@ -4051,7 +4051,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.60409927368164,
-        "long":-102.82835388183594,
+        "long":-102.82835388183594
     },
     {
         "id":"mills_texas_unitedstates",
@@ -4063,7 +4063,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.495208740234375,
-        "long":-98.59546661376953,
+        "long":-98.59546661376953
     },
     {
         "id":"dickens_texas_unitedstates",
@@ -4075,7 +4075,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.616573333740234,
-        "long":-100.77882385253906,
+        "long":-100.77882385253906
     },
     {
         "id":"lipscomb_texas_unitedstates",
@@ -4087,7 +4087,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":36.27780532836914,
-        "long":-100.27316284179688,
+        "long":-100.27316284179688
     },
     {
         "id":"shackelford_texas_unitedstates",
@@ -4099,7 +4099,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.735958099365234,
-        "long":-99.35393524169922,
+        "long":-99.35393524169922
     },
     {
         "id":"kinney_texas_unitedstates",
@@ -4111,7 +4111,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":29.350181579589844,
-        "long":-100.41795349121094,
+        "long":-100.41795349121094
     },
     {
         "id":"hardeman_texas_unitedstates",
@@ -4123,7 +4123,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.28960037231445,
-        "long":-99.74602508544922,
+        "long":-99.74602508544922
     },
     {
         "id":"cottle_texas_unitedstates",
@@ -4135,7 +4135,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.077640533447266,
-        "long":-100.27864837646484,
+        "long":-100.27864837646484
     },
     {
         "id":"carson_texas_unitedstates",
@@ -4147,7 +4147,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.4034309387207,
-        "long":-101.35414123535156,
+        "long":-101.35414123535156
     },
     {
         "id":"delta_texas_unitedstates",
@@ -4159,7 +4159,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.38578414916992,
-        "long":-95.6724853515625,
+        "long":-95.6724853515625
     },
     {
         "id":"hall_texas_unitedstates",
@@ -4171,7 +4171,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.530723571777344,
-        "long":-100.68091583251953,
+        "long":-100.68091583251953
     },
     {
         "id":"kimble_texas_unitedstates",
@@ -4183,7 +4183,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.486785888671875,
-        "long":-99.74853515625,
+        "long":-99.74853515625
     },
     {
         "id":"collingsworth_texas_unitedstates",
@@ -4195,7 +4195,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.9649543762207,
-        "long":-100.27001953125,
+        "long":-100.27001953125
     },
     {
         "id":"oldham_texas_unitedstates",
@@ -4207,7 +4207,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.40495300292969,
-        "long":-102.60289001464844,
+        "long":-102.60289001464844
     },
     {
         "id":"briscoe_texas_unitedstates",
@@ -4219,7 +4219,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.53036117553711,
-        "long":-101.2084732055664,
+        "long":-101.2084732055664
     },
     {
         "id":"armstrong_texas_unitedstates",
@@ -4231,7 +4231,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.965118408203125,
-        "long":-101.35728454589844,
+        "long":-101.35728454589844
     },
     {
         "id":"irion_texas_unitedstates",
@@ -4243,7 +4243,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.303922653198242,
-        "long":-100.98235321044922,
+        "long":-100.98235321044922
     },
     {
         "id":"roberts_texas_unitedstates",
@@ -4255,7 +4255,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.838623046875,
-        "long":-100.81350708007812,
+        "long":-100.81350708007812
     },
     {
         "id":"glasscock_texas_unitedstates",
@@ -4267,7 +4267,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.869403839111328,
-        "long":-101.52066040039062,
+        "long":-101.52066040039062
     },
     {
         "id":"motley_texas_unitedstates",
@@ -4279,7 +4279,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.07406234741211,
-        "long":-100.77983856201172,
+        "long":-100.77983856201172
     },
     {
         "totalConfirmed":610354,
@@ -4290,7 +4290,7 @@
         "totalConfirmedDelta":3824,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.46275520324707,
-        "long":-99.3330307006836,
+        "long":-99.3330307006836
     },
     {
         "id":"newyork_unitedstates",
@@ -4302,7 +4302,7 @@
         "totalConfirmedDelta":64,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.68354797363281,
-        "long":-73.83883666992188,
+        "long":-73.83883666992188
     },
     {
         "id":"kings_newyork_unitedstates",
@@ -4314,7 +4314,7 @@
         "totalConfirmedDelta":73,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.63428497314453,
-        "long":-73.95027923583984,
+        "long":-73.95027923583984
     },
     {
         "id":"bronx_newyork_unitedstates",
@@ -4326,7 +4326,7 @@
         "totalConfirmedDelta":65,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.84912109375,
-        "long":-73.85316467285156,
+        "long":-73.85316467285156
     },
     {
         "id":"suffolk_newyork_unitedstates",
@@ -4338,7 +4338,7 @@
         "totalConfirmedDelta":51,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.96629333496094,
-        "long":-72.6871109008789,
+        "long":-72.6871109008789
     },
     {
         "id":"nassau_newyork_unitedstates",
@@ -4350,7 +4350,7 @@
         "totalConfirmedDelta":56,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.7567138671875,
-        "long":-73.59139251708984,
+        "long":-73.59139251708984
     },
     {
         "id":"westchester_newyork_unitedstates",
@@ -4362,7 +4362,7 @@
         "totalConfirmedDelta":54,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.15165710449219,
-        "long":-73.75332641601562,
+        "long":-73.75332641601562
     },
     {
         "id":"newyork_newyork_unitedstates",
@@ -4374,7 +4374,7 @@
         "totalConfirmedDelta":62,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.77436447143555,
-        "long":-73.96977233886719,
+        "long":-73.96977233886719
     },
     {
         "id":"richmond_newyork_unitedstates",
@@ -4386,7 +4386,7 @@
         "totalConfirmedDelta":17,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.56227111816406,
-        "long":-74.13853454589844,
+        "long":-74.13853454589844
     },
     {
         "id":"rockland_newyork_unitedstates",
@@ -4398,7 +4398,7 @@
         "totalConfirmedDelta":15,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.152374267578125,
-        "long":-74.02400970458984,
+        "long":-74.02400970458984
     },
     {
         "id":"orange_newyork_unitedstates",
@@ -4410,7 +4410,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.402069091796875,
-        "long":-74.30559539794922,
+        "long":-74.30559539794922
     },
     {
         "id":"erie_newyork_unitedstates",
@@ -4422,7 +4422,7 @@
         "totalConfirmedDelta":66,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.75812911987305,
-        "long":-78.77777862548828,
+        "long":-78.77777862548828
     },
     {
         "id":"monroe_newyork_unitedstates",
@@ -4434,7 +4434,7 @@
         "totalConfirmedDelta":21,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.30011749267578,
-        "long":-77.6794204711914,
+        "long":-77.6794204711914
     },
     {
         "id":"dutchess_newyork_unitedstates",
@@ -4446,7 +4446,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.764957427978516,
-        "long":-73.7429428100586,
+        "long":-73.7429428100586
     },
     {
         "id":"onondaga_newyork_unitedstates",
@@ -4458,7 +4458,7 @@
         "totalConfirmedDelta":17,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.005794525146484,
-        "long":-76.19466400146484,
+        "long":-76.19466400146484
     },
     {
         "id":"albany_newyork_unitedstates",
@@ -4470,7 +4470,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.600135803222656,
-        "long":-73.97360229492188,
+        "long":-73.97360229492188
     },
     {
         "id":"oneida_newyork_unitedstates",
@@ -4482,7 +4482,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.24173355102539,
-        "long":-75.4357681274414,
+        "long":-75.4357681274414
     },
     {
         "id":"ulster_newyork_unitedstates",
@@ -4494,7 +4494,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.88811111450195,
-        "long":-74.25837707519531,
+        "long":-74.25837707519531
     },
     {
         "id":"putnam_newyork_unitedstates",
@@ -4506,7 +4506,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.42653274536133,
-        "long":-73.7495346069336,
+        "long":-73.7495346069336
     },
     {
         "id":"niagara_newyork_unitedstates",
@@ -4518,7 +4518,7 @@
         "totalConfirmedDelta":7,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.33161163330078,
-        "long":-78.7742691040039,
+        "long":-78.7742691040039
     },
     {
         "id":"sullivan_newyork_unitedstates",
@@ -4530,7 +4530,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.716312408447266,
-        "long":-74.76811218261719,
+        "long":-74.76811218261719
     },
     {
         "id":"broome_newyork_unitedstates",
@@ -4542,7 +4542,7 @@
         "totalConfirmedDelta":9,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.16021728515625,
-        "long":-75.81964874267578,
+        "long":-75.81964874267578
     },
     {
         "id":"schenectady_newyork_unitedstates",
@@ -4554,7 +4554,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.81813430786133,
-        "long":-74.05860137939453,
+        "long":-74.05860137939453
     },
     {
         "id":"saratoga_newyork_unitedstates",
@@ -4566,7 +4566,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.107330322265625,
-        "long":-73.86392211914062,
+        "long":-73.86392211914062
     },
     {
         "id":"rensselaer_newyork_unitedstates",
@@ -4578,7 +4578,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.71086120605469,
-        "long":-73.50973510742188,
+        "long":-73.50973510742188
     },
     {
         "id":"columbia_newyork_unitedstates",
@@ -4590,7 +4590,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.2500114440918,
-        "long":-73.6318588256836,
+        "long":-73.6318588256836
     },
     {
         "id":"madison_newyork_unitedstates",
@@ -4602,7 +4602,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.91291427612305,
-        "long":-75.66979217529297,
+        "long":-75.66979217529297
     },
     {
         "id":"ontario_newyork_unitedstates",
@@ -4614,7 +4614,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.85289001464844,
-        "long":-77.29981231689453,
+        "long":-77.29981231689453
     },
     {
         "id":"chautauqua_newyork_unitedstates",
@@ -4626,7 +4626,7 @@
         "totalConfirmedDelta":9,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.29924774169922,
-        "long":-79.40351867675781,
+        "long":-79.40351867675781
     },
     {
         "id":"warren_newyork_unitedstates",
@@ -4638,7 +4638,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.5609245300293,
-        "long":-73.84593963623047,
+        "long":-73.84593963623047
     },
     {
         "id":"steuben_newyork_unitedstates",
@@ -4650,7 +4650,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.267826080322266,
-        "long":-77.38382720947266,
+        "long":-77.38382720947266
     },
     {
         "id":"fulton_newyork_unitedstates",
@@ -4662,7 +4662,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.113861083984375,
-        "long":-74.42221069335938,
+        "long":-74.42221069335938
     },
     {
         "id":"greene_newyork_unitedstates",
@@ -4674,7 +4674,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.276546478271484,
-        "long":-74.12261962890625,
+        "long":-74.12261962890625
     },
     {
         "id":"orleans_newyork_unitedstates",
@@ -4686,7 +4686,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.371131896972656,
-        "long":-78.23088836669922,
+        "long":-78.23088836669922
     },
     {
         "id":"herkimer_newyork_unitedstates",
@@ -4698,7 +4698,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.41937255859375,
-        "long":-74.96247863769531,
+        "long":-74.96247863769531
     },
     {
         "id":"oswego_newyork_unitedstates",
@@ -4710,7 +4710,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.46392059326172,
-        "long":-76.20874786376953,
+        "long":-76.20874786376953
     },
     {
         "id":"genesee_newyork_unitedstates",
@@ -4722,7 +4722,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.000938415527344,
-        "long":-78.19369506835938,
+        "long":-78.19369506835938
     },
     {
         "id":"wayne_newyork_unitedstates",
@@ -4734,7 +4734,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.32212448120117,
-        "long":-77.04566192626953,
+        "long":-77.04566192626953
     },
     {
         "id":"stlawrence_newyork_unitedstates",
@@ -4746,7 +4746,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":44.49649429321289,
-        "long":-75.06893157958984,
+        "long":-75.06893157958984
     },
     {
         "id":"washington_newyork_unitedstates",
@@ -4758,7 +4758,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.3134765625,
-        "long":-73.43080139160156,
+        "long":-73.43080139160156
     },
     {
         "id":"tompkins_newyork_unitedstates",
@@ -4770,7 +4770,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.45199203491211,
-        "long":-76.47364807128906,
+        "long":-76.47364807128906
     },
     {
         "id":"chenango_newyork_unitedstates",
@@ -4782,7 +4782,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.493492126464844,
-        "long":-75.61153411865234,
+        "long":-75.61153411865234
     },
     {
         "id":"tioga_newyork_unitedstates",
@@ -4794,7 +4794,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.1702766418457,
-        "long":-76.3062973022461,
+        "long":-76.3062973022461
     },
     {
         "id":"montgomery_newyork_unitedstates",
@@ -4806,7 +4806,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.90229034423828,
-        "long":-74.4395980834961,
+        "long":-74.4395980834961
     },
     {
         "id":"cattaraugus_newyork_unitedstates",
@@ -4818,7 +4818,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.24859619140625,
-        "long":-78.6788101196289,
+        "long":-78.6788101196289
     },
     {
         "id":"chemung_newyork_unitedstates",
@@ -4830,7 +4830,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.14118957519531,
-        "long":-76.760009765625,
+        "long":-76.760009765625
     },
     {
         "id":"livingston_newyork_unitedstates",
@@ -4842,7 +4842,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.728084564208984,
-        "long":-77.77543640136719,
+        "long":-77.77543640136719
     },
     {
         "id":"cayuga_newyork_unitedstates",
@@ -4854,7 +4854,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.011043548583984,
-        "long":-76.5745849609375,
+        "long":-76.5745849609375
     },
     {
         "id":"clinton_newyork_unitedstates",
@@ -4866,7 +4866,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":44.74620819091797,
-        "long":-73.67821502685547,
+        "long":-73.67821502685547
     },
     {
         "id":"jefferson_newyork_unitedstates",
@@ -4878,7 +4878,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.99892044067383,
-        "long":-76.05258178710938,
+        "long":-76.05258178710938
     },
     {
         "id":"otsego_newyork_unitedstates",
@@ -4890,7 +4890,7 @@
         "totalConfirmedDelta":9,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.63376998901367,
-        "long":-75.03252410888672,
+        "long":-75.03252410888672
     },
     {
         "id":"essex_newyork_unitedstates",
@@ -4902,7 +4902,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":44.11724090576172,
-        "long":-73.77274322509766,
+        "long":-73.77274322509766
     },
     {
         "id":"wyoming_newyork_unitedstates",
@@ -4914,7 +4914,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.70242691040039,
-        "long":-78.22443389892578,
+        "long":-78.22443389892578
     },
     {
         "id":"delaware_newyork_unitedstates",
@@ -4926,7 +4926,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.19804382324219,
-        "long":-74.96635437011719,
+        "long":-74.96635437011719
     },
     {
         "id":"seneca_newyork_unitedstates",
@@ -4938,7 +4938,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.78104782104492,
-        "long":-76.8238296508789,
+        "long":-76.8238296508789
     },
     {
         "id":"cortland_newyork_unitedstates",
@@ -4950,7 +4950,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.595001220703125,
-        "long":-76.07023620605469,
+        "long":-76.07023620605469
     },
     {
         "id":"allegany_newyork_unitedstates",
@@ -4962,7 +4962,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.25739669799805,
-        "long":-78.02755737304688,
+        "long":-78.02755737304688
     },
     {
         "id":"schoharie_newyork_unitedstates",
@@ -4974,7 +4974,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.58820724487305,
-        "long":-74.442138671875,
+        "long":-74.442138671875
     },
     {
         "id":"yates_newyork_unitedstates",
@@ -4986,7 +4986,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.63343048095703,
-        "long":-77.10546875,
+        "long":-77.10546875
     },
     {
         "id":"franklin_newyork_unitedstates",
@@ -4998,7 +4998,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":44.59294128417969,
-        "long":-74.30368041992188,
+        "long":-74.30368041992188
     },
     {
         "id":"lewis_newyork_unitedstates",
@@ -5010,7 +5010,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.784732818603516,
-        "long":-75.4487075805664,
+        "long":-75.4487075805664
     },
     {
         "id":"schuyler_newyork_unitedstates",
@@ -5022,7 +5022,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.39375305175781,
-        "long":-76.87513732910156,
+        "long":-76.87513732910156
     },
     {
         "id":"hamilton_newyork_unitedstates",
@@ -5034,7 +5034,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":43.6612663269043,
-        "long":-74.49730682373047,
+        "long":-74.49730682373047
     },
     {
         "totalConfirmed":434100,
@@ -5045,7 +5045,7 @@
         "totalConfirmedDelta":698,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.93708038330078,
-        "long":-75.6106948852539,
+        "long":-75.6106948852539
     },
     {
         "id":"georgia_unitedstates",
@@ -5057,7 +5057,7 @@
         "totalConfirmedDelta":54,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.79024124145508,
-        "long":-84.46710968017578,
+        "long":-84.46710968017578
     },
     {
         "id":"gwinnett_georgia_unitedstates",
@@ -5069,7 +5069,7 @@
         "totalConfirmedDelta":45,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.96174621582031,
-        "long":-84.02367401123047,
+        "long":-84.02367401123047
     },
     {
         "id":"cobb_georgia_unitedstates",
@@ -5081,7 +5081,7 @@
         "totalConfirmedDelta":56,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.94147872924805,
-        "long":-84.5766372680664,
+        "long":-84.5766372680664
     },
     {
         "id":"dekalb_georgia_unitedstates",
@@ -5093,7 +5093,7 @@
         "totalConfirmedDelta":55,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.771541595458984,
-        "long":-84.2264633178711,
+        "long":-84.2264633178711
     },
     {
         "id":"hall_georgia_unitedstates",
@@ -5105,7 +5105,7 @@
         "totalConfirmedDelta":16,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.31681823730469,
-        "long":-83.81964111328125,
+        "long":-83.81964111328125
     },
     {
         "id":"chatham_georgia_unitedstates",
@@ -5117,7 +5117,7 @@
         "totalConfirmedDelta":25,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.999820709228516,
-        "long":-81.12887573242188,
+        "long":-81.12887573242188
     },
     {
         "id":"clayton_georgia_unitedstates",
@@ -5129,7 +5129,7 @@
         "totalConfirmedDelta":28,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.541969299316406,
-        "long":-84.35769653320312,
+        "long":-84.35769653320312
     },
     {
         "id":"richmond_georgia_unitedstates",
@@ -5141,7 +5141,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.3596305847168,
-        "long":-82.07361602783203,
+        "long":-82.07361602783203
     },
     {
         "id":"muscogee_georgia_unitedstates",
@@ -5153,7 +5153,7 @@
         "totalConfirmedDelta":18,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.5098991394043,
-        "long":-84.87686920166016,
+        "long":-84.87686920166016
     },
     {
         "id":"bibb_georgia_unitedstates",
@@ -5165,7 +5165,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.806636810302734,
-        "long":-83.69776153564453,
+        "long":-83.69776153564453
     },
     {
         "id":"cherokee_georgia_unitedstates",
@@ -5177,7 +5177,7 @@
         "totalConfirmedDelta":26,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.243980407714844,
-        "long":-84.47627258300781,
+        "long":-84.47627258300781
     },
     {
         "id":"henry_georgia_unitedstates",
@@ -5189,7 +5189,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.4530143737793,
-        "long":-84.15426635742188,
+        "long":-84.15426635742188
     },
     {
         "id":"whitfield_georgia_unitedstates",
@@ -5201,7 +5201,7 @@
         "totalConfirmedDelta":9,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.80552673339844,
-        "long":-84.96720886230469,
+        "long":-84.96720886230469
     },
     {
         "id":"lowndes_georgia_unitedstates",
@@ -5213,7 +5213,7 @@
         "totalConfirmedDelta":9,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.833627700805664,
-        "long":-83.26769256591797,
+        "long":-83.26769256591797
     },
     {
         "id":"douglas_georgia_unitedstates",
@@ -5225,7 +5225,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.70179748535156,
-        "long":-84.76824188232422,
+        "long":-84.76824188232422
     },
     {
         "id":"columbia_georgia_unitedstates",
@@ -5237,7 +5237,7 @@
         "totalConfirmedDelta":9,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.54417037963867,
-        "long":-82.26410675048828,
+        "long":-82.26410675048828
     },
     {
         "id":"forsyth_georgia_unitedstates",
@@ -5249,7 +5249,7 @@
         "totalConfirmedDelta":22,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.225521087646484,
-        "long":-84.12509155273438,
+        "long":-84.12509155273438
     },
     {
         "id":"glynn_georgia_unitedstates",
@@ -5261,7 +5261,7 @@
         "totalConfirmedDelta":16,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.230791091918945,
-        "long":-81.54042053222656,
+        "long":-81.54042053222656
     },
     {
         "id":"dougherty_georgia_unitedstates",
@@ -5273,7 +5273,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.533323287963867,
-        "long":-84.21629333496094,
+        "long":-84.21629333496094
     },
     {
         "id":"clarke_georgia_unitedstates",
@@ -5285,7 +5285,7 @@
         "totalConfirmedDelta":53,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.951107025146484,
-        "long":-83.3674087524414,
+        "long":-83.3674087524414
     },
     {
         "id":"houston_georgia_unitedstates",
@@ -5297,7 +5297,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.458946228027344,
-        "long":-83.66617584228516,
+        "long":-83.66617584228516
     },
     {
         "id":"troup_georgia_unitedstates",
@@ -5309,7 +5309,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.03351974487305,
-        "long":-85.02825927734375,
+        "long":-85.02825927734375
     },
     {
         "id":"bartow_georgia_unitedstates",
@@ -5321,7 +5321,7 @@
         "totalConfirmedDelta":19,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.237770080566406,
-        "long":-84.84053039550781,
+        "long":-84.84053039550781
     },
     {
         "id":"carroll_georgia_unitedstates",
@@ -5333,7 +5333,7 @@
         "totalConfirmedDelta":15,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.58262634277344,
-        "long":-85.07982635498047,
+        "long":-85.07982635498047
     },
     {
         "id":"newton_georgia_unitedstates",
@@ -5345,7 +5345,7 @@
         "totalConfirmedDelta":18,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.55500793457031,
-        "long":-83.8502197265625,
+        "long":-83.8502197265625
     },
     {
         "id":"floyd_georgia_unitedstates",
@@ -5357,7 +5357,7 @@
         "totalConfirmedDelta":19,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.263179779052734,
-        "long":-85.21420288085938,
+        "long":-85.21420288085938
     },
     {
         "id":"paulding_georgia_unitedstates",
@@ -5369,7 +5369,7 @@
         "totalConfirmedDelta":7,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.92042541503906,
-        "long":-84.86720275878906,
+        "long":-84.86720275878906
     },
     {
         "id":"coweta_georgia_unitedstates",
@@ -5381,7 +5381,7 @@
         "totalConfirmedDelta":14,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.35360336303711,
-        "long":-84.76336669921875,
+        "long":-84.76336669921875
     },
     {
         "id":"bulloch_georgia_unitedstates",
@@ -5393,7 +5393,7 @@
         "totalConfirmedDelta":123,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.396846771240234,
-        "long":-81.74317932128906,
+        "long":-81.74317932128906
     },
     {
         "id":"coffee_georgia_unitedstates",
@@ -5405,7 +5405,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.54905128479004,
-        "long":-82.8492202758789,
+        "long":-82.8492202758789
     },
     {
         "id":"colquitt_georgia_unitedstates",
@@ -5417,7 +5417,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.18836212158203,
-        "long":-83.76871490478516,
+        "long":-83.76871490478516
     },
     {
         "id":"barrow_georgia_unitedstates",
@@ -5429,7 +5429,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.99322509765625,
-        "long":-83.71272277832031,
+        "long":-83.71272277832031
     },
     {
         "id":"baldwin_georgia_unitedstates",
@@ -5441,7 +5441,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.0689811706543,
-        "long":-83.24986267089844,
+        "long":-83.24986267089844
     },
     {
         "id":"rockdale_georgia_unitedstates",
@@ -5453,7 +5453,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.65422439575195,
-        "long":-84.02668762207031,
+        "long":-84.02668762207031
     },
     {
         "id":"fayette_georgia_unitedstates",
@@ -5465,7 +5465,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.413909912109375,
-        "long":-84.49427032470703,
+        "long":-84.49427032470703
     },
     {
         "id":"gordon_georgia_unitedstates",
@@ -5477,7 +5477,7 @@
         "totalConfirmedDelta":16,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.5032958984375,
-        "long":-84.87572479248047,
+        "long":-84.87572479248047
     },
     {
         "id":"tift_georgia_unitedstates",
@@ -5489,7 +5489,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.457321166992188,
-        "long":-83.52671813964844,
+        "long":-83.52671813964844
     },
     {
         "id":"jackson_georgia_unitedstates",
@@ -5501,7 +5501,7 @@
         "totalConfirmedDelta":12,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.13389587402344,
-        "long":-83.56634521484375,
+        "long":-83.56634521484375
     },
     {
         "id":"walton_georgia_unitedstates",
@@ -5513,7 +5513,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.78152084350586,
-        "long":-83.73384094238281,
+        "long":-83.73384094238281
     },
     {
         "id":"thomas_georgia_unitedstates",
@@ -5525,7 +5525,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.863677978515625,
-        "long":-83.91930389404297,
+        "long":-83.91930389404297
     },
     {
         "id":"ware_georgia_unitedstates",
@@ -5537,7 +5537,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.053691864013672,
-        "long":-82.42369842529297,
+        "long":-82.42369842529297
     },
     {
         "id":"habersham_georgia_unitedstates",
@@ -5549,7 +5549,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.63097381591797,
-        "long":-83.53117370605469,
+        "long":-83.53117370605469
     },
     {
         "id":"laurens_georgia_unitedstates",
@@ -5561,7 +5561,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.463687896728516,
-        "long":-82.92216491699219,
+        "long":-82.92216491699219
     },
     {
         "id":"polk_georgia_unitedstates",
@@ -5573,7 +5573,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.001686096191406,
-        "long":-85.1881103515625,
+        "long":-85.1881103515625
     },
     {
         "id":"spalding_georgia_unitedstates",
@@ -5585,7 +5585,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.260860443115234,
-        "long":-84.28421020507812,
+        "long":-84.28421020507812
     },
     {
         "id":"chattahoochee_georgia_unitedstates",
@@ -5597,7 +5597,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.34701919555664,
-        "long":-84.78680419921875,
+        "long":-84.78680419921875
     },
     {
         "id":"toombs_georgia_unitedstates",
@@ -5609,7 +5609,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.12178421020508,
-        "long":-82.33135223388672,
+        "long":-82.33135223388672
     },
     {
         "id":"effingham_georgia_unitedstates",
@@ -5621,7 +5621,7 @@
         "totalConfirmedDelta":12,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.367557525634766,
-        "long":-81.34130096435547,
+        "long":-81.34130096435547
     },
     {
         "id":"walker_georgia_unitedstates",
@@ -5633,7 +5633,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.735591888427734,
-        "long":-85.30086517333984,
+        "long":-85.30086517333984
     },
     {
         "id":"camden_georgia_unitedstates",
@@ -5645,7 +5645,7 @@
         "totalConfirmedDelta":7,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.931367874145508,
-        "long":-81.66600799560547,
+        "long":-81.66600799560547
     },
     {
         "id":"decatur_georgia_unitedstates",
@@ -5657,7 +5657,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.87836265563965,
-        "long":-84.57894134521484,
+        "long":-84.57894134521484
     },
     {
         "id":"wayne_georgia_unitedstates",
@@ -5669,7 +5669,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.55141258239746,
-        "long":-81.91674041748047,
+        "long":-81.91674041748047
     },
     {
         "id":"liberty_georgia_unitedstates",
@@ -5681,7 +5681,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.826393127441406,
-        "long":-81.49128723144531,
+        "long":-81.49128723144531
     },
     {
         "id":"appling_georgia_unitedstates",
@@ -5693,7 +5693,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.749300003051758,
-        "long":-82.2889175415039,
+        "long":-82.2889175415039
     },
     {
         "id":"catoosa_georgia_unitedstates",
@@ -5705,7 +5705,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.903690338134766,
-        "long":-85.1382064819336,
+        "long":-85.1382064819336
     },
     {
         "id":"bryan_georgia_unitedstates",
@@ -5717,7 +5717,7 @@
         "totalConfirmedDelta":12,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.01324462890625,
-        "long":-81.4424819946289,
+        "long":-81.4424819946289
     },
     {
         "id":"sumter_georgia_unitedstates",
@@ -5729,7 +5729,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.039939880371094,
-        "long":-84.19705963134766,
+        "long":-84.19705963134766
     },
     {
         "id":"stephens_georgia_unitedstates",
@@ -5741,7 +5741,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.554046630859375,
-        "long":-83.29354858398438,
+        "long":-83.29354858398438
     },
     {
         "id":"emanuel_georgia_unitedstates",
@@ -5753,7 +5753,7 @@
         "totalConfirmedDelta":44,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.589759826660156,
-        "long":-82.30168151855469,
+        "long":-82.30168151855469
     },
     {
         "id":"gilmer_georgia_unitedstates",
@@ -5765,7 +5765,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.69119644165039,
-        "long":-84.45552062988281,
+        "long":-84.45552062988281
     },
     {
         "id":"harris_georgia_unitedstates",
@@ -5777,7 +5777,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.73603820800781,
-        "long":-84.90911102294922,
+        "long":-84.90911102294922
     },
     {
         "id":"mitchell_georgia_unitedstates",
@@ -5789,7 +5789,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.225271224975586,
-        "long":-84.19418334960938,
+        "long":-84.19418334960938
     },
     {
         "id":"murray_georgia_unitedstates",
@@ -5801,7 +5801,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.78840255737305,
-        "long":-84.7481460571289,
+        "long":-84.7481460571289
     },
     {
         "id":"lumpkin_georgia_unitedstates",
@@ -5813,7 +5813,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.57210159301758,
-        "long":-84.00272369384766,
+        "long":-84.00272369384766
     },
     {
         "id":"tattnall_georgia_unitedstates",
@@ -5825,7 +5825,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.04576110839844,
-        "long":-82.05815124511719,
+        "long":-82.05815124511719
     },
     {
         "id":"dawson_georgia_unitedstates",
@@ -5837,7 +5837,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.444297790527344,
-        "long":-84.17066955566406,
+        "long":-84.17066955566406
     },
     {
         "id":"grady_georgia_unitedstates",
@@ -5849,7 +5849,7 @@
         "totalConfirmedDelta":18,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.87470054626465,
-        "long":-84.2343521118164,
+        "long":-84.2343521118164
     },
     {
         "id":"lee_georgia_unitedstates",
@@ -5861,7 +5861,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.77959632873535,
-        "long":-84.14087677001953,
+        "long":-84.14087677001953
     },
     {
         "id":"upson_georgia_unitedstates",
@@ -5873,7 +5873,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.88119125366211,
-        "long":-84.29936218261719,
+        "long":-84.29936218261719
     },
     {
         "id":"jefferson_georgia_unitedstates",
@@ -5885,7 +5885,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.05491256713867,
-        "long":-82.41810607910156,
+        "long":-82.41810607910156
     },
     {
         "id":"burke_georgia_unitedstates",
@@ -5897,7 +5897,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.06109619140625,
-        "long":-82.00070190429688,
+        "long":-82.00070190429688
     },
     {
         "id":"jeffdavis_georgia_unitedstates",
@@ -5909,7 +5909,7 @@
         "totalConfirmedDelta":14,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.805431365966797,
-        "long":-82.63674926757812,
+        "long":-82.63674926757812
     },
     {
         "id":"benhill_georgia_unitedstates",
@@ -5921,7 +5921,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.759714126586914,
-        "long":-83.2208480834961,
+        "long":-83.2208480834961
     },
     {
         "id":"putnam_georgia_unitedstates",
@@ -5933,7 +5933,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.32175827026367,
-        "long":-83.37284088134766,
+        "long":-83.37284088134766
     },
     {
         "id":"washington_georgia_unitedstates",
@@ -5945,7 +5945,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.969520568847656,
-        "long":-82.79586029052734,
+        "long":-82.79586029052734
     },
     {
         "id":"monroe_georgia_unitedstates",
@@ -5957,7 +5957,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.014102935791016,
-        "long":-83.91866302490234,
+        "long":-83.91866302490234
     },
     {
         "id":"peach_georgia_unitedstates",
@@ -5969,7 +5969,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.56881332397461,
-        "long":-83.82678985595703,
+        "long":-83.82678985595703
     },
     {
         "id":"butts_georgia_unitedstates",
@@ -5981,7 +5981,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.287803649902344,
-        "long":-83.95714569091797,
+        "long":-83.95714569091797
     },
     {
         "id":"charlton_georgia_unitedstates",
@@ -5993,7 +5993,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.78171157836914,
-        "long":-82.13776397705078,
+        "long":-82.13776397705078
     },
     {
         "id":"chattooga_georgia_unitedstates",
@@ -6005,7 +6005,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.47492218017578,
-        "long":-85.34555053710938,
+        "long":-85.34555053710938
     },
     {
         "id":"oconee_georgia_unitedstates",
@@ -6017,7 +6017,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.834861755371094,
-        "long":-83.43704223632812,
+        "long":-83.43704223632812
     },
     {
         "id":"franklin_georgia_unitedstates",
@@ -6029,7 +6029,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.37555694580078,
-        "long":-83.2292251586914,
+        "long":-83.2292251586914
     },
     {
         "id":"madison_georgia_unitedstates",
@@ -6041,7 +6041,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.12777328491211,
-        "long":-83.20911407470703,
+        "long":-83.20911407470703
     },
     {
         "id":"pierce_georgia_unitedstates",
@@ -6053,7 +6053,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.35881805419922,
-        "long":-82.2127456665039,
+        "long":-82.2127456665039
     },
     {
         "id":"pickens_georgia_unitedstates",
@@ -6065,7 +6065,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.46428680419922,
-        "long":-84.46565246582031,
+        "long":-84.46565246582031
     },
     {
         "id":"bacon_georgia_unitedstates",
@@ -6077,7 +6077,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.553672790527344,
-        "long":-82.45267486572266,
+        "long":-82.45267486572266
     },
     {
         "id":"mcduffie_georgia_unitedstates",
@@ -6089,7 +6089,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.48284912109375,
-        "long":-82.4814224243164,
+        "long":-82.4814224243164
     },
     {
         "id":"white_georgia_unitedstates",
@@ -6101,7 +6101,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.64612579345703,
-        "long":-83.7469711303711,
+        "long":-83.7469711303711
     },
     {
         "id":"cook_georgia_unitedstates",
@@ -6113,7 +6113,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.153913497924805,
-        "long":-83.43035888671875,
+        "long":-83.43035888671875
     },
     {
         "id":"worth_georgia_unitedstates",
@@ -6125,7 +6125,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.55158805847168,
-        "long":-83.85098266601562,
+        "long":-83.85098266601562
     },
     {
         "id":"meriwether_georgia_unitedstates",
@@ -6137,7 +6137,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.04078674316406,
-        "long":-84.68840789794922,
+        "long":-84.68840789794922
     },
     {
         "id":"brooks_georgia_unitedstates",
@@ -6149,7 +6149,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.842130661010742,
-        "long":-83.5804443359375,
+        "long":-83.5804443359375
     },
     {
         "id":"union_georgia_unitedstates",
@@ -6161,7 +6161,7 @@
         "totalConfirmedDelta":11,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.83393096923828,
-        "long":-83.99044799804688,
+        "long":-83.99044799804688
     },
     {
         "id":"crisp_georgia_unitedstates",
@@ -6173,7 +6173,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.922889709472656,
-        "long":-83.76805877685547,
+        "long":-83.76805877685547
     },
     {
         "id":"elbert_georgia_unitedstates",
@@ -6185,7 +6185,7 @@
         "totalConfirmedDelta":12,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.11686706542969,
-        "long":-82.84014892578125,
+        "long":-82.84014892578125
     },
     {
         "id":"jones_georgia_unitedstates",
@@ -6197,7 +6197,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.025150299072266,
-        "long":-83.56034851074219,
+        "long":-83.56034851074219
     },
     {
         "id":"fannin_georgia_unitedstates",
@@ -6209,7 +6209,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.86418533325195,
-        "long":-84.31991577148438,
+        "long":-84.31991577148438
     },
     {
         "id":"greene_georgia_unitedstates",
@@ -6221,7 +6221,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.57875061035156,
-        "long":-83.16670989990234,
+        "long":-83.16670989990234
     },
     {
         "id":"morgan_georgia_unitedstates",
@@ -6233,7 +6233,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.59072494506836,
-        "long":-83.49236297607422,
+        "long":-83.49236297607422
     },
     {
         "id":"early_georgia_unitedstates",
@@ -6245,7 +6245,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.322755813598633,
-        "long":-84.90367889404297,
+        "long":-84.90367889404297
     },
     {
         "id":"hart_georgia_unitedstates",
@@ -6257,7 +6257,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.35086441040039,
-        "long":-82.96422576904297,
+        "long":-82.96422576904297
     },
     {
         "id":"atkinson_georgia_unitedstates",
@@ -6269,7 +6269,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.2971248626709,
-        "long":-82.8801498413086,
+        "long":-82.8801498413086
     },
     {
         "id":"berrien_georgia_unitedstates",
@@ -6281,7 +6281,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.276060104370117,
-        "long":-83.22975158691406,
+        "long":-83.22975158691406
     },
     {
         "id":"banks_georgia_unitedstates",
@@ -6293,7 +6293,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.3541145324707,
-        "long":-83.49742889404297,
+        "long":-83.49742889404297
     },
     {
         "id":"evans_georgia_unitedstates",
@@ -6305,7 +6305,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.15679931640625,
-        "long":-81.88693237304688,
+        "long":-81.88693237304688
     },
     {
         "id":"hancock_georgia_unitedstates",
@@ -6317,7 +6317,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.2702522277832,
-        "long":-83.0009994506836,
+        "long":-83.0009994506836
     },
     {
         "id":"stewart_georgia_unitedstates",
@@ -6329,7 +6329,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.07847595214844,
-        "long":-84.83517456054688,
+        "long":-84.83517456054688
     },
     {
         "id":"bleckley_georgia_unitedstates",
@@ -6341,7 +6341,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.43453598022461,
-        "long":-83.32783508300781,
+        "long":-83.32783508300781
     },
     {
         "id":"candler_georgia_unitedstates",
@@ -6353,7 +6353,7 @@
         "totalConfirmedDelta":16,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.40338134765625,
-        "long":-82.0736312866211,
+        "long":-82.0736312866211
     },
     {
         "id":"telfair_georgia_unitedstates",
@@ -6365,7 +6365,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.929319381713867,
-        "long":-82.9389877319336,
+        "long":-82.9389877319336
     },
     {
         "id":"haralson_georgia_unitedstates",
@@ -6377,7 +6377,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.794166564941406,
-        "long":-85.2108383178711,
+        "long":-85.2108383178711
     },
     {
         "id":"dodge_georgia_unitedstates",
@@ -6389,7 +6389,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.172218322753906,
-        "long":-83.16835021972656,
+        "long":-83.16835021972656
     },
     {
         "id":"lamar_georgia_unitedstates",
@@ -6401,7 +6401,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.0764274597168,
-        "long":-84.13951110839844,
+        "long":-84.13951110839844
     },
     {
         "id":"terrell_georgia_unitedstates",
@@ -6413,7 +6413,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.77676010131836,
-        "long":-84.4367904663086,
+        "long":-84.4367904663086
     },
     {
         "id":"johnson_georgia_unitedstates",
@@ -6425,7 +6425,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.70149230957031,
-        "long":-82.66004180908203,
+        "long":-82.66004180908203
     },
     {
         "id":"randolph_georgia_unitedstates",
@@ -6437,7 +6437,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.762596130371094,
-        "long":-84.75413513183594,
+        "long":-84.75413513183594
     },
     {
         "id":"jenkins_georgia_unitedstates",
@@ -6449,7 +6449,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.79240798950195,
-        "long":-81.96353912353516,
+        "long":-81.96353912353516
     },
     {
         "id":"brantley_georgia_unitedstates",
@@ -6461,7 +6461,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.196857452392578,
-        "long":-81.98201751708984,
+        "long":-81.98201751708984
     },
     {
         "id":"wilkinson_georgia_unitedstates",
@@ -6473,7 +6473,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.802433013916016,
-        "long":-83.17127990722656,
+        "long":-83.17127990722656
     },
     {
         "id":"clinch_georgia_unitedstates",
@@ -6485,7 +6485,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.91495704650879,
-        "long":-82.7061996459961,
+        "long":-82.7061996459961
     },
     {
         "id":"dooly_georgia_unitedstates",
@@ -6497,7 +6497,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.15713882446289,
-        "long":-83.79877471923828,
+        "long":-83.79877471923828
     },
     {
         "id":"seminole_georgia_unitedstates",
@@ -6509,7 +6509,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.93865966796875,
-        "long":-84.86880493164062,
+        "long":-84.86880493164062
     },
     {
         "id":"screven_georgia_unitedstates",
@@ -6521,7 +6521,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.75056838989258,
-        "long":-81.61198425292969,
+        "long":-81.61198425292969
     },
     {
         "id":"oglethorpe_georgia_unitedstates",
@@ -6533,7 +6533,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.880645751953125,
-        "long":-83.08056640625,
+        "long":-83.08056640625
     },
     {
         "id":"rabun_georgia_unitedstates",
@@ -6545,7 +6545,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.881675720214844,
-        "long":-83.40221405029297,
+        "long":-83.40221405029297
     },
     {
         "id":"turner_georgia_unitedstates",
@@ -6557,7 +6557,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.716352462768555,
-        "long":-83.62405395507812,
+        "long":-83.62405395507812
     },
     {
         "id":"pike_georgia_unitedstates",
@@ -6569,7 +6569,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.09217834472656,
-        "long":-84.38919067382812,
+        "long":-84.38919067382812
     },
     {
         "id":"lanier_georgia_unitedstates",
@@ -6581,7 +6581,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.038021087646484,
-        "long":-83.06258392333984,
+        "long":-83.06258392333984
     },
     {
         "id":"mcintosh_georgia_unitedstates",
@@ -6593,7 +6593,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.497373580932617,
-        "long":-81.40495300292969,
+        "long":-81.40495300292969
     },
     {
         "id":"echols_georgia_unitedstates",
@@ -6605,7 +6605,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":30.71006965637207,
-        "long":-82.8939208984375,
+        "long":-82.8939208984375
     },
     {
         "id":"calhoun_georgia_unitedstates",
@@ -6617,7 +6617,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.52910614013672,
-        "long":-84.6244888305664,
+        "long":-84.6244888305664
     },
     {
         "id":"wilcox_georgia_unitedstates",
@@ -6629,7 +6629,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.97294044494629,
-        "long":-83.4325180053711,
+        "long":-83.4325180053711
     },
     {
         "id":"wilkes_georgia_unitedstates",
@@ -6641,7 +6641,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.78196716308594,
-        "long":-82.74337768554688,
+        "long":-82.74337768554688
     },
     {
         "id":"irwin_georgia_unitedstates",
@@ -6653,7 +6653,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.60228729248047,
-        "long":-83.27632141113281,
+        "long":-83.27632141113281
     },
     {
         "id":"montgomery_georgia_unitedstates",
@@ -6665,7 +6665,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.17335510253906,
-        "long":-82.53483581542969,
+        "long":-82.53483581542969
     },
     {
         "id":"miller_georgia_unitedstates",
@@ -6677,7 +6677,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.163944244384766,
-        "long":-84.73065185546875,
+        "long":-84.73065185546875
     },
     {
         "id":"pulaski_georgia_unitedstates",
@@ -6689,7 +6689,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.232208251953125,
-        "long":-83.47595977783203,
+        "long":-83.47595977783203
     },
     {
         "id":"macon_georgia_unitedstates",
@@ -6701,7 +6701,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.357696533203125,
-        "long":-84.04259490966797,
+        "long":-84.04259490966797
     },
     {
         "id":"towns_georgia_unitedstates",
@@ -6713,7 +6713,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.91664123535156,
-        "long":-83.7371826171875,
+        "long":-83.7371826171875
     },
     {
         "id":"treutlen_georgia_unitedstates",
@@ -6725,7 +6725,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.40382766723633,
-        "long":-82.5672607421875,
+        "long":-82.5672607421875
     },
     {
         "id":"jasper_georgia_unitedstates",
@@ -6737,7 +6737,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.31637954711914,
-        "long":-83.68809509277344,
+        "long":-83.68809509277344
     },
     {
         "id":"dade_georgia_unitedstates",
@@ -6749,7 +6749,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.854549407958984,
-        "long":-85.50443267822266,
+        "long":-85.50443267822266
     },
     {
         "id":"lincoln_georgia_unitedstates",
@@ -6761,7 +6761,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.79358673095703,
-        "long":-82.45133209228516,
+        "long":-82.45133209228516
     },
     {
         "id":"long_georgia_unitedstates",
@@ -6773,7 +6773,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.752546310424805,
-        "long":-81.74578857421875,
+        "long":-81.74578857421875
     },
     {
         "id":"marion_georgia_unitedstates",
@@ -6785,7 +6785,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.35343933105469,
-        "long":-84.5245590209961,
+        "long":-84.5245590209961
     },
     {
         "id":"heard_georgia_unitedstates",
@@ -6797,7 +6797,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.29691696166992,
-        "long":-85.12838745117188,
+        "long":-85.12838745117188
     },
     {
         "id":"twiggs_georgia_unitedstates",
@@ -6809,7 +6809,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.66716766357422,
-        "long":-83.427001953125,
+        "long":-83.427001953125
     },
     {
         "id":"taylor_georgia_unitedstates",
@@ -6821,7 +6821,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.55558776855469,
-        "long":-84.24922943115234,
+        "long":-84.24922943115234
     },
     {
         "id":"talbot_georgia_unitedstates",
@@ -6833,7 +6833,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.69942092895508,
-        "long":-84.53297424316406,
+        "long":-84.53297424316406
     },
     {
         "id":"crawford_georgia_unitedstates",
@@ -6845,7 +6845,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.714500427246094,
-        "long":-83.98633575439453,
+        "long":-83.98633575439453
     },
     {
         "id":"wheeler_georgia_unitedstates",
@@ -6857,7 +6857,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.11699676513672,
-        "long":-82.72456359863281,
+        "long":-82.72456359863281
     },
     {
         "id":"warren_georgia_unitedstates",
@@ -6869,7 +6869,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.40892791748047,
-        "long":-82.67672729492188,
+        "long":-82.67672729492188
     },
     {
         "id":"clay_georgia_unitedstates",
@@ -6881,7 +6881,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.62617301940918,
-        "long":-84.98009490966797,
+        "long":-84.98009490966797
     },
     {
         "id":"schley_georgia_unitedstates",
@@ -6893,7 +6893,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.26200866699219,
-        "long":-84.31478881835938,
+        "long":-84.31478881835938
     },
     {
         "id":"baker_georgia_unitedstates",
@@ -6905,7 +6905,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.326095581054688,
-        "long":-84.44446563720703,
+        "long":-84.44446563720703
     },
     {
         "id":"webster_georgia_unitedstates",
@@ -6917,7 +6917,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.04672622680664,
-        "long":-84.5508804321289,
+        "long":-84.5508804321289
     },
     {
         "id":"glascock_georgia_unitedstates",
@@ -6929,7 +6929,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.229305267333984,
-        "long":-82.61079406738281,
+        "long":-82.61079406738281
     },
     {
         "id":"quitman_georgia_unitedstates",
@@ -6941,7 +6941,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.86728286743164,
-        "long":-85.01860046386719,
+        "long":-85.01860046386719
     },
     {
         "id":"taliaferro_georgia_unitedstates",
@@ -6953,7 +6953,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.566131591796875,
-        "long":-82.87881469726562,
+        "long":-82.87881469726562
     },
     {
         "totalConfirmed":268973,
@@ -6964,7 +6964,7 @@
         "totalConfirmedDelta":1215,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.64833068847656,
-        "long":-83.4445571899414,
+        "long":-83.4445571899414
     },
     {
         "id":"illinois_unitedstates",
@@ -6976,7 +6976,7 @@
         "totalConfirmedDelta":879,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.890533447265625,
-        "long":-87.69042205810547,
+        "long":-87.69042205810547
     },
     {
         "id":"lake_illinois_unitedstates",
@@ -6988,7 +6988,7 @@
         "totalConfirmedDelta":67,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.326637268066406,
-        "long":-87.68607330322266,
+        "long":-87.68607330322266
     },
     {
         "id":"dupage_illinois_unitedstates",
@@ -7000,7 +7000,7 @@
         "totalConfirmedDelta":95,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.8519401550293,
-        "long":-88.08560943603516,
+        "long":-88.08560943603516
     },
     {
         "id":"will_illinois_unitedstates",
@@ -7012,7 +7012,7 @@
         "totalConfirmedDelta":76,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.4450569152832,
-        "long":-87.97865295410156,
+        "long":-87.97865295410156
     },
     {
         "id":"kane_illinois_unitedstates",
@@ -7024,7 +7024,7 @@
         "totalConfirmedDelta":56,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.938873291015625,
-        "long":-88.42863464355469,
+        "long":-88.42863464355469
     },
     {
         "id":"stclair_illinois_unitedstates",
@@ -7036,7 +7036,7 @@
         "totalConfirmedDelta":17,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.470333099365234,
-        "long":-89.92842102050781,
+        "long":-89.92842102050781
     },
     {
         "id":"winnebago_illinois_unitedstates",
@@ -7048,7 +7048,7 @@
         "totalConfirmedDelta":31,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.33625793457031,
-        "long":-89.16085052490234,
+        "long":-89.16085052490234
     },
     {
         "id":"madison_illinois_unitedstates",
@@ -7060,7 +7060,7 @@
         "totalConfirmedDelta":26,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.82978057861328,
-        "long":-89.90503692626953,
+        "long":-89.90503692626953
     },
     {
         "id":"mchenry_illinois_unitedstates",
@@ -7072,7 +7072,7 @@
         "totalConfirmedDelta":41,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.32435607910156,
-        "long":-88.45243072509766,
+        "long":-88.45243072509766
     },
     {
         "id":"champaign_illinois_unitedstates",
@@ -7084,7 +7084,7 @@
         "totalConfirmedDelta":55,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.14008712768555,
-        "long":-88.19915771484375,
+        "long":-88.19915771484375
     },
     {
         "id":"peoria_illinois_unitedstates",
@@ -7096,7 +7096,7 @@
         "totalConfirmedDelta":57,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.788028717041016,
-        "long":-89.76010131835938,
+        "long":-89.76010131835938
     },
     {
         "id":"kankakee_illinois_unitedstates",
@@ -7108,7 +7108,7 @@
         "totalConfirmedDelta":48,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.13771438598633,
-        "long":-87.86181640625,
+        "long":-87.86181640625
     },
     {
         "id":"rockisland_illinois_unitedstates",
@@ -7120,7 +7120,7 @@
         "totalConfirmedDelta":25,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.46726989746094,
-        "long":-90.56746673583984,
+        "long":-90.56746673583984
     },
     {
         "id":"sangamon_illinois_unitedstates",
@@ -7132,7 +7132,7 @@
         "totalConfirmedDelta":7,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.75815963745117,
-        "long":-89.65888977050781,
+        "long":-89.65888977050781
     },
     {
         "id":"mclean_illinois_unitedstates",
@@ -7144,7 +7144,7 @@
         "totalConfirmedDelta":200,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.490875244140625,
-        "long":-88.8473129272461,
+        "long":-88.8473129272461
     },
     {
         "id":"kendall_illinois_unitedstates",
@@ -7156,7 +7156,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.5905876159668,
-        "long":-88.42880249023438,
+        "long":-88.42880249023438
     },
     {
         "id":"lasalle_illinois_unitedstates",
@@ -7168,7 +7168,7 @@
         "totalConfirmedDelta":18,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.3440055847168,
-        "long":-88.88594818115234,
+        "long":-88.88594818115234
     },
     {
         "id":"dekalb_illinois_unitedstates",
@@ -7180,7 +7180,7 @@
         "totalConfirmedDelta":11,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.893558502197266,
-        "long":-88.7702865600586,
+        "long":-88.7702865600586
     },
     {
         "id":"tazewell_illinois_unitedstates",
@@ -7192,7 +7192,7 @@
         "totalConfirmedDelta":23,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.507503509521484,
-        "long":-89.51351928710938,
+        "long":-89.51351928710938
     },
     {
         "id":"coles_illinois_unitedstates",
@@ -7204,7 +7204,7 @@
         "totalConfirmedDelta":15,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.520286560058594,
-        "long":-88.22175598144531,
+        "long":-88.22175598144531
     },
     {
         "id":"macon_illinois_unitedstates",
@@ -7216,7 +7216,7 @@
         "totalConfirmedDelta":11,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.86000442504883,
-        "long":-88.96157836914062,
+        "long":-88.96157836914062
     },
     {
         "id":"jackson_illinois_unitedstates",
@@ -7228,7 +7228,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.78510665893555,
-        "long":-89.38207244873047,
+        "long":-89.38207244873047
     },
     {
         "id":"williamson_illinois_unitedstates",
@@ -7240,7 +7240,7 @@
         "totalConfirmedDelta":19,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.730167388916016,
-        "long":-88.9299087524414,
+        "long":-88.9299087524414
     },
     {
         "id":"boone_illinois_unitedstates",
@@ -7252,7 +7252,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.32307815551758,
-        "long":-88.82337188720703,
+        "long":-88.82337188720703
     },
     {
         "id":"adams_illinois_unitedstates",
@@ -7264,7 +7264,7 @@
         "totalConfirmedDelta":7,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.987884521484375,
-        "long":-91.18844604492188,
+        "long":-91.18844604492188
     },
     {
         "id":"randolph_illinois_unitedstates",
@@ -7276,7 +7276,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.052093505859375,
-        "long":-89.82544708251953,
+        "long":-89.82544708251953
     },
     {
         "id":"clinton_illinois_unitedstates",
@@ -7288,7 +7288,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.60655212402344,
-        "long":-89.4224624633789,
+        "long":-89.4224624633789
     },
     {
         "id":"effingham_illinois_unitedstates",
@@ -7300,7 +7300,7 @@
         "totalConfirmedDelta":17,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.05976104736328,
-        "long":-88.58984375,
+        "long":-88.58984375
     },
     {
         "id":"whiteside_illinois_unitedstates",
@@ -7312,7 +7312,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.756256103515625,
-        "long":-89.91410827636719,
+        "long":-89.91410827636719
     },
     {
         "id":"morgan_illinois_unitedstates",
@@ -7324,7 +7324,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.7155647277832,
-        "long":-90.20153045654297,
+        "long":-90.20153045654297
     },
     {
         "id":"grundy_illinois_unitedstates",
@@ -7336,7 +7336,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.28509521484375,
-        "long":-88.41849517822266,
+        "long":-88.41849517822266
     },
     {
         "id":"ogle_illinois_unitedstates",
@@ -7348,7 +7348,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.04264450073242,
-        "long":-89.32067108154297,
+        "long":-89.32067108154297
     },
     {
         "id":"henry_illinois_unitedstates",
@@ -7360,7 +7360,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.35309600830078,
-        "long":-90.1313705444336,
+        "long":-90.1313705444336
     },
     {
         "id":"jefferson_illinois_unitedstates",
@@ -7372,7 +7372,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.300506591796875,
-        "long":-88.92399597167969,
+        "long":-88.92399597167969
     },
     {
         "id":"knox_illinois_unitedstates",
@@ -7384,7 +7384,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.93178939819336,
-        "long":-90.21320343017578,
+        "long":-90.21320343017578
     },
     {
         "id":"monroe_illinois_unitedstates",
@@ -7396,7 +7396,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.27864456176758,
-        "long":-90.17729187011719,
+        "long":-90.17729187011719
     },
     {
         "id":"union_illinois_unitedstates",
@@ -7408,7 +7408,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.47124099731445,
-        "long":-89.2550277709961,
+        "long":-89.2550277709961
     },
     {
         "id":"stephenson_illinois_unitedstates",
@@ -7420,7 +7420,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.351837158203125,
-        "long":-89.66224670410156,
+        "long":-89.66224670410156
     },
     {
         "id":"bureau_illinois_unitedstates",
@@ -7432,7 +7432,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.40414810180664,
-        "long":-89.5286636352539,
+        "long":-89.5286636352539
     },
     {
         "id":"macoupin_illinois_unitedstates",
@@ -7444,7 +7444,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.26100158691406,
-        "long":-89.92440032958984,
+        "long":-89.92440032958984
     },
     {
         "id":"franklin_illinois_unitedstates",
@@ -7456,7 +7456,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.992252349853516,
-        "long":-88.92420959472656,
+        "long":-88.92420959472656
     },
     {
         "id":"vermilion_illinois_unitedstates",
@@ -7468,7 +7468,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.183406829833984,
-        "long":-87.7328109741211,
+        "long":-87.7328109741211
     },
     {
         "id":"cass_illinois_unitedstates",
@@ -7480,7 +7480,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.97404098510742,
-        "long":-90.24734497070312,
+        "long":-90.24734497070312
     },
     {
         "id":"iroquois_illinois_unitedstates",
@@ -7492,7 +7492,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.747230529785156,
-        "long":-87.82430267333984,
+        "long":-87.82430267333984
     },
     {
         "id":"perry_illinois_unitedstates",
@@ -7504,7 +7504,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.083736419677734,
-        "long":-89.3670425415039,
+        "long":-89.3670425415039
     },
     {
         "id":"jersey_illinois_unitedstates",
@@ -7516,7 +7516,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.085594177246094,
-        "long":-90.35652923583984,
+        "long":-90.35652923583984
     },
     {
         "id":"woodford_illinois_unitedstates",
@@ -7528,7 +7528,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.788307189941406,
-        "long":-89.2112808227539,
+        "long":-89.2112808227539
     },
     {
         "id":"marion_illinois_unitedstates",
@@ -7540,7 +7540,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.64958572387695,
-        "long":-88.91893005371094,
+        "long":-88.91893005371094
     },
     {
         "id":"logan_illinois_unitedstates",
@@ -7552,7 +7552,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.12452697753906,
-        "long":-89.36752319335938,
+        "long":-89.36752319335938
     },
     {
         "id":"warren_illinois_unitedstates",
@@ -7564,7 +7564,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.848838806152344,
-        "long":-90.6150131225586,
+        "long":-90.6150131225586
     },
     {
         "id":"montgomery_illinois_unitedstates",
@@ -7576,7 +7576,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.23103713989258,
-        "long":-89.47882080078125,
+        "long":-89.47882080078125
     },
     {
         "id":"lee_illinois_unitedstates",
@@ -7588,7 +7588,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.7462043762207,
-        "long":-89.30033874511719,
+        "long":-89.30033874511719
     },
     {
         "id":"christian_illinois_unitedstates",
@@ -7600,7 +7600,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.5457763671875,
-        "long":-89.27725219726562,
+        "long":-89.27725219726562
     },
     {
         "id":"douglas_illinois_unitedstates",
@@ -7612,7 +7612,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.76945114135742,
-        "long":-88.21732330322266,
+        "long":-88.21732330322266
     },
     {
         "id":"mcdonough_illinois_unitedstates",
@@ -7624,7 +7624,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.45623779296875,
-        "long":-90.67784881591797,
+        "long":-90.67784881591797
     },
     {
         "id":"shelby_illinois_unitedstates",
@@ -7636,7 +7636,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.39116287231445,
-        "long":-88.80548858642578,
+        "long":-88.80548858642578
     },
     {
         "id":"livingston_illinois_unitedstates",
@@ -7648,7 +7648,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.89155578613281,
-        "long":-88.55772399902344,
+        "long":-88.55772399902344
     },
     {
         "id":"jodaviess_illinois_unitedstates",
@@ -7660,7 +7660,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.36578369140625,
-        "long":-90.2125015258789,
+        "long":-90.2125015258789
     },
     {
         "id":"fayette_illinois_unitedstates",
@@ -7672,7 +7672,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.00016784667969,
-        "long":-89.02410888671875,
+        "long":-89.02410888671875
     },
     {
         "id":"saline_illinois_unitedstates",
@@ -7684,7 +7684,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.75313949584961,
-        "long":-88.54075622558594,
+        "long":-88.54075622558594
     },
     {
         "id":"moultrie_illinois_unitedstates",
@@ -7696,7 +7696,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.6414909362793,
-        "long":-88.6192855834961,
+        "long":-88.6192855834961
     },
     {
         "id":"bond_illinois_unitedstates",
@@ -7708,7 +7708,7 @@
         "totalConfirmedDelta":12,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.88682556152344,
-        "long":-89.43551635742188,
+        "long":-89.43551635742188
     },
     {
         "id":"cumberland_illinois_unitedstates",
@@ -7720,7 +7720,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.2733268737793,
-        "long":-88.24016571044922,
+        "long":-88.24016571044922
     },
     {
         "id":"hancock_illinois_unitedstates",
@@ -7732,7 +7732,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.403831481933594,
-        "long":-91.16450500488281,
+        "long":-91.16450500488281
     },
     {
         "id":"lawrence_illinois_unitedstates",
@@ -7744,7 +7744,7 @@
         "totalConfirmedDelta":24,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.71991729736328,
-        "long":-87.72676849365234,
+        "long":-87.72676849365234
     },
     {
         "id":"carroll_illinois_unitedstates",
@@ -7756,7 +7756,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":42.068729400634766,
-        "long":-89.93431854248047,
+        "long":-89.93431854248047
     },
     {
         "id":"jasper_illinois_unitedstates",
@@ -7768,7 +7768,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.01000213623047,
-        "long":-88.15380859375,
+        "long":-88.15380859375
     },
     {
         "id":"white_illinois_unitedstates",
@@ -7780,7 +7780,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.087467193603516,
-        "long":-88.17955780029297,
+        "long":-88.17955780029297
     },
     {
         "id":"pulaski_illinois_unitedstates",
@@ -7792,7 +7792,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.22294998168945,
-        "long":-89.12659454345703,
+        "long":-89.12659454345703
     },
     {
         "id":"clark_illinois_unitedstates",
@@ -7804,7 +7804,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.33357238769531,
-        "long":-87.78767395019531,
+        "long":-87.78767395019531
     },
     {
         "id":"johnson_illinois_unitedstates",
@@ -7816,7 +7816,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.45958709716797,
-        "long":-88.88079833984375,
+        "long":-88.88079833984375
     },
     {
         "id":"washington_illinois_unitedstates",
@@ -7828,7 +7828,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.35225296020508,
-        "long":-89.41049194335938,
+        "long":-89.41049194335938
     },
     {
         "id":"wabash_illinois_unitedstates",
@@ -7840,7 +7840,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.445987701416016,
-        "long":-87.8443374633789,
+        "long":-87.8443374633789
     },
     {
         "id":"greene_illinois_unitedstates",
@@ -7852,7 +7852,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.35609817504883,
-        "long":-90.39045715332031,
+        "long":-90.39045715332031
     },
     {
         "id":"wayne_illinois_unitedstates",
@@ -7864,7 +7864,7 @@
         "totalConfirmedDelta":5,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.42953872680664,
-        "long":-88.4255599975586,
+        "long":-88.4255599975586
     },
     {
         "id":"mercer_illinois_unitedstates",
@@ -7876,7 +7876,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.205352783203125,
-        "long":-90.74140167236328,
+        "long":-90.74140167236328
     },
     {
         "id":"fulton_illinois_unitedstates",
@@ -7888,7 +7888,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.472755432128906,
-        "long":-90.20751953125,
+        "long":-90.20751953125
     },
     {
         "id":"mason_illinois_unitedstates",
@@ -7900,7 +7900,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.24020767211914,
-        "long":-89.91585540771484,
+        "long":-89.91585540771484
     },
     {
         "id":"edgar_illinois_unitedstates",
@@ -7912,7 +7912,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.67852783203125,
-        "long":-87.74555206298828,
+        "long":-87.74555206298828
     },
     {
         "id":"piatt_illinois_unitedstates",
@@ -7924,7 +7924,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.010311126708984,
-        "long":-88.591064453125,
+        "long":-88.591064453125
     },
     {
         "id":"clay_illinois_unitedstates",
@@ -7936,7 +7936,7 @@
         "totalConfirmedDelta":4,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.75413131713867,
-        "long":-88.49015808105469,
+        "long":-88.49015808105469
     },
     {
         "id":"crawford_illinois_unitedstates",
@@ -7948,7 +7948,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.00271224975586,
-        "long":-87.75955200195312,
+        "long":-87.75955200195312
     },
     {
         "id":"pike_illinois_unitedstates",
@@ -7960,7 +7960,7 @@
         "totalConfirmedDelta":3,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.622467041015625,
-        "long":-90.88631439208984,
+        "long":-90.88631439208984
     },
     {
         "id":"ford_illinois_unitedstates",
@@ -7972,7 +7972,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.597164154052734,
-        "long":-88.22327423095703,
+        "long":-88.22327423095703
     },
     {
         "id":"menard_illinois_unitedstates",
@@ -7984,7 +7984,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.02739334106445,
-        "long":-89.80215454101562,
+        "long":-89.80215454101562
     },
     {
         "id":"massac_illinois_unitedstates",
@@ -7996,7 +7996,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.21881866455078,
-        "long":-88.70773315429688,
+        "long":-88.70773315429688
     },
     {
         "id":"gallatin_illinois_unitedstates",
@@ -8008,7 +8008,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.7627067565918,
-        "long":-88.23047637939453,
+        "long":-88.23047637939453
     },
     {
         "id":"richland_illinois_unitedstates",
@@ -8020,7 +8020,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.71232604980469,
-        "long":-88.08511352539062,
+        "long":-88.08511352539062
     },
     {
         "id":"marshall_illinois_unitedstates",
@@ -8032,7 +8032,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.033145904541016,
-        "long":-89.34476470947266,
+        "long":-89.34476470947266
     },
     {
         "id":"hamilton_illinois_unitedstates",
@@ -8044,7 +8044,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.0815544128418,
-        "long":-88.53907012939453,
+        "long":-88.53907012939453
     },
     {
         "id":"scott_illinois_unitedstates",
@@ -8056,7 +8056,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.644081115722656,
-        "long":-90.47480773925781,
+        "long":-90.47480773925781
     },
     {
         "id":"henderson_illinois_unitedstates",
@@ -8068,7 +8068,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.81855773925781,
-        "long":-90.9253921508789,
+        "long":-90.9253921508789
     },
     {
         "id":"alexander_illinois_unitedstates",
@@ -8080,7 +8080,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.191673278808594,
-        "long":-89.33792114257812,
+        "long":-89.33792114257812
     },
     {
         "id":"dewitt_illinois_unitedstates",
@@ -8092,7 +8092,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.17462921142578,
-        "long":-88.90401458740234,
+        "long":-88.90401458740234
     },
     {
         "id":"edwards_illinois_unitedstates",
@@ -8104,7 +8104,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":38.41646957397461,
-        "long":-88.05323791503906,
+        "long":-88.05323791503906
     },
     {
         "id":"calhoun_illinois_unitedstates",
@@ -8116,7 +8116,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.169307708740234,
-        "long":-90.66751861572266,
+        "long":-90.66751861572266
     },
     {
         "id":"stark_illinois_unitedstates",
@@ -8128,7 +8128,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.09336853027344,
-        "long":-89.79742431640625,
+        "long":-89.79742431640625
     },
     {
         "id":"schuyler_illinois_unitedstates",
@@ -8140,7 +8140,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.158103942871094,
-        "long":-90.61534118652344,
+        "long":-90.61534118652344
     },
     {
         "id":"brown_illinois_unitedstates",
@@ -8152,7 +8152,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.961788177490234,
-        "long":-90.7503433227539,
+        "long":-90.7503433227539
     },
     {
         "id":"pope_illinois_unitedstates",
@@ -8164,7 +8164,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.41255187988281,
-        "long":-88.5614242553711,
+        "long":-88.5614242553711
     },
     {
         "id":"putnam_illinois_unitedstates",
@@ -8176,7 +8176,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.20445251464844,
-        "long":-89.2857666015625,
+        "long":-89.2857666015625
     },
     {
         "id":"hardin_illinois_unitedstates",
@@ -8188,7 +8188,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":37.518123626708984,
-        "long":-88.26697540283203,
+        "long":-88.26697540283203
     },
     {
         "totalConfirmed":233355,
@@ -8199,7 +8199,7 @@
         "totalConfirmedDelta":1992,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.11393737792969,
-        "long":-89.15876770019531,
+        "long":-89.15876770019531
     },
     {
         "id":"arizona_unitedstates",
@@ -8211,7 +8211,7 @@
         "totalConfirmedDelta":252,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.348838806152344,
-        "long":-112.4912338256836,
+        "long":-112.4912338256836
     },
     {
         "id":"pima_arizona_unitedstates",
@@ -8223,7 +8223,7 @@
         "totalConfirmedDelta":56,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.09727096557617,
-        "long":-111.78976440429688,
+        "long":-111.78976440429688
     },
     {
         "id":"yuma_arizona_unitedstates",
@@ -8235,7 +8235,7 @@
         "totalConfirmedDelta":17,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.76895523071289,
-        "long":-113.90583038330078,
+        "long":-113.90583038330078
     },
     {
         "id":"pinal_arizona_unitedstates",
@@ -8247,7 +8247,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.90432357788086,
-        "long":-111.34476470947266,
+        "long":-111.34476470947266
     },
     {
         "id":"navajo_arizona_unitedstates",
@@ -8259,7 +8259,7 @@
         "totalConfirmedDelta":6,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.39955139160156,
-        "long":-110.3213882446289,
+        "long":-110.3213882446289
     },
     {
         "id":"mohave_arizona_unitedstates",
@@ -8271,7 +8271,7 @@
         "totalConfirmedDelta":9,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.704193115234375,
-        "long":-113.75813293457031,
+        "long":-113.75813293457031
     },
     {
         "id":"apache_arizona_unitedstates",
@@ -8283,7 +8283,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.395626068115234,
-        "long":-109.48882293701172,
+        "long":-109.48882293701172
     },
     {
         "id":"coconino_arizona_unitedstates",
@@ -8295,7 +8295,7 @@
         "totalConfirmedDelta":7,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":35.83866882324219,
-        "long":-111.77052307128906,
+        "long":-111.77052307128906
     },
     {
         "id":"santacruz_arizona_unitedstates",
@@ -8307,7 +8307,7 @@
         "totalConfirmedDelta":1,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.525943756103516,
-        "long":-110.84661102294922,
+        "long":-110.84661102294922
     },
     {
         "id":"yavapai_arizona_unitedstates",
@@ -8319,7 +8319,7 @@
         "totalConfirmedDelta":16,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.59984588623047,
-        "long":-112.55381774902344,
+        "long":-112.55381774902344
     },
     {
         "id":"cochise_arizona_unitedstates",
@@ -8331,7 +8331,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":31.879518508911133,
-        "long":-109.7511978149414,
+        "long":-109.7511978149414
     },
     {
         "id":"gila_arizona_unitedstates",
@@ -8343,7 +8343,7 @@
         "totalConfirmedDelta":2,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.79966354370117,
-        "long":-110.81166076660156,
+        "long":-110.81166076660156
     },
     {
         "id":"graham_arizona_unitedstates",
@@ -8355,7 +8355,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":32.93267822265625,
-        "long":-109.88749694824219,
+        "long":-109.88749694824219
     },
     {
         "id":"lapaz_arizona_unitedstates",
@@ -8367,7 +8367,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.72919464111328,
-        "long":-113.98123168945312,
+        "long":-113.98123168945312
     },
     {
         "id":"greenlee_arizona_unitedstates",
@@ -8379,7 +8379,7 @@
         "totalConfirmedDelta":null,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":33.21552658081055,
-        "long":-109.24031829833984,
+        "long":-109.24031829833984
     },
     {
         "totalConfirmed":201661,
@@ -8390,7 +8390,7 @@
         "totalConfirmedDelta":374,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":34.2930793762207,
-        "long":-111.6646957397461,
+        "long":-111.6646957397461
     },
     {
         "id":"newjersey_unitedstates",
@@ -8402,7 +8402,7 @@
         "totalConfirmedDelta":37,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.95949172973633,
-        "long":-74.0744400024414,
+        "long":-74.0744400024414
     },
     {
         "id":"essex_newjersey_unitedstates",
@@ -8414,7 +8414,7 @@
         "totalConfirmedDelta":25,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.786922454833984,
-        "long":-74.24647521972656,
+        "long":-74.24647521972656
     },
     {
         "id":"hudson_newjersey_unitedstates",
@@ -8426,7 +8426,7 @@
         "totalConfirmedDelta":15,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.73014450073242,
-        "long":-74.07563018798828,
+        "long":-74.07563018798828
     },
     {
         "id":"middlesex_newjersey_unitedstates",
@@ -8438,7 +8438,7 @@
         "totalConfirmedDelta":17,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.440059661865234,
-        "long":-74.40895080566406,
+        "long":-74.40895080566406
     },
     {
         "id":"passaic_newjersey_unitedstates",
@@ -8450,7 +8450,7 @@
         "totalConfirmedDelta":21,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":41.03434753417969,
-        "long":-74.30105590820312,
+        "long":-74.30105590820312
     },
     {
         "id":"union_newjersey_unitedstates",
@@ -8462,7 +8462,7 @@
         "totalConfirmedDelta":11,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.659912109375,
-        "long":-74.30812072753906,
+        "long":-74.30812072753906
     },
     {
         "id":"ocean_newjersey_unitedstates",
@@ -8474,7 +8474,7 @@
         "totalConfirmedDelta":13,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.88496398925781,
-        "long":-74.28111267089844,
+        "long":-74.28111267089844
     },
     {
         "id":"monmouth_newjersey_unitedstates",
@@ -8486,7 +8486,7 @@
         "totalConfirmedDelta":10,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.28391647338867,
-        "long":-74.20352172851562,
+        "long":-74.20352172851562
     },
     {
         "id":"camden_newjersey_unitedstates",
@@ -8498,7 +8498,7 @@
         "totalConfirmedDelta":26,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.80371856689453,
-        "long":-74.95999908447266,
+        "long":-74.95999908447266
     },
     {
         "id":"mercer_newjersey_unitedstates",
@@ -8510,7 +8510,7 @@
         "totalConfirmedDelta":11,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.2833137512207,
-        "long":-74.70156860351562,
+        "long":-74.70156860351562
     },
     {
         "id":"morris_newjersey_unitedstates",
@@ -8522,7 +8522,7 @@
         "totalConfirmedDelta":8,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.86201858520508,
-        "long":-74.54427337646484,
+        "long":-74.54427337646484
     },
     {
         "id":"burlington_newjersey_unitedstates",
@@ -8534,7 +8534,7 @@
         "totalConfirmedDelta":12,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":39.87751770019531,
-        "long":-74.66790008544922,
+        "long":-74.66790008544922
     },
     {
         "id":"somerset_newjersey_unitedstates",
@@ -8546,6 +8546,6 @@
         "totalConfirmedDelta":13,
         "lastUpdated":"2020-08-31T01:12:39.345Z",
         "lat":40.5636100769043,
-        "long":-74.61627197265625,
+        "long":-74.61627197265625
     }
 ]
