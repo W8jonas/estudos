@@ -81,8 +81,8 @@ function CadastroCategoria() {
         ))}
       </ul>
 
-      <Link to="/">
-        Cadastrar Categoria
+      <Link to="/cadastro/video">
+        Cadastrar video
       </Link>
     </PageDefault>
   )
