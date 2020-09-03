@@ -193,6 +193,20 @@
       "url": "https://www.youtube.com/watch?v=e_hU6sAON2U",
       "categoriaId": 1,
       "id": 25
+    },
+    {
+      "titulo": "O que é ciência de dados | Nerdologia Tech",
+      "categoria": "Data Science e Inteligência Artificial",
+      "url": "https://www.youtube.com/watch?v=ykSILAQQu6o",
+      "categoriaId": 3,
+      "id": 26
+    },
+    {
+      "titulo": "BIG DATA - Nerdologia",
+      "categoria": "Data Science e Inteligência Artificial",
+      "url": "https://www.youtube.com/watch?v=hEFFCKxYbKM",
+      "categoriaId": 3,
+      "id": 27
     }
   ]
 }
