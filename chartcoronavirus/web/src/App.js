@@ -1,16 +1,18 @@
+
 import * as React from "react"
+
+// assets
 import './App.css'
-      
+import environment from './assets/data-gl/asset/starfield.jpg'
+import baseTexture from './assets/data-gl/asset/world_topo_bathy_200401.jpg'
+
+// echarts
 import 'echarts-gl'
 import ReactEcharts from "echarts-for-react";
 
+// functions / extras
 import getAllData from './utils/getAllData'
 
-const database = require("./assets/data-gl/populationPreProcessed.json")
-
-const baseTexture = require('./assets/data-gl/asset/world_topo_bathy_200401.jpg')
-const heightTexture = baseTexture
-const environment = require('./assets/data-gl/asset/starfield.jpg')
 
 
 function App() {
@@ -22,7 +24,7 @@ function App() {
 	backgroundColor: '#000',
 	globe: {
 		baseTexture: baseTexture,
-		heightTexture: heightTexture,
+		heightTexture: baseTexture,
 		shading: 'lambert',
 
 		// displacementScale: 0.05,
