@@ -3,12 +3,10 @@
     It sends a "hello" message, and then prints received data.
 */
 
+#include ".\env.h"
+
 #include <ESP8266WiFi.h>
 
-#ifndef STASSID
-#define STASSID "your-ssid"
-#define STAPSK  "your-password"
-#endif
 
 const char* ssid     = STASSID;
 const char* password = STAPSK;
