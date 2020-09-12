@@ -48,8 +48,8 @@ void loop() {
 
 	if (!client.connect(ENV_HOST, ENV_PORT)) {
 		Serial.print("connection failed! ");
-		Serial.println("Wait 5 sec...");
-		delay(5000);
+		Serial.println("Wait 2 sec...");
+		delay(2000);
 		return;
 	}
 	
