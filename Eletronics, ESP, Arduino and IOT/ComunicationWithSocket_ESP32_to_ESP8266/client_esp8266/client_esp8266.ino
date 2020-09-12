@@ -1,15 +1,8 @@
-/*
-    This sketch sends a string to a TCP server, and prints a one-line response.
-    You must run a TCP server in your local network.
-    For example, on Linux you can use this command: nc -v -l 3000
-*/
 
 
-#include <ESP8266WiFi.h>
-#include <ESP8266WiFiMulti.h>
+#include <ESP8266WiFi.h> //lib para conectar o wifi do ESP201
+#include <ESP8266WiFiMulti.h>//lib para as funções addAP e  run
 
-
-#define IN_PIN 23
 
 const char* ssid     = ENV_STASSID;
 const char* password = ENV_STAPSK;
@@ -18,12 +11,17 @@ const char* host = ENV_HOST;
 const uint16_t port = ENV_PORT;
 
 ESP8266WiFiMulti WiFiMulti;
+IPAddress local_IP(192, 168, 10, 110);
+
+#define IN_PIN 23
+
 
 enum Protocol{
-    PIN, //Pino que se deseja alterar o estado
-    VALUE, //Estado para qual o pino deve ir (HIGH = 1 ou LOW = 0)
-    BUFFER_SIZE //O tamanho do nosso protocolo. IMPORTANTE: deixar sempre como último do enum
+  PIN, //Pino que se deseja alterar o estado
+  VALUE, //Estado para qual o pino deve ir (HIGH = 1 ou LOW = 0)
+  BUFFER_SIZE //O tamanho do nosso protocolo. IMPORTANTE: deixar sempre como último do enum
 };
+
 
 void setup() {
   Serial.begin(115200);
