@@ -27,6 +27,8 @@ void setup()
 
     WiFi.mode(WIFI_AP);
 
+    delay(100);
+    
     while (!(WiFi.softAP(ENV_SSID, ENV_PASSWORD, 6, false))) {
         Serial.println(".");  
         delay(100);
@@ -75,9 +77,14 @@ void loop()
                 int len = client.read(buffer, Protocol::BUFFER_SIZE);
                 int pinNumber = buffer[Protocol::PIN];
                 int value = buffer[Protocol::VALUE];
+
+                Serial.print("Dados recebidos: ");
+                Serial.print(pinNumber);
+                Serial.print(": ");
+                Serial.println(value);
                 
-                pinMode(pinNumber, OUTPUT);
-                digitalWrite(pinNumber, value);
+                pinMode(23, OUTPUT);
+                digitalWrite(23, value);
             }
         }
         delay(1); 
