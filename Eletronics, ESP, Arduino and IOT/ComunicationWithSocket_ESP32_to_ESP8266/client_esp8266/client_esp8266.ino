@@ -10,7 +10,7 @@ ESP8266WiFiMulti WiFiMulti;
 IPAddress local_IP(ENV_LOCAL_IP[0], ENV_LOCAL_IP[1], ENV_LOCAL_IP[2], ENV_LOCAL_IP[3]);
 
 
-#define pin_for_read 16
+#define pin_for_read A0
 
 
 enum Protocol{
@@ -55,8 +55,9 @@ void loop() {
 	
 	uint8_t buffer[Protocol::BUFFER_SIZE];
 	
-	int value = digitalRead(pin_for_read);
-
+	int sensorValue = analogRead(pin_for_read);
+  float value = sensorValue * (3.3 / 1023.0);
+  
 	Serial.print("O pino esta: ");
 	Serial.println(value);
 
@@ -65,5 +66,5 @@ void loop() {
 	
 	client.write(buffer, Protocol::BUFFER_SIZE);
 	client.flush();
-	client.stop();  
+	client.stop();
 }
