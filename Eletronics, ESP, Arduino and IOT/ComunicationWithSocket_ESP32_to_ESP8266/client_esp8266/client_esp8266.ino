@@ -56,7 +56,7 @@ void loop() {
 	uint8_t buffer[Protocol::BUFFER_SIZE];
 	
 	int sensorValue = analogRead(pin_for_read);
-  float value = sensorValue * (3.3 / 1023.0);
+  int value = sensorValue * (255 / 1023.0);
   
 	Serial.print("O pino esta: ");
 	Serial.println(value);
