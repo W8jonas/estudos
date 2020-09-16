@@ -29,10 +29,12 @@ void setup() {
 	WiFiMulti.addAP(ENV_STASSID, ENV_PASSWORD);
 	Serial.println("Pronto, cliente conectado.");
 
+	Serial.print("Conectando.");
 	while (WiFiMulti.run() != WL_CONNECTED) {
 		Serial.print(".");
 		delay(500);
 	}
+	Serial.println("");
 
 	Serial.print("WiFi connected ");
 	Serial.print(" IP address: ");
@@ -56,8 +58,8 @@ void loop() {
 	uint8_t buffer[Protocol::BUFFER_SIZE];
 	
 	int sensorValue = analogRead(pin_for_read);
-  int value = sensorValue * (255 / 1023.0);
-  
+  	int value = sensorValue * (255 / 1023.0);
+
 	Serial.print("O pino esta: ");
 	Serial.println(value);
 
