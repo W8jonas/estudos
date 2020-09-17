@@ -7,18 +7,31 @@
 
 
 typedef struct {
-  int counter;
-  float halfCounter;
+  int value;
+  float halfValue;
 } Object;
 
+Object numbers;
 
 void setVariables(){
   
+  numbers.value = 10;
+  numbers.halfValue = 10/2;
+
 }
 
 
 void readVariables() {
+
+  Object *pointerToNumbers;
+  pointerToNumbers = &numbers;
+
+  Object newObject = *pointerToNumbers;
   
+  Serial.println(newObject.value);
+  Serial.println(newObject.halfValue);
+  Serial.println(sizeof(numbers));
+
 }
 
 
