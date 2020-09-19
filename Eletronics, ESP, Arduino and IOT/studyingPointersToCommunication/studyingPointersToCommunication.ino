@@ -13,6 +13,7 @@ typedef struct {
 
 Object numbers;
 
+
 void setVariables(){
   
   numbers.value = 10;
@@ -30,13 +31,16 @@ void readVariables() {
   
   Serial.println(newObject.value);
   Serial.println(newObject.halfValue);
+
+  // Acessando os dados usando os dois operadores (*). ou ->
+  Serial.println((*pointerToNumbers).value);
+  Serial.println(pointerToNumbers->halfValue);
   Serial.println(sizeof(numbers));
 
 }
 
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(115200);
   
   for(int i=0; i<=10; i++) Serial.println("");
@@ -48,5 +52,4 @@ void setup() {
 }
 
 
-void loop() {
-}
+void loop() {}
