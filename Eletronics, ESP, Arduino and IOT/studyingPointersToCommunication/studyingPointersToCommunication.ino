@@ -28,14 +28,19 @@ void readVariables() {
   pointerToNumbers = &numbers;
 
   Object newObject = *pointerToNumbers;
-  
-  Serial.println(newObject.value);
-  Serial.println(newObject.halfValue);
 
-  // Acessando os dados usando os dois operadores (*). ou ->
-  Serial.println((*pointerToNumbers).value);
-  Serial.println(pointerToNumbers->halfValue);
+  Serial.print("newObject.value: ");
+  Serial.println(newObject.value);
+  Serial.print("newObject.halfValue: ");
+  Serial.println(newObject.halfValue);
+  Serial.print("sizeof(numbers): ");
   Serial.println(sizeof(numbers));
+  
+  // Acessando os dados usando os dois operadores (*). ou ->
+  Serial.print("(*pointerToNumbers).value, HEX: ");
+  Serial.println((*pointerToNumbers).value, HEX);
+  Serial.print("pointerToNumbers->value, HEX: ");
+  Serial.println(pointerToNumbers->halfValue, HEX);
 
 }
 
