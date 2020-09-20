@@ -37,10 +37,10 @@ void readVariables() {
   Serial.println(sizeof(numbers));
   
   // Acessando os dados usando os dois operadores (*). ou ->
-  Serial.print("(*pointerToNumbers).value, HEX: ");
-  Serial.println((*pointerToNumbers).value, HEX);
-  Serial.print("pointerToNumbers->value, HEX: ");
-  Serial.println(pointerToNumbers->halfValue, HEX);
+  Serial.print("(*pointerToNumbers).value: ");
+  Serial.println((*pointerToNumbers).value);
+  Serial.print("pointerToNumbers->value: ");
+  Serial.println(pointerToNumbers->halfValue);
 
 }
 
