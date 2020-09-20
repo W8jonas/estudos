@@ -13,11 +13,12 @@ IPAddress local_IP(ENV_LOCAL_IP[0], ENV_LOCAL_IP[1], ENV_LOCAL_IP[2], ENV_LOCAL_
 #define pin_for_read A0
 
 
-enum Protocol{
-	PIN,
-	VALUE,
-	BUFFER_SIZE
-};
+typedef struct {
+  int pin;
+  float value;
+} DataStruct;
+
+DataStruct dataToSend;
 
 
 void setup() {
@@ -54,19 +55,20 @@ void loop() {
 		delay(2000);
 		return;
 	}
-	
-	uint8_t buffer[Protocol::BUFFER_SIZE];
-	
+
 	int sensorValue = analogRead(pin_for_read);
-  	int value = sensorValue * (255 / 1023.0);
+	int value = sensorValue * (255 / 1023.0);
 
 	Serial.print("O pino esta: ");
 	Serial.println(value);
 
-	buffer[Protocol::PIN] = pin_for_read;
-	buffer[Protocol::VALUE] = value;
-	
-	client.write(buffer, Protocol::BUFFER_SIZE);
+  dataToSend.pin = pin_for_read;
+  dataToSend.value = value;
+  
+  client.print(dataToSend.pin);
+  client.print(dataToSend.value);
 	client.flush();
 	client.stop();
+  
+  delay(2000);
 }
