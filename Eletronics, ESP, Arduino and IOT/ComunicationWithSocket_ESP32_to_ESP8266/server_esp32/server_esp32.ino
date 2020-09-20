@@ -17,6 +17,14 @@ enum Protocol{
 };
 
 
+typedef struct {
+  int pin;
+  float value;
+} DataStruct;
+
+DataStruct dataReceived;
+
+
 // use first channel of 16 channels (started from zero)
 #define LEDC_CHANNEL_0     0
 
@@ -90,18 +98,16 @@ void loop()
         {
             if (client.available())
             { 
-                uint8_t buffer[Protocol::BUFFER_SIZE];
 
-                int len = client.read(buffer, Protocol::BUFFER_SIZE);
-                int pinNumber = buffer[Protocol::PIN];
-                float value = buffer[Protocol::VALUE];
-                
+                int dataReceived = client.read();
                 Serial.print("Dados recebidos: ");
-                Serial.print(pinNumber);
-                Serial.print(": ");
-                Serial.println(value);
+                Serial.println(dataReceived);
+                
+                //float value = client.read();
+                //Serial.print(": ");
+                //Serial.println(value);
 
-                ledcAnalogWrite(LEDC_CHANNEL_0, value);
+                //ledcAnalogWrite(LEDC_CHANNEL_0, value);
                 //pinMode(23, OUTPUT);
                 //digitalWrite(23, value);
             }
