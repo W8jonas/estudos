@@ -9,18 +9,10 @@ IPAddress subnet(ENV_SUBNET[0], ENV_SUBNET[1], ENV_SUBNET[2], ENV_SUBNET[3]);
 
 WiFiServer server(ENV_SERVER_PORT);
 
-
-enum Protocol{
-    PIN,
-    VALUE,
-    BUFFER_SIZE
+struct DataStruct{
+  byte pin;
+  byte value;
 };
-
-
-typedef struct {
-  int pin;
-  float value;
-} DataStruct;
 
 DataStruct dataReceived;
 
@@ -99,7 +91,7 @@ void loop()
             if (client.available())
             { 
 
-                int dataReceived = client.read();
+                byte dataReceived = client.read();
                 Serial.print("Dados recebidos: ");
                 Serial.println(dataReceived);
                 
@@ -114,6 +106,7 @@ void loop()
         }
         delay(1); 
         client.stop();
+        Serial.println("----------------------------");
         digitalWrite(indicative_led, LOW);
     }
 }
