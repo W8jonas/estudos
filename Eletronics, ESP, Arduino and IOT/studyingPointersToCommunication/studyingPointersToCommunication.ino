@@ -6,10 +6,10 @@
 */
 
 
-typedef struct {
+struct Object {
   int value;
   float halfValue;
-} Object;
+};
 
 Object numbers;
 
