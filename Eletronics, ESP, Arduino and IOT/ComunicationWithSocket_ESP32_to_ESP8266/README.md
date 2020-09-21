@@ -3,11 +3,19 @@
 Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Server (ESP32). O server cria e estabelece um localhost para que o Client consiga se conectar e, a partir disto, enviar dados para o servidor.
 
 <br/>
+<br/>
 
-Inicialmente o ESP8266 está lendo o valor digital (1 ou 0) de uma de suas portas e o envia para o o servidor que, por sua vez, repassa o estado digital que foi recebido para uma de suas portas.
+
+### História do desenvolvimento
+
+Inicialmente o projeto usava `enum` para a transferência de dados. Sua vantagem e a simplicidade de código, pois basta criar uma nova variável dentro do enum que ela já poderá ser transmitida. Todavia, sua principal desvantagem é que o enum só é capaz de armazenar constantes inteiras, sendo vetado o uso de variáveis longs, floats, structs ou arrays.
+Por esse motivo, o código foi modificado para transmitir structs capazes de armazenar quaisquer tipos de variáveis.
 
 <br/>
-<br/>
+
+Em primeiro momento o ESP8266 está lendo o valor digital (1 ou 0) de uma de suas portas e o envia para o o servidor que, por sua vez, repassa o estado digital que foi recebido para uma de suas portas.
+Após a transferência de sinais digitais, iniciou-se a tentativa de transmissão de valores de ponto flutuante, sendo esse não possível pelas limitações do `enum`.
+
 
 ### Variáveis de ambientes definidas
 Para o funcionamento do projeto foram estabelecidas algumas variáveis de ambiente que estão mostradas abaixo como exemplo, sendo elas:
@@ -50,3 +58,4 @@ Para o funcionamento do projeto foram estabelecidas algumas variáveis de ambien
 <br/>
 
 É importante perceber que alguns parâmetros precisam ser estritamente iguais tanto no server quanto no client, como por exemplo: nome e senha da rede, e o IP local.
+
