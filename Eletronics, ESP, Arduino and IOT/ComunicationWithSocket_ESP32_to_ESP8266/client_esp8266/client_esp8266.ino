@@ -14,8 +14,8 @@ IPAddress local_IP(ENV_LOCAL_IP[0], ENV_LOCAL_IP[1], ENV_LOCAL_IP[2], ENV_LOCAL_
 
 
 struct DataStruct{
-  int pin;
-  int value;
+  byte pin;
+  byte value;
 };
 
 DataStruct dataToSend;
@@ -64,11 +64,6 @@ void loop() {
 
   dataToSend.pin = 23;
   dataToSend.value = value;
-  
-  //client.print(dataToSend.pin);
-  //client.print(dataToSend.value);
-
-  //client.write(24);
   
   byte *ptr = (byte *) &dataToSend;
   for (int i = 0; i < sizeof(struct DataStruct); i++)  client.write(*ptr++);
