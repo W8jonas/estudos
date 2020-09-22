@@ -12,8 +12,21 @@ Por esse motivo, o código foi modificado para transmitir structs capazes de arm
 
 <br/>
 
-Em primeiro momento o ESP8266 está lendo o valor digital (1 ou 0) de uma de suas portas e o envia para o o servidor que, por sua vez, repassa o estado digital que foi recebido para uma de suas portas.
+Primeiramente o ESP8266 estava lendo o valor digital (1 ou 0) de uma de suas portas e o envia para o o servidor que, por sua vez, repassa o estado digital que foi recebido para uma de suas portas.
 Após a transferência de sinais digitais, iniciou-se a tentativa de transmissão de valores de ponto flutuante, sendo esse não possível pelas limitações do `enum`.
+
+Em segundo momento, iniciado a transmissão dos dados do tipo struct contendo variáveis do tipo int do ESP8266 um novo problema surgiu. O tamanho alocado de memoria para cada tipo de variável é diferente do ESP8266 para o ESP32. Sendo isso o fator que impossibilita a transmissão de variáveis do tipo int ou similares. Abaixo segue exemplo demonstrativo.
+
+    struct DataStruct{
+      int pin;
+      int value;
+    };
+
+    print(sizeof(struct DataStruct));
+
+
+O código acima, no ESP8266 retorna 20, enquanto que o mesmo código no ESP32 retorna 40, mostrando que os tipos de variáveis int possuem tamanho diferente nos microcontroladores.
+
 
 <br/>
 
