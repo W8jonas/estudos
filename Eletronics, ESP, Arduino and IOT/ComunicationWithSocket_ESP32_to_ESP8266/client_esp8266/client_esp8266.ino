@@ -65,9 +65,9 @@ void loop() {
   dataToSend.pin = 23;
   dataToSend.value = value;
   
-  byte *ptr = (byte *) &dataToSend;
-  for (int i = 0; i < sizeof(struct DataStruct); i++)  client.write(*ptr++);
 
+  client.write((byte*)&dataToSend, sizeof(DataStruct));
+  
 	client.flush();
 	client.stop();
   
