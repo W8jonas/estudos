@@ -17,15 +17,20 @@ Após a transferência de sinais digitais, iniciou-se a tentativa de transmissã
 
 Em segundo momento, iniciado a transmissão dos dados do tipo struct contendo variáveis do tipo int do ESP8266 um novo problema surgiu. O tamanho alocado de memoria para cada tipo de variável é diferente do ESP8266 para o ESP32. Sendo isso o fator que impossibilita a transmissão de variáveis do tipo int ou similares. Abaixo segue exemplo demonstrativo.
 
-    struct DataStruct{
-      int pin;
-      int value;
-    };
+```C
+struct DataStruct{
+    int pin;
+    int value;
+};
 
-    print(sizeof(struct DataStruct));
+print(sizeof(struct DataStruct));
+```
 
 
 O código acima, no ESP8266 retorna 20, enquanto que o mesmo código no ESP32 retorna 40, mostrando que os tipos de variáveis int possuem tamanho diferente nos microcontroladores.
+
+Para resolver esse problema de forma temporário, foi usado somente variáveis do tipo byte na struct pois, por definição, ambos os microcontroladores terão o tamanho final igual, resolvendo o problema anterior. 
+
 
 
 <br/>
@@ -36,34 +41,38 @@ Para o funcionamento do projeto foram estabelecidas algumas variáveis de ambien
 
 ### ESP32 - Server
 
-    #define ENV_SSID "NOME_DA_REDE_WIFI" 
-    #define ENV_PASSWORD "SENHA_DA_REDE_WIFI"
+```C
+#define ENV_SSID "NOME_DA_REDE_WIFI" 
+#define ENV_PASSWORD "SENHA_DA_REDE_WIFI"
 
-    #define ENV_SERVER_PORT 1234
+#define ENV_SERVER_PORT 1234
 
-    int ENV_LOCAL_IP[] = {
-    192, 168, 10, 11
-    };
+int ENV_LOCAL_IP[] = {
+192, 168, 10, 11
+};
 
-    int ENV_GATEWAY[] = {
-    192, 168, 10, 10
-    };
+int ENV_GATEWAY[] = {
+192, 168, 10, 10
+};
 
-    int ENV_SUBNET[] = {
-    255, 255, 255, 0
-    };
+int ENV_SUBNET[] = {
+255, 255, 255, 0
+};
+```
 
 ### ESP8266 - Client
 
-    #define ENV_STASSID "NOME_DA_REDE_WIFI"
-    #define ENV_PASSWORD "SENHA_DA_REDE_WIFI"
+```C
+#define ENV_STASSID "NOME_DA_REDE_WIFI"
+#define ENV_PASSWORD "SENHA_DA_REDE_WIFI"
 
-    #define ENV_HOST "192.168.10.11"
-    #define ENV_PORT 1234
+#define ENV_HOST "192.168.10.11"
+#define ENV_PORT 1234
 
-    int ENV_LOCAL_IP[] = {
-    192, 168, 10, 110
-    };
+int ENV_LOCAL_IP[] = {
+192, 168, 10, 110
+};
+```
 
 É importante perceber que alguns parâmetros precisam ser estritamente iguais tanto no server quanto no client, como por exemplo: nome e senha da rede, e o IP local.
 
