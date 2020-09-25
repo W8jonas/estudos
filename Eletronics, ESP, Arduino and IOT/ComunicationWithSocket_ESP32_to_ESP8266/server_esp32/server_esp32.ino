@@ -10,11 +10,14 @@ IPAddress subnet(ENV_SUBNET[0], ENV_SUBNET[1], ENV_SUBNET[2], ENV_SUBNET[3]);
 WiFiServer server(ENV_SERVER_PORT);
 
 struct DataStruct{
-  byte pin;
-  byte value;
+  byte byteValue;
+  int intValue;
+  long longValue;
+  bool boolValue;
+  uint16_t uint16_tValue;
+  uint32_t uint32_tValue;
+  uint64_t uint64_tValue;
 };
-
-DataStruct dataReceived;
 
 
 // use first channel of 16 channels (started from zero)
@@ -95,15 +98,26 @@ void loop()
 
                 int len = client.read(buffer, sizeof(struct DataStruct));
                 
-                DataStruct dataReceived = (DataStruct *) &buffer;
+                DataStruct dataReceived = * (DataStruct *) &buffer;
                 
                 //byte dataReceived = client.read();
                 Serial.print("Dados recebidos: \n len: ");
-                Serial.print(len);
-                Serial.print(" - pin: ");
-                Serial.print(dataReceived->pin);
-                Serial.print(" - value: ");
-                Serial.println(dataReceived->value);
+                Serial.println(len);
+                
+                Serial.print(" - byteValue: ");
+                Serial.println(dataReceived.byteValue);
+                Serial.print(" - intValue: ");
+                Serial.println(dataReceived.intValue);
+                Serial.print(" - longValue: ");
+                Serial.println(dataReceived.longValue);
+                Serial.print(" - boolValue: ");
+                Serial.println(dataReceived.boolValue);
+                Serial.print(" - uint16_tValue: ");
+                Serial.println(dataReceived.uint16_tValue);
+                Serial.print(" - uint32_tValue: ");
+                Serial.println(dataReceived.uint32_tValue);
+                Serial.print(" - uint64_tValue: ");
+                Serial.println((unsigned long)dataReceived.uint64_tValue);
                 
                 //float value = client.read();
                 //Serial.print(": ");
