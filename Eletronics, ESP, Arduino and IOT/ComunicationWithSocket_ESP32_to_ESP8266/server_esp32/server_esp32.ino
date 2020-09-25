@@ -95,16 +95,15 @@ void loop()
 
                 int len = client.read(buffer, sizeof(struct DataStruct));
                 
-                DataStruct *pointerToDataReceived;
-                pointerToDataReceived = (DataStruct *) &buffer;
+                DataStruct dataReceived = (DataStruct *) &buffer;
                 
                 //byte dataReceived = client.read();
                 Serial.print("Dados recebidos: \n len: ");
                 Serial.print(len);
                 Serial.print(" - pin: ");
-                Serial.print(pointerToDataReceived->pin);
+                Serial.print(dataReceived->pin);
                 Serial.print(" - value: ");
-                Serial.println(pointerToDataReceived->value);
+                Serial.println(dataReceived->value);
                 
                 //float value = client.read();
                 //Serial.print(": ");
