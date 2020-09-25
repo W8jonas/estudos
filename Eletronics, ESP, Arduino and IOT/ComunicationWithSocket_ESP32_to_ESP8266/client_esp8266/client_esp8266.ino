@@ -14,8 +14,13 @@ IPAddress local_IP(ENV_LOCAL_IP[0], ENV_LOCAL_IP[1], ENV_LOCAL_IP[2], ENV_LOCAL_
 
 
 struct DataStruct{
-  byte pin;
-  byte value;
+  byte byteValue;
+  int intValue;
+  long longValue;
+  bool boolValue;
+  uint16_t uint16_tValue;
+  uint32_t uint32_tValue;
+  uint64_t uint64_tValue;
 };
 
 DataStruct dataToSend;
@@ -56,16 +61,21 @@ void loop() {
 		return;
 	}
 
-	int sensorValue = analogRead(pin_for_read);
-	int value = sensorValue * (255 / 1023.0);
+	//int sensorValue = analogRead(pin_for_read);
+	//int value = sensorValue * (255 / 1023.0);
 
-	Serial.print("O pino esta: ");
-	Serial.println(value);
+	//Serial.print("O pino esta: ");
+	//Serial.println(value);
 
-  dataToSend.pin = 23;
-  dataToSend.value = value;
+
+  dataToSend.byteValue = 200;
+  dataToSend.intValue = 200;
+  dataToSend.longValue = 200;
+  dataToSend.boolValue = false;
+  dataToSend.uint16_tValue = 200;
+  dataToSend.uint32_tValue = 200;
+  dataToSend.uint64_tValue = 200;
   
-
   client.write((byte*)&dataToSend, sizeof(DataStruct));
   
 	client.flush();
