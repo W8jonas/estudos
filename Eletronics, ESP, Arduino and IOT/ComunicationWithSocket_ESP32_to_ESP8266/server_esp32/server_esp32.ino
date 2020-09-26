@@ -11,9 +11,9 @@ WiFiServer server(ENV_SERVER_PORT);
 
 
 struct DataStruct {
-  char *client_id[30];
   byte pin;
   float pinRead;
+  char client_id[30];
 };
 
 
@@ -105,7 +105,7 @@ void loop()
                 Serial.print("pinValue: ");
                 Serial.println(dataReceived.pinRead);
                 Serial.print("client_id: ");
-                Serial.println(dataReceived.client_id[0]);
+                Serial.println(dataReceived.client_id);
 
                 
                 ledcAnalogWrite(LEDC_CHANNEL_0, dataReceived.pinRead);
