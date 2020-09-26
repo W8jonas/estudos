@@ -14,9 +14,9 @@ IPAddress local_IP(ENV_LOCAL_IP[0], ENV_LOCAL_IP[1], ENV_LOCAL_IP[2], ENV_LOCAL_
 
 
 struct DataStruct {
-  char *client_id[30];
   byte pin;
   float pinRead;
+  char client_id[30];
 };
 
 DataStruct dataToSend;
@@ -63,7 +63,8 @@ void loop() {
 	Serial.print("O pino esta: ");
 	Serial.println(value);
 
-  dataToSend.client_id[0] = "ESP8266_UID_GENERIC";
+  strcpy(dataToSend.client_id, "ESP8266_UID_GENERIC");
+  
   dataToSend.pin = pin_for_read;
   dataToSend.pinRead = value;
 
