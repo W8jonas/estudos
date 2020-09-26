@@ -9,14 +9,11 @@ IPAddress subnet(ENV_SUBNET[0], ENV_SUBNET[1], ENV_SUBNET[2], ENV_SUBNET[3]);
 
 WiFiServer server(ENV_SERVER_PORT);
 
-struct DataStruct{
-  byte byteValue;
-  int intValue;
-  long longValue;
-  bool boolValue;
-  uint16_t uint16_tValue;
-  uint32_t uint32_tValue;
-  uint64_t uint64_tValue;
+
+struct DataStruct {
+  char *client_id[30];
+  byte pin;
+  float pinRead;
 };
 
 
@@ -95,37 +92,25 @@ void loop()
             { 
               
                 byte buffer[sizeof(struct DataStruct)];
-
                 int len = client.read(buffer, sizeof(struct DataStruct));
-                
                 DataStruct dataReceived = * (DataStruct *) &buffer;
                 
-                //byte dataReceived = client.read();
-                Serial.print("Dados recebidos: \n len: ");
+                Serial.println("Dados recebidos");
+                
+                Serial.print("len: ");
                 Serial.println(len);
                 
-                Serial.print(" - byteValue: ");
-                Serial.println(dataReceived.byteValue);
-                Serial.print(" - intValue: ");
-                Serial.println(dataReceived.intValue);
-                Serial.print(" - longValue: ");
-                Serial.println(dataReceived.longValue);
-                Serial.print(" - boolValue: ");
-                Serial.println(dataReceived.boolValue);
-                Serial.print(" - uint16_tValue: ");
-                Serial.println(dataReceived.uint16_tValue);
-                Serial.print(" - uint32_tValue: ");
-                Serial.println(dataReceived.uint32_tValue);
-                Serial.print(" - uint64_tValue: ");
-                Serial.println((unsigned long)dataReceived.uint64_tValue);
-                
-                //float value = client.read();
-                //Serial.print(": ");
-                //Serial.println(value);
+                Serial.print("pin: ");
+                Serial.println(dataReceived.pin);
+                Serial.print("pinValue: ");
+                Serial.println(dataReceived.pinRead);
+                Serial.print("client_id: ");
+                Serial.println(dataReceived.client_id[0]);
 
-                //ledcAnalogWrite(LEDC_CHANNEL_0, value);
-                //pinMode(23, OUTPUT);
-                //digitalWrite(23, value);
+                
+                ledcAnalogWrite(LEDC_CHANNEL_0, dataReceived.pinRead);
+                pinMode(23, OUTPUT);
+                digitalWrite(23, dataReceived.pinRead);
             }
         }
         delay(1); 
