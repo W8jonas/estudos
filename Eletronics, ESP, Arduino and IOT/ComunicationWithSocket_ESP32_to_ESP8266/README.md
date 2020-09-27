@@ -4,6 +4,10 @@ Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Serve
 
 <br/>
 
+### Primeiro modelo de comunicação -- Transmissão de sinal analógico
+![](demo/wifiCommunicationWithSocket_ESP32_to_ESP8266.gif)
+
+<br/>
 
 ### História do desenvolvimento
 
