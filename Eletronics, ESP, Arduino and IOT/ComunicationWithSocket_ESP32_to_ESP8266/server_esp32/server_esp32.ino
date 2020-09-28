@@ -11,11 +11,14 @@ WiFiServer server(ENV_SERVER_PORT);
 
 
 struct DataStruct {
-  byte pin;
-  float pinRead;
   char client_id[30];
+  byte read1;
+  byte read2;
+  byte read3;
+  byte read4;
+  byte read5;
+  float readAnalog1;
 };
-
 
 // use first channel of 16 channels (started from zero)
 #define LEDC_CHANNEL_0     0
@@ -26,7 +29,16 @@ struct DataStruct {
 // use 5000 Hz as a LEDC base frequency
 #define LEDC_BASE_FREQ     5000
 
-#define indicative_led 23
+#define indicative_led 25
+
+
+int ledPin1 = 21;
+int ledPin2 = 22;
+int ledPin3 = 23;
+int ledPin4 = 14;
+int ledPin5 = 32;
+int ledPin6 = 33;
+
 
 void ledcAnalogWrite(uint8_t channel, uint32_t value, uint32_t valueMax = 255) {
   // calculate duty, 8191 from 2 ^ 13 - 1
@@ -36,7 +48,6 @@ void ledcAnalogWrite(uint8_t channel, uint32_t value, uint32_t valueMax = 255) {
   ledcWrite(channel, duty);
 }
 
-
 void setup()
 {
     Serial.begin(115200);
@@ -44,7 +55,16 @@ void setup()
     // configurando saida do LED para analógico
     ledcSetup(LEDC_CHANNEL_0, LEDC_BASE_FREQ, LEDC_TIMER_13_BIT);
     ledcAttachPin(indicative_led, LEDC_CHANNEL_0);
-  
+
+    
+    pinMode(ledPin1, OUTPUT);
+    pinMode(ledPin2, OUTPUT);
+    pinMode(ledPin3, OUTPUT);
+    pinMode(ledPin4, OUTPUT);
+    pinMode(ledPin5, OUTPUT);
+    pinMode(ledPin6, OUTPUT);
+
+    
     WiFi.mode(WIFI_AP);
     delay(100);
     
@@ -95,22 +115,22 @@ void loop()
                 int len = client.read(buffer, sizeof(struct DataStruct));
                 DataStruct dataReceived = * (DataStruct *) &buffer;
                 
-                Serial.println("Dados recebidos");
                 
-                Serial.print("len: ");
-                Serial.println(len);
-                
-                Serial.print("pin: ");
-                Serial.println(dataReceived.pin);
-                Serial.print("pinValue: ");
-                Serial.println(dataReceived.pinRead);
-                Serial.print("client_id: ");
-                Serial.println(dataReceived.client_id);
+                digitalWrite(ledPin1, dataReceived.read1);
+                digitalWrite(ledPin2, dataReceived.read2);
+                digitalWrite(ledPin3, dataReceived.read3);
+                digitalWrite(ledPin4, dataReceived.read4);
+                digitalWrite(ledPin5, dataReceived.read5);
+                digitalWrite(ledPin6, (dataReceived.readAnalog1 >= 50) ? true : false);
 
+                Serial.println("DADOS RECEBIDOS: ");
+                Serial.println(dataReceived.read1);
+                Serial.println(dataReceived.read2);
+                Serial.println(dataReceived.read3);
+                Serial.println(dataReceived.read4);
+                Serial.println(dataReceived.read5);
+                Serial.println(dataReceived.readAnalog1);
                 
-                ledcAnalogWrite(LEDC_CHANNEL_0, dataReceived.pinRead);
-                pinMode(23, OUTPUT);
-                digitalWrite(23, dataReceived.pinRead);
             }
         }
         delay(1); 
