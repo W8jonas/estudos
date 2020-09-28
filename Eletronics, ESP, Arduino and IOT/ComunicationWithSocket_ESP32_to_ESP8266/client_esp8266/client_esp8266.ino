@@ -10,23 +10,36 @@ ESP8266WiFiMulti WiFiMulti;
 IPAddress local_IP(ENV_LOCAL_IP[0], ENV_LOCAL_IP[1], ENV_LOCAL_IP[2], ENV_LOCAL_IP[3]);
 
 
-#define pin_for_read A0
-
-
 struct DataStruct {
-  byte pin;
-  float pinRead;
   char client_id[30];
+  byte read1;
+  byte read2;
+  byte read3;
+  byte read4;
+  byte read5;
+  float readAnalog1;
 };
 
 DataStruct dataToSend;
 
 
+int ledPin1 = D1;
+int ledPin2 = D3;
+int ledPin3 = D4;
+int ledPin4 = D6;
+int ledPin5 = D7;
+int ledPin6 = A0;
+
 void setup() {
 	Serial.begin(115200);
 	
-	pinMode(pin_for_read, INPUT);
-
+  pinMode(ledPin1, INPUT);
+  pinMode(ledPin2, INPUT);
+  pinMode(ledPin3, INPUT);
+  pinMode(ledPin4, INPUT);
+  pinMode(ledPin5, INPUT);
+  pinMode(ledPin6, INPUT);
+  
 	WiFi.mode(WIFI_STA);
 	WiFiMulti.addAP(ENV_STASSID, ENV_PASSWORD);
 	Serial.println("Pronto, cliente conectado.");
@@ -57,21 +70,21 @@ void loop() {
 		return;
 	}
 
-	int sensorValue = analogRead(pin_for_read);
-	float value = sensorValue * (255 / 1023.0);
-
-	Serial.print("O pino esta: ");
-	Serial.println(value);
-
   strcpy(dataToSend.client_id, "ESP8266_UID_GENERIC");
+
+	int sensorValue = analogRead(ledPin6);
+	float value = sensorValue * (255 / 1023.0);
   
-  dataToSend.pin = pin_for_read;
-  dataToSend.pinRead = value;
+  dataToSend.read1 = digitalRead(ledPin1);
+  dataToSend.read2 = digitalRead(ledPin2);
+  dataToSend.read3 = digitalRead(ledPin3);
+  dataToSend.read4 = digitalRead(ledPin4);
+  dataToSend.read5 = digitalRead(ledPin5);
+  dataToSend.readAnalog1 = value;
 
   client.write((byte*)&dataToSend, sizeof(DataStruct));
   
 	client.flush();
 	client.stop();
-  
-  delay(2000);
+  delay(10);
 }
