@@ -36,7 +36,8 @@ export default class App extends Component {
     this.state = {
       scanning:false,
       peripherals: new Map(),
-      appState: ''
+      appState: '',
+      historyArray: []
     }
 
     this.handleDiscoverPeripheral = this.handleDiscoverPeripheral.bind(this);
@@ -110,8 +111,15 @@ export default class App extends Component {
 		return arr.map(function(i){return String.fromCharCode(i)}).join("")
 	}
 
-	console.log('Received data from ' + data.peripheral + ' characteristic ' + data.characteristic, bufferToString(data.value));
+    const actualDataString = bufferToString(data.value)
 
+    console.log('Received data from ' + data.peripheral + ' characteristic ' + data.characteristic, actualDataString);
+    
+    let _historyArray = this.state.historyArray
+    _historyArray.push(actualDataString)
+
+    this.setState({ historyArray: _historyArray })
+    
   }
 
   handleStopScan() {
@@ -247,7 +255,12 @@ export default class App extends Component {
               renderItem={({ item }) => this.renderItem(item) }
               keyExtractor={item => item.id}
             />
+            
+            <Text>Histórico dos valores recebidos</Text>
+            {this.state.historyArray.map(item=>(
+                <Text key={`${Math.random()}`}>{item}</Text>
 
+            ))}
           </ScrollView>
         </View>
       </SafeAreaView>
