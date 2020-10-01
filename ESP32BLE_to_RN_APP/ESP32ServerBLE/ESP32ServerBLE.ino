@@ -104,24 +104,28 @@ void setup() {
 void loop() {
   //se existe algum dispositivo conectado
   if (deviceConnected) {
-  /*
-    float tempAmbiente = 26.23453;
+  
+    float analogInput = analogRead(34);
     char txString[8];
-    dtostrf(tempAmbiente, 1, 2, txString);
+    dtostrf(analogInput, 1, 2, txString);
     
     characteristicTX->setValue(txString); //seta o valor que a caracteristica notificará (enviar)       
     characteristicTX->notify(); // Envia o valor para o smartphone
     
-    Serial.print("*** Sent Value: ");
+    Serial.print("*** Original Value: ");
+    Serial.print(analogInput);
+    Serial.print(" *** Sent Value: ");
     Serial.print(txString);
     Serial.println(" ***");
-  */
-  
-    delay(1000);
-    characteristicTX->setValue("Hello!"); // Sending a test message
+    
+    delay(100);
+    
+  /*
+    characteristicTX->setValue("Hello World!"); // Sending a test message
     characteristicTX->notify(); // Send the value to the app!
-  
+  */
   }
+  
   delay(1000);
 
 }
