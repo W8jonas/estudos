@@ -3,9 +3,6 @@
  * Código retirado do site Fernando K para ser utilizado para estudos.
  */
 
-#include <Wire.h>                //Biblioteca para I2C
-#include <SparkFunMLX90614.h>    //Biblioteca SparkFunMLX90614
-
 #include <BLEDevice.h>
 #include <BLEServer.h>
 #include <BLEUtils.h>
@@ -13,13 +10,9 @@
 
 BLECharacteristic *characteristicTX; //através desse objeto iremos enviar dados para o client
 
-//objeto responsável pela comunicação com o sensor de temperatura infravermelho
-IRTherm sensor;
-
 bool deviceConnected = false; //controle de dispositivo conectado
 
-const int LED = 2; //LED interno do ESP32 (esse pino pode variar de placa para placa) // Could be different depending on the dev board. I used the DOIT ESP32 dev board.
-const int BUZZER = 23; //pino d BUZZER
+const int LED = 2; //LED interno do ESP32 (esse pino pode variar de placa para placa)
 
 // See the following for generating UUIDs:
 // https://www.uuidgenerator.net/
@@ -65,15 +58,6 @@ class CharacteristicCallbacks: public BLECharacteristicCallbacks {
           Serial.print("Turning LED OFF!");
           digitalWrite(LED, LOW);
         }
-        // Do stuff based on the command received from the app
-        else if (rxValue.find("B1") != -1) { 
-          Serial.print("Turning Buzzer ON!");
-          digitalWrite(BUZZER, HIGH);
-        }
-        else if (rxValue.find("B0") != -1) {
-          Serial.print("Turning Buzzer OFF!");
-          digitalWrite(BUZZER, LOW);
-        }
 
         Serial.println();
         Serial.println("*********");
@@ -85,7 +69,6 @@ void setup() {
   Serial.begin(115200);
 
   pinMode(LED, OUTPUT);
-  pinMode(BUZZER, OUTPUT);
 
   // Create the BLE Device
   BLEDevice::init("ESP32-BLE"); // nome do dispositivo bluetooth
@@ -114,50 +97,31 @@ void setup() {
   // Start advertising (descoberta do ESP32)
   server->getAdvertising()->start();
 
-  //Inicializa sensor de temperatura infravermelho            
-  sensor.begin();  
-  //Seleciona temperatura em Celsius               
-  sensor.setUnit(TEMP_C);//podemos ainda utilizar TEMP_F para Fahrenheit ou TEMP_K para Kelvin    
-  
   Serial.println("Waiting a client connection to notify...");
 
 }
 
 void loop() {
-     //se existe algum dispositivo conectado
-    if (deviceConnected) {
-      //chamamos o método "read" do sensor para realizar a leitura da temperatura
-      //read retornará 1 caso consiga realizar a leitura, ou 0 caso contrário 
-      if (sensor.read())
-      {
-          //recupera a leitura da temperatura do ambiente
-          float tempAmbiente = sensor.ambient();
-          //recupera a leitura da temperatura do objeto apontado pelo sensor
-          float tempObjeto   = sensor.object();
-      
-          // Let's convert the value to a char array:
-          char txString[8]; // make sure this is big enuffz
-          dtostrf(tempAmbiente, 1, 2, txString); // float_val, min_width, digits_after_decimal, char_buffer
-
-          characteristicTX->setValue(txString); //seta o valor que a caracteristica notificará (enviar)       
-          characteristicTX->notify(); // Envia o valor para o smartphone
-
-          Serial.print("*** Sent Value: ");
-          Serial.print(txString);
-          Serial.println(" ***");
-      }
-  
-/*
-    delay(1000);
-
-
-    characteristicTX2->setValue("Hello!"); // Sending a test message
-    characteristicTX2->notify(); // Send the value to the app!
-  
+  //se existe algum dispositivo conectado
+  if (deviceConnected) {
+  /*
+    float tempAmbiente = 26.23453;
+    char txString[8];
+    dtostrf(tempAmbiente, 1, 2, txString);
+    
+    characteristicTX->setValue(txString); //seta o valor que a caracteristica notificará (enviar)       
+    characteristicTX->notify(); // Envia o valor para o smartphone
+    
+    Serial.print("*** Sent Value: ");
+    Serial.print(txString);
+    Serial.println(" ***");
   */
-
+  
+    delay(1000);
+    characteristicTX->setValue("Hello!"); // Sending a test message
+    characteristicTX->notify(); // Send the value to the app!
+  
   }
   delay(1000);
 
 }
-
