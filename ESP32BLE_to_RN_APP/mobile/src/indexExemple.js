@@ -9,7 +9,6 @@ import {
   Platform,
   PermissionsAndroid,
   ScrollView,
-  AppState,
   FlatList,
   Dimensions,
   Button,
@@ -37,7 +36,6 @@ export default class App extends Component {
     this.state = {
       scanning:false,
       peripherals: new Map(),
-      appState: '',
       historyArray: []
     }
 
@@ -45,11 +43,10 @@ export default class App extends Component {
     this.handleStopScan = this.handleStopScan.bind(this)
     this.handleUpdateValueForCharacteristic = this.handleUpdateValueForCharacteristic.bind(this)
     this.handleDisconnectedPeripheral = this.handleDisconnectedPeripheral.bind(this)
-    this.handleAppStateChange = this.handleAppStateChange.bind(this)
   }
 
   componentDidMount() {
-    AppState.addEventListener('change', this.handleAppStateChange)
+		console.log('%c componentDidMount', 'color: orange')
 
     BleManager.start({showAlert: false})
 
@@ -57,7 +54,6 @@ export default class App extends Component {
     this.handlerStop = bleManagerEmitter.addListener('BleManagerStopScan', this.handleStopScan )
     this.handlerDisconnect = bleManagerEmitter.addListener('BleManagerDisconnectPeripheral', this.handleDisconnectedPeripheral )
     this.handlerUpdate = bleManagerEmitter.addListener('BleManagerDidUpdateValueForCharacteristic', this.handleUpdateValueForCharacteristic )
-
 
 
     if (Platform.OS === 'android' && Platform.Version >= 23) {
@@ -78,24 +74,18 @@ export default class App extends Component {
 
   }
 
-  handleAppStateChange(nextAppState) {
-    if (this.state.appState.match(/inactive|background/) && nextAppState === 'active') {
-      console.log('App has come to the foreground!')
-      BleManager.getConnectedPeripherals([]).then((peripheralsArray) => {
-        console.log('Connected peripherals: ' + peripheralsArray.length)
-      })
-    }
-    this.setState({appState: nextAppState})
-  }
-
   componentWillUnmount() {
-    this.handlerDiscover.remove()
+		console.log('%c componentWillUnmount', 'color: orange')
+		
+		this.handlerDiscover.remove()
     this.handlerStop.remove()
     this.handlerDisconnect.remove()
     this.handlerUpdate.remove()
   }
 
   handleDisconnectedPeripheral(data) {
+		console.log('%c handleDisconnectedPeripheral', 'color: orange')
+
     let peripherals = this.state.peripherals
     let peripheral = peripherals.get(data.peripheral)
     if (peripheral) {
@@ -107,7 +97,9 @@ export default class App extends Component {
   }
 
   handleUpdateValueForCharacteristic(data) {
-    function bufferToString(arr){
+		console.log('%c handleUpdateValueForCharacteristic', 'color: orange')
+		
+		function bufferToString(arr){
       return arr.map(function(i){return String.fromCharCode(i)}).join("")
     }
     const actualDataString = bufferToString(data.value)
@@ -123,21 +115,27 @@ export default class App extends Component {
   }
 
   handleStopScan() {
+		console.log('%c handleStopScan', 'color: orange')
+
     console.log('Scan is stopped')
     this.setState({ scanning: false })
   }
 
   startScan() {
+		console.log('%c startScan', 'color: orange')
+
     if (!this.state.scanning) {
       //this.setState({peripherals: new Map()})
       BleManager.scan([], 3, true).then((results) => {
-        console.log('Scanning...')
+        console.log('Scanning...', results)
         this.setState({scanning:true})
       })
     }
   }
 
-  retrieveConnected(){
+  retrieveConnected() {
+		console.log('%c retrieveConnected', 'color: orange')
+
     BleManager.getConnectedPeripherals([]).then((results) => {
       if (results.length == 0) {
         console.log('No connected peripherals')
@@ -153,8 +151,10 @@ export default class App extends Component {
     })
   }
 
-  handleDiscoverPeripheral(peripheral){
-    var peripherals = this.state.peripherals
+  handleDiscoverPeripheral(peripheral) {
+		console.log('%c handleDiscoverPeripheral', 'color: orange')
+		
+		var peripherals = this.state.peripherals
     console.log('Got ble peripheral', peripheral)
     if (!peripheral.name) {
       peripheral.name = 'NO NAME'
@@ -164,7 +164,9 @@ export default class App extends Component {
   }
 
   test(peripheral) {
-    if (peripheral){
+		console.log('%c test', 'color: orange')
+		
+		if (peripheral){
       if (peripheral.connected){
         BleManager.disconnect(peripheral.id)
       }else{
