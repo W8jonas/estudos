@@ -101,25 +101,31 @@ void setup() {
 
 }
 
+float lastAnalogInput = 0.0;
+
 void loop() {
+  float analogInput = analogRead(34);
+  
   //se existe algum dispositivo conectado
   if (deviceConnected) {
-  
-    float analogInput = analogRead(34);
-    char txString[8];
-    dtostrf(analogInput, 1, 2, txString);
+    float result = analogInput - lastAnalogInput;
     
-    characteristicTX->setValue(txString); //seta o valor que a caracteristica notificará (enviar)       
-    characteristicTX->notify(); // Envia o valor para o smartphone
-    
-    Serial.print("*** Original Value: ");
-    Serial.print(analogInput);
-    Serial.print(" *** Sent Value: ");
-    Serial.print(txString);
-    Serial.println(" ***");
-    
-    delay(100);
-    
+    if( abs(result) > 100){
+      char txString[8];
+      dtostrf(analogInput, 1, 2, txString);
+      
+      characteristicTX->setValue(txString); //seta o valor que a caracteristica notificará (enviar)
+      characteristicTX->notify(); // Envia o valor para o smartphone
+      
+      Serial.print("*** Original Value: ");
+      Serial.print(analogInput);
+      Serial.print(" *** Sent Value: ");
+      Serial.print(txString);
+      Serial.println(" ***");
+      lastAnalogInput = analogInput;
+    }
+
+    delay(1000);
   /*
     characteristicTX->setValue("Hello World!"); // Sending a test message
     characteristicTX->notify(); // Send the value to the app!
