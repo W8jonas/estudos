@@ -1,8 +1,20 @@
 import React, {useState, useEffect} from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, Platform, PermissionsAndroid } from 'react-native'
 
+// assets
+
+// components
+
+// functions
 import BleManager from 'react-native-ble-manager';
 
+
+const BleManagerModule = NativeModules.BleManager
+const bleManagerEmitter = new NativeEventEmitter(BleManagerModule)
+
+import { View, Text, StyleSheet, TouchableOpacity, Platform, PermissionsAndroid, NativeModules, NativeEventEmitter } from 'react-native'
+
+
+// constants 
 const NAME_ID 				 = "ESP32-BLE"
 const SERVICE_UUID           = "ab0828b1-198e-4351-b779-901fa0e0371e"
 const CHARACTERISTIC_UUID_RX = "4ac8a682-9736-4e5d-932b-e9b31405049c"
@@ -15,49 +27,56 @@ export default function App() {
 	const [actualValue, setActualValue] = useState(0)
 
 	useEffect(()=>{
+
+		BleManager.start({showAlert: false})
+	
+		const handlerDiscover = bleManagerEmitter.addListener('BleManagerDiscoverPeripheral', handleDiscoverPeripheral )
+		const handlerStop = bleManagerEmitter.addListener('BleManagerStopScan', handleStopScan )
+		const handlerDisconnect = bleManagerEmitter.addListener('BleManagerDisconnectPeripheral', handleDisconnectedPeripheral )
+		const handlerUpdate = bleManagerEmitter.addListener('BleManagerDidUpdateValueForCharacteristic', handleUpdateValueForCharacteristic )
+	
+	
 		if (Platform.OS === 'android' && Platform.Version >= 23) {
 			PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION).then((result) => {
 				if (result) {
-				  console.log("Permission is OK");
+				  console.log("Permission is OK")
 				} else {
 				  PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION).then((result) => {
 					if (result) {
-					  console.log("User accept");
+					  console.log("User accept")
 					} else {
-					  console.log("User refuse");
+					  console.log("User refuse")
 					}
-				  });
+				  })
 				}
-		  });
+		  })
 		}
+	
 	}, [])
 
-	function handleConnection() {
-		BleManager.connect(CHARACTERISTIC_UUID_TX)
-		.then(() => {
-			// Success code
-			console.log("Connected");
-		})
-		.catch((error) => {
-			// Failure code
-			console.log(error);
-		});
+	function handleDiscoverPeripheral(peripheral){
+
 	}
 
-	function start(){
-		BleManager.start({ showAlert: false }).then((result) => {
-			// Success code
-			console.log("Module initialized", result);
-		  });
+	function handleStopScan(){
+
+	}
+
+	function handleDisconnectedPeripheral(data){
+
+	}
+
+	function handleUpdateValueForCharacteristic(data){
+
+	}
+
+	function handleConnection(){
+
 	}
 
 	function startScan(){
-		BleManager.scan([], 3, true).then((results) => {
-			console.log('Scanning...', results);
-		});
+
 	}
-
-
 
   return (
     <View style={styles.container}>
@@ -67,28 +86,14 @@ export default function App() {
 			</Text>
 
 			{!isConnected && 
-			<TouchableOpacity 
-				style={styles.button}
-				onPress={handleConnection}
-			>
+			<TouchableOpacity  style={styles.button} onPress={handleConnection}>
 				<Text>Se conecte agora</Text>
 			</TouchableOpacity>
 			}
 
-			<TouchableOpacity 
-				style={styles.button}
-				onPress={start}
-			>
-				<Text>Start</Text>
+			<TouchableOpacity style={styles.button} onPress={startScan}>
+				<Text>Start Scan Bluetooth</Text>
 			</TouchableOpacity>
-
-			<TouchableOpacity 
-				style={styles.button}
-				onPress={startScan}
-			>
-				<Text>Escaniar redes</Text>
-			</TouchableOpacity>
-
 
 			<Text>
 				Valor atual: {actualValue}
@@ -103,7 +108,7 @@ export default function App() {
 
 			{
 			exampleArray.map(item=>(
-				<Text>{item}</Text>
+				<Text key={Math.random()}>{item}</Text>
 			))}
 
 		</View>
@@ -134,3 +139,4 @@ const styles = StyleSheet.create({
 		borderRadius: 80
 	}
 })
+
