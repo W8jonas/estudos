@@ -28,6 +28,7 @@ const SERVICE_UUID           = "ab0828b1-198e-4351-b779-901fa0e0371e"
 const CHARACTERISTIC_UUID_RX = "4ac8a682-9736-4e5d-932b-e9b31405049c"
 const CHARACTERISTIC_UUID_TX = "0972EF8C-7613-4075-AD52-756F33D4DA91"
 
+let lastDataNumber = 0;
 
 export default class App extends Component {
   constructor(){
@@ -106,20 +107,19 @@ export default class App extends Component {
   }
 
   handleUpdateValueForCharacteristic(data) {
-	
-	function bufferToString(arr){
-		return arr.map(function(i){return String.fromCharCode(i)}).join("")
-	}
-
+    function bufferToString(arr){
+      return arr.map(function(i){return String.fromCharCode(i)}).join("")
+    }
     const actualDataString = bufferToString(data.value)
+    const actualDataNumber = Number(actualDataString)
 
-    console.log('Received data from ' + data.peripheral + ' characteristic ' + data.characteristic, actualDataString);
+    console.log('Received data from ' + data.peripheral + ' characteristic ' + data.characteristic, actualDataNumber);
     
-    let _historyArray = this.state.historyArray
-    _historyArray.push(actualDataString)
+    if( Math.abs(actualDataNumber - lastDataNumber) > 3){
+      lastDataNumber = actualDataNumber
+      this.setState({ historyArray: [actualDataNumber, ...this.state.historyArray] })
+    }
 
-    this.setState({ historyArray: _historyArray })
-    
   }
 
   handleStopScan() {
@@ -216,9 +216,13 @@ export default class App extends Component {
   }
 
   renderItem(item) {
+    if(!item) {
+      return
+    }
+
     const color = item.connected ? 'green' : '#fff';
     return (
-      <TouchableHighlight onPress={() => this.test(item) }>
+      <TouchableHighlight key={item.id} onPress={() => this.test(item) }>
         <View style={[styles.row, {backgroundColor: color}]}>
           <Text style={{fontSize: 12, textAlign: 'center', color: '#333333', padding: 10}}>{item.name}</Text>
           <Text style={{fontSize: 10, textAlign: 'center', color: '#333333', padding: 2}}>RSSI: {item.rssi}</Text>
@@ -250,12 +254,9 @@ export default class App extends Component {
                 <Text style={{textAlign: 'center'}}>No peripherals</Text>
               </View>
             }
-            <FlatList
-              data={list}
-              renderItem={({ item }) => this.renderItem(item) }
-              keyExtractor={item => item.id}
-            />
-            
+
+            {list.map((item) => this.renderItem(item))}
+
             <Text>Histórico dos valores recebidos</Text>
             {this.state.historyArray.map(item=>(
                 <Text key={`${Math.random()}`}>{item}</Text>
