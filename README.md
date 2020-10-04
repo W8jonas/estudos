@@ -29,11 +29,11 @@ Globo terrestre em 3D que possibilita ver o total de casos confirmados de corona
 :---------------:|:----------------:|:-----------------:|
 
 
-#### [Comunicação ESP32 para ESP8266 usando socket](https://github.com/W8jonas/estudos/tree/master/chartcoronavirus/web)
+#### [Comunicação ESP32 para ESP8266 usando socket](https://github.com/W8jonas/estudos/tree/master/Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/ComunicationWithSocket_ESP32_to_ESP8266)
 
 Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Server (ESP32). O server cria e estabelece um localhost para que o Client consiga se conectar e, a partir disto, enviar dados para o servidor.
 
-![](Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/ComunicationWithSocket_ESP32_to_ESP8266/demos/Demo.gif)  |  ![](Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/ComunicationWithSocket_ESP32_to_ESP8266/demos/wifiCommunicationWithSocket_ESP32_to_ESP8266.gif) | 
+![](Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/ComunicationWithSocket_ESP32_to_ESP8266/demo/Demo.gif)  |  ![](Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/ComunicationWithSocket_ESP32_to_ESP8266/demo/wifiCommunicationWithSocket_ESP32_to_ESP8266.gif) | 
 :---------------:|:----------------:|
 
 
