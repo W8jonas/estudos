@@ -6,7 +6,40 @@
 
 #### Divirta-se!!! 😀
 
+
 <br/>
+
+## Projetos em destaque
+
+Lista dos projetos que gostei de desenvolver e gostei do resultado final. Estão apresentados com uma descrição curta e algumas prints. Você pode consultar o projeto completo com toda a descrição e demos clicando no seu nome (ctrl + click para abrir em nova aba).
+
+#### [Ecoleta](https://github.com/W8jonas/estudos/tree/master/nextLevelWeek/Ecoleta)
+
+Projeto desenvolvido na **Next Level Week**, contendo backend, frontend web e aplicação mobile, usando a stack **Node.Js e React**. A proposta do projeto é dar oportunidades para empresas de reciclagem poderem registrar pontos de coletas de resíduos e para que as pessoas tenham visualização para esses pontos marcados.
+
+![](nextLevelWeek/Ecoleta/screenshots/Screenshot_1.png)  |  ![](nextLevelWeek/Ecoleta/screenshots/Screenshot_2.png) |  ![](nextLevelWeek/Ecoleta/screenshots/Screenshot_3.png)  | 
+:---------------:|:----------------:|:-----------------:|
+
+
+#### [Chart Corona Virus](https://github.com/W8jonas/estudos/tree/master/chartcoronavirus/web)
+
+Globo terrestre em 3D que possibilita ver o total de casos confirmados de coronavirus ao redor do mundo de forma interativa. Foi utilizado ReactJs e a lib Echarts para a plotagem do gráfico.
+
+![](chartcoronavirus/web/screenshots/Screenshot_1.png)  |  ![](chartcoronavirus/web/screenshots/Screenshot_2.png) |  ![](chartcoronavirus/web/screenshots/Screenshot_3.png)  | 
+:---------------:|:----------------:|:-----------------:|
+
+
+#### [Comunicação ESP32 para ESP8266 usando socket](https://github.com/W8jonas/estudos/tree/master/chartcoronavirus/web)
+
+Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Server (ESP32). O server cria e estabelece um localhost para que o Client consiga se conectar e, a partir disto, enviar dados para o servidor.
+
+![](Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/ComunicationWithSocket_ESP32_to_ESP8266/demos/Demo.gif)  |  ![](Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/ComunicationWithSocket_ESP32_to_ESP8266/demos/wifiCommunicationWithSocket_ESP32_to_ESP8266.gif) | 
+:---------------:|:----------------:|
+
+
+<br/>
+
+
 
 ## Índice para o projeto completo
 
@@ -19,7 +52,7 @@
 [SemanaOmniStack](https://github.com/W8jonas/estudos/tree/master/semanaOmniStack)
  - [Semana 11 - Be The Hero](https://github.com/W8jonas/estudos/tree/master/semanaOmniStack/semana11)
 
-- [chartcoronavirus](https://github.com/W8jonas/estudos/tree/master/chartcoronavirus/web)
+[chartcoronavirus](https://github.com/W8jonas/estudos/tree/master/chartcoronavirus/web)
 
 Eletronics, ESP, Arduino and IOT
 - [WiFiNetworkListWithESP32](https://github.com/W8jonas/estudos/tree/master/Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/WiFiNetworkListWithESP32)
