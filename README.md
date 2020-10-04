@@ -2,10 +2,27 @@
 
 ### Este é meu repositório contendo somente conteúdos relacionados aos meus estudos, projetos desenvolvidos em cursos e afins.
 
-#### Você pode conferir um resumo de todos eles abaixo, e caso tenha interesse em algum deles, você pode clicar no nome do projeto e você será levado para uma nova guia contendo mais imagens e informações sobre o projeto específico.
+<br/>
+
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/W8jonas/estudos?style=flat-square">
+
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/W8jonas/estudos?style=flat-square">
+
+  <img alt="Repo size" src="https://img.shields.io/github/repo-size/W8jonas/estudos?style=flat-square">
+
+  <a href="https://github.com/W8jonas/estudos/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/W8jonas/estudos?style=flat-square">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/github/license/W8jonas/estudos?style=flat-square">
+</p>
+<br/>
+
+Você pode conferir um resumo de todos eles abaixo, e caso tenha interesse em algum deles, você pode clicar no nome do projeto e você será levado para uma nova guia contendo mais imagens e informações sobre o projeto específico.
+
 
 #### Divirta-se!!! 😀
-
 
 <br/>
 
