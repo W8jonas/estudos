@@ -26,6 +26,13 @@ Projeto desenvolvido na **Next Level Week**, contendo backend, frontend web e ap
 ![](screenshots/Screenshot_4.png) |  ![](screenshots/Screenshot_5.png)  | 
 |:----------------:|:-----------------:|
 
+<br/>
+
+## Etapas desenvolvidas:
+- [x] server
+- [x] web
+- [x] mobile
+- [ ] funcionalidade avançadas
 
 <br/>
 
