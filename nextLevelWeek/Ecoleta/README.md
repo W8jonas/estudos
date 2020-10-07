@@ -30,7 +30,7 @@ Projeto desenvolvido na **Next Level Week**, contendo backend, frontend web e ap
 <br/>
 
 ## Tecnologias
-Esse projeto foi desenvolvido utilizando como principal linguagem o **Typescript**, usando os frameworks o ReactJs e React-Native, além de Node no backend.
+Esse projeto foi desenvolvido utilizando como principal linguagem o **Typescript**, usando os frameworks o **ReactJs** e **React-Native**, além de **Node** no backend.
 
 <details>
   <summary>Backend</summary>
@@ -53,7 +53,6 @@ Esse projeto foi desenvolvido utilizando como principal linguagem o **Typescript
  - Typescript
  - Axios
  - Leaflet
- - React
  - React DOM
  - React Icons
  - React Leaflet
@@ -71,7 +70,6 @@ Esse projeto foi desenvolvido utilizando como principal linguagem o **Typescript
  - masked-view
  - Geo Location
  - Mail Composer
- - React
  - React Native
  - react native vector icons
  - React Native Svg
