@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Ecoleta" src="Screenshots/logo_ecoleta.png" />
+    <img alt="Ecoleta" src="screenshots/logo_ecoleta.png" />
     <br/>
     ♻️ Ecoleta ♻️
 </h1>
