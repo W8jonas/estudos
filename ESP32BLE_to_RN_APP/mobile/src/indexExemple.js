@@ -12,7 +12,8 @@ import {
   FlatList,
   Dimensions,
   Button,
-  SafeAreaView
+  SafeAreaView,
+  Vibration
 } from 'react-native'
 import BleManager from 'react-native-ble-manager'
 
@@ -114,6 +115,9 @@ export default class App extends Component {
     this.setState({ historyArray: [actualDataNumber, ...this.state.historyArray] })
     this.setState({lastReceivedNumber: actualDataNumber})
 
+    if (actualDataNumber > 3900){
+      Vibration.vibrate(500, 500, 500, 500, 500)
+    }
   }
 
   handleStopScan() {
