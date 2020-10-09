@@ -16,6 +16,9 @@ import {
 } from 'react-native'
 import BleManager from 'react-native-ble-manager'
 
+import ChartClassBased from './chartExemple'
+import Chart from './chart'
+
 const window = Dimensions.get('window')
 
 const BleManagerModule = NativeModules.BleManager
@@ -27,7 +30,6 @@ const SERVICE_UUID           = "ab0828b1-198e-4351-b779-901fa0e0371e"
 const CHARACTERISTIC_UUID_RX = "4ac8a682-9736-4e5d-932b-e9b31405049c"
 const CHARACTERISTIC_UUID_TX = "0972EF8C-7613-4075-AD52-756F33D4DA91"
 
-let lastDataNumber = 0
 
 export default class App extends Component {
   constructor(){
@@ -36,7 +38,8 @@ export default class App extends Component {
     this.state = {
       scanning:false,
       peripherals: new Map(),
-      historyArray: []
+      historyArray: [],
+      lastReceivedNumber: 0
     }
 
     this.handleDiscoverPeripheral = this.handleDiscoverPeripheral.bind(this)
@@ -107,10 +110,8 @@ export default class App extends Component {
 
     console.log('Received data from ' + data.peripheral + ' characteristic ' + data.characteristic, actualDataNumber)
     
-    if( Math.abs(actualDataNumber - lastDataNumber) > 3){
-      lastDataNumber = actualDataNumber
-      this.setState({ historyArray: [actualDataNumber, ...this.state.historyArray] })
-    }
+    this.setState({lastReceivedNumber: actualDataNumber})
+    this.setState({ historyArray: [actualDataNumber, ...this.state.historyArray] })
 
   }
 
@@ -250,6 +251,7 @@ export default class App extends Component {
             <Button title="Retrieve connected peripherals" onPress={() => this.retrieveConnected() } />
           </View>
 
+
           <ScrollView style={styles.scroll}>
             {(list.length == 0) &&
               <View style={{flex:1, margin: 20}}>
@@ -259,11 +261,14 @@ export default class App extends Component {
 
             {list.map((item) => this.renderItem(item))}
 
+            <Chart newData={this.state.historyArray[0]}/>
+
             <Text>Histórico dos valores recebidos</Text>
             {this.state.historyArray.map(item=>(
                 <Text key={`${Math.random()}`}>{item}</Text>
 
             ))}
+
           </ScrollView>
         </View>
       </SafeAreaView>
