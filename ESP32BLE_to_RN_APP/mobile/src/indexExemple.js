@@ -112,6 +112,7 @@ export default class App extends Component {
     
     this.setState({lastReceivedNumber: actualDataNumber})
     this.setState({ historyArray: [actualDataNumber, ...this.state.historyArray] })
+    this.setState({lastReceivedNumber: actualDataNumber})
 
   }
 
@@ -261,7 +262,7 @@ export default class App extends Component {
 
             {list.map((item) => this.renderItem(item))}
 
-            <Chart newData={this.state.historyArray[0]}/>
+            <Chart newData={this.state.lastReceivedNumber}/>
 
             <Text>Histórico dos valores recebidos</Text>
             {this.state.historyArray.map(item=>(
