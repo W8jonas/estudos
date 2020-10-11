@@ -110,7 +110,7 @@ void loop() {
   if (deviceConnected) {
     float result = analogInput - lastAnalogInput;
     
-    if( abs(result) > 20){
+    if( abs(result) > 100){
       char txString[8];
       dtostrf(analogInput, 1, 2, txString);
       
@@ -125,7 +125,7 @@ void loop() {
       lastAnalogInput = analogInput;
     }
 
-    delay(500);
+    delay(1000);
   /*
     characteristicTX->setValue("Hello World!"); // Sending a test message
     characteristicTX->notify(); // Send the value to the app!

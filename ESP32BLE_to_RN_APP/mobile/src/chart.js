@@ -59,8 +59,16 @@ export default function Chart(props) {
         
         console.log("props.newData", x, y)
 
-        setDateList([...dateList, x])
-        setValueList([...valueList, y])
+        const _dateList = dateList
+        const _valueList = valueList
+        
+        if(dateList.length > 30){
+            _dateList.shift()
+            _valueList.shift()
+        }
+
+        setDateList([..._dateList, x])
+        setValueList([..._valueList, y])
         
         console.log('atualizando dateList: ', dateList)
         console.log('atualizando valueList: ', valueList)
