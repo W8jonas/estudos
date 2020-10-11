@@ -3,6 +3,9 @@ import React, {useState, useEffect} from 'react'
 // assets
 
 // components
+import ChartClassBased from './chartExemple'
+import Chart from './chart'
+
 
 // functions
 import BleManager from 'react-native-ble-manager';
@@ -11,7 +14,23 @@ import BleManager from 'react-native-ble-manager';
 const BleManagerModule = NativeModules.BleManager
 const bleManagerEmitter = new NativeEventEmitter(BleManagerModule)
 
-import { View, Text, StyleSheet, TouchableOpacity, Platform, PermissionsAndroid, NativeModules, NativeEventEmitter } from 'react-native'
+
+import {
+	StyleSheet,
+	Text,
+	View,
+	TouchableOpacity,
+	NativeEventEmitter,
+	NativeModules,
+	Platform,
+	PermissionsAndroid,
+	ScrollView,
+	FlatList,
+	Dimensions,
+	Button,
+	SafeAreaView,
+	Vibration
+  } from 'react-native'
 
 
 // constants 
@@ -20,11 +39,19 @@ const SERVICE_UUID           = "ab0828b1-198e-4351-b779-901fa0e0371e"
 const CHARACTERISTIC_UUID_RX = "4ac8a682-9736-4e5d-932b-e9b31405049c"
 const CHARACTERISTIC_UUID_TX = "0972EF8C-7613-4075-AD52-756F33D4DA91"
 
+const window = Dimensions.get('window')
+const BleManagerModule = NativeModules.BleManager
+const bleManagerEmitter = new NativeEventEmitter(BleManagerModule)
+
+
 export default function App() {
 
-	const exampleArray = [13, 2, 43, 53, 123, 12, 22]
-	const [isConnected, setIsConnected] = useState(false)
-	const [actualValue, setActualValue] = useState(0)
+	const [scanning, setScanning] = useState(false)
+	const [lastReceivedNumber, setLastReceivedNumber] = useState(0)
+	const [historyArray, setHistoryArray] = useState([])
+	const [list, setList] = useState([])
+	const [peripherals, setPeripherals] = useState([])
+
 
 	useEffect(()=>{
 
@@ -74,45 +101,50 @@ export default function App() {
 
 	}
 
+	function retrieveConnected() {
+
+	}
+	
 	function startScan(){
+
+	}
+	
+	function renderItem(){
 
 	}
 
   return (
-    <View style={styles.container}>
-		<View style={styles.topContainer}>
-			<Text>
-				Você está: {isConnected ? "conectado" : "desconectado"}
-			</Text>
+		<View style={styles.container}>
+			<View style={{margin: 10}}>
+				<Button 
+					title={`Scan Bluetooth ${scanning ? 'on' : 'off'}`} 
+					onPress={() => startScan() } 
+				/>
+			</View>
 
-			{!isConnected && 
-			<TouchableOpacity  style={styles.button} onPress={handleConnection}>
-				<Text>Se conecte agora</Text>
-			</TouchableOpacity>
-			}
+			<View style={{margin: 10}}>
+				<Button title="Retrieve connected peripherals" onPress={() => retrieveConnected() } />
+			</View>
 
-			<TouchableOpacity style={styles.button} onPress={startScan}>
-				<Text>Start Scan Bluetooth</Text>
-			</TouchableOpacity>
+			<ScrollView style={styles.scroll}>
+				{(list.length == 0) &&
+				<View style={{flex:1, margin: 20}}>
+					<Text style={{textAlign: 'center'}}>No peripherals</Text>
+				</View>
+				}
 
-			<Text>
-				Valor atual: {actualValue}
-			</Text>
-		</View>
+				{list.map((item) => renderItem(item))}
 
+				<Chart newData={lastReceivedNumber}/>
 
-		<View style={styles.bottomContainer}>
-			<Text>
-			Histórico de valores recebidos:
-			</Text>
+				<Text>Histórico dos valores recebidos</Text>
+				{historyArray.map(item=>(
+					<Text key={`${Math.random()}`}>{item}</Text>
+				))}
 
-			{
-			exampleArray.map(item=>(
-				<Text key={Math.random()}>{item}</Text>
-			))}
+			</ScrollView>
 
 		</View>
-    </View>
   )
 }
 
