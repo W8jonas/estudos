@@ -52,7 +52,6 @@ export default function App() {
 	const [list, setList] = useState([])
 	const [peripherals, setPeripherals] = useState(new Map())
 
-
 	useEffect(()=>{
 
 		BleManager.start({showAlert: false})
@@ -78,10 +77,16 @@ export default function App() {
 				}
 		  })
 		}
-	
+		
+		return (
+			handlerDiscover,
+			handlerStop,
+			handlerDisconnect,
+			handlerUpdate
+		)
 	}, [])
 
-	function startScan(){
+	function startScan() {
 		console.log('%c startScan', 'color: orange')
 
 		if (!scanning) {
@@ -92,14 +97,14 @@ export default function App() {
 		}
 	}
 
-	function handleStopScan(){
+	function handleStopScan() {
 		console.log('%c handleStopScan', 'color: orange')
 	
 		console.log('Scan is stopped')
 		setScanning(false)
 	}
 
-	function handleDiscoverPeripheral(peripheral){
+	function handleDiscoverPeripheral(peripheral) {
 		console.log('%c handleDiscoverPeripheral', 'color: orange')
 		
 		const _peripherals = peripherals
@@ -111,7 +116,7 @@ export default function App() {
 		setPeripherals(_peripherals)
 	}
 
-	function handleDisconnectedPeripheral(data){
+	function handleDisconnectedPeripheral(data) {
 		console.log('%c handleDisconnectedPeripheral', 'color: orange')
 
 		const _peripherals = peripherals
@@ -125,11 +130,11 @@ export default function App() {
 		console.log('Disconnected from ' + data.peripheral)
 	}
 
-	function handleUpdateValueForCharacteristic(data){
+	function handleUpdateValueForCharacteristic(data) {
 		console.log('%c handleUpdateValueForCharacteristic', 'color: orange')
 		
-		function bufferToString(arr){
-			return arr.map(function(i){return String.fromCharCode(i)}).join("")
+		function bufferToString(arr) {
+			return arr.map(function(i) {return String.fromCharCode(i)}).join("")
 		}
 
 		const actualDataString = bufferToString(data.value)
@@ -140,21 +145,86 @@ export default function App() {
 		setLastReceivedNumber(actualDataNumber)
 		setHistoryArray([actualDataNumber, ...historyArray])
 
-		if (actualDataNumber > 3900){
+		if (actualDataNumber > 3900) {
 			Vibration.vibrate(500, 500, 500, 500, 500)
 		}
 	}
 
 	function retrieveConnected() {
+		console.log('%c retrieveConnected', 'color: orange')
 
+		BleManager.getConnectedPeripherals([]).then((results) => {
+		if (results.length == 0) {
+			console.log('No connected peripherals')
+		}
+		console.log(results)
+		const _peripherals = peripherals
+		for (var i = 0; i < results.length; i++) {
+			var peripheral = results[i]
+			peripheral.connected = true
+			_peripherals.set(peripheral.id, peripheral)
+			setPeripherals(_peripherals)
+		}
+		})
 	}
 
-	function handleConnection(peripheral){
+	function handleConnection(peripheral) {
+		console.log('%c test', 'color: orange')
+		
+		if (peripheral) {
+			if (peripheral.connected) {
+				BleManager.disconnect(peripheral.id)
+			} else {
+				BleManager.connect(peripheral.id).then(() => {
+					let _peripherals = peripherals
+					let p = _peripherals.get(peripheral.id)
+					if (p) {
+						p.connected = true
+						_peripherals.set(peripheral.id, p)
+						setPeripherals(_peripherals)
+					}
+					console.log('Connected to ' + peripheral.id)
 
+					setTimeout(() => {
+
+						BleManager.retrieveServices(peripheral.id).then((peripheralInfo) => {
+							console.log(peripheralInfo)
+							var service = SERVICE_UUID
+							var bakeCharacteristic = CHARACTERISTIC_UUID_TX
+							var crustCharacteristic = CHARACTERISTIC_UUID_RX
+
+							setTimeout(() => {
+								BleManager.startNotification(peripheral.id, service, bakeCharacteristic).then(() => {
+									console.log('Started notification on ' + peripheral.id)
+								}).catch((error) => {
+									console.log('Notification error', error)
+								})
+							}, 200)
+						})
+					}, 900)
+
+				}).catch((error) => {
+					console.log('Connection error', error)
+				})
+			}
+		}
 	}
 
-	function renderItem(){
-
+	function renderItem(item) {
+		if(!item) {
+			return
+		}
+	
+		const color = item.connected ? 'green' : '#fff'
+		return (
+		<TouchableHighlight key={item.id} onPress={() => handleConnection(item) }>
+			<View style={[styles.row, {backgroundColor: color}]}>
+			<Text style={{fontSize: 12, textAlign: 'center', color: '#333333', padding: 10}}>{item.name}</Text>
+			<Text style={{fontSize: 10, textAlign: 'center', color: '#333333', padding: 2}}>RSSI: {item.rssi}</Text>
+			<Text style={{fontSize: 8, textAlign: 'center', color: '#333333', padding: 2, paddingBottom: 20}}>{item.id}</Text>
+			</View>
+		</TouchableHighlight>
+		)
 	}
 
   return (
@@ -193,26 +263,43 @@ export default function App() {
 }
 
 
+// const styles = StyleSheet.create({
+// 	container: {
+// 		flex: 1,
+// 		padding: 10
+// 	},
+// 	topContainer: {
+// 		height: '50%',
+// 	},
+// 	bottomContainer: {
+// 		height: '50%'
+// 	},
+// 	button: {
+// 		height: 50, 
+// 		width: 250,
+// 		marginTop: 10,
+// 		alignItems: 'center',
+// 		justifyContent: 'center',
+// 		alignSelf: 'center',
+// 		backgroundColor: '#88f',
+// 		borderRadius: 80
+// 	}
+// })
+
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		padding: 10
+	  flex: 1,
+	  backgroundColor: '#FFF',
+	  width: window.width,
+	  height: window.height
 	},
-	topContainer: {
-		height: '50%',
+	scroll: {
+	  flex: 1,
+	  backgroundColor: '#f0f0f0',
+	  margin: 10,
 	},
-	bottomContainer: {
-		height: '50%'
+	row: {
+	  margin: 10
 	},
-	button: {
-		height: 50, 
-		width: 250,
-		marginTop: 10,
-		alignItems: 'center',
-		justifyContent: 'center',
-		alignSelf: 'center',
-		backgroundColor: '#88f',
-		borderRadius: 80
-	}
 })
 
