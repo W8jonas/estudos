@@ -50,7 +50,7 @@ export default function App() {
 	const [lastReceivedNumber, setLastReceivedNumber] = useState(0)
 	const [historyArray, setHistoryArray] = useState([])
 	const [list, setList] = useState([])
-	const [peripherals, setPeripherals] = useState([])
+	const [peripherals, setPeripherals] = useState(new Map())
 
 
 	useEffect(()=>{
@@ -81,34 +81,78 @@ export default function App() {
 	
 	}, [])
 
-	function handleDiscoverPeripheral(peripheral){
+	function startScan(){
+		console.log('%c startScan', 'color: orange')
 
+		if (!scanning) {
+			BleManager.scan([], 3, true).then((results) => {
+				console.log('Scanning...', results)
+				setScanning(true)
+			})
+		}
 	}
 
 	function handleStopScan(){
+		console.log('%c handleStopScan', 'color: orange')
+	
+		console.log('Scan is stopped')
+		setScanning(false)
+	}
 
+	function handleDiscoverPeripheral(peripheral){
+		console.log('%c handleDiscoverPeripheral', 'color: orange')
+		
+		const _peripherals = peripherals
+		console.log('Got ble peripheral', peripheral)
+		if (!peripheral.name) {
+		peripheral.name = 'NO NAME'
+		}
+		_peripherals.set(peripheral.id, peripheral)
+		setPeripherals(_peripherals)
 	}
 
 	function handleDisconnectedPeripheral(data){
+		console.log('%c handleDisconnectedPeripheral', 'color: orange')
 
+		const _peripherals = peripherals
+		let peripheral = _peripherals.get(data.peripheral)
+		
+		if (peripheral) {
+			peripheral.connected = false
+			_peripherals.set(peripheral.id, peripheral)
+			setPeripherals(_peripherals)
+		}
+		console.log('Disconnected from ' + data.peripheral)
 	}
 
 	function handleUpdateValueForCharacteristic(data){
+		console.log('%c handleUpdateValueForCharacteristic', 'color: orange')
+		
+		function bufferToString(arr){
+			return arr.map(function(i){return String.fromCharCode(i)}).join("")
+		}
 
-	}
+		const actualDataString = bufferToString(data.value)
+		const actualDataNumber = Number(actualDataString)
 
-	function handleConnection(){
+		console.log('Received data from ' + data.peripheral + ' characteristic ' + data.characteristic, actualDataNumber)
+		
+		setLastReceivedNumber(actualDataNumber)
+		setHistoryArray([actualDataNumber, ...historyArray])
 
+		if (actualDataNumber > 3900){
+			Vibration.vibrate(500, 500, 500, 500, 500)
+		}
 	}
 
 	function retrieveConnected() {
 
 	}
-	
-	function startScan(){
+
+	function handleConnection(peripheral){
 
 	}
-	
+
 	function renderItem(){
 
 	}
