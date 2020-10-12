@@ -3,17 +3,12 @@ import React, {useState, useEffect} from 'react'
 // assets
 
 // components
-import ChartClassBased from './chartExemple'
-import Chart from './chart'
+// import ChartClassBased from './chartExemple'
+// import Chart from './chart'
 
 
 // functions
 import BleManager from 'react-native-ble-manager';
-
-
-const BleManagerModule = NativeModules.BleManager
-const bleManagerEmitter = new NativeEventEmitter(BleManagerModule)
-
 
 import {
 	StyleSheet,
@@ -30,7 +25,7 @@ import {
 	Button,
 	SafeAreaView,
 	Vibration
-  } from 'react-native'
+} from 'react-native'
 
 
 // constants 
@@ -61,7 +56,6 @@ export default function App() {
 		const handlerDisconnect = bleManagerEmitter.addListener('BleManagerDisconnectPeripheral', handleDisconnectedPeripheral )
 		const handlerUpdate = bleManagerEmitter.addListener('BleManagerDidUpdateValueForCharacteristic', handleUpdateValueForCharacteristic )
 	
-	
 		if (Platform.OS === 'android' && Platform.Version >= 23) {
 			PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION).then((result) => {
 				if (result) {
@@ -78,12 +72,6 @@ export default function App() {
 		  })
 		}
 		
-		return (
-			handlerDiscover,
-			handlerStop,
-			handlerDisconnect,
-			handlerUpdate
-		)
 	}, [])
 
 	function startScan() {
@@ -249,7 +237,7 @@ export default function App() {
 
 				{list.map((item) => renderItem(item))}
 
-				<Chart newData={lastReceivedNumber}/>
+				{/* <Chart newData={lastReceivedNumber}/> */}
 
 				<Text>Histórico dos valores recebidos</Text>
 				{historyArray.map(item=>(

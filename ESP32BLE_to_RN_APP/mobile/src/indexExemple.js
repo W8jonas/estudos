@@ -17,8 +17,8 @@ import {
 } from 'react-native'
 import BleManager from 'react-native-ble-manager'
 
-import ChartClassBased from './chartExemple'
-import Chart from './chart'
+// import ChartClassBased from './chartExemple'
+// import Chart from './chart'
 
 const window = Dimensions.get('window')
 
@@ -266,7 +266,7 @@ export default class App extends Component {
 
             {list.map((item) => this.renderItem(item))}
 
-            <Chart newData={this.state.lastReceivedNumber}/>
+            {/* <Chart newData={this.state.lastReceivedNumber}/> */}
 
             <Text>Histórico dos valores recebidos</Text>
             {this.state.historyArray.map(item=>(
