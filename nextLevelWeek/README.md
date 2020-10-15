@@ -16,3 +16,11 @@ Etapas desenvolvidas:
 - [x] mobile
 - [x] funcionalidade avançadas
 
+
+## [Happy](https://github.com/W8jonas/estudos/tree/master/nextLevelWeek/Happy)
+Etapas desenvolvidas:
+- [ ] server
+- [ ] web
+- [ ] mobile
+- [ ] funcionalidade avançadas
+
