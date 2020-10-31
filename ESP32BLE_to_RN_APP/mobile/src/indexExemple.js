@@ -116,7 +116,8 @@ export default class App extends Component {
     this.setState({lastReceivedNumber: actualDataNumber})
 
     if (actualDataNumber > 3900){
-      Vibration.vibrate(500, 500, 500, 500, 500)
+      // Vibration.vibrate(500, 500, 500, 500, 500)
+			console.log("VIBRANDO CELULAR")
     }
   }
 
