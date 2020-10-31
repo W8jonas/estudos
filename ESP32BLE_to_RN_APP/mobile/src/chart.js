@@ -3,8 +3,9 @@ import 'react-native-get-random-values'
 import React, { useState, useEffect, useRef } from "react"
 
 import { ECharts } from "react-native-echarts-wrapper"
+import BleManager from 'react-native-ble-manager';
 
-import { StyleSheet, View, Dimensions } from "react-native"
+import { StyleSheet, View, Dimensions, NativeModules, NativeEventEmitter } from "react-native"
 
 const window = Dimensions.get('window')
 
@@ -43,6 +44,9 @@ const chartOption = {
     }
 }
 
+const BleManagerModule = NativeModules.BleManager
+const bleManagerEmitter = new NativeEventEmitter(BleManagerModule)
+
 export default function Chart(props) {
     
     const [dateList, setDateList] = useState([])
@@ -50,6 +54,26 @@ export default function Chart(props) {
     const [valueList, setValueList] = useState([])
 
     const chartRef = useRef(null)
+
+    useEffect(()=>{
+		const handlerUpdate = bleManagerEmitter.addListener('BleManagerDidUpdateValueForCharacteristic', handleUpdateValueForCharacteristic )
+        return (
+			() => (handlerUpdate)
+		)
+    },[])
+
+    function handleUpdateValueForCharacteristic(data) {
+		console.log('%c handleUpdateValueForCharacteristic', 'color: red')
+        
+        function bufferToString(arr) {
+			return arr.map(function(i) {return String.fromCharCode(i)}).join("")
+		}
+
+		const actualDataString = bufferToString(data.value)
+		const actualDataNumber = Number(actualDataString)
+
+        console.log('%c handleUpdateValueForCharacteristic', 'color: #273', actualDataNumber)
+    }
 
     useEffect(()=>{
         const now = new Date(new Date().getTime() - new Date().getTimezoneOffset()/60 * 3600 * 1000).toISOString().substr(11, 8)
