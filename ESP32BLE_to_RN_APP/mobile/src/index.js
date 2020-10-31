@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react'
 
 // components
 // import ChartClassBased from './chartExemple'
-// import Chart from './chart'
+import Chart from './chart'
 
 
 // functions
@@ -14,17 +14,14 @@ import {
 	StyleSheet,
 	Text,
 	View,
-	TouchableOpacity,
 	NativeEventEmitter,
 	NativeModules,
 	Platform,
 	PermissionsAndroid,
 	ScrollView,
-	FlatList,
 	Dimensions,
 	Button,
-	SafeAreaView,
-	Vibration
+	TouchableHighlight
 } from 'react-native'
 
 
@@ -71,7 +68,12 @@ export default function App() {
 				}
 		  })
 		}
-		
+		return (
+			() => (handlerDiscover,
+			handlerStop,
+			handlerDisconnect,
+			handlerUpdate)
+		)
 	}, [])
 
 	function startScan() {
@@ -98,7 +100,7 @@ export default function App() {
 		const _peripherals = peripherals
 		console.log('Got ble peripheral', peripheral)
 		if (!peripheral.name) {
-		peripheral.name = 'NO NAME'
+			peripheral.name = 'NO NAME'
 		}
 		_peripherals.set(peripheral.id, peripheral)
 		setPeripherals(_peripherals)
@@ -131,10 +133,11 @@ export default function App() {
 		console.log('Received data from ' + data.peripheral + ' characteristic ' + data.characteristic, actualDataNumber)
 		
 		setLastReceivedNumber(actualDataNumber)
-		setHistoryArray([actualDataNumber, ...historyArray])
+
 
 		if (actualDataNumber > 3900) {
-			Vibration.vibrate(500, 500, 500, 500, 500)
+			// Vibration.vibrate(500, 500, 500, 500, 500)
+			console.log("VIBRANDO CELULAR")
 		}
 	}
 
@@ -157,7 +160,7 @@ export default function App() {
 	}
 
 	function handleConnection(peripheral) {
-		console.log('%c test', 'color: orange')
+		console.log('%c handleConnection', 'color: orange')
 		
 		if (peripheral) {
 			if (peripheral.connected) {
@@ -170,6 +173,10 @@ export default function App() {
 						p.connected = true
 						_peripherals.set(peripheral.id, p)
 						setPeripherals(_peripherals)
+						setTimeout(() => {
+							setPeripherals(_peripherals)
+						}, 500);
+						
 					}
 					console.log('Connected to ' + peripheral.id)
 
@@ -215,6 +222,21 @@ export default function App() {
 		)
 	}
 
+	useEffect(()=>{
+		let array = historyArray
+
+		array = [lastReceivedNumber, ...array]
+
+		setHistoryArray(array)
+		console.log("HistoryArray: ", historyArray, lastReceivedNumber, array)
+		
+	}, [lastReceivedNumber])
+
+	useEffect(()=>{
+		console.log('peripherals detectados: ', Array.from(peripherals.values()))
+	}, [peripherals])
+
+
   return (
 		<View style={styles.container}>
 			<View style={{margin: 10}}>
@@ -228,6 +250,8 @@ export default function App() {
 				<Button title="Retrieve connected peripherals" onPress={() => retrieveConnected() } />
 			</View>
 
+			<Text style={{fontSize: 10}}>Funcional</Text>
+
 			<ScrollView style={styles.scroll}>
 				{(list.length == 0) &&
 				<View style={{flex:1, margin: 20}}>
@@ -235,9 +259,11 @@ export default function App() {
 				</View>
 				}
 
-				{list.map((item) => renderItem(item))}
+				{/* {list.map((item) => renderItem(item))} */}
 
-				{/* <Chart newData={lastReceivedNumber}/> */}
+				{Array.from(peripherals.values()).map((item) => renderItem(item))}
+
+				<Chart newData={lastReceivedNumber}/>
 
 				<Text>Histórico dos valores recebidos</Text>
 				{historyArray.map(item=>(
