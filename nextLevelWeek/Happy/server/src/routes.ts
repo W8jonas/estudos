@@ -8,7 +8,7 @@ routes.post('/orphanages', OrphanagesController.create)
 
 
 routes.get('/', (request, response) => {
-    return response.json({ok: "2OKK"})
+    return response.json({ok: "Ok mano"})
 })
 
 export default routes
