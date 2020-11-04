@@ -13,16 +13,7 @@ import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
 
 // functions
 import {Link} from 'react-router-dom'
-import Leaflet from 'leaflet'
-
-
-
-const mapIcon = Leaflet.icon({
-  iconUrl: Logo, 
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [170, 2]
-})
+import MapIcon from '../components/MapIcon'
 
 export default function OrphanagesMap() {
   return(
@@ -52,13 +43,13 @@ export default function OrphanagesMap() {
 
         <Marker
           position={[-21.7289999,-43.522607]}
-          icon={mapIcon}
+          icon={MapIcon}
         >
 
           <Popup closeButton={false} minWidth={240} maxWidth={240} className="map-popup">
             Lar das meninas
 
-            <Link to="">
+            <Link to="orphanage/1">
               <FiArrowRight size={20} color="#FFF" />
             </Link>
           </Popup>
@@ -66,7 +57,7 @@ export default function OrphanagesMap() {
         </Marker>
       </Map>
 
-      <Link to="" className="create-orphanage">
+      <Link to="/orphanages/create" className="create-orphanage">
         <FiPlus size={32} color="#FFF"/>
       </Link>
 
