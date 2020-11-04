@@ -20,7 +20,7 @@ const int LED = 2; //LED interno do ESP32 (esse pino pode variar de placa para p
 #define SERVICE_UUID           "ab0828b1-198e-4351-b779-901fa0e0371e" // UART service UUID
 #define CHARACTERISTIC_UUID_RX "4ac8a682-9736-4e5d-932b-e9b31405049c"
 #define CHARACTERISTIC_UUID_TX "0972EF8C-7613-4075-AD52-756F33D4DA91"
-
+#define ESP32_NAME_ID "BLE_DEVICE_NAME"
 
 //callback para receber os eventos de conexão de dispositivos
 class ServerCallbacks: public BLEServerCallbacks {
@@ -71,7 +71,7 @@ void setup() {
   pinMode(LED, OUTPUT);
 
   // Create the BLE Device
-  BLEDevice::init("ESP32-BLE"); // nome do dispositivo bluetooth
+  BLEDevice::init(ESP32_NAME_ID); // nome do dispositivo bluetooth
   // Create the BLE Server
   BLEServer *server = BLEDevice::createServer(); //cria um BLE server 
   server->setCallbacks(new ServerCallbacks()); //seta o callback do server
@@ -125,7 +125,7 @@ void loop() {
       lastAnalogInput = analogInput;
     }
 
-    delay(1000);
+    delay(50);
   /*
     characteristicTX->setValue("Hello World!"); // Sending a test message
     characteristicTX->notify(); // Send the value to the app!
