@@ -2,49 +2,17 @@
   display: flex;
 }
 
-#page-create-orphanage aside {
-  position: fixed;
-  height: 100%;
-  padding: 32px 24px;
-  background: linear-gradient(329.54deg, #15B6D6 0%, #15D6D6 100%);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#page-create-orphanage aside img {
-  width: 48px;
-}
-
-#page-create-orphanage aside footer a,
-#page-create-orphanage aside footer button {
-  width: 48px;
-  height: 48px;
-
-  border: 0;
-
-  background: #12AFCB;
-  border-radius: 16px;
-
-  cursor: pointer;
-
-  transition: background-color 0.2s;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#page-create-orphanage aside footer a:hover,
-#page-create-orphanage aside footer button:hover {
-  background: #17D6EB;
-}
-
 #page-create-orphanage main {
   flex: 1;
 }
+
+
+form.create-orphanage-form .leaflet-container {
+  margin-bottom: 40px;
+  border: 1px solid #D3E2E5;
+  border-radius: 20px;
+}
+
 
 form.create-orphanage-form {
   width: 700px;
@@ -121,13 +89,33 @@ form.create-orphanage-form .input-block textarea {
   line-height: 28px;
 }
 
-form.create-orphanage-form .input-block .new-image {
+form.create-orphanage-form .input-block .images-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 16px;
+}
+
+form.create-orphanage-form .input-block .images-container img {
   width: 100%;
-  height: 64px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+form.create-orphanage-form .input-block .new-image {
+  height: 96px;
   background: #F5F8FA;
   border: 1px dashed #96D2F0;
   border-radius: 20px;
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form.create-orphanage-form .input-block input[type="file"] {
+  display: none
 }
 
 form.create-orphanage-form .input-block .button-select {
