@@ -19,8 +19,8 @@ Etapas desenvolvidas:
 
 ## [Happy](https://github.com/W8jonas/estudos/tree/master/nextLevelWeek/Happy)
 Etapas desenvolvidas:
-- [ ] server
-- [ ] web
+- [x] server
+- [x] web
 - [ ] mobile
 - [ ] funcionalidade avançadas
 
