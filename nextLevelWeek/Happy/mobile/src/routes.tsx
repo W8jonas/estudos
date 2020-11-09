@@ -16,7 +16,7 @@ import SelectMapPosition from './pages/CreateOrphanage/SelectMapPosition/index'
 export default function Routes() {
     return (
         <NavigationContainer>
-            <Navigator screenOptions={{ headerShown: false }}>
+            <Navigator screenOptions={{ headerShown: false, cardStyle: {backgroundColor: '#f3f2f5'} }}>
                 <Screen name="OrphanagesMap" component={OrphanagesMap}/>
                 <Screen name="OrphanageDetails" component={OrphanageDetails}/>
 
