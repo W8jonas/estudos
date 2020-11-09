@@ -1,0 +1,6 @@
+
+# Removendo arquivos de configuração do VScode
+.vscode/
+
+node_modules
+/node_modules

@@ -1,0 +1,17 @@
+{
+  "name": "nodeJsCharts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon routes.js"
+  },
+  "dependencies": {
+    "d3": "^6.2.0",
+    "express": "^4.17.1",
+    "jsdom": "^16.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
