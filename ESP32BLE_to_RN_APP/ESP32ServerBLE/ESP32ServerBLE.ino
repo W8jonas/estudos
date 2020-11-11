@@ -20,7 +20,7 @@ const int LED = 2; //LED interno do ESP32 (esse pino pode variar de placa para p
 #define SERVICE_UUID           "ab0828b1-198e-4351-b779-901fa0e0371e" // UART service UUID
 #define CHARACTERISTIC_UUID_RX "4ac8a682-9736-4e5d-932b-e9b31405049c"
 #define CHARACTERISTIC_UUID_TX "0972EF8C-7613-4075-AD52-756F33D4DA91"
-#define ESP32_NAME_ID "BLE_DEVICE_NAME"
+#define ESP32_NAME_ID "ESP32-BLE"
 
 //callback para receber os eventos de conexão de dispositivos
 class ServerCallbacks: public BLEServerCallbacks {
