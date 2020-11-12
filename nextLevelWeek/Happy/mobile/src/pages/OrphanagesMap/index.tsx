@@ -70,7 +70,7 @@ export default function App() {
       </MapView>
 
       <View style={styles.footerContainer}>
-          <Text style={styles.footerText}>2 orfanatos encontrados</Text>
+          <Text style={styles.footerText}>{orphanages.length} orfanatos encontrados</Text>
           <TouchableOpacity style={styles.createOrphanageButton} onPress={handleNavigateToCreateOrphanage}>
             <Feather name="plus" size={20} color="#fff"/>
           </TouchableOpacity>
