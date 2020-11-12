@@ -6,10 +6,11 @@ import {Feather} from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
 
 interface HeaderProps {
-    title: string
+    title: string,
+    showCancel?: boolean
 }
 
-export default function Header({title}: HeaderProps) {
+export default function Header({title, showCancel = true}: HeaderProps) {
 
     const navigation = useNavigation()
 
@@ -24,9 +25,15 @@ export default function Header({title}: HeaderProps) {
 
       <Text style={styles.title}>{title}</Text>
 
-      <BorderlessButton onPress={handleGoToHomePage} >
+      {showCancel 
+      ? <BorderlessButton onPress={handleGoToHomePage} >
         <Feather name="x" size={24} color="#ff669d"/>
       </BorderlessButton>
+      : <View>
+
+      </View>
+      }
+      
   </View>
 }
 
