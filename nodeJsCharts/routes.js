@@ -11,6 +11,8 @@ app.get('/', IndexController.Controller)
 
 app.get('/ok', working.index)
 app.get('/okBar', working.bar)
+app.get('/okPie', working.pie)
+app.get('/okLine', working.line)
 
 app.get('/bar', bar.index)
 
