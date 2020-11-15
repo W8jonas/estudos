@@ -21,6 +21,6 @@ Etapas desenvolvidas:
 Etapas desenvolvidas:
 - [x] server
 - [x] web
-- [ ] mobile
+- [x] mobile
 - [ ] funcionalidade avançadas
 
