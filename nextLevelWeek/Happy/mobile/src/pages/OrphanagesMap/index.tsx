@@ -5,7 +5,7 @@ import MapView, { PROVIDER_GOOGLE, Marker, Callout } from 'react-native-maps'
 import {Feather} from '@expo/vector-icons'
 
 import MapMarker from '../../images/map-marker.png'
-import { useNavigation } from '@react-navigation/native'
+import { useFocusEffect, useNavigation } from '@react-navigation/native'
 import api from '../../services/api'
 
 interface Orphanage {
@@ -18,7 +18,6 @@ interface Orphanage {
 export default function App() {
 
   const navigation = useNavigation()
-
   const [orphanages, setOrphanages] = useState<Orphanage[]>([])
 
   function handleNavigateToOrphanageDetails(id : number) {
@@ -29,9 +28,9 @@ export default function App() {
     navigation.navigate("SelectMapPosition")
   }
 
-  useEffect(()=>{
+  useFocusEffect(()=>{
     api.get('orphanages').then((response) => setOrphanages(response.data))
-  },[])
+  })
 
   return (
     <View style={styles.container}>
