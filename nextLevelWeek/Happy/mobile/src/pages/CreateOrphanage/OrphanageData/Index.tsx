@@ -3,7 +3,7 @@ import { ScrollView, View, StyleSheet, Switch, Text, TextInput, TouchableOpacity
 import { Feather } from '@expo/vector-icons';
 import { RectButton } from 'react-native-gesture-handler';
 import { useRoute } from '@react-navigation/native';
-
+import * as ImagePicker from 'expo-image-picker'
 
 interface OrphanageDetailsRouteParams {
   position: {
@@ -23,6 +23,7 @@ export default function OrphanageData() {
   const [opening_hours, setOpeningHours] = useState('')
   const [open_on_weekends, setOpen_on_weekends] = useState(true)
 
+  const [images, setImages] = useState<string[]>([])
 
   function handleCreateOrphanage() {
     
@@ -34,6 +35,29 @@ export default function OrphanageData() {
       open_on_weekends,
       ...params.position
     })
+  }
+
+  async function handleSelectedImages() {
+    const {status} = await ImagePicker.requestCameraRollPermissionsAsync()
+
+    if(status !== 'granted') {
+      alert('Ops, precisamos de acesso às suas fotos')
+      return
+    }
+
+    const result = await ImagePicker.launchImageLibraryAsync({
+      allowsEditing: true,
+      quality: 1,
+      mediaTypes: ImagePicker.MediaTypeOptions.Images
+    })
+
+    if(result.cancelled) {
+      return
+    }
+
+    const { uri } = result
+
+    setImages([...images, uri])
   }
 
   return (
