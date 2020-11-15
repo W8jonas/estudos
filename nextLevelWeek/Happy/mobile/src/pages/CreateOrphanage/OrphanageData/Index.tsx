@@ -2,8 +2,9 @@ import React, {useState, useEffect} from 'react';
 import { ScrollView, View, StyleSheet, Switch, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { RectButton } from 'react-native-gesture-handler';
-import { useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker'
+import api from '../../../services/api';
 
 interface OrphanageDetailsRouteParams {
   position: {
@@ -14,6 +15,7 @@ interface OrphanageDetailsRouteParams {
 
 export default function OrphanageData() {
   const route = useRoute()
+  const navigation = useNavigation()
 
   const params = route.params as OrphanageDetailsRouteParams
 
@@ -25,16 +27,31 @@ export default function OrphanageData() {
 
   const [images, setImages] = useState<string[]>([])
 
-  function handleCreateOrphanage() {
+  async function handleCreateOrphanage() {
     
-    console.log({
-      name,
-      about,
-      instructions,
-      opening_hours,
-      open_on_weekends,
-      ...params.position
+    const { latitude, longitude } = params.position
+
+    const data = new FormData()
+
+    data.append('name', name),
+    data.append('about', about),
+    data.append('instructions', instructions),
+    data.append('opening_hours', opening_hours),
+    data.append('open_on_weekends', String(open_on_weekends)),
+    data.append('latitude', String(latitude)),
+    data.append('longitude', String(longitude))
+    
+    images.forEach((image, index)=>{
+      data.append('images', {
+        type: 'image/jpg',
+        uri: image,
+        name: `index_${index}.jpg`
+      } as any)
     })
+    
+    console.log('data', data)
+    await api.post('orphanages', data)
+    navigation.navigate('OrphanagesMap')
   }
 
   async function handleSelectedImages() {
@@ -94,7 +111,7 @@ export default function OrphanageData() {
           />
         ))}
       </View>
-      <TouchableOpacity style={styles.imagesInput} onPress={() => {}}>
+      <TouchableOpacity style={styles.imagesInput} onPress={handleSelectedImages}>
         <Feather name="plus" size={24} color="#15B6D6" />
       </TouchableOpacity>
 
