@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { ScrollView, View, StyleSheet, Switch, Text, TextInput, TouchableOpacity } from 'react-native';
+import { ScrollView, View, StyleSheet, Switch, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { RectButton } from 'react-native-gesture-handler';
 import { useRoute } from '@react-navigation/native';
@@ -85,6 +85,15 @@ export default function OrphanageData() {
       /> */}
 
       <Text style={styles.label}>Fotos</Text>
+      <View style={styles.uploadedImagesContainer}>
+        {images.map((image)=>(
+          <Image 
+            key={image}
+            source={{uri: image}}
+            style={styles.uploadedImage}
+          />
+        ))}
+      </View>
       <TouchableOpacity style={styles.imagesInput} onPress={() => {}}>
         <Feather name="plus" size={24} color="#15B6D6" />
       </TouchableOpacity>
@@ -171,6 +180,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 32,
+  },
+
+  uploadedImagesContainer: {
+    flexDirection: 'row',
+  },
+  uploadedImage: {
+    width: 64,
+    height: 64,
+    borderRadius: 20,
+    marginBottom: 32,
+    marginRight: 8
   },
 
   switchContainer: {
