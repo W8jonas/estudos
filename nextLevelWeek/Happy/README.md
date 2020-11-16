@@ -15,6 +15,14 @@
 ## Descrição
 Projeto desenvolvido na Next Level Week, contendo backend, frontend web e aplicação mobile, usando a stack Node.Js e React. A proposta do projeto é dar oportunidades para orfanatos poderem registrar sua localização e para que as pessoas tenham visualização desses pontos marcados para visita-los.
 
+## Abaixo seguem algumas prints de todo o projeto
+
+### Mobile:
+
+![](screenshots/Screenshot_1.png)  |  ![](screenshots/Screenshot_2.png) |  ![](screenshots/Screenshot_3.png)  |  ![](screenshots/Screenshot_4.png)  |  ![](screenshots/Screenshot_5.png)   
+:---------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
+
+<br/>
 
 ## Etapas desenvolvidas:
 - [x] server
