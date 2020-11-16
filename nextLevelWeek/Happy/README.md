@@ -1,7 +1,7 @@
 
 
 <h1 align="center">
-    <img alt="Happy" title="Happy" src=".screenshots/logo.svg" />
+    <img alt="Happy" title="Happy" src="./screenshots/logo.svg" />
     <br/>
     😀 Happy 😀
 </h1>
