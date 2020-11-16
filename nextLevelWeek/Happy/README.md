@@ -59,6 +59,7 @@ Esse projeto foi desenvolvido utilizando como principal linguagem o **Typescript
 <details>
   <summary>Mobile</summary>
 
+ - Expo
  - Typescript
  - Axios
  - mapbox-gl
