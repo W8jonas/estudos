@@ -65,6 +65,7 @@ Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Serve
 [NextLevelWeek](https://github.com/W8jonas/estudos/tree/master/nextLevelWeek)
  - [Ecoleta](https://github.com/W8jonas/estudos/tree/master/nextLevelWeek/Ecoleta)
  - [Proffy](https://github.com/W8jonas/estudos/tree/master/nextLevelWeek/Proffy)
+ - [Happy](https://github.com/W8jonas/estudos/tree/master/nextLevelWeek/Happy)
 
 [SemanaOmniStack](https://github.com/W8jonas/estudos/tree/master/semanaOmniStack)
  - [Semana 11 - Be The Hero](https://github.com/W8jonas/estudos/tree/master/semanaOmniStack/semana11)
