@@ -18,6 +18,9 @@ Etapas desenvolvidas:
 
 
 ## [Happy](https://github.com/W8jonas/estudos/tree/master/nextLevelWeek/Happy)
+#### Descrição
+Projeto desenvolvido na Next Level Week, contendo backend, frontend web e aplicação mobile, usando a stack Node.Js e React. A proposta do projeto é dar oportunidades para orfanatos poderem registrar sua localização e para que as pessoas tenham visualização desses pontos marcados para visita-los.
+
 Etapas desenvolvidas:
 - [x] server
 - [x] web
