@@ -22,6 +22,17 @@ Projeto desenvolvido na Next Level Week, contendo backend, frontend web e aplica
 ![](screenshots/Screenshot_1.png)  |  ![](screenshots/Screenshot_2.png) |  ![](screenshots/Screenshot_3.png)  |  ![](screenshots/Screenshot_4.png)  |  ![](screenshots/Screenshot_5.png)   
 :---------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
 
+
+### Web:
+
+![](screenshots/Screenshot_6.png) |  ![](screenshots/Screenshot_7.png)
+|:----------------:|:-----------------:|
+
+
+![](screenshots/Screenshot_8.png)  |  ![](screenshots/Screenshot_9.png)  
+|:----------------:|:-----------------:|
+
+
 <br/>
 
 ## Etapas desenvolvidas:
