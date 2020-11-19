@@ -3,7 +3,6 @@ import React, {useState, useEffect} from 'react'
 // assets
 import '../styles/pages/OrphanagesMap.css'
 import MapMarker from '../images/mapMarker.svg'
-import Logo from '../images/Logo.svg'
 import 'leaflet/dist/leaflet.css'
 
 
