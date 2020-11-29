@@ -141,8 +141,9 @@ module.exports = {
         const svgFinal = body.html()
 
         fs.writeFileSync('working-bar.svg', svgFinal);
-        return res.status(200).json({result: "Gráfico de padrao", SVG: svgFinal})
+        return res.status(200).json({result: "Gráfico de barras", SVG: svgFinal})
     },
+
     async line(req, res) {
         const dom = new JSDOM(`<!DOCTYPE html><body></body>`);
         const width = 1000
