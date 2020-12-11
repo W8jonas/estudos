@@ -19,6 +19,9 @@ function App() {
 
 	const [allData, setAllData] = useState([4, 5, 5])
 	const [valueMaxFounded, setValueMaxFounded] = useState(0)
+	const [dayToShow, setDayToShow] = useState(0)
+	const [counterActive, setCounterActive] = useState(true)
+
 	
 	useEffect(()=>{
 		getAllImportantData().then((itens)=>{
@@ -27,7 +30,19 @@ function App() {
 		})
 	}, [])
 
+	useEffect(() => {
+        if (counterActive) {
+            const timer = setInterval(() => {
+                setDayToShow(dayToShow + 1)
+            }, 1000)
+
+            return () => {
+                clearInterval(timer)
+            }
+        }
+    }, [counterActive, dayToShow])
 	
+
 	if (!valueMaxFounded) {
 		return <div>
 			<h1>Carregando</h1>
@@ -93,7 +108,7 @@ function App() {
 				option={GL_OPTION}
 			/>
 			<span className="total-connections">
-                dia atual: 01/01/2020
+                dia atual: 01/01/2020 {dayToShow}
             </span>
 		</div>
 	)
