@@ -1,5 +1,5 @@
 
-import * as React from "react"
+import React, {useState, useEffect} from "react"
 
 // assets
 import './App.css'
@@ -12,95 +12,87 @@ import ReactEcharts from "echarts-for-react";
 
 // functions / extras
 import getAllData from './utils/getAllData'
-import Papa from 'papaparse';
-import { useEffect } from "react"
-
+import getAllImportantData from './utils/getAllImportantData'
 
 
 function App() {
-  
-  const  [allData, valueMaxFounded] = getAllData()
 
+	const [allData, setAllData] = useState([4, 5, 5])
+	const [valueMaxFounded, setValueMaxFounded] = useState(0)
+	
+	useEffect(()=>{
+		getAllImportantData().then((itens)=>{
+			setAllData(itens[0])
+			setValueMaxFounded(itens[1])
+		})
+	}, [])
 
-  const GL_OPTION = {
-	backgroundColor: '#000',
-	globe: {
-		baseTexture: baseTexture,
-		heightTexture: baseTexture,
-		shading: 'lambert',
+	if (!valueMaxFounded) {
+		return <div>
+			<h1>Carregando</h1>
+		</div>
+	}
 
-		// displacementScale: 0.05,
-		// displacementQuality: 'medium',
-		
-		environment: environment,
-		light: {
-			main: {
-				intensity: 3
+	const GL_OPTION = {
+		backgroundColor: '#000',
+		globe: {
+			baseTexture: baseTexture,
+			heightTexture: baseTexture,
+			shading: 'lambert',
+
+			// displacementScale: 0.05,
+			// displacementQuality: 'medium',
+			
+			environment: environment,
+			light: {
+				main: {
+					intensity: 3
+				}
+			},
+			viewControl: {
+				autoRotate: false
 			}
 		},
-		viewControl: {
-			autoRotate: false
-		}
-	},
-	visualMap: {
-		max: Math.sqrt(valueMaxFounded),
-		calculable: true,
-		realtime: false,
-		inRange: {
-			colorLightness: [0.2, 0.9]
-		},
-		textStyle: {
-			color: '#fff'
-		},
-		controller: {
+		visualMap: {
+			max: valueMaxFounded,
+			calculable: true,
+			realtime: false,
 			inRange: {
+				colorLightness: [0.2, 0.9]
+			},
+			textStyle: {
+				color: '#fff'
+			},
+			controller: {
+				inRange: {
+					color: '#284'
+				}
+			},
+			outOfRange: {
+				colorAlpha: 0
+			}
+		},
+		series: [{
+			type: 'bar3D',
+			coordinateSystem: 'globe',
+			data: allData,
+			barSize: 0.6,
+			minHeight: 0.2,
+			silent: true,
+			itemStyle: {
 				color: '#284'
 			}
-		},
-		outOfRange: {
-			colorAlpha: 0
-		}
-	},
-	series: [{
-		type: 'bar3D',
-		coordinateSystem: 'globe',
-		data: allData,
-		barSize: 0.6,
-		minHeight: 0.2,
-		silent: true,
-		itemStyle: {
-			color: '#284'
-		}
-	}]
-  
-  }
-
-  useEffect(()=>{
-	GetData()
-  },[])
-
-	async function GetData() {
-		const data = Papa.parse(await fetchCsv());
-		console.log(data);
+		}]
 	}
 
-	async function fetchCsv() {
-		const response = await fetch('newData1.csv');
-		const reader = response.body.getReader();
-		const result = await reader.read();
-		const decoder = new TextDecoder('utf-8');
-		const csv = await decoder.decode(result.value);
-		return csv;
-	}
-
-  return (
-    <div className="App">
-      <ReactEcharts
-	  	style={{height: '100vh', width: '100%'}}
-        option={GL_OPTION}
-      />
-    </div>
-  );
+	return (
+		<div className="App">
+			<ReactEcharts
+				style={{height: '100vh', width: '100%'}}
+				option={GL_OPTION}
+			/>
+		</div>
+	)
 }
 
-export default App;
+export default App
