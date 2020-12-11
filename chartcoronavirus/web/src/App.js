@@ -27,6 +27,7 @@ function App() {
 		})
 	}, [])
 
+	
 	if (!valueMaxFounded) {
 		return <div>
 			<h1>Carregando</h1>
@@ -91,6 +92,9 @@ function App() {
 				style={{height: '100vh', width: '100%'}}
 				option={GL_OPTION}
 			/>
+			<span className="total-connections">
+                dia atual: 01/01/2020
+            </span>
 		</div>
 	)
 }
