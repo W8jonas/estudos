@@ -11,8 +11,10 @@ import 'echarts-gl'
 import ReactEcharts from "echarts-for-react";
 
 // functions / extras
-import getAllData from './utils/getAllData'
+// import getAllData from './utils/getAllData'
 import getAllImportantData from './utils/getAllImportantData'
+
+import useRepository from './functions/repository'
 
 
 function App() {
@@ -22,8 +24,21 @@ function App() {
 	const [dayToShow, setDayToShow] = useState(0)
 	const [counterActive, setCounterActive] = useState(true)
 
+	const {getDataFrame, getDataInDay, getDataFrameHeader} = useRepository()
 	
 	useEffect(()=>{
+		// console.log('getAllData: ', getAllData().then(item=>item))
+		
+		setTimeout(()=>{
+			console.log('getDataFrame: ', getDataFrame())
+			
+			console.log('getDataInDay: ', getDataInDay(300))
+			
+			console.log('getDataFrameHeader: ', getDataFrameHeader())
+		}, 500)
+
+
+
 		getAllImportantData().then((itens)=>{
 			setAllData(itens[0])
 			setValueMaxFounded(itens[1])
@@ -41,7 +56,7 @@ function App() {
             }
         }
     }, [counterActive, dayToShow])
-	
+
 
 	if (!valueMaxFounded) {
 		return <div>
