@@ -9,48 +9,47 @@ export default function useRepository() {
     const [allData, setAllData] = useState([])
 
     useEffect(() => {
-        console.log('Tivemos mudanças allData:', allData)
         getAllData()
+        console.log('Tivemos mudanças allData:', allData)
     }, [])
 
-    async function getAllData() {
+    function getAllData() {
 
-        async function fetchCsv() {
-            const response = await fetch('newData.csv');
-            const reader = response.body.getReader();
-            const result = await reader.read();
-            const decoder = new TextDecoder('utf-8');
-            const csv = await decoder.decode(result.value);
-            return csv;
+        function fetchCsv() {
+            return fetch('newData.csv').then((response) => {
+                const reader = response.body.getReader()
+                return reader.read().then((result) => {
+                    const decoder = new TextDecoder('utf-8')
+                    const csv = decoder.decode(result.value)
+                    return csv
+                })
+            })
         }
 
-        async function getDataFromCsv() {
-            const dataFromCsv = await Papa.parse(await fetchCsv())
+        // async function fetchCsv() {
+        //     const response = await fetch('newData.csv');
+        //     const reader = response.body.getReader();
+        //     const result = await reader.read();
+        //     const decoder = new TextDecoder('utf-8');
+        //     const csv = decoder.decode(result.value);
+        //     return csv;
+        // }
 
-            const dataFrame = dataFromCsv.data
-            
-            console.log('dataFrame: ', dataFrame)
-
-            setAllData(dataFrame)
-            
-            // let valueMaxFoundedInData = 0
-            // console.log('data.data: ', data.data[0][DAY])
-
-            // const importantData = data.data.map((country)=> {
-
-            //     const totalConfirmed = Math.sqrt(Number(country[DAY]))
-
-            //     const long = Number(country[2])
-            //     const lat = Number(country[3])
-                
-            //     if(totalConfirmed > valueMaxFoundedInData) {
-            //         valueMaxFoundedInData = totalConfirmed
-            //     }
-            //     return [lat, long, totalConfirmed]
-            // })
-
-            // return [importantData, valueMaxFoundedInData]
+        function getDataFromCsv() {
+            fetchCsv().then((CsvReturned) => {
+                const dataFromCsv = Papa.parse(CsvReturned)
+                const dataFrame = dataFromCsv.data
+                console.log('dataFrame: ', dataFrame)
+                setAllData(dataFrame)
+            })
         }
+
+        // async function getDataFromCsv() {
+        //     const dataFromCsv = Papa.parse(await fetchCsv())
+        //     const dataFrame = dataFromCsv.data
+        //     console.log('dataFrame: ', dataFrame)
+        //     setAllData(dataFrame)
+        // }
 
         getDataFromCsv()
     }
