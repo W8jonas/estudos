@@ -14,7 +14,8 @@ import ReactEcharts from "echarts-for-react";
 // import getAllData from './utils/getAllData'
 import getAllImportantData from './utils/getAllImportantData'
 
-import useRepository from './functions/repository'
+// import useRepository from './functions/repository'
+import useFetchData from './functions/useFetchData'
 
 
 function App() {
@@ -24,26 +25,30 @@ function App() {
 	const [dayToShow, setDayToShow] = useState(0)
 	const [counterActive, setCounterActive] = useState(true)
 
-	const {getDataFrame, getDataInDay, getDataFrameHeader} = useRepository()
+	// const {getDataFrame, getDataInDay, getDataFrameHeader, repositoryAllData} = useRepository()
 	
+	const {result, loading, getDataFrameHeader} = useFetchData(dayToShow)
+
 	useEffect(()=>{
 		// console.log('getAllData: ', getAllData().then(item=>item))
 		
-		setTimeout(()=>{
-			console.log('getDataFrame: ', getDataFrame())
+		// setTimeout(()=>{
+			// console.log('getDataFrame: ', getDataFrame())
 			
-			console.log('getDataInDay: ', getDataInDay(300))
+			// console.log('getDataInDay: ', getDataInDay(300))
+			
+			// console.log('repositoryAllData: ', repositoryAllData)
 			
 			console.log('getDataFrameHeader: ', getDataFrameHeader())
-		}, 500)
 
-
+			console.log('result: ', result)
+		// }, 500)
 
 		getAllImportantData().then((itens)=>{
 			setAllData(itens[0])
 			setValueMaxFounded(itens[1])
 		})
-	}, [])
+	}, [result])
 
 	useEffect(() => {
         if (counterActive) {
@@ -123,7 +128,7 @@ function App() {
 				option={GL_OPTION}
 			/>
 			<span className="total-connections">
-                dia atual: 01/01/2020 {dayToShow}
+                dia atual: 01/01/2020 {dayToShow} {loading}
             </span>
 		</div>
 	)
