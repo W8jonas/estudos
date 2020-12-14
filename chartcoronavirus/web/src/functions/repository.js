@@ -6,53 +6,79 @@ const DAY = 300
 
 export default function useRepository() {
 
+    const [dataLoaded, setDataLoaded] = useState(false)
     const [allData, setAllData] = useState([])
 
     useEffect(() => {
-        getAllData()
-        console.log('Tivemos mudanças allData:', allData)
-    }, [])
-
-    function getAllData() {
-
-        function fetchCsv() {
-            return fetch('newData.csv').then((response) => {
-                const reader = response.body.getReader()
-                return reader.read().then((result) => {
-                    const decoder = new TextDecoder('utf-8')
-                    const csv = decoder.decode(result.value)
-                    return csv
-                })
-            })
-        }
-
-        // async function fetchCsv() {
-        //     const response = await fetch('newData.csv');
-        //     const reader = response.body.getReader();
-        //     const result = await reader.read();
-        //     const decoder = new TextDecoder('utf-8');
-        //     const csv = decoder.decode(result.value);
-        //     return csv;
-        // }
-
-        function getDataFromCsv() {
-            fetchCsv().then((CsvReturned) => {
-                const dataFromCsv = Papa.parse(CsvReturned)
+        async function getAllData() {
+            async function fetchCsv() {
+                const response = await fetch('newData.csv');
+                const reader = response.body.getReader();
+                const result = await reader.read();
+                const decoder = new TextDecoder('utf-8');
+                const csv = decoder.decode(result.value);
+                return csv;
+            }
+    
+            async function getDataFromCsv() {
+                const dataFromCsv = Papa.parse(await fetchCsv())
                 const dataFrame = dataFromCsv.data
                 console.log('dataFrame: ', dataFrame)
                 setAllData(dataFrame)
-            })
+            }
+    
+            getDataFromCsv()
+            setDataLoaded(true)
         }
 
-        // async function getDataFromCsv() {
-        //     const dataFromCsv = Papa.parse(await fetchCsv())
-        //     const dataFrame = dataFromCsv.data
-        //     console.log('dataFrame: ', dataFrame)
-        //     setAllData(dataFrame)
-        // }
+        if(!dataLoaded) getAllData()
+        console.log('Tivemos mudanças allData:', allData)
 
-        getDataFromCsv()
-    }
+    }, [allData])
+
+    
+    // function getAllData() {
+
+    //     function fetchCsv() {
+    //         return fetch('newData.csv').then((response) => {
+    //             const reader = response.body.getReader()
+    //             return reader.read().then((result) => {
+    //                 const decoder = new TextDecoder('utf-8')
+    //                 const csv = decoder.decode(result.value)
+    //                 return csv
+    //             })
+    //         })
+    //     }
+
+    //     // async function fetchCsv() {
+    //     //     const response = await fetch('newData.csv');
+    //     //     const reader = response.body.getReader();
+    //     //     const result = await reader.read();
+    //     //     const decoder = new TextDecoder('utf-8');
+    //     //     const csv = decoder.decode(result.value);
+    //     //     return csv;
+    //     // }
+
+    //     function getDataFromCsv() {
+    //         fetchCsv().then((CsvReturned) => {
+    //             const dataFromCsv = Papa.parse(CsvReturned)
+    //             const dataFrame = dataFromCsv.data
+    //             console.log('dataFrame: ', dataFrame)
+    //             setAllData(dataFrame)
+    //         })
+    //     }
+
+    //     // async function getDataFromCsv() {
+    //     //     const dataFromCsv = Papa.parse(await fetchCsv())
+    //     //     const dataFrame = dataFromCsv.data
+    //     //     console.log('dataFrame: ', dataFrame)
+    //     //     setAllData(dataFrame)
+    //     // }
+
+    //     getDataFromCsv()
+    //     setDataLoaded(true)
+    // }
+
 
     function getDataFrameHeader() {
         console.log('getDataFrameHeader: ', allData)
@@ -79,7 +105,7 @@ export default function useRepository() {
     // console.log('dataFrame: ', dataFrame)
 
     return {
-        getAllData,
+        repositoryAllData: allData,
         getDataInDay,
         getDataFrameHeader,
         getDataFrame,
