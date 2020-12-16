@@ -34,7 +34,7 @@ export default function useAsyncHook(allDataFromCsv, dayToShow) {
     function getDataInDay(day) {
         const dataFrame = [...globalData]
         dataFrame.shift()
-        return dataFrame[day]
+        return dataFrame.map((item, index)=> dataFrame[index][day])
     }
 
     function getValueMaxInThisDay(day) {
