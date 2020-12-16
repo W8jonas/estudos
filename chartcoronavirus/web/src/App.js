@@ -16,39 +16,37 @@ import getAllImportantData from './utils/getAllImportantData'
 
 // import useRepository from './functions/repository'
 import useFetchData from './functions/useFetchData'
+import getCsvData from './functions/getCsvData'
 
 
 function App() {
 
 	const [allData, setAllData] = useState([4, 5, 5])
+	const [dataFromCsv, setDataFromCsv] = useState([])
+
 	const [valueMaxFounded, setValueMaxFounded] = useState(0)
-	const [dayToShow, setDayToShow] = useState(0)
+	const [dayToShow, setDayToShow] = useState(4)
 	const [counterActive, setCounterActive] = useState(true)
 
-	// const {getDataFrame, getDataInDay, getDataFrameHeader, repositoryAllData} = useRepository()
-	
-	const {result, loading, getDataFrameHeader} = useFetchData(dayToShow)
+	const {globalData, dayData, getDataFrameHeader, getDataFrame, getDataInDay} = useFetchData(dataFromCsv, dayToShow)
+
+	useEffect(() => {
+		getCsvData().then(setDataFromCsv)
+	}, [])
 
 	useEffect(()=>{
-		// console.log('getAllData: ', getAllData().then(item=>item))
-		
-		// setTimeout(()=>{
-			// console.log('getDataFrame: ', getDataFrame())
-			
-			// console.log('getDataInDay: ', getDataInDay(300))
-			
-			// console.log('repositoryAllData: ', repositoryAllData)
-			
-			console.log('getDataFrameHeader: ', getDataFrameHeader())
+		const header = getDataFrameHeader()
 
-			console.log('result: ', result)
-		// }, 500)
+		console.log('globalData: ', globalData)
+		console.log('getDataFrameHeader: ', header ? header[dayToShow] : undefined)
+		console.log('dayData: ', dayData)
 
-		getAllImportantData().then((itens)=>{
-			setAllData(itens[0])
-			setValueMaxFounded(itens[1])
-		})
-	}, [result])
+		// getAllImportantData().then((itens)=>{
+		// 	setAllData(itens[0])
+		// 	setValueMaxFounded(itens[1])
+		// })
+
+	}, [dayToShow])
 
 	useEffect(() => {
         if (counterActive) {
@@ -128,7 +126,7 @@ function App() {
 				option={GL_OPTION}
 			/>
 			<span className="total-connections">
-                dia atual: 01/01/2020 {dayToShow} {loading}
+                dia atual: 01/01/2020 {dayToShow}
             </span>
 		</div>
 	)
