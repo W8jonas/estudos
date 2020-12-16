@@ -3,63 +3,70 @@ import Papa from 'papaparse';
 import {useState, useEffect} from 'react'
 
 
-export default function useAsyncHook(dayToShow) {
-    const [result, setResult] = useState([]);
-    const [loading, setLoading] = useState("false");
+export default function useAsyncHook(allDataFromCsv, dayToShow) {
+    const [globalData, setGlobalData] = useState([]);
+    const [dayData, setDayData] = useState("false");
 
     useEffect(() => {
-        async function getAllData() {
-            async function fetchCsv() {
-                const response = await fetch('newData.csv');
-                const reader = response.body.getReader();
-                const result = await reader.read();
-                const decoder = new TextDecoder('utf-8');
-                const csv = decoder.decode(result.value);
-                return csv;
-            }
-    
-            async function getDataFromCsv() {
-                const dataFromCsv = Papa.parse(await fetchCsv())
-                const dataFrame = dataFromCsv.data
-                console.log('dataFrame: ', dataFrame)
-                setResult(dataFrame)
-            }
-    
-            getDataFromCsv()
-        }
+        setGlobalData(allDataFromCsv)
+    }, [allDataFromCsv])
 
-        getAllData()
-        console.log('Tivemos mudanças result:', result)
+    useEffect(() => {
+        // retornar as informações desse dia, dayToShow
+        // retornar o maior valor encontrado nesse dia
+        const dataInThisDay = getDataInDay(dayToShow)
+        setDayData(dataInThisDay)
 
     }, [dayToShow])
   
     function getDataFrameHeader() {
-        console.log('getDataFrameHeader: ', result)
-        const dataFrame = result
-        const dataFrameHeader = dataFrame.shift()
+        const dataFrame = globalData
+        const dataFrameHeader = dataFrame[0]
         return dataFrameHeader
     }
 
     function getDataFrame() {
-        console.log('getDataFrame: ', result)
-        const dataFrame = result
+        const dataFrame = [...globalData]
         dataFrame.shift()
         return dataFrame
     }
 
     function getDataInDay(day) {
-        console.log('getDataInDay: ', day, result)
-        const dataFrame = result
+        const dataFrame = [...globalData]
         dataFrame.shift()
         return dataFrame[day]
     }
 
+    function getValueMaxInThisDay(day) {
+        const dataFrame = globalData
+
+        let valueMaxFoundedInData = 0
+
+        // console.log('data.data: ', data.data[0][DAY])
+
+		const importantData = dataFrame.map((country)=> {
+
+            // const totalConfirmed = Number(country[DAY])
+            const totalConfirmed = Math.sqrt(Number(country[1]))
+
+            const long = Number(country[2])
+            const lat = Number(country[3])
+            
+            if(totalConfirmed > valueMaxFoundedInData) {
+                valueMaxFoundedInData = totalConfirmed
+            }
+            return [lat, long, totalConfirmed]
+        })
+        console.log('importantData: ', importantData)
+        return valueMaxFoundedInData
+    }
+
 
     return {
-        result, 
-        loading,
+        globalData, 
+        dayData,
         getDataFrameHeader,
         getDataFrame,
         getDataInDay,
     }
-  }
+}
