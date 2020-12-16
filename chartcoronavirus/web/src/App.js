@@ -21,14 +21,14 @@ import getCsvData from './functions/getCsvData'
 
 function App() {
 
-	const [allData, setAllData] = useState([4, 5, 5])
+	const [allData, setAllData] = useState([67.709953, 33.93911, 198.1262])
 	const [dataFromCsv, setDataFromCsv] = useState([])
 
 	const [valueMaxFounded, setValueMaxFounded] = useState(0)
 	const [dayToShow, setDayToShow] = useState(4)
 	const [counterActive, setCounterActive] = useState(true)
 
-	const {globalData, dayData, getDataFrameHeader, getDataFrame, getDataInDay} = useFetchData(dataFromCsv, dayToShow)
+	const {globalData, dayData, valueMaxFoundedInActualDay, getDataFrameHeader, getDataFrame, getDataInDay} = useFetchData(dataFromCsv, dayToShow)
 
 	useEffect(() => {
 		getCsvData().then(setDataFromCsv)
@@ -40,16 +40,14 @@ function App() {
 		console.log('globalData: ', globalData)
 		console.log('getDataFrameHeader: ', header ? header[dayToShow] : undefined)
 		console.log('dayData: ', dayData)
+		console.log('valueMaxFoundedInActualDay: ', valueMaxFoundedInActualDay)
 
-		// getAllImportantData().then((itens)=>{
-		// 	setAllData(itens[0])
-		// 	setValueMaxFounded(itens[1])
-		// })
-
+		setAllData(globalData)
+		setValueMaxFounded(valueMaxFoundedInActualDay)
 	}, [dayToShow])
 
 	useEffect(() => {
-        if (counterActive) {
+        if (counterActive && dayToShow < 300) {
             const timer = setInterval(() => {
                 setDayToShow(dayToShow + 1)
             }, 1000)
