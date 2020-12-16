@@ -5,7 +5,8 @@ import {useState, useEffect} from 'react'
 
 export default function useAsyncHook(allDataFromCsv, dayToShow) {
     const [globalData, setGlobalData] = useState([]);
-    const [dayData, setDayData] = useState("false");
+    const [dayData, setDayData] = useState([]);
+    const [valueMaxFoundedInActualDay, setValueMaxFoundedInActualDay] = useState(0);
 
     useEffect(() => {
         setGlobalData(allDataFromCsv)
@@ -15,10 +16,12 @@ export default function useAsyncHook(allDataFromCsv, dayToShow) {
         // retornar as informações desse dia, dayToShow
         // retornar o maior valor encontrado nesse dia
         const dataInThisDay = getDataInDay(dayToShow)
+        const valueMaxInThisDay = getValueMaxInThisDay(dataInThisDay)
         setDayData(dataInThisDay)
+        setValueMaxFoundedInActualDay(valueMaxInThisDay)
 
     }, [dayToShow])
-  
+    
     function getDataFrameHeader() {
         const dataFrame = globalData
         const dataFrameHeader = dataFrame[0]
@@ -34,37 +37,38 @@ export default function useAsyncHook(allDataFromCsv, dayToShow) {
     function getDataInDay(day) {
         const dataFrame = [...globalData]
         dataFrame.shift()
-        return dataFrame.map((item, index)=> dataFrame[index][day])
-    }
+        return dataFrame.map((item, index)=> {
+            // dataFrame[index][day]
 
-    function getValueMaxInThisDay(day) {
-        const dataFrame = globalData
+            const totalConfirmed = Number(Math.sqrt(Number(dataFrame[index][day])).toFixed(0))
 
-        let valueMaxFoundedInData = 0
+            const long = Number(dataFrame[index][2])
+            const lat = Number(dataFrame[index][3])
 
-        // console.log('data.data: ', data.data[0][DAY])
-
-		const importantData = dataFrame.map((country)=> {
-
-            // const totalConfirmed = Number(country[DAY])
-            const totalConfirmed = Math.sqrt(Number(country[1]))
-
-            const long = Number(country[2])
-            const lat = Number(country[3])
-            
-            if(totalConfirmed > valueMaxFoundedInData) {
-                valueMaxFoundedInData = totalConfirmed
-            }
             return [lat, long, totalConfirmed]
         })
-        console.log('importantData: ', importantData)
-        return valueMaxFoundedInData
+    }
+
+    function getValueMaxInThisDay(dataInThisDay) {
+        let valueMaxFounded = 0
+
+		dataInThisDay.map((day)=> {
+            const totalConfirmed = Number(day[2])
+            
+            if(totalConfirmed > valueMaxFounded) {
+                valueMaxFounded = totalConfirmed
+            }
+
+            return valueMaxFounded
+        })
+        return valueMaxFounded
     }
 
 
     return {
         globalData, 
         dayData,
+        valueMaxFoundedInActualDay,
         getDataFrameHeader,
         getDataFrame,
         getDataInDay,
