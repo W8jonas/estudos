@@ -25,8 +25,9 @@ function App() {
 	const [dataFromCsv, setDataFromCsv] = useState([])
 
 	const [valueMaxFounded, setValueMaxFounded] = useState(0)
-	const [dayToShow, setDayToShow] = useState(4)
+	const [dayToShow, setDayToShow] = useState(3)
 	const [counterActive, setCounterActive] = useState(true)
+	const [actualDayDataString, setActualDayDataString] = useState('01/01/2020')
 
 	const {globalData, dayData, valueMaxFoundedInActualDay, getDataFrameHeader, getDataFrame, getDataInDay} = useFetchData(dataFromCsv, dayToShow)
 
@@ -41,29 +42,25 @@ function App() {
 		console.log('getDataFrameHeader: ', header ? header[dayToShow] : undefined)
 		console.log('dayData: ', dayData)
 		console.log('valueMaxFoundedInActualDay: ', valueMaxFoundedInActualDay)
-
-		setAllData(globalData)
+		
+		setActualDayDataString(header ? header[dayToShow] : undefined)
+		setAllData(dayData)
 		setValueMaxFounded(valueMaxFoundedInActualDay)
+
 	}, [dayToShow])
 
+
 	useEffect(() => {
-        if (counterActive && dayToShow < 300) {
+        if (counterActive) {
             const timer = setInterval(() => {
                 setDayToShow(dayToShow + 1)
-            }, 1000)
+            }, 400)
 
             return () => {
                 clearInterval(timer)
             }
         }
     }, [counterActive, dayToShow])
-
-
-	if (!valueMaxFounded) {
-		return <div>
-			<h1>Carregando</h1>
-		</div>
-	}
 
 	const GL_OPTION = {
 		backgroundColor: '#000',
@@ -124,7 +121,7 @@ function App() {
 				option={GL_OPTION}
 			/>
 			<span className="total-connections">
-                dia atual: 01/01/2020 {dayToShow}
+                dia atual: {actualDayDataString} -- dia: {dayToShow}
             </span>
 		</div>
 	)
