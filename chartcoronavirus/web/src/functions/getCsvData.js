@@ -19,7 +19,6 @@ export default async function useAsyncHook() {
     }
 
     const data = await getDataFromCsv()
-    console.log('Tivemos mudanças result:', data)
 
     return data
 }
