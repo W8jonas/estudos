@@ -4,6 +4,13 @@ int latchPin = 8;  // Pin connected to ST_CP of 74HC595
 int clockPin = 13; // Pin connected to SH_CP of 74HC595
 int dataPin = 11;  // Pin connected to DS of 74HC595
 
+typedef struct
+{
+    byte  rgbtBlue;
+    byte  rgbtGreen;
+    byte  rgbtRed;
+} RGBLedLine;
+
 void setup() {
   SPI.setBitOrder(LSBFIRST);
   SPI.setDataMode(SPI_MODE0);
@@ -18,16 +25,18 @@ void setup() {
 }
 
 void loop() {
-
-  byte lineRed = 0x01;
-  byte lineGreen = 0x0F;
-  byte lineBlue = 0xAA;
+  RGBLedLine line;
+  
+  line.rgbtRed = 0x01;
+  line.rgbtGreen = 0x0F;
+  line.rgbtBlue = 0xAA;
+  
   byte lineCathode = 0x77;
   
   SPI.transfer(lineCathode);
-  SPI.transfer(lineRed);
-  SPI.transfer(lineBlue);
-  SPI.transfer(lineGreen);
+  SPI.transfer(line.rgbtGreen);
+  SPI.transfer(line.rgbtBlue);
+  SPI.transfer(line.rgbtRed);
   
   digitalWrite(latchPin, HIGH);
   digitalWrite(latchPin, LOW);
