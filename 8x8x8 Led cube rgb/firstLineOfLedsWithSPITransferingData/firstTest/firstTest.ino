@@ -12,24 +12,26 @@ void setup() {
   pinMode(latchPin, OUTPUT);
   pinMode(clockPin, OUTPUT);
   pinMode(dataPin, OUTPUT);
-
+  digitalWrite(latchPin, LOW);
+  
   SPI.begin();
 }
 
 void loop() {
-  digitalWrite(latchPin, LOW);
-  SPI.transfer(0xAA);
-  SPI.transfer(0x0A);
-  SPI.transfer(0x88);
-  SPI.transfer(0x99);
+  SPI.transfer(0xFF);
+  SPI.transfer(0xFF);
+  SPI.transfer(0x00);
+  SPI.transfer(0x00);
   digitalWrite(latchPin, HIGH);
   digitalWrite(latchPin, LOW);
   delay(1000);
   
-  SPI.transfer(0x77);
+  SPI.transfer(0xFF);
+  SPI.transfer(0x00);
+  SPI.transfer(0xFF);
+  SPI.transfer(0x00);
   digitalWrite(latchPin, HIGH);
   digitalWrite(latchPin, LOW);
   delay(1000);
-  
   SPI.end();
 }
