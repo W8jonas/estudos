@@ -18,20 +18,20 @@ void setup() {
 }
 
 void loop() {
-  SPI.transfer(0xFF);
-  SPI.transfer(0xFF);
-  SPI.transfer(0x00);
-  SPI.transfer(0x00);
-  digitalWrite(latchPin, HIGH);
-  digitalWrite(latchPin, LOW);
-  delay(1000);
+
+  byte lineRed = 0x01;
+  byte lineGreen = 0x0F;
+  byte lineBlue = 0xAA;
+  byte lineCathode = 0x77;
   
-  SPI.transfer(0xFF);
-  SPI.transfer(0x00);
-  SPI.transfer(0xFF);
-  SPI.transfer(0x00);
+  SPI.transfer(lineCathode);
+  SPI.transfer(lineRed);
+  SPI.transfer(lineBlue);
+  SPI.transfer(lineGreen);
+  
   digitalWrite(latchPin, HIGH);
   digitalWrite(latchPin, LOW);
   delay(1000);
+
   SPI.end();
 }
