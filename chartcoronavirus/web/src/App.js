@@ -10,15 +10,9 @@ import baseTexture from './assets/data-gl/asset/world_topo_bathy_200401.jpg'
 import 'echarts-gl'
 import ReactEcharts from "echarts-for-react";
 
-// functions / extras
-// import getAllData from './utils/getAllData'
-// import getAllImportantData from './utils/getAllImportantData'
-
-// import useRepository from './functions/repository'
 import useFetchData from './functions/useFetchData'
 import getCsvData from './functions/getCsvData'
-
-const OFFSET = 4
+import { OFFSET } from './utils/constants'
 
 function App() {
 
@@ -39,20 +33,13 @@ function App() {
 
 	useEffect(() => {
 		const header = getDataFrameHeader()
-
-		// console.log('globalData: ', globalData)
-		// console.log('getDataFrameHeader: ', header ? header[dayToShow] : undefined)
-		// console.log('dayData: ', dayData)
-		// console.log('valueMaxFoundedInActualDay: ', valueMaxFoundedInActualDay)
-
 		setActualDayDataString(header ? header[dayToShow + OFFSET] : undefined)
 		setAllData(dayData)
 		setValueMaxFounded(valueMaxFoundedInActualDay)
-
 	}, [dayData, dayToShow, getDataFrameHeader, valueMaxFoundedInActualDay])
 
 	useEffect(() => {
-		if (dayToShow > totalDataBaseDays) {
+		if (dayToShow + 1 > totalDataBaseDays) {
 			setCounterActive(false)
 		} else {
 			setCounterActive(true)
