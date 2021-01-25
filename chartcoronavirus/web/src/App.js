@@ -1,5 +1,5 @@
 
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 
 // assets
 import './App.css'
@@ -12,7 +12,7 @@ import ReactEcharts from "echarts-for-react";
 
 // functions / extras
 // import getAllData from './utils/getAllData'
-import getAllImportantData from './utils/getAllImportantData'
+// import getAllImportantData from './utils/getAllImportantData'
 
 // import useRepository from './functions/repository'
 import useFetchData from './functions/useFetchData'
@@ -29,38 +29,38 @@ function App() {
 	const [counterActive, setCounterActive] = useState(true)
 	const [actualDayDataString, setActualDayDataString] = useState('01/01/2020')
 
-	const {globalData, dayData, valueMaxFoundedInActualDay, getDataFrameHeader, getDataFrame, getDataInDay} = useFetchData(dataFromCsv, dayToShow)
+	const { globalData, dayData, valueMaxFoundedInActualDay, getDataFrameHeader, getDataFrame, getDataInDay } = useFetchData(dataFromCsv, dayToShow)
 
 	useEffect(() => {
 		getCsvData().then(setDataFromCsv)
 	}, [])
 
-	useEffect(()=>{
+	useEffect(() => {
 		const header = getDataFrameHeader()
 
-		console.log('globalData: ', globalData)
-		console.log('getDataFrameHeader: ', header ? header[dayToShow] : undefined)
-		console.log('dayData: ', dayData)
-		console.log('valueMaxFoundedInActualDay: ', valueMaxFoundedInActualDay)
-		
+		// console.log('globalData: ', globalData)
+		// console.log('getDataFrameHeader: ', header ? header[dayToShow] : undefined)
+		// console.log('dayData: ', dayData)
+		// console.log('valueMaxFoundedInActualDay: ', valueMaxFoundedInActualDay)
+
 		setActualDayDataString(header ? header[dayToShow] : undefined)
 		setAllData(dayData)
 		setValueMaxFounded(valueMaxFoundedInActualDay)
 
-	}, [dayToShow])
+	}, [dayData, dayToShow, getDataFrameHeader, valueMaxFoundedInActualDay])
 
 
 	useEffect(() => {
-        if (counterActive) {
-            const timer = setInterval(() => {
-                setDayToShow(dayToShow + 1)
-            }, 400)
+		if (counterActive) {
+			const timer = setInterval(() => { // o num é 325
+				setDayToShow(dayToShow + 1)
+			}, 400 - dayToShow)
 
-            return () => {
-                clearInterval(timer)
-            }
-        }
-    }, [counterActive, dayToShow])
+			return () => {
+				clearInterval(timer)
+			}
+		}
+	}, [counterActive, dayToShow])
 
 	const GL_OPTION = {
 		backgroundColor: '#000',
@@ -71,7 +71,7 @@ function App() {
 
 			// displacementScale: 0.05,
 			// displacementQuality: 'medium',
-			
+
 			environment: environment,
 			light: {
 				main: {
@@ -117,12 +117,12 @@ function App() {
 	return (
 		<div className="App">
 			<ReactEcharts
-				style={{height: '100vh', width: '100%'}}
+				style={{ height: '100vh', width: '100%' }}
 				option={GL_OPTION}
 			/>
-			<span className="total-connections">
-                dia atual: {actualDayDataString} -- dia: {dayToShow}
-            </span>
+			<div className="total-connections">
+				data: {actualDayDataString} {' '} -- dia: {dayToShow}
+			</div>
 		</div>
 	)
 }
