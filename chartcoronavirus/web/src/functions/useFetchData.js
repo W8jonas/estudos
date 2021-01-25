@@ -1,6 +1,6 @@
 
 import Papa from 'papaparse';
-import {useState, useEffect} from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 
 export default function useAsyncHook(allDataFromCsv, dayToShow) {
@@ -12,16 +12,33 @@ export default function useAsyncHook(allDataFromCsv, dayToShow) {
         setGlobalData(allDataFromCsv)
     }, [allDataFromCsv])
 
+    const getDataInDay = useCallback((day) => {
+        const dataFrame = [...globalData]
+        dataFrame.shift()
+        return dataFrame.map((item, index) => {
+            // dataFrame[index][day]
+
+            const totalConfirmed = Number(Math.sqrt(Number(dataFrame[index][day])).toFixed(0))
+
+            const long = Number(dataFrame[index][2])
+            const lat = Number(dataFrame[index][3])
+
+            return [lat, long, totalConfirmed]
+        })
+    }, [globalData])
+
     useEffect(() => {
         // retornar as informações desse dia, dayToShow
         // retornar o maior valor encontrado nesse dia
         const dataInThisDay = getDataInDay(dayToShow)
         const valueMaxInThisDay = getValueMaxInThisDay(dataInThisDay)
+
         setDayData(dataInThisDay)
+
         setValueMaxFoundedInActualDay(valueMaxInThisDay)
 
-    }, [dayToShow])
-    
+    }, [dayToShow, getDataInDay])
+
     function getDataFrameHeader() {
         const dataFrame = globalData
         const dataFrameHeader = dataFrame[0]
@@ -34,28 +51,13 @@ export default function useAsyncHook(allDataFromCsv, dayToShow) {
         return dataFrame
     }
 
-    function getDataInDay(day) {
-        const dataFrame = [...globalData]
-        dataFrame.shift()
-        return dataFrame.map((item, index)=> {
-            // dataFrame[index][day]
-
-            const totalConfirmed = Number(Math.sqrt(Number(dataFrame[index][day])).toFixed(0))
-
-            const long = Number(dataFrame[index][2])
-            const lat = Number(dataFrame[index][3])
-
-            return [lat, long, totalConfirmed]
-        })
-    }
-
     function getValueMaxInThisDay(dataInThisDay) {
         let valueMaxFounded = 0
 
-		dataInThisDay.map((day)=> {
+        dataInThisDay.map((day) => {
             const totalConfirmed = Number(day[2])
-            
-            if(totalConfirmed > valueMaxFounded) {
+
+            if (totalConfirmed > valueMaxFounded) {
                 valueMaxFounded = totalConfirmed
             }
 
@@ -66,7 +68,7 @@ export default function useAsyncHook(allDataFromCsv, dayToShow) {
 
 
     return {
-        globalData, 
+        globalData,
         dayData,
         valueMaxFoundedInActualDay,
         getDataFrameHeader,
