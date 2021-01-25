@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 
-const OFFSET = 4
+import { OFFSET } from '../utils/constants'
 
 export default function useAsyncHook(allDataFromCsv, dayToShow) {
     const [globalData, setGlobalData] = useState([]);
@@ -10,15 +10,10 @@ export default function useAsyncHook(allDataFromCsv, dayToShow) {
     const [valueMaxFoundedInActualDay, setValueMaxFoundedInActualDay] = useState(0);
 
     useEffect(() => {
-        console.log("allDataFromCsv: ", allDataFromCsv)
-
         if (allDataFromCsv.length) {
             const dataFrameLineLength = allDataFromCsv[0].length
-            setTotalDataBaseDays(dataFrameLineLength - OFFSET)
-
-            console.log("allDataFromCsv[0].length: ", dataFrameLineLength - OFFSET)
+            setTotalDataBaseDays(dataFrameLineLength - OFFSET - 1)
         }
-
         setGlobalData(allDataFromCsv)
     }, [allDataFromCsv])
 
