@@ -1,8 +1,8 @@
 
-Nome		tipo	IC(mA)	Freq
-2N2222		NPN	?	?
-BC547		NPN	?	?
-BC557		PNP	?	?
-2N3904		NPN	?	?
-PN2222		NPN	600	100M
+Nome		tipo	IC(mA) power	Freq
+2N2222		NPN	?		?
+BC547		NPN	?		?
+BC557		PNP	?		?
+2N3904		NPN	?		?
+PN2222		NPN	600	625mW	100M
 
