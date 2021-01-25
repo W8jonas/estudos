@@ -1,11 +1,11 @@
 
-import Papa from 'papaparse';
 import { useState, useEffect, useCallback } from 'react'
 
 
 export default function useAsyncHook(allDataFromCsv, dayToShow) {
     const [globalData, setGlobalData] = useState([]);
     const [dayData, setDayData] = useState([]);
+    const [totalDataBaseDays, setTotalDataBaseDays] = useState(0);
     const [valueMaxFoundedInActualDay, setValueMaxFoundedInActualDay] = useState(0);
 
     useEffect(() => {
@@ -16,10 +16,8 @@ export default function useAsyncHook(allDataFromCsv, dayToShow) {
         const dataFrame = [...globalData]
         dataFrame.shift()
         return dataFrame.map((item, index) => {
-            // dataFrame[index][day]
 
             const totalConfirmed = Number(Math.sqrt(Number(dataFrame[index][day])).toFixed(0))
-
             const long = Number(dataFrame[index][2])
             const lat = Number(dataFrame[index][3])
 
@@ -71,6 +69,7 @@ export default function useAsyncHook(allDataFromCsv, dayToShow) {
         globalData,
         dayData,
         valueMaxFoundedInActualDay,
+        totalDataBaseDays,
         getDataFrameHeader,
         getDataFrame,
         getDataInDay,

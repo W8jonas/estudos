@@ -29,7 +29,8 @@ function App() {
 	const [counterActive, setCounterActive] = useState(true)
 	const [actualDayDataString, setActualDayDataString] = useState('01/01/2020')
 
-	const { globalData, dayData, valueMaxFoundedInActualDay, getDataFrameHeader, getDataFrame, getDataInDay } = useFetchData(dataFromCsv, dayToShow)
+	const { globalData, dayData, valueMaxFoundedInActualDay, totalDataBaseDays,
+		getDataFrameHeader, getDataFrame, getDataInDay } = useFetchData(dataFromCsv, dayToShow)
 
 	useEffect(() => {
 		getCsvData().then(setDataFromCsv)
@@ -49,6 +50,11 @@ function App() {
 
 	}, [dayData, dayToShow, getDataFrameHeader, valueMaxFoundedInActualDay])
 
+	useEffect(() => {
+		if (dayToShow > totalDataBaseDays) {
+			setCounterActive(false)
+		}
+	}, [dayToShow, totalDataBaseDays])
 
 	useEffect(() => {
 		if (counterActive) {
