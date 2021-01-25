@@ -1,6 +1,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 
+const OFFSET = 4
 
 export default function useAsyncHook(allDataFromCsv, dayToShow) {
     const [globalData, setGlobalData] = useState([]);
@@ -9,6 +10,15 @@ export default function useAsyncHook(allDataFromCsv, dayToShow) {
     const [valueMaxFoundedInActualDay, setValueMaxFoundedInActualDay] = useState(0);
 
     useEffect(() => {
+        console.log("allDataFromCsv: ", allDataFromCsv)
+
+        if (allDataFromCsv.length) {
+            const dataFrameLineLength = allDataFromCsv[0].length
+            setTotalDataBaseDays(dataFrameLineLength - OFFSET)
+
+            console.log("allDataFromCsv[0].length: ", dataFrameLineLength - OFFSET)
+        }
+
         setGlobalData(allDataFromCsv)
     }, [allDataFromCsv])
 
@@ -28,7 +38,9 @@ export default function useAsyncHook(allDataFromCsv, dayToShow) {
     useEffect(() => {
         // retornar as informações desse dia, dayToShow
         // retornar o maior valor encontrado nesse dia
-        const dataInThisDay = getDataInDay(dayToShow)
+
+        const dayToShowWithOffset = dayToShow + OFFSET
+        const dataInThisDay = getDataInDay(dayToShowWithOffset)
         const valueMaxInThisDay = getValueMaxInThisDay(dataInThisDay)
 
         setDayData(dataInThisDay)

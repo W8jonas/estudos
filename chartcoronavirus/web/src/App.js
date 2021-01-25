@@ -18,6 +18,7 @@ import ReactEcharts from "echarts-for-react";
 import useFetchData from './functions/useFetchData'
 import getCsvData from './functions/getCsvData'
 
+const OFFSET = 4
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
 	const [dataFromCsv, setDataFromCsv] = useState([])
 
 	const [valueMaxFounded, setValueMaxFounded] = useState(0)
-	const [dayToShow, setDayToShow] = useState(3)
+	const [dayToShow, setDayToShow] = useState(0)
 	const [counterActive, setCounterActive] = useState(true)
 	const [actualDayDataString, setActualDayDataString] = useState('01/01/2020')
 
@@ -44,7 +45,7 @@ function App() {
 		// console.log('dayData: ', dayData)
 		// console.log('valueMaxFoundedInActualDay: ', valueMaxFoundedInActualDay)
 
-		setActualDayDataString(header ? header[dayToShow] : undefined)
+		setActualDayDataString(header ? header[dayToShow + OFFSET] : undefined)
 		setAllData(dayData)
 		setValueMaxFounded(valueMaxFoundedInActualDay)
 
@@ -53,6 +54,8 @@ function App() {
 	useEffect(() => {
 		if (dayToShow > totalDataBaseDays) {
 			setCounterActive(false)
+		} else {
+			setCounterActive(true)
 		}
 	}, [dayToShow, totalDataBaseDays])
 
