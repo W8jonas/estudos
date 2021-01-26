@@ -14,6 +14,15 @@ class Business {
 
     async _init() {
         this.currentStream = await this.media.getCamera()
-        console.log('_init', this.currentStream)
+        this.addVideoStream('teste01')
+    }
+
+    addVideoStream(userId, stream = this.currentStream) {
+        const isCurrentId = false
+
+        this.view.renderVideo({
+            userId,
+            stream
+        })
     }
 }
