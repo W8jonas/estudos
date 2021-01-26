@@ -17,9 +17,19 @@ const onload = () => {
   // recorderBtn.addEventListener('click', recordClick(recorderBtn))
 
   const view = new View()
-  view.renderVideo({ userId: 'Random 1', url: 'https://media.giphy.com/media/HOhtUWb2tOWSoM1W5h/giphy.mp4' })
-  view.renderVideo({ userId: 'Random 2', url: 'https://media.giphy.com/media/HOhtUWb2tOWSoM1W5h/giphy.mp4' })
-  view.renderVideo({ userId: 'W8Jonas', isCurrentId: true, url: 'https://media.giphy.com/media/HOhtUWb2tOWSoM1W5h/giphy.mp4' })
+  const media = new Media()
+
+  const deps = {
+    view,
+    media,
+    room
+  }
+
+  Business.initialize(deps)
+
+  // view.renderVideo({ userId: 'Random 1', url: 'https://media.giphy.com/media/HOhtUWb2tOWSoM1W5h/giphy.mp4' })
+  // view.renderVideo({ userId: 'Random 2', url: 'https://media.giphy.com/media/HOhtUWb2tOWSoM1W5h/giphy.mp4' })
+  // view.renderVideo({ userId: 'W8Jonas', isCurrentId: true, url: 'https://media.giphy.com/media/HOhtUWb2tOWSoM1W5h/giphy.mp4' })
 
 }
 
