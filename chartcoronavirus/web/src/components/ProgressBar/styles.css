@@ -1,0 +1,28 @@
+/* style={{ width: '100%', height: 10, position: 'absolute', bottom: 10, justifyContent: 'center', backgroundColor: '#274192' }} */
+
+
+.content-container {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center; 
+    
+    width: 100%;
+    height: 20px;
+
+    position: absolute;
+    bottom: 10px;
+  
+    color: #274192;
+}
+
+.content-container div {
+    background-color: rgb(119, 105, 146);
+    width: 50%;
+}
+.content-container p {
+    align-self: center; 
+    position: absolute;
+    font-size: 12px;
+    line-height: 1px;
+}
