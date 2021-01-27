@@ -35,6 +35,7 @@ const onload = () => {
     view,
     media,
     room,
+    peerBuilder,
     socketBuilder
   }
 
