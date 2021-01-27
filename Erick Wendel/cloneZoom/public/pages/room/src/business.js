@@ -24,9 +24,11 @@ class Business {
             .setOnUserDisconnected(this.onUserDisconnected())
             .build()
 
-        this.currentPeer = this.peerBuilder
+        this.currentPeer = await this.peerBuilder
             .setOnError(this.onPeerError())
             .setOnConnectionOpened(this.onPeerConnectionOpened())
+            .setOnCallReceived(this.onPeerCallReceived())
+            .setOnPeerStreamReceived(this.onPeerStreamReceived)
             .build()
 
         this.addVideoStream('teste01')
@@ -38,13 +40,15 @@ class Business {
         this.view.renderVideo({
             userId,
             stream,
-            isCurrentId
+            isCurrentId,
+            muted: true
         })
     }
 
     onUserConnected = function () {
         return userId => {
             console.log('user connected', userId)
+            this.currentPeer.call(userId, this.currentStream)
         }
     }
 
@@ -65,6 +69,19 @@ class Business {
             const id = peer.id
             console.log('peer!', id)
             this.socket.emit('join-room', this.room, id)
+        }
+    }
+
+    onPeerCallReceived = function () {
+        return call => {
+            console.log('answering call')
+            call.answer(this.currentStream)
+        }
+    }
+    onPeerStreamReceived = function () {
+        return (call, stream) => {
+            const callerId = call.peer
+            this.addVideoStream(callerId, stream)
         }
     }
 }
