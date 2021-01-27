@@ -13,6 +13,8 @@ import useFetchData from './functions/useFetchData'
 import getCsvData from './functions/getCsvData'
 import { OFFSET } from './utils/constants'
 
+import ProgressBar from './components/ProgressBar'
+
 function App() {
 
 	const [allData, setAllData] = useState([67.709953, 33.93911, 198.1262])
@@ -115,6 +117,7 @@ function App() {
 				style={{ height: '100vh', width: '100%' }}
 				option={GL_OPTION}
 			/>
+			<ProgressBar maxValue={totalDataBaseDays} actualValue={dayToShow} />
 			<div className="total-connections">
 				data: {actualDayDataString} {' '} -- dia: {dayToShow}
 			</div>
