@@ -1,0 +1,16 @@
+{
+  "name": "peer-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm start",
+    "start": "npx peerjs --port 9000 --key peerjs --path /"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "peer": "^0.6.1"
+  }
+}
