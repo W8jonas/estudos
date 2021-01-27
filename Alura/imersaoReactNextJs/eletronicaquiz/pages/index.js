@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 import db from '../db.json'
 import Widget from '../src/components/widget'
-import Footer from '../src/components/Footer'
+// import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GithubCorner'
 import QuizBackground from '../src/components/QuizBackground'
-
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -17,6 +16,9 @@ export const QuizContainer = styled.div`
   }
 `;
 
+
+// Saiba que eu vou te apoiar sempre sempre sempre sempre mesmo
+
 export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -25,9 +27,12 @@ export default function Home() {
         <Widget>
           <Widget.Content>
             <Widget.Header>
-              <h1>Aqui vem o titulo</h1>
+              <h1>Boaa noitee Princesa!!!💗</h1>
             </Widget.Header>
-            <p>Aqui vem um parágrafo para uma pergunta</p>
+            <p>Eu fiz isso aqui só para dizer que você é uma mulher incrível e muito especial pra mim! 💗</p>
+            <p>Você é super inteligente, ter um sorriso lindo e ser super carinhosa, você tem uma personalidade muito divertida que me anima sempre para tudo. 💗</p>
+            <p>Eu fico bobo e abismado pensando em como você pode me causar tantos sorrisos sinceros e memoráveis mandando somente algumas mensagens. 💗</p>
+            <p>Você tem a magia de sempre me animar e me deixar feliz só por ser quem é, da forma e do jeitinho que sempre foi. 💗</p>
           </Widget.Content>
         </Widget>
       </QuizContainer>
@@ -36,15 +41,14 @@ export default function Home() {
         <Widget>
           <Widget.Content>
             <Widget.Header>
-              <h1>Aqui vem o titulo</h1>
+              <h1>Princesa,</h1>
             </Widget.Header>
-            <p>Aqui vem um parágrafo para uma pergunta</p>
+            <p>Meu dia está mega corrido hoje, pelos motivos que eu ja te falei, mas é tudo por uma boa causa. Enfim espero que tenha gostado da surpresinha que fiz para ti! 💗💗💗</p>
           </Widget.Content>
         </Widget>
-        <Footer />
+        {/* <Footer /> */}
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/W8jonas" />
     </QuizBackground>
-
   )
 }
