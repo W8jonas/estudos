@@ -45,6 +45,5 @@ export default function Home() {
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/W8jonas" />
     </QuizBackground>
-
   )
 }
