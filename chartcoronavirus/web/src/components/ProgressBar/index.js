@@ -12,7 +12,7 @@ const ProgressBar = ({ maxValue = 100, actualValue = 50 }) => {
         <div className="content-container">
 
             <div>
-                <div style={{ width: `${progressInPercentage}%`, height: 13, backgroundColor: '#774192' }} />
+                <div style={{ width: `${progressInPercentage}%`, height: 15, backgroundColor: '#774192' }} />
             </div>
 
             <p>
