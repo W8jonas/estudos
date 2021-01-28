@@ -12,6 +12,7 @@ import ReactEcharts from "echarts-for-react";
 import useFetchData from './functions/useFetchData'
 import getCsvData from './functions/getCsvData'
 import { OFFSET } from './utils/constants'
+import { formateDate } from './utils/formateDateString'
 
 import ProgressBar from './components/ProgressBar'
 
@@ -51,7 +52,7 @@ function App() {
 		if (counterActive) {
 			const timer = setInterval(() => { // o num é 325
 				setDayToShow(dayToShow + 1)
-			}, 400 - dayToShow)
+			}, 400 - (dayToShow) / 2)
 
 			return () => {
 				clearInterval(timer)
@@ -66,8 +67,8 @@ function App() {
 			heightTexture: baseTexture,
 			shading: 'lambert',
 
-			// displacementScale: 0.05,
-			// displacementQuality: 'medium',
+			displacementScale: 0.05,
+			displacementQuality: 'hight',
 
 			environment: environment,
 			light: {
@@ -119,7 +120,7 @@ function App() {
 			/>
 			<ProgressBar maxValue={totalDataBaseDays} actualValue={dayToShow} />
 			<div className="total-connections">
-				data: {actualDayDataString} {' '} -- dia: {dayToShow}
+				data: {formateDate(actualDayDataString)} {' '} -- dia: {dayToShow}
 			</div>
 		</div>
 	)
