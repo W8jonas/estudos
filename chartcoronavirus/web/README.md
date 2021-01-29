@@ -27,6 +27,12 @@ Esse projeto foi desenvolvido utilizando como principal linguagem o **javascript
 <br/>
 
 ## Abaixo seguem algumas prints de todo o projeto
-![](screenshots/Screenshot_1.png)  |  ![](screenshots/Screenshot_2.png) |  ![](screenshots/Screenshot_3.png)  | 
-:---------------:|:----------------:|:-----------------:|
+![](screenshots/Screenshot_4.png)
+
+![](screenshots/Screenshot_5.png)  |  ![](screenshots/Screenshot_6.png) |
+:---------------:|:----------------:|
+![](screenshots/Screenshot_7.png)  |  ![](screenshots/Screenshot_9.png) |
+:---------------:|:----------------:|
+
+![](screenshots/Screenshot_8.png)
 
