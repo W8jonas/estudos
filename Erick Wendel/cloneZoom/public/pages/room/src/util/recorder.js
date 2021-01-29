@@ -5,7 +5,9 @@ class Recorder {
 
         this.filename = `id:${userName}-when${Date.now()}`
         this.videoType = 'video/webm'
+
         this.mediaRecorder = {}
+        this.completeRecordings = []
         this.RecorderBlobs = []
         this.recordingActive = false
     }
@@ -47,6 +49,20 @@ class Recorder {
         this.mediaRecorder.start()
         console.log('Media Recorded started: ', this.mediaRecorder)
         this.recordingActive = true
+    }
+
+    async stopRecording() {
+        if (!this.recordingActive) return
+        if (this.mediaRecorder.state === 'inactive') return
+
+        console.log('media recorded stopped!', this.userName)
+
+        this.mediaRecorder.stop()
+        this.recordingActive = false
+        await Util.sleep(200)
+
+        this.completeRecordings.push([...this.RecorderBlobs])
+        this.RecorderBlobs = []
     }
 
 }
