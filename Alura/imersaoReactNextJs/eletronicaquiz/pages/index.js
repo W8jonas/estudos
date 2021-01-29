@@ -16,9 +16,6 @@ export const QuizContainer = styled.div`
   }
 `;
 
-
-// Saiba que eu vou te apoiar sempre sempre sempre sempre mesmo
-
 export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
