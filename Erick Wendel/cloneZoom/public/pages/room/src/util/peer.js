@@ -7,9 +7,18 @@ class PeerBuilder {
         this.onCallReceived = defaultFunctionValue
         this.onConnectionOpened = defaultFunctionValue
         this.onPeerStreamReceived = defaultFunctionValue
+        this.onCallError = defaultFunctionValue
+        this.onCallClose = defaultFunctionValue
     }
 
-
+    setOnCallClose(fn) {
+        this.onCallClose = fn
+        return this
+    }
+    setOnCallError(fn) {
+        this.onCallError = fn
+        return this
+    }
     setOnError(fn) {
         this.onError = fn
         return this
@@ -32,12 +41,29 @@ class PeerBuilder {
 
     _prepareCallEvent(call) {
         call.on('stream', stream => this.onPeerStreamReceived(call, stream))
-
+        call.on('error', error => this.onCallError(call, error))
+        call.on('close', _ => this.onCallClose(call))
         this.onCallReceived(call)
     }
 
+    _preparePeerInstanceFunction(PeerModule) {
+        class PeerCustomModule extends PeerModule { }
+
+        const peerCall = PeerCustomModule.prototype.call
+        const context = this
+        PeerCustomModule.prototype.call = function (id, stream) {
+            const call = peerCall.apply(this, [id, stream])
+
+            context._prepareCallEvent(call)
+
+            return call
+        }
+        return PeerCustomModule
+    }
+
     build() {
-        const peer = new Peer(...this.peerConfig)
+        const PeerCustomInstance = this._preparePeerInstanceFunction(Peer)
+        const peer = new PeerCustomInstance(...this.peerConfig)
 
         peer.on('error', this.onError)
         peer.on('call', this._prepareCallEvent.bind(this))
