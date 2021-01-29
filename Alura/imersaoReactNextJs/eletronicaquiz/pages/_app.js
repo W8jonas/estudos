@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import db from '../db.json'
 import Head from 'next/Head'
