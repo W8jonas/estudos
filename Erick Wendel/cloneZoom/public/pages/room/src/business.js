@@ -105,6 +105,12 @@ class Business {
     onPeerStreamReceived = function () {
         return (call, stream) => {
             const callerId = call.peer
+            console.log('New call Stream', callerId)
+
+            if (this.peers.has(callerId)) {
+                return
+            }
+
             this.addVideoStream(callerId, stream)
 
             this.peers.set(callerId, { call })
