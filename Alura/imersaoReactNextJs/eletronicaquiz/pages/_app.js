@@ -1,3 +1,4 @@
+import React from 'React'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import db from '../db.json'
 import Head from 'next/Head'
@@ -29,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = db.theme
 
+// eslint-disable-next-line react/prop-types
 export default function App({ Component, pageProps }) {
   return (
     <>
