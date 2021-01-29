@@ -1,10 +1,11 @@
-import React from 'React'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import db from '../db.json'
 import Widget from '../src/components/widget'
-// import Footer from '../src/components/Footer'
+import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GithubCorner'
 import QuizBackground from '../src/components/QuizBackground'
+import { useRouter } from 'next/router'
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -18,33 +19,49 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+
+  const router = useRouter()
+  const [name, setName] = useState('Jonas')
+
+  function onHandleSubmit(event) {
+    event.preventDefault()
+    router.push(`/quiz?name=${name}`)
+  }
+
   return (
     <QuizBackground backgroundImage={db.bg}>
 
       <QuizContainer>
         <Widget>
+          <Widget.Header>
+            <h1>Alura Quiz - Modelo Base</h1>
+          </Widget.Header>
           <Widget.Content>
-            <Widget.Header>
-              <h1>Boaa noitee Princesa!!!💗</h1>
-            </Widget.Header>
-            <p>Eu fiz isso aqui só para dizer que você é uma mulher incrível e muito especial pra mim! 💗</p>
-            <p>Você é super inteligente, ter um sorriso lindo e ser super carinhosa, você tem uma personalidade muito divertida que me anima sempre para tudo. 💗</p>
-            <p>Eu fico bobo e abismado pensando em como você pode me causar tantos sorrisos sinceros e memoráveis mandando somente algumas mensagens. 💗</p>
-            <p>Você tem a magia de sempre me animar e me deixar feliz só por ser quem é, da forma e do jeitinho que sempre foi. 💗</p>
+            <form onSubmit={onHandleSubmit}>
+              <input
+                placeholder="Digite seu nome"
+                onChange={(event) => { setName(event.target.value) }}
+              />
+
+              <button type="submit" disabled={!name}>
+                Jogar {name}
+              </button>
+
+            </form>
           </Widget.Content>
         </Widget>
       </QuizContainer>
 
       <QuizContainer>
         <Widget>
+          <Widget.Header>
+            <h1>Projeto</h1>
+          </Widget.Header>
           <Widget.Content>
-            <Widget.Header>
-              <h1>Princesa,</h1>
-            </Widget.Header>
-            <p>Meu dia está mega corrido hoje, pelos motivos que eu ja te falei, mas é tudo por uma boa causa. Enfim espero que tenha gostado da surpresinha que fiz para ti! 💗💗💗</p>
+            <p>Em dev</p>
           </Widget.Content>
         </Widget>
-        {/* <Footer /> */}
+        <Footer />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/W8jonas" />
     </QuizBackground>
