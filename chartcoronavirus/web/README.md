@@ -34,5 +34,5 @@ Esse projeto foi desenvolvido utilizando como principal linguagem o **javascript
 ![](screenshots/Screenshot_7.png)  |  ![](screenshots/Screenshot_9.png) |
 :---------------:|:----------------:|
 
-![](screenshots/Screenshot_8.png)
+![](screenshots/gif.gif)
 
