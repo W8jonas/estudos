@@ -11,8 +11,10 @@ const onload = () => {
   const peerConfig = Object.values({
     id: undefined,
     config: {
-      port: 9000,
-      host: 'localhost',
+      host: 'murmuring-tor-35529.herokuapp.com/',
+      secure: true,
+      // port: 9000,
+      // host: 'localhost',
       path: '/'
     }
   })
