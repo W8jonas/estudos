@@ -26,3 +26,14 @@ export default function Input({ onChange, placeholder, ...props }) {
         </div>
     );
 }
+
+Input.defaultProps = {
+    value: '',
+};
+
+Input.propTypes = {
+    onChange: PropTypes.func.isRequired,
+    placeholder: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    value: PropTypes.string,
+};
