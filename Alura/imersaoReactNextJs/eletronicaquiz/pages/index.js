@@ -1,71 +1,65 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
 import db from '../db.json'
+import { useRouter } from 'next/router'
 import Widget from '../src/components/widget'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GithubCorner'
 import QuizBackground from '../src/components/QuizBackground'
+import Head from 'next/Head'
+import QuizLogo from '../src/components/QuizLogo'
 import Input from '../src/components/Input'
-import { useRouter } from 'next/router'
+import Button from '../src/components/Button'
+import QuizContainer from '../src/components/QuizContainer'
 
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
 
-export default function Home() {
+export default function QuizPage() {
 
-  const router = useRouter()
-  const [name, setName] = useState('Jonas')
+	const router = useRouter()
+	const [name, setName] = useState('Jonas')
 
-  function onHandleSubmit(event) {
-    event.preventDefault()
-    router.push(`/quiz?name=${name}`)
-  }
+	function onHandleSubmit(event) {
+		event.preventDefault()
+		router.push(`/quiz?name=${name}`)
+	}
 
-  return (
-    <QuizBackground backgroundImage={db.bg}>
+	return (
+		<QuizBackground backgroundImage={db.bg}>
+			<Head>
+				<title>{db.title}</title>
+			</Head>
 
-      <QuizContainer>
-        <Widget>
-          <Widget.Header>
-            <h1>Alura Quiz - Modelo Base</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <form onSubmit={onHandleSubmit}>
-              <Input
-                name="jonas"
-                placeholder="Digite seu nome"
-                onChange={(event) => { setName(event.target.value) }}
-              />
+			<QuizContainer>
+				<QuizLogo />
+				<Widget>
+					<Widget.Header>
+						<h1>Alura Quiz - Modelo Base</h1>
+					</Widget.Header>
+					<Widget.Content>
+						<form onSubmit={onHandleSubmit}>
+							<Input
+								name="nome do usuário"
+								placeholder="Digite seu nome"
+								onChange={(event) => { setName(event.target.value) }}
+								value={name}
+							/>
 
-              <button type="submit" disabled={!name}>
-                Jogar {name}
-              </button>
+							<Button type="submit" disabled={!name}>
+								Jogar {name}
+							</Button>
 
-            </form>
-          </Widget.Content>
-        </Widget>
-      </QuizContainer>
+						</form>
+					</Widget.Content>
+				</Widget>
 
-      <QuizContainer>
-        <Widget>
-          <Widget.Header>
-            <h1>Projeto</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <p>Em dev</p>
-          </Widget.Content>
-        </Widget>
-        <Footer />
-      </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/W8jonas" />
-    </QuizBackground>
-  )
+				<Widget>
+					<Widget.Content>
+						<h1>Projeto</h1>
+						<p>Em dev</p>
+					</Widget.Content>
+				</Widget>
+				<Footer />
+			</QuizContainer>
+			<GitHubCorner projectUrl="https://github.com/W8jonas" />
+		</QuizBackground>
+	)
 }
