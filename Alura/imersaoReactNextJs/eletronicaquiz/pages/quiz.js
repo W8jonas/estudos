@@ -72,7 +72,6 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit }) {
 
                 </form>
 
-
             </Widget.Content>
         </Widget>
     )

@@ -5,7 +5,7 @@ import Widget from '../src/components/widget'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GithubCorner'
 import QuizBackground from '../src/components/QuizBackground'
-import Head from 'next/Head'
+// import Head from 'next/Head'
 import QuizLogo from '../src/components/QuizLogo'
 import Input from '../src/components/Input'
 import Button from '../src/components/Button'
@@ -24,9 +24,9 @@ export default function QuizPage() {
 
 	return (
 		<QuizBackground backgroundImage={db.bg}>
-			<Head>
+			{/* <Head>
 				<title>{db.title}</title>
-			</Head>
+			</Head> */}
 
 			<QuizContainer>
 				<QuizLogo />
