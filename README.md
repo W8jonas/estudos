@@ -44,7 +44,9 @@ Globo terrestre em 3D que possibilita ver o total de casos confirmados de corona
 
 ![](chartcoronavirus/web/screenshots/Screenshot_1.png)  |  ![](chartcoronavirus/web/screenshots/Screenshot_2.png) |  ![](chartcoronavirus/web/screenshots/Screenshot_3.png)  | 
 :---------------:|:----------------:|:-----------------:|
+![](chartcoronavirus/web/screenshots/Screenshot_6.png)  |  ![](chartcoronavirus/web/screenshots/Screenshot_7.png) |  ![](chartcoronavirus/web/screenshots/Screenshot_8.png)  | 
 
+![](chartcoronavirus/web/screenshots/gif.gif)
 
 #### [Comunicação ESP32 para ESP8266 usando socket](https://github.com/W8jonas/estudos/tree/master/Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/ComunicationWithSocket_ESP32_to_ESP8266)
 
