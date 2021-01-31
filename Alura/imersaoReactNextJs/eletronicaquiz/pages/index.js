@@ -5,6 +5,7 @@ import Widget from '../src/components/widget'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GithubCorner'
 import QuizBackground from '../src/components/QuizBackground'
+import Input from '../src/components/Input'
 import { useRouter } from 'next/router'
 
 export const QuizContainer = styled.div`
@@ -38,7 +39,8 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={onHandleSubmit}>
-              <input
+              <Input
+                name="jonas"
                 placeholder="Digite seu nome"
                 onChange={(event) => { setName(event.target.value) }}
               />
