@@ -6,6 +6,7 @@ import QuizBackground from '../src/components/QuizBackground'
 import Button from '../src/components/Button'
 import QuizLogo from '../src/components/QuizLogo'
 import QuizContainer from '../src/components/QuizContainer'
+import AlternativeForm from '../src/components/AlternativeForm'
 
 function ResultWidget({ results }) {
 
@@ -26,7 +27,6 @@ function ResultWidget({ results }) {
 
             <Widget.Content>
                 <p>Você acertou {countAnswer} perguntas</p>
-                {JSON.stringify(results)}
                 <ul>
                     {results.map((response, index) => (
                         <li key={index}>
@@ -91,17 +91,22 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, add
                 <h2>{question.title}</h2>
                 <p>{question.description}</p>
 
-                <form onSubmit={onHandleSubmit}>
+                <AlternativeForm onSubmit={onHandleSubmit}>
                     {question.alternatives.map((alternative, index) => {
                         const alternativeId = `${alternative}_${index}`
+                        const selectedAlternativeStatus = isQuestionSubmitted && isCorrectAnswer ? 'SUCCESS' : 'ERROR'
+                        const isSelected = selectedAlternative === index
                         return (
                             <Widget.Topic
                                 as="label"
                                 key={alternativeId}
                                 htmlFor={alternativeId}
+                                data-selected={isSelected}
+                                data-status={selectedAlternativeStatus}
                             >
                                 <input
                                     id={alternativeId}
+                                    style={{ display: 'none' }}
                                     type="radio"
                                     name={questionId}
                                     onChange={() => setSelectedAlternative(index)}
@@ -116,7 +121,7 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, add
                     </Button>
                     {isQuestionSubmitted && isCorrectAnswer && <p> Você acertou a questão </p>}
                     {isQuestionSubmitted && !isCorrectAnswer && <p> Você errou a questão </p>}
-                </form>
+                </AlternativeForm>
 
             </Widget.Content>
         </Widget>
