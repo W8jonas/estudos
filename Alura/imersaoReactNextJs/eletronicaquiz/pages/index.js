@@ -60,11 +60,11 @@ export default function QuizPage() {
 									.replace(/\//g, '')
 									.replace('https:', '')
 									.replace('.vercel.app', '')
-									.split('.')
-
+									.split('.');
+								console.log(projectName, githubUser)
 								return <li key={index}>
-									<Widget.Topic href={link}>
-										{`${projectName}_${githubUser}`}
+									<Widget.Topic href={`/quiz/${projectName}___${githubUser}`}>
+										{`${githubUser}/${projectName}`}
 									</Widget.Topic>
 								</li>
 							})}
