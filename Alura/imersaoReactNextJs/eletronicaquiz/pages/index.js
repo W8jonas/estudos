@@ -18,7 +18,7 @@ import { motion } from 'framer-motion'
 export default function QuizPage() {
 
 	const router = useRouter()
-	const [name, setName] = useState('Jonas')
+	const [name, setName] = useState('Digite o seu nome aqui...')
 
 	function onHandleSubmit(event) {
 		event.preventDefault()
@@ -35,9 +35,10 @@ export default function QuizPage() {
 				<QuizLogo />
 				<Widget
 					as={motion.section}
+					transition={{ duration: 0.8, delay: 0 }}
 					variants={{
-						show: { opacity: 1 },
-						hidden: { opacity: 0 }
+						show: { opacity: 1, x: 0 },
+						hidden: { opacity: 0, x: -200 }
 					}}
 					initial="hidden"
 					animate="show"
@@ -64,10 +65,10 @@ export default function QuizPage() {
 
 				<Widget
 					as={motion.section}
-					transition={{ duration: 0.5, delay: 0.3 }}
+					transition={{ duration: 0.8, delay: 0.1 }}
 					variants={{
-						show: { opacity: 1 },
-						hidden: { opacity: 0 }
+						show: { opacity: 1, x: 0 },
+						hidden: { opacity: 0, x: -200 }
 					}}
 					initial="hidden"
 					animate="show"
@@ -94,7 +95,16 @@ export default function QuizPage() {
 						</ul>
 					</Widget.Content>
 				</Widget>
-				<Footer />
+				<Footer
+					as={motion.section}
+					transition={{ duration: 0.8, delay: 0.2 }}
+					variants={{
+						show: { opacity: 1, x: 0 },
+						hidden: { opacity: 0, x: -200 }
+					}}
+					initial="hidden"
+					animate="show"
+				/>
 			</QuizContainer>
 			<GitHubCorner projectUrl="https://github.com/W8jonas" />
 		</QuizBackground>
