@@ -12,6 +12,8 @@ import Button from '../src/components/Button'
 import QuizContainer from '../src/components/QuizContainer'
 import Link from '../src/components/Link'
 
+import { motion } from 'framer-motion'
+
 
 export default function QuizPage() {
 
@@ -31,7 +33,15 @@ export default function QuizPage() {
 
 			<QuizContainer>
 				<QuizLogo />
-				<Widget>
+				<Widget
+					as={motion.section}
+					variants={{
+						show: { opacity: 1 },
+						hidden: { opacity: 0 }
+					}}
+					initial="hidden"
+					animate="show"
+				>
 					<Widget.Header>
 						<h1>Alura Quiz - Modelo Base</h1>
 					</Widget.Header>
@@ -52,7 +62,16 @@ export default function QuizPage() {
 					</Widget.Content>
 				</Widget>
 
-				<Widget>
+				<Widget
+					as={motion.section}
+					transition={{ duration: 0.5, delay: 0.3 }}
+					variants={{
+						show: { opacity: 1 },
+						hidden: { opacity: 0 }
+					}}
+					initial="hidden"
+					animate="show"
+				>
 					<Widget.Content>
 						<h1>Quizes da galera</h1>
 						<ul>
