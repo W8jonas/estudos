@@ -10,6 +10,7 @@ import QuizLogo from '../src/components/QuizLogo'
 import Input from '../src/components/Input'
 import Button from '../src/components/Button'
 import QuizContainer from '../src/components/QuizContainer'
+import Link from '../src/components/Link'
 
 
 export default function QuizPage() {
@@ -63,7 +64,10 @@ export default function QuizPage() {
 									.split('.');
 								console.log(projectName, githubUser)
 								return <li key={index}>
-									<Widget.Topic href={`/quiz/${projectName}___${githubUser}`}>
+									<Widget.Topic
+										as={Link}
+										href={`/quiz/${projectName}___${githubUser}`}
+									>
 										{`${githubUser}/${projectName}`}
 									</Widget.Topic>
 								</li>
