@@ -83,7 +83,7 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, add
 
             <img
                 alt="Descrição"
-                styled={{ width: '100%', height: '150px', objectFit: 'cover' }}
+                style={{ width: '100%', height: '150px', objectFit: 'cover' }}
                 src={question.image}
             />
 

@@ -18,7 +18,7 @@ import { motion } from 'framer-motion'
 export default function QuizPage() {
 
 	const router = useRouter()
-	const [name, setName] = useState('Digite o seu nome aqui...')
+	const [name, setName] = useState('')
 
 	function onHandleSubmit(event) {
 		event.preventDefault()
@@ -44,7 +44,7 @@ export default function QuizPage() {
 					animate="show"
 				>
 					<Widget.Header>
-						<h1>Alura Quiz - Modelo Base</h1>
+						<h1>{db.title}</h1>
 					</Widget.Header>
 					<Widget.Content>
 						<form onSubmit={onHandleSubmit}>
