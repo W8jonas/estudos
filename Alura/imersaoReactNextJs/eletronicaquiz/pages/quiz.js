@@ -26,10 +26,11 @@ function ResultWidget({ results }) {
 
             <Widget.Content>
                 <p>Você acertou {countAnswer} perguntas</p>
+                {JSON.stringify(results)}
                 <ul>
                     {results.map((response, index) => (
-                        <li key={index + 1}>
-                            {`#${index} Resultado: ${response ? 'acertou' : 'errou'}`}
+                        <li key={index}>
+                            {`#${index + 1} Resultado: ${response ? 'acertou' : 'errou'}`}
                         </li>
                     ))}
                 </ul>
@@ -113,10 +114,8 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, add
                     <Button type="submit" disable={!hasAlternativeSelected}>
                         Confirmar
                     </Button>
-                    {!isCorrectAnswer
-                        ? isQuestionSubmitted && <p> Você acertou a questão </p>
-                        : isQuestionSubmitted && <p> Você errou essa questão </p>
-                    }
+                    {isQuestionSubmitted && isCorrectAnswer && <p> Você acertou a questão </p>}
+                    {isQuestionSubmitted && !isCorrectAnswer && <p> Você errou a questão </p>}
                 </form>
 
             </Widget.Content>
@@ -131,9 +130,9 @@ const screenStates = {
 }
 
 export default function QuizPage() {
-    const [screenState, setScreenState] = React.useState(screenStates.RESULT)
+    const [screenState, setScreenState] = React.useState(screenStates.LOADING)
     const [currentQuestion, setCurrentQuestion] = React.useState(0)
-    const [results, setResults] = React.useState([true, true, false, true])
+    const [results, setResults] = React.useState([])
 
     const totalQuestions = db.questions.length
     const questionIndex = currentQuestion
@@ -141,7 +140,7 @@ export default function QuizPage() {
 
     React.useEffect(() => {
         setTimeout(() => {
-            // setScreenState(screenStates.QUIZ)
+            setScreenState(screenStates.QUIZ)
         }, 1 * 100)
     }, [])
 
@@ -155,7 +154,7 @@ export default function QuizPage() {
     }
 
     function addResult(result) {
-        setResults(...results, result)
+        setResults([...results, result])
     }
 
     return (
