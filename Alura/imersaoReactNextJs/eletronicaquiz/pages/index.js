@@ -53,8 +53,22 @@ export default function QuizPage() {
 
 				<Widget>
 					<Widget.Content>
-						<h1>Projeto</h1>
-						<p>Em dev</p>
+						<h1>Quizes da galera</h1>
+						<ul>
+							{db.external.map((link, index) => {
+								const [projectName, githubUser] = link
+									.replace(/\//g, '')
+									.replace('https:', '')
+									.replace('.vercel.app', '')
+									.split('.')
+
+								return <li key={index}>
+									<Widget.Topic href={link}>
+										{`${projectName}_${githubUser}`}
+									</Widget.Topic>
+								</li>
+							})}
+						</ul>
 					</Widget.Content>
 				</Widget>
 				<Footer />
