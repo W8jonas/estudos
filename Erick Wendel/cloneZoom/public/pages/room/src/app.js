@@ -1,23 +1,36 @@
+
+const __DEV__ = true
+
 const onload = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const room = urlParams.get('room');
   console.log('this is the room:', room)
 
 
-  const socketUrl = 'https://vast-ocean-74317.herokuapp.com'
-  // const socketUrl = 'http://localhost:3000'
+  const socketUrl = __DEV__ ? 'http://localhost:3000' : 'https://vast-ocean-74317.herokuapp.com'
+
   const socketBuilder = new SocketBuilder({ socketUrl })
 
-  const peerConfig = Object.values({
+  const peerConfigDev = Object.values({
+    id: undefined,
+    config: {
+      port: 9000,
+      host: 'localhost',
+      path: '/'
+    }
+  })
+
+  const peerConfigProd = Object.values({
     id: undefined,
     config: {
       host: 'fathomless-citadel-61419.herokuapp.com',
       secure: true,
-      // port: 9000,
-      // host: 'localhost',
       path: '/'
     }
   })
+
+  const peerConfig = __DEV__ ? peerConfigDev : peerConfigProd
+
   const peerBuilder = new PeerBuilder({ peerConfig })
 
   const view = new View()
