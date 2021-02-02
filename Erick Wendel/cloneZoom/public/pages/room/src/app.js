@@ -1,5 +1,5 @@
 
-const __DEV__ = true
+const __DEV__ = false
 
 const onload = () => {
   const urlParams = new URLSearchParams(window.location.search);
