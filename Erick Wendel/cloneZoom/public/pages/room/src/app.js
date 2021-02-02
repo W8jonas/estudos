@@ -5,14 +5,14 @@ const onload = () => {
   console.log('this is the room:', room)
 
 
-  const socketUrl = 'https://rocky-shelf-03178.herokuapp.com/'
+  const socketUrl = 'https://vast-ocean-74317.herokuapp.com'
   // const socketUrl = 'http://localhost:3000'
   const socketBuilder = new SocketBuilder({ socketUrl })
 
   const peerConfig = Object.values({
     id: undefined,
     config: {
-      host: 'murmuring-tor-35529.herokuapp.com/',
+      host: 'fathomless-citadel-61419.herokuapp.com',
       secure: true,
       // port: 9000,
       // host: 'localhost',
