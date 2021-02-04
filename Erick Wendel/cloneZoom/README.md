@@ -2,7 +2,7 @@
 
 #### Descrição
 Projeto desenvolvido na Semana-javascript-expert02. Foi utilizado **javascript**. A proposta do projeto é Clonar o aplicativo Zoom, e suas principais funções.
-[Mais informações consultar arquivo getCsvData.js](src/functions/getCsvData.js)
+Mais informações você pode acessar o post no linkedin [ctrl + click](https://www.linkedin.com/feed/update/urn:li:activity:6763189114251550720/)
 
 
 
