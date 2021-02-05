@@ -9,3 +9,21 @@ Mais informações sobre o projeto podem ser encontradas nesse post no LinkedIn:
 Você pode acessar o projeto online por aqui [ctrl+ click](https://estudos.w8jonas.vercel.app/)
 
 <br/>
+
+#### Tecnologias
+Esse projeto foi desenvolvido utilizando como principal linguagem o **javascript**, usando os frameworks o **ReactJs** e **NextJs**, além de **styled-components**. Além disso foi utilizado algumas animações fornecidas pelo **framer-motion**.
+
+
+<details>
+  <summary>Tecnologias detalhadas</summary>
+
+ - Javascript
+ - NextJs
+ - Framer-motion
+ - Styled-components
+ - Vercel
+
+</details>
+
+<br/>
+
