@@ -27,3 +27,13 @@ Esse projeto foi desenvolvido utilizando como principal linguagem o **javascript
 
 <br/>
 
+
+## Abaixo seguem algumas fotos de todo o projeto
+![](fotos_do_projeto/gif.gif)
+
+![](fotos_do_projeto/Screenshot_1.png)  |  ![](fotos_do_projeto/Screenshot_2.png) |
+:---------------:|:----------------:|
+![](fotos_do_projeto/Screenshot_3.png)  |  ![](fotos_do_projeto/Screenshot_4.png) |
+:---------------:|:----------------:|
+
+![](fotos_do_projeto/Screenshot_6.png)
