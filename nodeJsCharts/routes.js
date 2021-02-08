@@ -3,7 +3,7 @@ const express = require("express")
 const app = express()
 
 const IndexController = require('./index')
-const working = require('./working')
+const working = require('./src/working')
 const bar = require('./bar')
 const anyChart = require('./src/anyChart')
 

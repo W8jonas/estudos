@@ -1,0 +1,236 @@
+
+var jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+
+const d3 = require('d3');
+const fs = require('fs');
+
+const { default: svgr } = require('@svgr/core')
+
+const { pieData } = require('./data/pie')
+const { barData } = require('./data/bar')
+const { lineData } = require('./data/line')
+
+module.exports = {
+    async index(req, res) {
+        const dom = new JSDOM(`<!DOCTYPE html><body></body>`);
+
+        let body = d3.select(dom.window.document.querySelector("body"))
+        let svg = body.append('svg').attr('width', 100).attr('height', 100).attr('xmlns', 'http://www.w3.org/2000/svg');
+        svg.append("rect")
+            .attr("x", 50)
+            .attr("y", 10)
+            .attr("width", 80)
+            .attr("height", 80)
+            .style("fill", "orange");
+
+        const svgFinal = body.html()
+
+        fs.writeFileSync('working.svg', svgFinal);
+        return res.status(200).json({ result: "Gráfico de padrao", SVG: svgFinal })
+    },
+    async bar(req, res) {
+        const dom = new JSDOM(`<!DOCTYPE html><body></body>`)
+
+        const margin = 60
+        const width = 1000 - 2 * margin
+        const height = 600 - 2 * margin
+        const sample = barData
+
+        let body = d3.select(dom.window.document.querySelector("body"))
+
+        const chart = body.append('svg')
+            .attr("viewBox", [-50, -80, width + 50, height + 100])
+            .attr('width', width + 50).attr('height', height + 100).attr('xmlns', 'http://www.w3.org/2000/svg')
+
+        chart.append('g').attr('transform', `translate(${margin}, ${margin})`);
+
+        const xScale = d3.scaleBand().range([0, width]).domain(sample.map((s) => s.language)).padding(0.2)
+        chart.append('g').attr('transform', `translate(0, ${height})`).call(d3.axisBottom(xScale))
+
+        const yScale = d3.scaleLinear().range([height, 0]).domain([0, 100]);
+        chart.append('g').call(d3.axisLeft(yScale));
+
+
+        chart.selectAll()
+            .data(sample)
+            .enter()
+            .append('rect')
+            .attr('x', (s) => xScale(s.language))
+            .attr('y', (s) => yScale(s.value))
+            .attr('height', (s) => height - yScale(s.value))
+            .attr('width', xScale.bandwidth())
+            .style("fill", (s) => s.color)
+
+
+        // chart.append('g')  // Colocando grid vertical
+        //     .attr('class', 'grid')
+        //     .attr('transform', `translate(0, ${height})`)
+        //     .call(d3.axisBottom()
+        //         .scale(xScale)
+        //         .tickSize(-height, 0, 0)
+        //         .tickFormat(''))
+
+        chart.append('g')
+            .attr('class', 'grid')
+            .call(d3.axisLeft()
+                .scale(yScale)
+                .tickSize(-width, 0, 0)
+                .tickFormat(''))
+
+        chart.append('text')
+            .attr('x', -height / 2)
+            .attr('y', -30)
+            .attr('transform', 'rotate(-90)')
+            .attr('text-anchor', 'middle')
+            .text('Love meter (%)')
+
+
+        chart.append('text')
+            .attr('x', width / 2 + margin)
+            .attr('y', -20)
+            .attr('text-anchor', 'middle')
+            .text('Most loved programming languages in 2018')
+
+
+        const svgFinal = body.html()
+
+        const jsCode = svgr.sync(svgFinal, {
+            icon: false,
+            plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
+            native: true,
+        }, { componentName: 'MyComponent' })
+
+        // svgr(svgFinal, {
+        //     plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
+        //   }).then(jsCode => {
+        //     console.log(jsCode)
+        //   })
+
+        fs.writeFileSync('working-bar.svg', jsCode);
+        return res.status(200).json({ result: "Gráfico de barras", SVG: jsCode })
+    },
+
+    async line(req, res) {
+        const dom = new JSDOM(`<!DOCTYPE html><body></body>`);
+        const width = 1000
+        const height = 500
+        const margin = ({ top: 20, right: 30, bottom: 30, left: 40 })
+
+        let body = d3.select(dom.window.document.querySelector("body"))
+        let svg = body.append('svg').attr('width', 1000).attr('height', 500).attr('xmlns', 'http://www.w3.org/2000/svg')
+            .attr("viewBox", [0, 0, width, height])
+
+        let data = lineData
+
+        data = data.sort((a, b) => { return b.date - a.date })
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.value)]).nice()
+            .range([height - margin.bottom, margin.top])
+
+        const x = d3.scaleUtc()
+            .domain(d3.extent(data, d => d.date))
+            .range([margin.left, width - margin.right])
+
+        const yAxis = g => g
+            .attr("transform", `translate(${margin.left},0)`)
+            .call(d3.axisLeft(y))
+            .call(g => g.select(".domain").remove())
+            .call(g => g.select(".tick:last-of-type text").clone()
+                .attr("x", 3)
+                .attr("text-anchor", "start")
+                .attr("font-weight", "bold")
+                .text(data.y))
+
+        const xAxis = g => g
+            .attr("transform", `translate(0,${height - margin.bottom})`)
+            .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0))
+
+        const line = d3.line()
+            .defined(d => !isNaN(d.value))
+            .x(d => x(d.date))
+            .y(d => y(d.value))
+
+        svg.append("g")
+            .call(xAxis);
+
+        svg.append("g")
+            .call(yAxis);
+
+        svg.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", "steelblue")
+            .attr("stroke-width", 1.5)
+            .attr("stroke-linejoin", "round")
+            .attr("stroke-linecap", "round")
+            .attr("d", line);
+
+        const svgFinal = body.html()
+        fs.writeFileSync('line.svg', svgFinal);
+        return res.status(200).json({ result: "Gráfico de Linha", SVG: svgFinal })
+    },
+    async pie(req, res) {
+        const dom = new JSDOM(`<!DOCTYPE html><body></body>`);
+        const width = 500
+        const height = 500
+
+        let body = d3.select(dom.window.document.querySelector("body"))
+        let svg = body.append('svg').attr('width', 500).attr('height', 500).attr('xmlns', 'http://www.w3.org/2000/svg')
+            .attr("viewBox", [-width / 2, -height / 2, width, height])
+
+        const pie = d3.pie()
+            .sort(null)
+            .value(d => d.value)
+
+
+        const radius = Math.min(width, height) / 2 * 0.8;
+        const arcLabel = d3.arc().innerRadius(radius).outerRadius(radius);
+
+        const arc = d3.arc().innerRadius(0).outerRadius(Math.min(width, height) / 2 - 1)
+
+        const data = pieData
+
+        const color = d3.scaleOrdinal()
+            .domain(data.map(d => d.name))
+            .range(d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), data.length).reverse())
+
+        const arcs = pie(data);
+
+        // svg = d3.create("svg")
+        //     .attr("viewBox", [-width / 2, -height / 2, width, height]);
+
+        svg.append("g")
+            .attr("stroke", "white")
+            .selectAll("path")
+            .data(arcs)
+            .join("path")
+            .attr("fill", d => color(d.data.name))
+            .attr("d", arc)
+            .append("title")
+            .text(d => `${d.data.name}: ${d.data.value.toLocaleString()}`);
+
+        svg.append("g")
+            .attr("font-family", "sans-serif")
+            .attr("font-size", 12)
+            .attr("text-anchor", "middle")
+            .selectAll("text")
+            .data(arcs)
+            .join("text")
+            .attr("transform", d => `translate(${arcLabel.centroid(d)})`)
+            .call(text => text.append("tspan")
+                .attr("y", "-0.4em")
+                .attr("font-weight", "bold")
+                .text(d => d.data.name))
+            .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
+                .attr("x", 0)
+                .attr("y", "0.7em")
+                .attr("fill-opacity", 0.7)
+                .text(d => d.data.value.toLocaleString()));
+
+        const svgFinal = body.html()
+        fs.writeFileSync('pie.svg', svgFinal);
+        return res.status(200).json({ result: "Gráfico de Pizza", SVG: svgFinal })
+    },
+}
