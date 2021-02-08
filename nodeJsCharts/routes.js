@@ -9,13 +9,12 @@ const anyChart = require('./src/anyChart')
 
 app.get('/', IndexController.Controller)
 
-app.get('/ok', working.index)
+app.get('/ok', working.simpleTest)
 app.get('/okBar', working.bar)
 app.get('/okPie', working.pie)
 app.get('/okLine', working.line)
 
 app.get('/bar', bar.index)
-
 app.get('/anyChart', anyChart.index)
 
 app.listen(3333)
