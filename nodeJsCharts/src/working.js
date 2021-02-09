@@ -115,20 +115,25 @@ module.exports = {
 
         let data = lineData
 
-        data = data.sort((a, b) => { return b.date - a.date })
+        // data = data.sort((a, b) => { return b.date - a.date })
 
         const y = d3.scaleLinear()
-            .domain([0, d3.max(data, d => d.value)]).nice()
+            .domain([0, 100]).nice()
             .range([height - margin.bottom, margin.top])
 
-        const x = d3.scaleUtc()
+        const x = d3.scaleTime()
+            // .domain(d3.extent(data, d => d.date))
             .domain(d3.extent(data, d => d.date))
             .range([margin.left, width - margin.right])
+
+        // const xScale = d3.scaleBand()
+        //     .range([0, width])
+        //     .domain(data.map((s) => s.date))
 
         const yAxis = g => g
             .attr("transform", `translate(${margin.left},0)`)
             .call(d3.axisLeft(y))
-            .call(g => g.select(".domain").remove())
+            // .call(g => g.select(".domain").remove()) // remove a linha do eixo
             .call(g => g.select(".tick:last-of-type text").clone()
                 .attr("x", 3)
                 .attr("text-anchor", "start")
@@ -137,18 +142,15 @@ module.exports = {
 
         const xAxis = g => g
             .attr("transform", `translate(0,${height - margin.bottom})`)
-            .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0))
+            .call(d3.axisBottom(x).ticks(d3.timeDay.every(1)).tickFormat(d3.timeFormat('%d/%d')))
 
         const line = d3.line()
             .defined(d => !isNaN(d.value))
             .x(d => x(d.date))
             .y(d => y(d.value))
 
-        svg.append("g")
-            .call(xAxis)
-
-        svg.append("g")
-            .call(yAxis)
+        svg.append("g").call(xAxis)
+        svg.append("g").call(yAxis)
 
         svg.append("path")
             .datum(data)
