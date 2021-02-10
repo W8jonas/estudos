@@ -85,12 +85,9 @@ module.exports = {
             .data(colors)
             .enter()
             .append('stop')
-            .style('stop-color', function (d, i) { return d; })
+            .style('stop-color', (d) => d)
             .style('stop-opacity', '100%')
-            .attr('offset', function (d, i) {
-                console.log('offset: ', d, i)
-                return 100 * (i / (colors.length - 1)) + '%';
-            })
+            .attr('offset', (d, i) => 100 * (i / (colors.length - 1)) + '%')
 
         chart.selectAll()
             .data(sample)
