@@ -29,6 +29,7 @@ module.exports = {
         fs.writeFileSync('working.svg', svgFinal)
         return res.status(200).json({ result: "Gráfico de padrao", SVG: svgFinal })
     },
+
     async bar(req, res) {
         const dom = new JSDOM(`<!DOCTYPE html><body></body>`)
 
@@ -47,6 +48,113 @@ module.exports = {
 
         const xScale = d3.scaleBand()
             .domain(sample.map((s) => s.language))
+            .range([0, width])
+            .padding(0.2)
+
+        const yScale = d3.scaleLinear()
+            .domain([0, 100])
+            .range([height, 0])
+
+        chart.append('g').attr('transform', `translate(0, ${height})`).call(d3.axisBottom(xScale))
+        chart.append('g').call(d3.axisLeft(yScale))
+
+        chart.append('g')
+            .attr('class', 'grid')
+            .call(d3.axisLeft()
+                .scale(yScale)
+                .tickSize(-width, 0, 0)
+                .tickFormat('')
+            )
+
+        // const defsGradient = <defs>
+        //     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        //         <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+        //         <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+        //     </linearGradient>
+        // </defs>
+
+        const colors = ['#128', '#538']
+        const grad = chart.append('defs')
+            .append('linearGradient')
+            .attr('id', 'grad')
+            .attr('x1', '0%')
+            .attr('x2', '0%')
+            .attr('y1', '0%')
+            .attr('y2', '100%');
+
+        grad.selectAll('stop')
+            .data(colors)
+            .enter()
+            .append('stop')
+            .style('stop-color', (d) => d)
+            .style('stop-opacity', '100%')
+            .attr('offset', (d, i) => 100 * (i / (colors.length - 1)) + '%')
+
+        chart.selectAll()
+            .data(sample)
+            .enter()
+            .append('rect')
+            .attr('x', (s) => xScale(s.language))
+            .attr('y', (s) => yScale(s.value))
+            .attr('height', (s) => height - yScale(s.value))
+            .attr('width', xScale.bandwidth())
+            .style("fill", (s) => s.color)
+            .attr("ry", "20")
+            .style('fill', 'url(#grad)')
+
+
+
+        // chart.append('text')
+        //     .attr('x', -height / 2)
+        //     .attr('y', -30)
+        //     .attr('transform', 'rotate(-90)')
+        //     .attr('text-anchor', 'middle')
+        //     .text('Love meter (%)')
+
+
+        // chart.append('text')
+        //     .attr('x', width / 2 + margin)
+        //     .attr('y', -20)
+        //     .attr('text-anchor', 'middle')
+        //     .text('Most loved programming languages in 2018')
+
+
+        const svgFinal = body.html()
+
+        // const jsCode = svgr.sync(svgFinal, {
+        //     icon: false,
+        //     plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
+        //     native: true,
+        // }, { componentName: 'MyComponent' })
+
+        // svgr(svgFinal, {
+        //     plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
+        //   }).then(jsCode => {
+        //     console.log(jsCode)
+        //   })
+
+        fs.writeFileSync('working-bar.svg', svgFinal)
+        return res.status(200).json({ result: "Gráfico de barras", SVG: svgFinal })
+    },
+
+    async stackedBar(req, res) {
+        const dom = new JSDOM(`<!DOCTYPE html><body></body>`)
+
+        const margin = 60
+        const width = 1000 - 2 * margin
+        const height = 600 - 2 * margin
+        const sample = barData
+
+        let body = d3.select(dom.window.document.querySelector("body"))
+
+        const chart = body.append('svg')
+            .attr("viewBox", [-50, -80, width + 50, height + 100])
+            .attr('width', width + 50).attr('height', height + 100).attr('xmlns', 'http://www.w3.org/2000/svg')
+
+        chart.append('g').attr('transform', `translate(${margin}, ${margin})`)
+
+        const xScale = d3.scaleBand()
+            .domain(sample.map((s) => [s.initialValue, s.finalValue]))
             .range([0, width])
             .padding(0.2)
 
