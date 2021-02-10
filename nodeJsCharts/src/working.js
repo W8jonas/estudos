@@ -9,6 +9,7 @@ const { default: svgr } = require('@svgr/core')
 
 const { pieData } = require('./data/pie')
 const { barData } = require('./data/bar')
+const { stackedBarData } = require('./data/stackedBar')
 const { lineData } = require('./data/line')
 
 module.exports = {
@@ -143,7 +144,7 @@ module.exports = {
         const margin = 60
         const width = 1000 - 2 * margin
         const height = 600 - 2 * margin
-        const sample = barData
+        const sample = stackedBarData
 
         let body = d3.select(dom.window.document.querySelector("body"))
 
@@ -154,7 +155,7 @@ module.exports = {
         chart.append('g').attr('transform', `translate(${margin}, ${margin})`)
 
         const xScale = d3.scaleBand()
-            .domain(sample.map((s) => [s.initialValue, s.finalValue]))
+            .domain(sample.map((s) => s.language))
             .range([0, width])
             .padding(0.2)
 
@@ -173,57 +174,17 @@ module.exports = {
                 .tickFormat('')
             )
 
-        // const defsGradient = <defs>
-        //     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-        //         <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
-        //         <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
-        //     </linearGradient>
-        // </defs>
-
-        const colors = ['#128', '#538']
-        const grad = chart.append('defs')
-            .append('linearGradient')
-            .attr('id', 'grad')
-            .attr('x1', '0%')
-            .attr('x2', '0%')
-            .attr('y1', '0%')
-            .attr('y2', '100%');
-
-        grad.selectAll('stop')
-            .data(colors)
-            .enter()
-            .append('stop')
-            .style('stop-color', (d) => d)
-            .style('stop-opacity', '100%')
-            .attr('offset', (d, i) => 100 * (i / (colors.length - 1)) + '%')
-
         chart.selectAll()
             .data(sample)
             .enter()
             .append('rect')
             .attr('x', (s) => xScale(s.language))
-            .attr('y', (s) => yScale(s.value))
-            .attr('height', (s) => height - yScale(s.value))
+            .attr('y', (s) => yScale(s.finalValue))
+            .attr('height', (s) => height - yScale(s.finalValue - s.initialValue))
             .attr('width', xScale.bandwidth())
             .style("fill", (s) => s.color)
             .attr("ry", "20")
-            .style('fill', 'url(#grad)')
-
-
-
-        // chart.append('text')
-        //     .attr('x', -height / 2)
-        //     .attr('y', -30)
-        //     .attr('transform', 'rotate(-90)')
-        //     .attr('text-anchor', 'middle')
-        //     .text('Love meter (%)')
-
-
-        // chart.append('text')
-        //     .attr('x', width / 2 + margin)
-        //     .attr('y', -20)
-        //     .attr('text-anchor', 'middle')
-        //     .text('Most loved programming languages in 2018')
+            .style('fill', '#239')
 
 
         const svgFinal = body.html()
@@ -240,8 +201,8 @@ module.exports = {
         //     console.log(jsCode)
         //   })
 
-        fs.writeFileSync('working-bar.svg', svgFinal)
-        return res.status(200).json({ result: "Gráfico de barras", SVG: svgFinal })
+        fs.writeFileSync('working-stackedBar.svg', svgFinal)
+        return res.status(200).json({ result: "Gráfico de barras empilhadas", SVG: svgFinal })
     },
 
     async line(req, res) {
