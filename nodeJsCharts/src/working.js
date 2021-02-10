@@ -45,12 +45,52 @@ module.exports = {
 
         chart.append('g').attr('transform', `translate(${margin}, ${margin})`)
 
-        const xScale = d3.scaleBand().range([0, width]).domain(sample.map((s) => s.language)).padding(0.2)
-        chart.append('g').attr('transform', `translate(0, ${height})`).call(d3.axisBottom(xScale))
+        const xScale = d3.scaleBand()
+            .domain(sample.map((s) => s.language))
+            .range([0, width])
+            .padding(0.2)
 
-        const yScale = d3.scaleLinear().range([height, 0]).domain([0, 100])
+        const yScale = d3.scaleLinear()
+            .domain([0, 100])
+            .range([height, 0])
+
+        chart.append('g').attr('transform', `translate(0, ${height})`).call(d3.axisBottom(xScale))
         chart.append('g').call(d3.axisLeft(yScale))
 
+        chart.append('g')
+            .attr('class', 'grid')
+            .call(d3.axisLeft()
+                .scale(yScale)
+                .tickSize(-width, 0, 0)
+                .tickFormat('')
+            )
+
+        // const defsGradient = <defs>
+        //     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        //         <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+        //         <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+        //     </linearGradient>
+        // </defs>
+
+        const colors = ['#128', '#538']
+        const grad = chart.append('defs')
+            .append('linearGradient')
+            .attr('id', 'grad')
+            .attr('x1', '0%')
+            .attr('x2', '0%')
+            .attr('y1', '0%')
+            .attr('y2', '100%');
+
+        grad.selectAll('stop')
+            .data(colors)
+            .enter()
+            .append('stop')
+            .style('stop-color', function (d, i) { return d; })
+            .style('stop-opacity', '100%')
+            .attr('offset', function (d, i) {
+                console.log('offset: ', d, i)
+                return 100 * (i / (colors.length - 1)) + '%';
+            })
 
         chart.selectAll()
             .data(sample)
@@ -61,28 +101,24 @@ module.exports = {
             .attr('height', (s) => height - yScale(s.value))
             .attr('width', xScale.bandwidth())
             .style("fill", (s) => s.color)
+            .attr("ry", "20")
+            .style('fill', 'url(#grad)')
 
 
-        chart.append('g')
-            .attr('class', 'grid')
-            .call(d3.axisLeft()
-                .scale(yScale)
-                .tickSize(-width, 0, 0)
-                .tickFormat(''))
 
-        chart.append('text')
-            .attr('x', -height / 2)
-            .attr('y', -30)
-            .attr('transform', 'rotate(-90)')
-            .attr('text-anchor', 'middle')
-            .text('Love meter (%)')
+        // chart.append('text')
+        //     .attr('x', -height / 2)
+        //     .attr('y', -30)
+        //     .attr('transform', 'rotate(-90)')
+        //     .attr('text-anchor', 'middle')
+        //     .text('Love meter (%)')
 
 
-        chart.append('text')
-            .attr('x', width / 2 + margin)
-            .attr('y', -20)
-            .attr('text-anchor', 'middle')
-            .text('Most loved programming languages in 2018')
+        // chart.append('text')
+        //     .attr('x', width / 2 + margin)
+        //     .attr('y', -20)
+        //     .attr('text-anchor', 'middle')
+        //     .text('Most loved programming languages in 2018')
 
 
         const svgFinal = body.html()
@@ -142,12 +178,13 @@ module.exports = {
 
         const xAxis = g => g
             .attr("transform", `translate(0,${height - margin.bottom})`)
-            .call(d3.axisBottom(x).ticks(d3.timeDay.every(1)).tickFormat(d3.timeFormat('%d/%d')))
+            .call(d3.axisBottom(x).ticks(d3.timeDay.every(1)).tickFormat(d3.timeFormat('%d/%m')))
 
         const line = d3.line()
             .defined(d => !isNaN(d.value))
             .x(d => x(d.date))
             .y(d => y(d.value))
+            .curve(d3.curveCardinal.tension(0.5))
 
         svg.append("g").call(xAxis)
         svg.append("g").call(yAxis)
