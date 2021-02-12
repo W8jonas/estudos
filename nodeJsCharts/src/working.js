@@ -122,11 +122,11 @@ module.exports = {
 
         const svgFinal = body.html()
 
-        // const jsCode = svgr.sync(svgFinal, {
-        //     icon: false,
-        //     plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
-        //     native: true,
-        // }, { componentName: 'MyComponent' })
+        const jsCode = svgr.sync(svgFinal, {
+            icon: false,
+            plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
+            native: true,
+        }, { componentName: 'MyComponent' })
 
         // svgr(svgFinal, {
         //     plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
@@ -134,8 +134,8 @@ module.exports = {
         //     console.log(jsCode)
         //   })
 
-        fs.writeFileSync('working-bar.svg', svgFinal)
-        return res.status(200).json({ result: "Gráfico de barras", SVG: svgFinal })
+        fs.writeFileSync('working-bar.svg', jsCode)
+        return res.status(200).json({ result: "Gráfico de barras", SVG: jsCode })
     },
 
     async stackedBar(req, res) {
@@ -324,7 +324,14 @@ module.exports = {
                 .text(d => d.data.value.toLocaleString()))
 
         const svgFinal = body.html()
+
+        const jsCode = svgr.sync(svgFinal, {
+            icon: false,
+            plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
+            native: true,
+        }, { componentName: 'MyComponent' })
+
         fs.writeFileSync('pie.svg', svgFinal)
-        return res.status(200).json({ result: "Gráfico de Pizza", SVG: svgFinal })
+        return res.status(200).json({ result: "Gráfico de Pizza", SVG: jsCode })
     },
 }
