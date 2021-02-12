@@ -76,6 +76,8 @@ Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Serve
 
   - [chartcoronavirus](https://github.com/W8jonas/estudos/tree/master/chartcoronavirus/web)
 
+ - [Erick Wendel - cloneZoom](https://github.com/W8jonas/estudos/tree/master/Erick%20Wendel/cloneZoom)
+
   - Eletronics, ESP, Arduino and IOT
     - [WiFiNetworkListWithESP32](https://github.com/W8jonas/estudos/tree/master/Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/WiFiNetworkListWithESP32)
     - [CommunicationWithSocket_ESP32_to_ESP8266](https://github.com/W8jonas/estudos/tree/master/Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/ComunicationWithSocket_ESP32_to_ESP8266)
