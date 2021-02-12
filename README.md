@@ -60,7 +60,7 @@ Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Serve
 
 
 
-## Índice para o projeto completo
+## Índice para cada projeto completo
 
 [Alura - Imersão React - AluraFlix](https://github.com/W8jonas/estudos/tree/master/Alura/imersaoReact/aluraflix)
 
