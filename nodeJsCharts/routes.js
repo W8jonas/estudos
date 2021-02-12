@@ -1,4 +1,5 @@
 const express = require("express")
+const cors = require('cors')
 
 const app = express()
 
@@ -6,6 +7,8 @@ const IndexController = require('./index')
 const working = require('./src/working')
 const bar = require('./bar')
 const anyChart = require('./src/anyChart')
+
+app.use(cors())
 
 app.get('/', IndexController.Controller)
 
