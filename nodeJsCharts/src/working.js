@@ -156,6 +156,7 @@ module.exports = {
         }, { componentName: 'MyComponent' })
 
         const jsCodeWithoutReactComponentString = removeReactCompString(jsCode)
+        // console.log('jsCodeWithoutReactComponentString: ', jsCodeWithoutReactComponentString)
         const chartParsed = parse(jsCodeWithoutReactComponentString)
 
         fs.writeFileSync('working-bar.svg', svgFinal)
@@ -225,8 +226,17 @@ module.exports = {
         //     console.log(jsCode)
         //   })
 
+        const jsCode = svgr.sync(svgFinal, {
+            icon: false,
+            plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
+            native: true,
+        }, { componentName: 'MyComponent' })
+
+        const jsCodeWithoutReactComponentString = removeReactCompString(jsCode)
+        const chartParsed = parse(jsCodeWithoutReactComponentString)
+
         fs.writeFileSync('working-stackedBar.svg', svgFinal)
-        return res.status(200).json({ result: "Gráfico de barras empilhadas", SVG: svgFinal })
+        return res.status(200).json({ result: "Gráfico de barras empilhadas", SVG: chartParsed })
     },
 
     async line(req, res) {
@@ -289,8 +299,18 @@ module.exports = {
             .attr("d", line)
 
         const svgFinal = body.html()
+
+        const jsCode = svgr.sync(svgFinal, {
+            icon: false,
+            plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
+            native: true,
+        }, { componentName: 'MyComponent' })
+
+        const jsCodeWithoutReactComponentString = removeReactCompString(jsCode)
+        const chartParsed = parse(jsCodeWithoutReactComponentString)
+
         fs.writeFileSync('line.svg', svgFinal)
-        return res.status(200).json({ result: "Gráfico de Linha", SVG: svgFinal })
+        return res.status(200).json({ result: "Gráfico de Linha", SVG: chartParsed })
     },
 
     async pie(req, res) {
@@ -349,13 +369,16 @@ module.exports = {
 
         const svgFinal = body.html()
 
-        // const jsCode = svgr.sync(svgFinal, {
-        //     icon: false,
-        //     plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
-        //     native: true,
-        // }, { componentName: 'MyComponent' })
+        const jsCode = svgr.sync(svgFinal, {
+            icon: false,
+            plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
+            native: true,
+        }, { componentName: 'MyComponent' })
+
+        const jsCodeWithoutReactComponentString = removeReactCompString(jsCode)
+        const chartParsed = parse(jsCodeWithoutReactComponentString)
 
         fs.writeFileSync('pie.svg', svgFinal)
-        return res.status(200).json({ result: "Gráfico de Pizza", SVG: svgFinal })
+        return res.status(200).json({ result: "Gráfico de Pizza", SVG: chartParsed })
     },
 }
