@@ -14,6 +14,7 @@ const { lineData } = require('./data/line')
 
 const { parse } = require('svg-parser')
 
+const removeReactCompString = require('./utils/util')
 
 module.exports = {
     async simpleTest(req, res) {
@@ -104,7 +105,7 @@ module.exports = {
         //     </linearGradient>
         // </defs>
 
-        const colors = ['#128', '#538']
+        const colors = ['#58f', '#128', '#538']
         const grad = chart.append('defs')
             .append('linearGradient')
             .attr('id', 'grad')
@@ -131,7 +132,7 @@ module.exports = {
             .attr('width', xScale.bandwidth())
             .style("fill", (s) => s.color)
             .attr("ry", "20")
-        // .style('fill', 'url(#grad)')
+            .style('fill', 'url(#grad)')
 
         // chart.append('text')
         //     .attr('x', -height / 2)
@@ -154,19 +155,11 @@ module.exports = {
             native: true,
         }, { componentName: 'MyComponent' })
 
-        let jsCodeWithoutReactComponents = jsCode.replace(`export default MyComponent;`, '')
-
-        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace('{...props}', '')
-
-        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`import Svg, { G, Path, Text, Defs, LinearGradient, Stop, Rect } from "react-native-svg";`, '')
-
-        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`import * as React from "react";`, '')
-        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`\n\n\nfunction MyComponent(props) {`, '')
-        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`\n  return `, '')
-        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`;\n}\n\n`, '')
+        const jsCodeWithoutReactComponentString = removeReactCompString(jsCode)
+        const chartParsed = parse(jsCodeWithoutReactComponentString)
 
         fs.writeFileSync('working-bar.svg', svgFinal)
-        return res.status(200).json({ result: "Gráfico de barras", SVG: parse(jsCodeWithoutReactComponents) })
+        return res.status(200).json({ result: "Gráfico de barras", SVG: chartParsed })
     },
 
     async stackedBar(req, res) {
