@@ -12,6 +12,9 @@ const { barData } = require('./data/bar')
 const { stackedBarData } = require('./data/stackedBar')
 const { lineData } = require('./data/line')
 
+const { parse } = require('svg-parser')
+
+
 module.exports = {
     async simpleTest(req, res) {
         const dom = new JSDOM(`<!DOCTYPE html><body></body>`)
@@ -27,23 +30,50 @@ module.exports = {
 
         const svgFinal = body.html()
 
+        const jsCode = svgr.sync(svgFinal, {
+            icon: false,
+            plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
+            native: true,
+        }, { componentName: 'MyComponent' })
+
+        let jsCodeWithoutReactComponents = jsCode.replace(`export default MyComponent;`, '')
+
+        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace('{...props}', '')
+
+        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`import Svg, { Path } from "react-native-svg";`, '')
+
+        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`import * as React from "react";`, '')
+        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`\n\n\nfunction MyComponent(props) {`, '')
+        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`\n  return `, '')
+        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`;\n}\n\n`, '')
+
         fs.writeFileSync('working.svg', svgFinal)
-        return res.status(200).json({ result: "Gráfico de padrao", SVG: svgFinal })
+        return res.status(200).json({ result: "Gráfico de padrao", SVG: jsCodeWithoutReactComponents })
     },
 
     async bar(req, res) {
         const dom = new JSDOM(`<!DOCTYPE html><body></body>`)
 
-        const margin = 60
-        const width = 1000 - 2 * margin
-        const height = 600 - 2 * margin
+        const margin = 60 / 2
+        const width = 1000 / 2 - 2 * margin
+        const height = 600 / 2 - 2 * margin
         const sample = barData
 
         let body = d3.select(dom.window.document.querySelector("body"))
 
+        // let svg = body.append('svg')
+        //     .attr("viewBox", [0, 0, width, height])
+        //     .attr('width', 1000).attr('height', 500)
+        //     .attr('xmlns', 'http://www.w3.org/2000/svg')
+
         const chart = body.append('svg')
-            .attr("viewBox", [-50, -80, width + 50, height + 100])
-            .attr('width', width + 50).attr('height', height + 100).attr('xmlns', 'http://www.w3.org/2000/svg')
+            .attr("viewBox", [0, 0, width, height])
+            .attr('width', width).attr('height', height)
+            .attr('xmlns', 'http://www.w3.org/2000/svg')
+
+        // const chart = body.append('svg')
+        //     .attr("viewBox", [-50, -80, width + 50, height + 100])
+        //     .attr('width', width + 50).attr('height', height + 100).attr('xmlns', 'http://www.w3.org/2000/svg')
 
         chart.append('g').attr('transform', `translate(${margin}, ${margin})`)
 
@@ -101,9 +131,7 @@ module.exports = {
             .attr('width', xScale.bandwidth())
             .style("fill", (s) => s.color)
             .attr("ry", "20")
-            .style('fill', 'url(#grad)')
-
-
+        // .style('fill', 'url(#grad)')
 
         // chart.append('text')
         //     .attr('x', -height / 2)
@@ -112,30 +140,33 @@ module.exports = {
         //     .attr('text-anchor', 'middle')
         //     .text('Love meter (%)')
 
-
         // chart.append('text')
         //     .attr('x', width / 2 + margin)
         //     .attr('y', -20)
         //     .attr('text-anchor', 'middle')
         //     .text('Most loved programming languages in 2018')
 
-
         const svgFinal = body.html()
 
         const jsCode = svgr.sync(svgFinal, {
             icon: false,
-            plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
+            plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
             native: true,
         }, { componentName: 'MyComponent' })
 
-        // svgr(svgFinal, {
-        //     plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
-        //   }).then(jsCode => {
-        //     console.log(jsCode)
-        //   })
+        let jsCodeWithoutReactComponents = jsCode.replace(`export default MyComponent;`, '')
 
-        fs.writeFileSync('working-bar.svg', jsCode)
-        return res.status(200).json({ result: "Gráfico de barras", SVG: jsCode })
+        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace('{...props}', '')
+
+        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`import Svg, { G, Path, Text, Defs, LinearGradient, Stop, Rect } from "react-native-svg";`, '')
+
+        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`import * as React from "react";`, '')
+        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`\n\n\nfunction MyComponent(props) {`, '')
+        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`\n  return `, '')
+        jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`;\n}\n\n`, '')
+
+        fs.writeFileSync('working-bar.svg', svgFinal)
+        return res.status(200).json({ result: "Gráfico de barras", SVG: parse(jsCodeWithoutReactComponents) })
     },
 
     async stackedBar(req, res) {
@@ -184,7 +215,7 @@ module.exports = {
             .attr('width', xScale.bandwidth())
             .style("fill", (s) => s.color)
             .attr("ry", "20")
-            .style('fill', '#239')
+            .style('fill', '#203090')
 
 
         const svgFinal = body.html()
@@ -325,13 +356,13 @@ module.exports = {
 
         const svgFinal = body.html()
 
-        const jsCode = svgr.sync(svgFinal, {
-            icon: false,
-            plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
-            native: true,
-        }, { componentName: 'MyComponent' })
+        // const jsCode = svgr.sync(svgFinal, {
+        //     icon: false,
+        //     plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
+        //     native: true,
+        // }, { componentName: 'MyComponent' })
 
         fs.writeFileSync('pie.svg', svgFinal)
-        return res.status(200).json({ result: "Gráfico de Pizza", SVG: jsCode })
+        return res.status(200).json({ result: "Gráfico de Pizza", SVG: svgFinal })
     },
 }
