@@ -1,17 +1,15 @@
 
-
 module.exports = function removeReactCompString(reactComponentString) {
-    let WithoutReactComponentString = reactComponentString.replace(`export default MyComponent;`, '')
 
-    WithoutReactComponentString = WithoutReactComponentString.replace('{...props}', '')
+    let svgComponent = reactComponentString
 
-    WithoutReactComponentString = WithoutReactComponentString.replace(`import Svg, { G, Path, Text, Defs, LinearGradient, Stop, Rect } from "react-native-svg";`, '')
+    const initTagSvg = svgComponent.indexOf('<Svg')
+    const finalTagSvg = svgComponent.indexOf('</Svg>') + 6
 
-    WithoutReactComponentString = WithoutReactComponentString.replace(`import * as React from "react";`, '')
-    WithoutReactComponentString = WithoutReactComponentString.replace(`\n\n\nfunction MyComponent(props) {`, '')
-    WithoutReactComponentString = WithoutReactComponentString.replace(`\n  return `, '')
-    WithoutReactComponentString = WithoutReactComponentString.replace(`;\n}\n\n`, '')
+    const WithoutReactComponentString = svgComponent.slice(initTagSvg, finalTagSvg)
 
-    return WithoutReactComponentString
+    const WithoutProps = WithoutReactComponentString.replace('{...props}', '')
+
+    return WithoutProps
 }
 
