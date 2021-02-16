@@ -3,7 +3,7 @@ module.exports = {
         {
             language: 'Rust',
             value: 78.9,
-            color: '#000000'
+            color: '#123521'
         },
         {
             language: 'Kotlin',
