@@ -1,17 +1,10 @@
-class Employee:
+class Salary:
     minimum_wage = 1000
-
-    def __init__(self, name, age, monthsInTheCompany, postInCompany):
-        self.name = name
-        self.age = age
+    
+    def __init__(self, monthsInTheCompany, postInCompany):
+        self.actual_salary = 0
         self.monthsInTheCompany = monthsInTheCompany
         self.postInCompany = postInCompany
-
-    def show_name(self):
-        print(self.name)
-
-    def show_name_and_age(self):
-        print(self.name, self.age)
 
     def calculate_salary(self):
         developer_bonus = 400
@@ -28,11 +21,27 @@ class Employee:
             print(self.minimum_wage * self.monthsInTheCompany)
 
 
+class Employee:
+
+    def __init__(self, name, age, monthsInTheCompany, postInCompany):
+        self.name = name
+        self.age = age
+        self.monthsInTheCompany = monthsInTheCompany
+        self.postInCompany = postInCompany
+        self.salary = Salary(monthsInTheCompany, postInCompany)
+
+    def show_name(self):
+        print(self.name)
+
+    def show_name_and_age(self):
+        print(self.name, self.age)
+
+
 programmer = Employee("Jonas", 19, 3, "programador")
-programmer.calculate_salary()
+programmer.salary.calculate_salary()
 
 analyst = Employee("Pablo", 17, 3, "analista")
-analyst.calculate_salary()
+analyst.salary.calculate_salary()
 
 manager = Employee("Lucas", 20, 3, "gerente")
-manager.calculate_salary()
+manager.salary.calculate_salary()
