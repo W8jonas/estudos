@@ -6,7 +6,7 @@ class Salary:
         self.monthsInTheCompany = monthsInTheCompany
         self.postInCompany = postInCompany
 
-    def calculate_salary(self):
+    def __calculate_salary(self):
         developer_bonus = 400
         analyst_bonus = 600
         manager_bonus = 1000
@@ -19,6 +19,10 @@ class Salary:
             print(self.minimum_wage * self.monthsInTheCompany + manager_bonus)
         else:
             print(self.minimum_wage * self.monthsInTheCompany)
+    
+    def calculate(self):
+        self.__calculate_salary()
+
 
 
 class Employee:
@@ -38,10 +42,10 @@ class Employee:
 
 
 programmer = Employee("Jonas", 19, 3, "programador")
-programmer.salary.calculate_salary()
+programmer.salary.calculate()
 
 analyst = Employee("Pablo", 17, 3, "analista")
-analyst.salary.calculate_salary()
+analyst.salary.calculate()
 
 manager = Employee("Lucas", 20, 3, "gerente")
-manager.salary.calculate_salary()
+manager.salary.calculate()
