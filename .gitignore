@@ -1,6 +1,7 @@
 
 # Removendo arquivos de configuração do VScode
 .vscode/
+__pycache__/
 
 modeloMD.md
 
