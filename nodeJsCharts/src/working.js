@@ -105,7 +105,7 @@ module.exports = {
         //     </linearGradient>
         // </defs>
 
-        const colors = ['#58f', '#128', '#538']
+        const colors = ['#B899D9', '#7133B4', '#538', '#1F0040']
         const grad = chart.append('defs')
             .append('linearGradient')
             .attr('id', 'grad')
@@ -293,7 +293,7 @@ module.exports = {
             .datum(data)
             .attr("fill", "none")
             .attr("stroke", "steelblue")
-            .attr("stroke-width", 1.5)
+            .attr("stroke-width", 5)
             .attr("stroke-linejoin", "round")
             .attr("stroke-linecap", "round")
             .attr("d", line)
@@ -319,7 +319,8 @@ module.exports = {
         const height = 500
 
         let body = d3.select(dom.window.document.querySelector("body"))
-        let svg = body.append('svg').attr('width', 500).attr('height', 500).attr('xmlns', 'http://www.w3.org/2000/svg')
+        let svg = body.append('svg')
+            .attr('width', 500).attr('height', 500).attr('xmlns', 'http://www.w3.org/2000/svg')
             .attr("viewBox", [-width / 2, -height / 2, width, height])
 
         const pie = d3.pie()
