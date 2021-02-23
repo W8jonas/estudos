@@ -15,10 +15,11 @@ defmodule RocketpayWeb.UsersController do
     |> render("create.json", user: user)
   end
 
-  # defp handle_response({:error, reason}, conn) do
-  #   conn
-  #   |> put_status(:bad_request)
-  #   |> json(reason)
-  # end
+  defp handle_response({:error, result}, conn) do
+    conn
+    |> put_status(:bad_request)
+    |> put_view(RocketpayWeb.ErrorView)
+    |> render("400.json", result: result)
+  end
 
 end
