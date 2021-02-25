@@ -32,6 +32,6 @@ defmodule Rocketpay.User.Create do
       {:error, _operation, reason, _changes} -> {:error, reason}
       {:ok, %{preload_data: user}} -> {:ok, user}
     end
-
   end
+
 end
