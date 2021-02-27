@@ -6,18 +6,18 @@ defmodule RocketpayWeb.AccountsController do
   action_fallback RocketpayWeb.FallbackController
 
   def deposit(conn, params) do
-    with {:ok, %Account{} = Account} <- Rocketpay.deposit(params) do
+    with {:ok, %Account{} = account} <- Rocketpay.deposit(params) do
       conn
       |> put_status(:ok)
-      |> render("update.json", Account: Account)
+      |> render("update.json", Account: account)
     end
   end
 
   def withdraw(conn, params) do
-    with {:ok, %Account{} = Account} <- Rocketpay.withdraw(params) do
+    with {:ok, %Account{} = account} <- Rocketpay.withdraw(params) do
       conn
       |> put_status(:ok)
-      |> render("update.json", Account: Account)
+      |> render("update.json", account: account)
     end
   end
 
