@@ -1,4 +1,4 @@
-defmodule Rocketpay.Accounts.Transation do
+defmodule Rocketpay.Accounts.Transaction do
   alias Ecto.Multi
 
   alias Rocketpay.Accounts.Operation
@@ -12,15 +12,15 @@ defmodule Rocketpay.Accounts.Transation do
     Multi.new()
     |> Multi.merge(fn _changes -> Operation.call(withdraw_params, :withdraw) end )
     |> Multi.merge(fn _changes -> Operation.call(deposit_params, :deposit) end )
-    |> run_transation()
+    |> run_Transaction()
   end
 
   defp build_params(id, value), do: %{"id" => id, "value" => value}
 
-  defp run_transation(multi) do
+  defp run_Transaction(multi) do
     case Repo.transaction(multi) do
       {:error, _operation, reason, _changes} -> {:error, reason}
-      {:ok, %{deposit: to_account, withdraw: from_account}} -> {:ok, to_account: to_account, from_account: from_account}
+      {:ok, %{deposit: to_account, withdraw: from_account}} -> {:ok, %{to_account: to_account, from_account: from_account}}
     end
   end
 
