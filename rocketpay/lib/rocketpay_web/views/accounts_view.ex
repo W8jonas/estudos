@@ -5,7 +5,7 @@ defmodule RocketpayWeb.AccountsView do
 
   def render("update.json", %{account: %Account{ id: account_id, balance: balance }}) do
     %{
-      nessage: "Ballance changed successfully",
+      message: "Ballance changed successfully",
         account: %{
           id: account_id,
           balance: balance
