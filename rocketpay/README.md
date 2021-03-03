@@ -1,19 +1,23 @@
-# Rocketpay
+### Rocketpay - Elixir 
 
-To start your Phoenix server:
+#### Descrição
+Projeto backend desenvolvido na Next Level Week 04, utilizando **Elixir**. A proposta do projeto é desenvolver um sistema de depósitos, saques e transferências de dinheiro. Além do sistema desenvolvido, foram feitos alguns testes simples em alguns setores.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+<br/>
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+#### Tecnologias
+Esse projeto foi desenvolvido utilizando como principal linguagem o **Elixir**, usando o framework **Phoenix**, além disso, foi utilizada a lib **Ecto** para gerenciamento de algumas variáveis, objetos e querys. 
 
-## Learn more
+<details>
+  <summary>Tecnologias detalhadas</summary>
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+ - Elixir
+ - Phoenix
+ - Ecto
+ - ExUnit
+
+</details>
+
+<br/>
+
