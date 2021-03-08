@@ -9,15 +9,23 @@ struct Person {
     uint8_t height;
 };
 
-int main() {
 
+void createPerson(char name[], uint8_t age, uint8_t height, void (* function_pointer)(struct Person)) {
     Person person;
-    strcpy(person.name, "Jonas");
-    person.age = 20;
-    person.height = 185;
+    strcpy(person.name, name);
+    person.age = age;
+    person.height = height;
 
-    printf("from main: %x\n", &person);
+    (* function_pointer)(person);
+}
+
+
+void printPerson(Person person) {
     printf("person name: %s\nperson age: %d\nperson height: %d\n\n", person.name, person.age, person.height);
+}
 
+
+int main() {
+    createPerson("Jonas", 19, 185, &printPerson);
     return 1;
 }
