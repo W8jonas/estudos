@@ -3,35 +3,40 @@
 #include <string.h>
 #include <inttypes.h>
 
-struct Person {
+#define Class struct
+
+Class Person {
     char name[10];
     uint8_t age;
     uint8_t height;
+    void (*show)(Person *);
 };
 
-
-void createPerson(char name[], uint8_t age, uint8_t height, void (* function_pointer)(struct Person)) {
-    Person person;
-    strcpy(person.name, name);
-    person.age = age;
-    person.height = height;
-
-    (* function_pointer)(person);
+void printPerson(Person *self) {
+    printf("person name: %s\nperson age: %d\nperson height: %d\n\n",
+        self->name, self->age, self->height);
 }
 
 
-void printPerson(Person person) {
-    printf("person name: %s\nperson age: %d\nperson height: %d\n\n", person.name, person.age, person.height);
-}
+Class Person * newPerson(char name[], uint8_t age, uint8_t height) {
+    
+    Class Person *self = (Class Person *) malloc(sizeof(Class Person *newPerson));
 
+    strcpy(self->name, name);
+    self->age = age;
+    self->height = height;
 
-void printPersonDiferente(Person person) {
-    printf("person name: %s\n\n", person.name);
+    self->show = &printPerson;
+
+    return self;
 }
 
 
 int main() {
-    createPerson("Jonas", 19, 185, &printPerson);
-    createPerson("Henrique", 19, 185, &printPersonDiferente);
+    Class Person *person2 = 
+    (Class Person *) newPerson("Jonas", 19, 185);
+
+    person2->show(person2);
+
     return 1;
 }
