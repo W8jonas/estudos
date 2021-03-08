@@ -25,7 +25,13 @@ void printPerson(Person person) {
 }
 
 
+void printPersonDiferente(Person person) {
+    printf("person name: %s\n\n", person.name);
+}
+
+
 int main() {
     createPerson("Jonas", 19, 185, &printPerson);
+    createPerson("Henrique", 19, 185, &printPersonDiferente);
     return 1;
 }
