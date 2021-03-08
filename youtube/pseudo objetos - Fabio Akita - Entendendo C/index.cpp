@@ -3,22 +3,21 @@
 #include <string.h>
 #include <inttypes.h>
 
-
-void f2(char hello[]) {
-    printf("from f2: %d\n", &hello);
-    printf("from f2: %s\n", hello);
-}
-
-void f1(char hello[]) {
-    printf("from f1: %d\n", &hello);
-    f2(hello);
-}
+struct Person {
+    char name[10];
+    uint8_t age;
+    uint8_t height;
+};
 
 int main() {
 
-    char hello[] = "Hello World";
-    printf("from main: %d\n", &hello);
-    f1(hello);
+    Person person;
+    strcpy(person.name, "Jonas");
+    person.age = 20;
+    person.height = 185;
+
+    printf("from main: %x\n", &person);
+    printf("person name: %s\nperson age: %d\nperson height: %d\n\n", person.name, person.age, person.height);
 
     return 1;
 }
