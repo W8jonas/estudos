@@ -21,7 +21,6 @@ function Home() {
 				borderBottomWidth: 3,
 				borderBottomColor: '#ccc',
 				flexDirection: 'row',
-				justifyContent: 'space-between',
 				alignItems: 'center',
 				paddingHorizontal: 15,
 				borderRadius: 30,
@@ -31,8 +30,14 @@ function Home() {
 					height: 30, width: 30, borderRadius: 30, borderWidth: 3, borderColor: '#f60', backgroundColor: '#Fa0',
 				}}
 				/>
-				<Text>Descrição</Text>
-				<Text>Data</Text>
+
+				<View style={{
+					flexDirection: 'row', justifyContent: 'space-between', width: '90%', marginLeft: 10,
+				}}
+				>
+					<Text style={{ width: '70%' }}>Descrição</Text>
+					<Text style={{ width: '20%' }}>Data</Text>
+				</View>
 			</View>
 
 		</View>
