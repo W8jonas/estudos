@@ -1,12 +1,12 @@
-import React from 'react';
-import {Text, View} from 'react-native';
+import React from 'react'
+import { View } from 'react-native'
 
-const App = () => {
-  return (
-    <View>
-      <Text> Hello App </Text>
-    </View>
-  );
-};
+import BottomTabNavigator from './routes'
 
-export default App;
+const App = () => (
+	<View style={{ flex: 1 }}>
+		<BottomTabNavigator />
+	</View>
+)
+
+export default App
