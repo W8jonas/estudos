@@ -7,11 +7,15 @@ import HomeScreen from './screens/home/index'
 const TabNavigator = createBottomTabNavigator({
 	Home: {
 		screen: HomeScreen,
-		title: 'HomeScreen',
+		navigationOptions: {
+			title: 'Home',
+		},
 	},
 	Settings: {
 		screen: FilterScreen,
-		title: 'FilterScreen',
+		navigationOptions: {
+			title: 'Filter tasks',
+		},
 	},
 })
 
