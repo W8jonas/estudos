@@ -27,7 +27,10 @@ function Home() {
 				borderRadius: 30,
 			}}
 			>
-
+				<View style={{
+					height: 30, width: 30, borderRadius: 30, borderWidth: 3, borderColor: '#f60', backgroundColor: '#Fa0',
+				}}
+				/>
 				<Text>Descrição</Text>
 				<Text>Data</Text>
 			</View>
