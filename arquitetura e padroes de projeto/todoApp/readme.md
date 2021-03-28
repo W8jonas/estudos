@@ -7,7 +7,14 @@ Projeto criado para desenvolver minhas habilidades sobre Custom Hooks, padrões 
 #### To-Do:
 - [x] Adicionar ESLint ao projeto
 - [x] Criar sistema de rotas da aplicação
-- [ ] Criar páginas do app
+- [ ] Criar páginas do app:
+    - [ ] Página: Home
+    - [ ] Página: FilterTasks
 - [ ] Criar componentes do app
+    - [ ] componente Task
+    - [ ] componente Add Task
+    - [ ] componente Modal Filter
 - [ ] Desenvolver parte lógica de tasks do app (CRUD)
+- [ ] Desenvolver a documentação
+
 
