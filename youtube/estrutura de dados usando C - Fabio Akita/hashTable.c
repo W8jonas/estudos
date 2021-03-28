@@ -16,6 +16,16 @@ struct Hash {
 };
 
 
+unsigned int hashCode(char *key) {
+    unsigned long hash = 5381;
+    unsigned int c;
+
+    while(c =*key++) {
+        hash = ((hash << 5) + hash) + c;
+    }
+    return hash % HASH_SIZE;
+}
+
 
 void main() {
 
