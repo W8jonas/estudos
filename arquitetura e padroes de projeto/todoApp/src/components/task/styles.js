@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
 	textContainer: {
 		flexDirection: 'row',
 		justifyContent: 'space-between',
+		alignItems: 'center',
 		width: '90%',
 		marginLeft: 10,
 	},
@@ -27,14 +28,14 @@ const styles = StyleSheet.create({
 		borderWidth: 3,
 		alignItems: 'center',
 		justifyContent: 'center',
-		borderColor: '#f60',
-		backgroundColor: '#Fa0',
+		borderColor: '#eaebee',
+		backgroundColor: '#eaebee',
 	},
 	textDescription: {
 		width: '70%',
 	},
 	textDate: {
-		width: '20%',
+		width: '30%',
 	},
 })
 
