@@ -16,6 +16,7 @@ struct Hash {
 };
 
 
+
 unsigned int hashCode(char *key) {
     unsigned long hash = 5381;
     unsigned int c;
@@ -25,6 +26,15 @@ unsigned int hashCode(char *key) {
     }
     return hash % HASH_SIZE;
 }
+
+
+struct Node* createNode(char *key, char *value) {
+    struct Node *node = (struct Node*) malloc(sizeof(struct Node));
+    node->key = key;
+    node->value = value;
+    return node;
+};
+
 
 
 void main() {
