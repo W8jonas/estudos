@@ -18,16 +18,16 @@ import styles from './styles'
 function Input() {
 	return (
 		<View style={styles.container}>
-			<TextInput style={styles.textInput} />
+			<TextInput style={styles.textInput} multiline />
 
 			<TouchableOpacity style={styles.touchCalendar}>
 				<Icon name="calendar-today" size={20} color={colors.grayDark} />
 			</TouchableOpacity>
 
 			<TouchableOpacity style={styles.touchTypeOfTask}>
-				<View style={styles.circle} />
-				<Text> Work </Text>
-				<IconAwesome name="chevron-down" size={16} color={colors.blackDark} />
+				<View style={[styles.circle]} />
+				<Text style={styles.textTypeOfTask}>Programação</Text>
+				<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
 			</TouchableOpacity>
 
 		</View>
