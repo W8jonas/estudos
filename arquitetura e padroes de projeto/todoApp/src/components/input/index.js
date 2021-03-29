@@ -16,17 +16,29 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
 function Input() {
 	return (
 		<View style={{
-			backgroundColor: '#FFF', flexDirection: 'row', borderRadius: 22, padding: 10, marginTop: 10, marginBottom: 5, alignItems: 'center',
+			backgroundColor: '#FFF',
+			flexDirection: 'row',
+			borderRadius: 22,
+			paddingHorizontal: 10,
+			paddingVertical: 5,
+			marginTop: 10,
+			marginBottom: 5,
+			alignItems: 'center',
 		}}
 		>
+			<TextInput style={{ width: '70%' }} />
 
-			<TextInput />
-
-			<TouchableOpacity>
+			<TouchableOpacity style={{
+				alignItems: 'center', justifyContent: 'center', backgroundColor: '#ccc', marginHorizontal: 5, padding: 5, height: 30,
+			}}
+			>
 				<Icon name="calendar-today" size={20} color="#B8BAC6" />
 			</TouchableOpacity>
 
-			<TouchableOpacity>
+			<TouchableOpacity style={{
+				flexDirection: 'row', justifyContent: 'center', alignItems: 'center', backgroundColor: '#eaebee', width: '18%', height: 30,
+			}}
+			>
 				<View style={{
 					height: 12, width: 12, borderRadius: 12, borderColor: '#F60', borderWidth: 2,
 				}}
