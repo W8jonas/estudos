@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 // Assets
+import { colors } from '../../styles'
 import styles from './styles'
 
 // Functions
@@ -15,6 +16,8 @@ import styles from './styles'
 const TYPES_AND_COLORS = {
 	programação: '#f60',
 	Faculdade: '#848',
+	trabalho: '#283',
+	pessoal: '#45c',
 }
 
 Task.propTypes = {
@@ -29,8 +32,8 @@ function Task({
 }) {
 	return (
 		<View style={styles.container}>
-			<View style={[styles.checkCircle, { borderColor: TYPES_AND_COLORS[type] || '#eaebee' }]}>
-				{ done && <Icon name="check" size={20} color="#080" />}
+			<View style={[styles.checkCircle, { borderColor: TYPES_AND_COLORS[type] || colors.whiteDefault }]}>
+				{ done && <Icon name="check" size={20} color={colors.greenDefault} />}
 			</View>
 
 			<View style={styles.textContainer}>
