@@ -8,6 +8,7 @@ import IconAwesome from 'react-native-vector-icons/FontAwesome'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 // Assets
+import { colors } from '../../styles'
 import styles from './styles'
 
 // Functions
@@ -20,13 +21,13 @@ function Input() {
 			<TextInput style={styles.textInput} />
 
 			<TouchableOpacity style={styles.touchCalendar}>
-				<Icon name="calendar-today" size={20} color="#B8BAC6" />
+				<Icon name="calendar-today" size={20} color={colors.grayDark} />
 			</TouchableOpacity>
 
 			<TouchableOpacity style={styles.touchTypeOfTask}>
 				<View style={styles.circle} />
 				<Text> Work </Text>
-				<IconAwesome name="chevron-down" size={16} color="#000" />
+				<IconAwesome name="chevron-down" size={16} color={colors.blackDark} />
 			</TouchableOpacity>
 
 		</View>
