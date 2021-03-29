@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import {
+	View, Text, TouchableOpacity, ScrollView,
+} from 'react-native'
 
 // Modules
 
@@ -46,9 +48,11 @@ function Home() {
 	return (
 		<View style={{ padding: 10, flex: 1, backgroundColor: '#eee' }}>
 
-			{FAKE_DATA.map((task) => (
-				<Task key={task.id} {...task} />
-			))}
+			<ScrollView>
+				{FAKE_DATA.map((task) => (
+					<Task key={task.id} {...task} />
+				))}
+			</ScrollView>
 
 			<Input />
 		</View>
