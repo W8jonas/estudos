@@ -18,3 +18,10 @@ Projeto criado para desenvolver minhas habilidades sobre Custom Hooks, padrões 
 - [ ] Desenvolver a documentação
 
 
+#### Anotações extras:
+Cada Tarefa terá as seguintes propriedades:
+id: Número de identificação da tarefa - String
+Descrição: Campo de texto - String
+Data: Data selecionada pelo usuário - Number (Timestamp)
+Tipo de tarefa: Tipo da tarefa - String
+Feita: Marcador de tarefa realizada - Booleano
