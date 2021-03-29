@@ -26,7 +26,7 @@ function Input() {
 			<TouchableOpacity style={styles.touchTypeOfTask}>
 				<View style={styles.circle} />
 				<Text> Work </Text>
-				<IconAwesome name="chevron-down" size={28} color="#000" />
+				<IconAwesome name="chevron-down" size={16} color="#000" />
 			</TouchableOpacity>
 
 		</View>
