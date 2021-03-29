@@ -25,3 +25,13 @@ Descrição: Campo de texto - String
 Data: Data selecionada pelo usuário - Number (Timestamp)
 Tipo de tarefa: Tipo da tarefa - String
 Feita: Marcador de tarefa realizada - Booleano
+
+
+#### Documentação:
+``To-Do``
+
+
+#### Referências:
+Referência que usei para layout do projeto:
+Autor: Jakub Antalik - Product Designer jakubantalik.com
+Link para referência direta: https://dribbble.com/shots/14568765-Dona-mobile-composer-interactions 
