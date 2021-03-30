@@ -14,13 +14,16 @@ import styles from './styles'
 // Functions
 
 // Components
+import ModalDatePicker from '../modalDatePicker/index'
 
 function Input() {
+	const [showDatePicker, setShowDatePicker] = useState(false)
+
 	return (
 		<View style={styles.container}>
-			<TextInput style={styles.textInput} multiline />
+			<TextInput style={styles.textInput} multiline placeholder="Digite sua nova tarefa" />
 
-			<TouchableOpacity style={styles.touchCalendar}>
+			<TouchableOpacity style={styles.touchCalendar} onPress={() => setShowDatePicker(true)}>
 				<Icon name="calendar-today" size={20} color={colors.grayDark} />
 			</TouchableOpacity>
 
@@ -30,6 +33,13 @@ function Input() {
 				<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
 			</TouchableOpacity>
 
+			{showDatePicker && (
+				<ModalDatePicker
+					onCancel={() => setShowDatePicker(false)}
+					setDate={() => {}}
+					visible={showDatePicker}
+				/>
+			)}
 		</View>
 	)
 }
