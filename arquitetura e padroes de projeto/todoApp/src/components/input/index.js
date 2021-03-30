@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import {
 	View, Text, TouchableOpacity, TextInput,
 } from 'react-native'
@@ -18,12 +18,19 @@ import ModalDatePicker from '../modalDatePicker/index'
 import SelectPicker from '../selectPicker/index'
 
 function Input() {
+	const inputRef = useRef(null)
+
 	const [showDatePicker, setShowDatePicker] = useState(false)
 	const [showSelectPicker, setShowSelectPicker] = useState(false)
 
 	return (
 		<View style={styles.container}>
-			<TextInput style={styles.textInput} multiline placeholder="Digite sua nova tarefa" />
+			<TextInput
+				style={styles.textInput}
+				multiline
+				ref={inputRef}
+				placeholder="Digite sua nova tarefa"
+			/>
 
 			<TouchableOpacity style={styles.touchCalendar} onPress={() => setShowDatePicker(true)}>
 				<Icon name="calendar-today" size={20} color={colors.grayDark} />
