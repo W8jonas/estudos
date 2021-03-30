@@ -1,6 +1,9 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
+// Modules
+import PropTypes from 'prop-types'
+
 // Assets
 import { colors } from '../../styles'
 
@@ -21,6 +24,11 @@ function Circle({ color, size }) {
 	return (
 		<View style={[styles.checkCircle, { borderColor: color, height: size, width: size }]} />
 	)
+}
+
+Circle.propTypes = {
+	color: PropTypes.string.isRequired,
+	size: PropTypes.number.isRequired,
 }
 
 export default Circle
