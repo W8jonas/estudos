@@ -1,18 +1,21 @@
 import { StyleSheet } from 'react-native'
 
+import { colors } from '../../styles'
+
 const styles = StyleSheet.create({
 	container: {
 		width: '100%',
 		height: 60,
-		backgroundColor: '#FFF',
+		backgroundColor: colors.fullWhite,
 		elevation: 4,
 		borderBottomWidth: 2,
-		borderBottomColor: '#ccc',
+		borderBottomColor: colors.greySolid,
 		flexDirection: 'row',
 		alignItems: 'center',
 		paddingHorizontal: 15,
 		borderRadius: 30,
-		marginTop: 10,
+		marginTop: 5,
+		marginBottom: 5,
 	},
 	textContainer: {
 		flexDirection: 'row',
@@ -28,8 +31,8 @@ const styles = StyleSheet.create({
 		borderWidth: 3,
 		alignItems: 'center',
 		justifyContent: 'center',
-		borderColor: '#eaebee',
-		backgroundColor: '#eaebee',
+		borderColor: colors.whiteDefault,
+		backgroundColor: colors.whiteDefault,
 	},
 	textDescription: {
 		width: '70%',
