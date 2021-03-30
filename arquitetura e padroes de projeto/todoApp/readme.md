@@ -11,8 +11,10 @@ Projeto criado para desenvolver minhas habilidades sobre Custom Hooks, padrões 
     - [ ] Página: Home
     - [ ] Página: FilterTasks
 - [ ] Criar componentes do app
-    - [ ] componente Task
+    - [x] componente Task
     - [ ] componente Add Task
+        - [x] datePicker
+        - [x] Type of task select
     - [ ] componente Modal Filter
 - [ ] Desenvolver parte lógica de tasks do app (CRUD)
 - [ ] Desenvolver a documentação
