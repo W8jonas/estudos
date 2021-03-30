@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
-	View, Button, Modal, Text, TouchableOpacity, Dimensions,
+	View, Button, Modal, Text,
 } from 'react-native'
 
 // Modules
@@ -8,14 +8,11 @@ import PropTypes from 'prop-types'
 import DatePicker from 'react-native-date-picker'
 
 // Assets
-
-// Functions
-
-// Components
-
-const { height: screenHeight } = Dimensions.get('window')
+import styles from './styles'
 
 function ModalDatePicker({ onCancel, visible, setDate }) {
+	const [datePicker, setDatePicker] = useState(new Date())
+
 	return (
 		<Modal
 			onRequestClose={() => onCancel()}
@@ -23,18 +20,15 @@ function ModalDatePicker({ onCancel, visible, setDate }) {
 			transparent
 			visible={visible}
 		>
-			<View style={{ height: screenHeight * 0.5 }} />
+			<View style={styles.transparentContainer} />
 
-			<View style={{
-				height: screenHeight * 0.5, backgroundColor: '#FFF', alignItems: 'center',
-			}}
-			>
-				<Text>Selecione a data da tarefa</Text>
+			<View style={styles.container}>
+				<Text style={styles.title}>Selecione a data da tarefa</Text>
 
 				<DatePicker
-					style={{ width: 403, alignSelf: 'center', marginVertical: 20 }}
-					date={new Date()}
-					onDateChange={(date) => setDate(date)}
+					style={styles.datePickerContainer}
+					date={datePicker}
+					onDateChange={(date) => setDatePicker(date)}
 					mode="datetime"
 					is24Hour
 					androidVariant="nativeAndroid"
@@ -43,7 +37,7 @@ function ModalDatePicker({ onCancel, visible, setDate }) {
 
 				<Button
 					title="         Pronto         "
-					onPress={onCancel}
+					onPress={() => setDate(datePicker)}
 				/>
 			</View>
 		</Modal>
@@ -53,7 +47,7 @@ function ModalDatePicker({ onCancel, visible, setDate }) {
 ModalDatePicker.propTypes = {
 	onCancel: PropTypes.func.isRequired,
 	setDate: PropTypes.func.isRequired,
-	visible: PropTypes.number.isRequired,
+	visible: PropTypes.bool.isRequired,
 }
 
 export default ModalDatePicker
