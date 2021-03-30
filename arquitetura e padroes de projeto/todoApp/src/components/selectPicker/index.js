@@ -1,17 +1,20 @@
 import React from 'react'
 import {
-	View, Modal, Text, Dimensions, TouchableOpacity,
+	View, Modal, Text, TouchableOpacity,
 } from 'react-native'
 
-// Modules
+// Assets
+import { colors } from '../../styles'
+import styles from './styles'
 
-const { height: screenHeight } = Dimensions.get('window')
+// Components
+import Circle from '../circle/index'
 
 const TYPES_AND_COLORS = {
-	programação: '#f60',
+	Programação: '#f60',
 	Faculdade: '#848',
-	trabalho: '#283',
-	pessoal: '#45c',
+	Trabalho: '#283',
+	Pessoal: '#45c',
 }
 
 function SelectPiker(props) {
@@ -22,21 +25,18 @@ function SelectPiker(props) {
 			transparent
 			visible={props.visible}
 		>
-			<View style={{ height: screenHeight * 0.5 }} />
+			<View style={styles.transparentContainer} />
 
-			<View style={{
-				height: screenHeight * 0.5, backgroundColor: '#FFF', alignItems: 'center',
-			}}
-			>
-				<Text>Selecione o tipo da tarefa</Text>
+			<View style={styles.container}>
+				<Text style={styles.title}>Selecione o tipo da tarefa</Text>
 
 				{Object.keys(TYPES_AND_COLORS).map((item) => (
-					<TouchableOpacity key={item}>
-						<View style={{
-							height: 12, width: 12, borderRadius: 12, borderColor: TYPES_AND_COLORS[item], borderWidth: 2,
-						}}
-						/>
-						<Text>{item}</Text>
+					<TouchableOpacity
+						key={item}
+						style={styles.selectItem}
+					>
+						<Circle color={TYPES_AND_COLORS[item]} size={20} />
+						<Text style={styles.selectText}>{item}</Text>
 					</TouchableOpacity>
 				))}
 			</View>
