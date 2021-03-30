@@ -15,9 +15,11 @@ import styles from './styles'
 
 // Components
 import ModalDatePicker from '../modalDatePicker/index'
+import SelectPicker from '../selectPicker/index'
 
 function Input() {
 	const [showDatePicker, setShowDatePicker] = useState(false)
+	const [showSelectPicker, setShowSelectPicker] = useState(false)
 
 	return (
 		<View style={styles.container}>
@@ -27,7 +29,7 @@ function Input() {
 				<Icon name="calendar-today" size={20} color={colors.grayDark} />
 			</TouchableOpacity>
 
-			<TouchableOpacity style={styles.touchTypeOfTask}>
+			<TouchableOpacity style={styles.touchTypeOfTask} onPress={() => setShowSelectPicker(true)}>
 				<View style={[styles.circle]} />
 				<Text style={styles.textTypeOfTask}>Programação</Text>
 				<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
@@ -36,8 +38,16 @@ function Input() {
 			{showDatePicker && (
 				<ModalDatePicker
 					onCancel={() => setShowDatePicker(false)}
-					setDate={() => {}}
+					setDate={(date) => { setShowDatePicker(false) }}
 					visible={showDatePicker}
+				/>
+			)}
+
+			{showSelectPicker && (
+				<SelectPicker
+					onCancel={() => setShowSelectPicker(false)}
+					selectItem={(item) => { setShowSelectPicker(false) }}
+					visible={showSelectPicker}
 				/>
 			)}
 		</View>
