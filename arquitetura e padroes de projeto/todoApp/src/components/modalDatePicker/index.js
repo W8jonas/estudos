@@ -37,7 +37,7 @@ function ModalDatePicker({ onCancel, visible, setDate }) {
 
 				<Button
 					title="         Pronto         "
-					onPress={() => setDate(datePicker)}
+					onPress={() => setDate(datePicker.getTime())}
 				/>
 			</View>
 		</Modal>

@@ -11,8 +11,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
 import { colors } from '../../styles'
 import styles from './styles'
 
-// Functions
-
 // Components
 import ModalDatePicker from '../modalDatePicker/index'
 import SelectPicker from '../selectPicker/index'
@@ -23,12 +21,17 @@ function Input() {
 	const [showDatePicker, setShowDatePicker] = useState(false)
 	const [showSelectPicker, setShowSelectPicker] = useState(false)
 
+	const [taskDate, setTaskDate] = useState(undefined)
+	const [taskType, setTaskType] = useState(undefined)
+	const [description, setDescription] = useState(undefined)
+
 	return (
 		<View style={styles.container}>
 			<TextInput
 				style={styles.textInput}
 				multiline
 				ref={inputRef}
+				onChangeText={(text) => setDescription(text)}
 				placeholder="Digite sua nova tarefa"
 			/>
 
@@ -45,7 +48,10 @@ function Input() {
 			{showDatePicker && (
 				<ModalDatePicker
 					onCancel={() => setShowDatePicker(false)}
-					setDate={(date) => { setShowDatePicker(false) }}
+					setDate={(date) => {
+						setShowDatePicker(false)
+						setTaskDate(date)
+					}}
 					visible={showDatePicker}
 				/>
 			)}
@@ -53,7 +59,10 @@ function Input() {
 			{showSelectPicker && (
 				<SelectPicker
 					onCancel={() => setShowSelectPicker(false)}
-					selectItem={(item) => { setShowSelectPicker(false) }}
+					selectItem={(item) => {
+						setShowSelectPicker(false)
+						setTaskType(item)
+					}}
 					visible={showSelectPicker}
 				/>
 			)}

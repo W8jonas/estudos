@@ -4,7 +4,6 @@ import {
 } from 'react-native'
 
 // Assets
-import { colors } from '../../styles'
 import styles from './styles'
 
 // Components
@@ -32,6 +31,7 @@ function SelectPiker(props) {
 
 				{Object.keys(TYPES_AND_COLORS).map((item) => (
 					<TouchableOpacity
+						onPress={() => props.selectItem(item)}
 						key={item}
 						style={styles.selectItem}
 					>
