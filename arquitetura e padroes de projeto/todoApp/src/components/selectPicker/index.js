@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-	View, Modal, Text, TouchableOpacity,
+	View, Modal, Text, TouchableOpacity, Animated,
 } from 'react-native'
 
 // Assets
@@ -18,29 +18,20 @@ const TYPES_AND_COLORS = {
 
 function SelectPiker(props) {
 	return (
-		<Modal
-			onRequestClose={() => props.onCancel()}
-			animationType="slide"
-			transparent
-			visible={props.visible}
-		>
-			<View style={styles.transparentContainer} />
+		<Animated.View style={[styles.container, {}]}>
+			<Text style={styles.title}>Selecione o tipo da tarefa</Text>
 
-			<View style={styles.container}>
-				<Text style={styles.title}>Selecione o tipo da tarefa</Text>
-
-				{Object.keys(TYPES_AND_COLORS).map((item) => (
-					<TouchableOpacity
-						onPress={() => props.selectItem(item)}
-						key={item}
-						style={styles.selectItem}
-					>
-						<Circle color={TYPES_AND_COLORS[item]} size={20} />
-						<Text style={styles.selectText}>{item}</Text>
-					</TouchableOpacity>
-				))}
-			</View>
-		</Modal>
+			{Object.keys(TYPES_AND_COLORS).map((item) => (
+				<TouchableOpacity
+					onPress={() => props.selectItem(item)}
+					key={item}
+					style={styles.selectItem}
+				>
+					<Circle color={TYPES_AND_COLORS[item]} size={20} />
+					<Text style={styles.selectText}>{item}</Text>
+				</TouchableOpacity>
+			))}
+		</Animated.View>
 	)
 }
 
