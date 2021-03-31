@@ -25,6 +25,10 @@ function Input() {
 	const [taskType, setTaskType] = useState(undefined)
 	const [description, setDescription] = useState(undefined)
 
+	function focusInput() {
+		inputRef.current.focus()
+	}
+
 	return (
 		<View style={styles.container}>
 			<TextInput
@@ -45,27 +49,25 @@ function Input() {
 				<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
 			</TouchableOpacity>
 
-			{showDatePicker && (
-				<ModalDatePicker
-					onCancel={() => setShowDatePicker(false)}
-					setDate={(date) => {
-						setShowDatePicker(false)
-						setTaskDate(date)
-					}}
-					visible={showDatePicker}
-				/>
-			)}
+			<ModalDatePicker
+				onCancel={() => setShowDatePicker(false)}
+				setDate={(date) => {
+					focusInput()
+					setShowDatePicker(false)
+					setTaskDate(date)
+				}}
+				visible={showDatePicker}
+			/>
 
-			{showSelectPicker && (
-				<SelectPicker
-					onCancel={() => setShowSelectPicker(false)}
-					selectItem={(item) => {
-						setShowSelectPicker(false)
-						setTaskType(item)
-					}}
-					visible={showSelectPicker}
-				/>
-			)}
+			<SelectPicker
+				onCancel={() => setShowSelectPicker(false)}
+				selectItem={(item) => {
+					focusInput()
+					setShowSelectPicker(false)
+					setTaskType(item)
+				}}
+				visible={showSelectPicker}
+			/>
 		</View>
 	)
 }
