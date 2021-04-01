@@ -65,16 +65,17 @@ function Input() {
 					<Text style={styles.textTypeOfTask}>Programação</Text>
 					<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
 				</TouchableOpacity>
-
-				<SelectDatePicker
-					onCancel={() => setShowDatePicker(false)}
-					setDate={(date) => {
-						setShowDatePicker(false)
-						setTaskDate(date)
-					}}
-					visible={showDatePicker}
-				/>
 			</View>
+
+			<SelectDatePicker
+				onCancel={() => setShowDatePicker(false)}
+				setDate={(date) => {
+					setShowDatePicker(false)
+					setTaskDate(date)
+					focusInput()
+				}}
+				visible={showDatePicker}
+			/>
 
 			<SelectPicker
 				onCancel={() => setShowSelectPicker(false)}
