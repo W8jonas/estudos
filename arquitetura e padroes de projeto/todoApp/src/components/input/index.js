@@ -12,6 +12,7 @@ import { colors } from '../../styles'
 import styles from './styles'
 
 // Components
+import { TYPES_AND_COLORS } from '../../configs/constants'
 import SelectDatePicker from '../selectDatePicker/index'
 import SelectPicker from '../selectPicker/index'
 
@@ -22,7 +23,7 @@ function Input() {
 	const [showSelectPicker, setShowSelectPicker] = useState(false)
 
 	const [taskDate, setTaskDate] = useState(undefined)
-	const [taskType, setTaskType] = useState(undefined)
+	const [taskType, setTaskType] = useState('Pessoal')
 	const [description, setDescription] = useState(undefined)
 
 	function focusInput() {
@@ -31,6 +32,13 @@ function Input() {
 
 	function blurInput() {
 		inputRef.current.blur()
+	}
+
+	function onKeyPress({ nativeEvent }) {
+		const { key } = nativeEvent
+		if (key === 'Enter') {
+			console.log(key)
+		}
 	}
 
 	return (
@@ -42,6 +50,7 @@ function Input() {
 					ref={inputRef}
 					onChangeText={(text) => setDescription(text)}
 					placeholder="Digite sua nova tarefa"
+					onKeyPress={onKeyPress}
 				/>
 
 				<TouchableOpacity
@@ -61,8 +70,8 @@ function Input() {
 						setShowSelectPicker(true)
 					}}
 				>
-					<View style={[styles.circle]} />
-					<Text style={styles.textTypeOfTask}>Programação</Text>
+					<View style={[styles.circle, { borderColor: TYPES_AND_COLORS[taskType] }]} />
+					<Text style={styles.textTypeOfTask}>{taskType}</Text>
 					<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
 				</TouchableOpacity>
 			</View>
