@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-	View, Modal, Text, TouchableOpacity, Animated,
+	View, Modal, Text, TouchableOpacity, Animated, Easing,
 } from 'react-native'
 
 // Assets
@@ -17,8 +17,16 @@ const TYPES_AND_COLORS = {
 }
 
 function SelectPiker(props) {
+	const pos = new Animated.Value(0)
+
 	return (
-		<Animated.View style={[styles.container, {}]}>
+		<Animated.View
+			style={[
+				styles.container,
+				props.visible ? {} : { height: 0 },
+				{ transform: [{ translateY: pos }] },
+			]}
+		>
 			<Text style={styles.title}>Selecione o tipo da tarefa</Text>
 
 			{Object.keys(TYPES_AND_COLORS).map((item) => (
