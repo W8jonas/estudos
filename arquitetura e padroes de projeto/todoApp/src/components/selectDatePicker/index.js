@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {
-	View, Button, Modal, Text,
+	View, Button, Text, Animated,
 } from 'react-native'
 
 // Modules
@@ -14,33 +14,26 @@ function SelectDatePicker({ onCancel, visible, setDate }) {
 	const [datePicker, setDatePicker] = useState(new Date())
 
 	return (
-		<Modal
-			onRequestClose={() => onCancel()}
-			animationType="slide"
-			transparent
-			visible={visible}
+		<Animated.View
+			style={styles.container}
 		>
-			<View style={styles.transparentContainer} />
+			<Text style={styles.title}>Selecione a data da tarefa</Text>
 
-			<View style={styles.container}>
-				<Text style={styles.title}>Selecione a data da tarefa</Text>
+			<DatePicker
+				style={styles.datePickerContainer}
+				date={datePicker}
+				onDateChange={(date) => setDatePicker(date)}
+				mode="datetime"
+				is24Hour
+				androidVariant="nativeAndroid"
+				locale="pt_BR"
+			/>
 
-				<DatePicker
-					style={styles.datePickerContainer}
-					date={datePicker}
-					onDateChange={(date) => setDatePicker(date)}
-					mode="datetime"
-					is24Hour
-					androidVariant="nativeAndroid"
-					locale="pt_BR"
-				/>
-
-				<Button
-					title="         Pronto         "
-					onPress={() => setDate(datePicker.getTime())}
-				/>
-			</View>
-		</Modal>
+			<Button
+				title="         Pronto         "
+				onPress={() => setDate(datePicker.getTime())}
+			/>
+		</Animated.View>
 	)
 }
 
