@@ -10,7 +10,7 @@ import DatePicker from 'react-native-date-picker'
 // Assets
 import styles from './styles'
 
-function ModalDatePicker({ onCancel, visible, setDate }) {
+function SelectDatePicker({ onCancel, visible, setDate }) {
 	const [datePicker, setDatePicker] = useState(new Date())
 
 	return (
@@ -44,10 +44,10 @@ function ModalDatePicker({ onCancel, visible, setDate }) {
 	)
 }
 
-ModalDatePicker.propTypes = {
+SelectDatePicker.propTypes = {
 	onCancel: PropTypes.func.isRequired,
 	setDate: PropTypes.func.isRequired,
 	visible: PropTypes.bool.isRequired,
 }
 
-export default ModalDatePicker
+export default SelectDatePicker
