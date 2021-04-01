@@ -12,7 +12,7 @@ import { colors } from '../../styles'
 import styles from './styles'
 
 // Components
-import ModalDatePicker from '../modalDatePicker/index'
+import SelectDatePicker from '../selectDatePicker/index'
 import SelectPicker from '../selectPicker/index'
 
 function Input() {
@@ -66,7 +66,7 @@ function Input() {
 					<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
 				</TouchableOpacity>
 
-				<ModalDatePicker
+				<SelectDatePicker
 					onCancel={() => setShowDatePicker(false)}
 					setDate={(date) => {
 						setShowDatePicker(false)
