@@ -21,6 +21,24 @@ const heightOfContainer = screenHeight * 0.45
 function SelectPiker(props) {
 	const pos = new Animated.Value(0)
 
+	function show() {
+		Animated.timing(pos, {
+			toValue: heightOfContainer,
+			useNativeDriver: true,
+			duration: 200,
+			easing: Easing.linear,
+		}).start()
+	}
+
+	function hide() {
+		Animated.timing(pos, {
+			toValue: 0,
+			useNativeDriver: true,
+			duration: 200,
+			easing: Easing.linear,
+		}).start()
+	}
+
 	return (
 		<Animated.View
 			style={[
