@@ -6,9 +6,9 @@ const { height: screenHeight, width: screenWidth } = Dimensions.get('window')
 
 const styles = StyleSheet.create({
 	container: {
-		position: 'relative',
+		position: 'absolute',
 		left: -10,
-		bottom: -20,
+		bottom: 0,
 		width: screenWidth,
 		backgroundColor: '#FFF',
 		alignItems: 'center',
