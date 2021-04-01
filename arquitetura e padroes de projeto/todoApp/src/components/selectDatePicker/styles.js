@@ -6,8 +6,10 @@ const { width: screenWidth } = Dimensions.get('window')
 
 const styles = StyleSheet.create({
 	container: {
-		position: 'absolute',
 		width: screenWidth,
+		position: 'absolute',
+		left: -10,
+		bottom: 0,
 		backgroundColor: '#FFF',
 		alignItems: 'center',
 	},
