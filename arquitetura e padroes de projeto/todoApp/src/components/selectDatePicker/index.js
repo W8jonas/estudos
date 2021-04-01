@@ -12,10 +12,14 @@ import styles from './styles'
 
 function SelectDatePicker({ onCancel, visible, setDate }) {
 	const [datePicker, setDatePicker] = useState(new Date())
+	const [pos] = useState(new Animated.Value(0))
 
 	return (
 		<Animated.View
-			style={styles.container}
+			style={[
+				styles.container,
+				{ transform: [{ translateY: pos }] },
+			]}
 		>
 			<Text style={styles.title}>Selecione a data da tarefa</Text>
 
