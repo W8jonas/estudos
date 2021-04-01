@@ -29,6 +29,10 @@ function Input() {
 		inputRef.current.focus()
 	}
 
+	function blurInput() {
+		inputRef.current.blur()
+	}
+
 	return (
 		<>
 			<View style={styles.container}>
@@ -40,11 +44,23 @@ function Input() {
 					placeholder="Digite sua nova tarefa"
 				/>
 
-				<TouchableOpacity style={styles.touchCalendar} onPress={() => setShowDatePicker(true)}>
+				<TouchableOpacity
+					style={styles.touchCalendar}
+					onPress={() => {
+						blurInput()
+						setShowDatePicker(true)
+					}}
+				>
 					<Icon name="calendar-today" size={20} color={colors.grayDark} />
 				</TouchableOpacity>
 
-				<TouchableOpacity style={styles.touchTypeOfTask} onPress={() => setShowSelectPicker(true)}>
+				<TouchableOpacity
+					style={styles.touchTypeOfTask}
+					onPress={() => {
+						blurInput()
+						setShowSelectPicker(true)
+					}}
+				>
 					<View style={[styles.circle]} />
 					<Text style={styles.textTypeOfTask}>Programação</Text>
 					<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
@@ -53,7 +69,6 @@ function Input() {
 				<ModalDatePicker
 					onCancel={() => setShowDatePicker(false)}
 					setDate={(date) => {
-						focusInput()
 						setShowDatePicker(false)
 						setTaskDate(date)
 					}}
@@ -64,9 +79,9 @@ function Input() {
 			<SelectPicker
 				onCancel={() => setShowSelectPicker(false)}
 				selectItem={(item) => {
-					focusInput()
 					setShowSelectPicker(false)
 					setTaskType(item)
+					focusInput()
 				}}
 				visible={showSelectPicker}
 			/>
