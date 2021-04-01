@@ -12,20 +12,16 @@ const styles = StyleSheet.create({
 		bottom: 0,
 		backgroundColor: '#FFF',
 		alignItems: 'center',
+		padding: 10,
 	},
 	title: {
 		fontSize: 18,
 		marginTop: 5,
 	},
 	datePickerContainer: {
-		width: 400,
+		width: screenWidth,
 		alignSelf: 'center',
-		marginVertical: 20,
-	},
-	selectText: {
-		marginLeft: 20,
-		fontSize: 20,
-		color: colors.blackDark,
+		marginVertical: 10,
 	},
 })
 
