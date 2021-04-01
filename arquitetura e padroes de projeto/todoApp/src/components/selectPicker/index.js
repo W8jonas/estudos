@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
 	View, Modal, Text, TouchableOpacity, Animated, Easing, Dimensions,
 } from 'react-native'
@@ -19,7 +19,7 @@ const { height: screenHeight, width: screenWidth } = Dimensions.get('window')
 const heightOfContainer = screenHeight * 0.45
 
 function SelectPiker(props) {
-	const pos = new Animated.Value(0)
+	const [pos] = useState(new Animated.Value(0))
 
 	function show() {
 		Animated.timing(pos, {
@@ -38,6 +38,14 @@ function SelectPiker(props) {
 			easing: Easing.linear,
 		}).start()
 	}
+
+	useEffect(() => {
+		if (props.visible) {
+			hide()
+		} else {
+			show()
+		}
+	}, [props.visible])
 
 	return (
 		<Animated.View
