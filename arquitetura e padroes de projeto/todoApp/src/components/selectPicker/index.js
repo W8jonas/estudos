@@ -10,14 +10,9 @@ import PropTypes from 'prop-types'
 import styles from './styles'
 
 // Components
+import { TYPES_AND_COLORS } from '../../configs/constants'
 import Circle from '../circle/index'
 
-const TYPES_AND_COLORS = {
-	Programação: '#f60',
-	Faculdade: '#848',
-	Trabalho: '#283',
-	Pessoal: '#45c',
-}
 const { height: screenHeight } = Dimensions.get('window')
 const heightOfContainer = screenHeight * 0.45
 
