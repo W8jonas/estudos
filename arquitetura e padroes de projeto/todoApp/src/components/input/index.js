@@ -30,34 +30,36 @@ function Input() {
 	}
 
 	return (
-		<View style={styles.container}>
-			<TextInput
-				style={styles.textInput}
-				multiline
-				ref={inputRef}
-				onChangeText={(text) => setDescription(text)}
-				placeholder="Digite sua nova tarefa"
-			/>
+		<>
+			<View style={styles.container}>
+				<TextInput
+					style={styles.textInput}
+					multiline
+					ref={inputRef}
+					onChangeText={(text) => setDescription(text)}
+					placeholder="Digite sua nova tarefa"
+				/>
 
-			<TouchableOpacity style={styles.touchCalendar} onPress={() => setShowDatePicker(true)}>
-				<Icon name="calendar-today" size={20} color={colors.grayDark} />
-			</TouchableOpacity>
+				<TouchableOpacity style={styles.touchCalendar} onPress={() => setShowDatePicker(true)}>
+					<Icon name="calendar-today" size={20} color={colors.grayDark} />
+				</TouchableOpacity>
 
-			<TouchableOpacity style={styles.touchTypeOfTask} onPress={() => setShowSelectPicker(true)}>
-				<View style={[styles.circle]} />
-				<Text style={styles.textTypeOfTask}>Programação</Text>
-				<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
-			</TouchableOpacity>
+				<TouchableOpacity style={styles.touchTypeOfTask} onPress={() => setShowSelectPicker(true)}>
+					<View style={[styles.circle]} />
+					<Text style={styles.textTypeOfTask}>Programação</Text>
+					<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
+				</TouchableOpacity>
 
-			<ModalDatePicker
-				onCancel={() => setShowDatePicker(false)}
-				setDate={(date) => {
-					focusInput()
-					setShowDatePicker(false)
-					setTaskDate(date)
-				}}
-				visible={showDatePicker}
-			/>
+				<ModalDatePicker
+					onCancel={() => setShowDatePicker(false)}
+					setDate={(date) => {
+						focusInput()
+						setShowDatePicker(false)
+						setTaskDate(date)
+					}}
+					visible={showDatePicker}
+				/>
+			</View>
 
 			<SelectPicker
 				onCancel={() => setShowSelectPicker(false)}
@@ -68,7 +70,7 @@ function Input() {
 				}}
 				visible={showSelectPicker}
 			/>
-		</View>
+		</>
 	)
 }
 
