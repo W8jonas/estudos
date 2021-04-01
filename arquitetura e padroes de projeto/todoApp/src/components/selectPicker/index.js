@@ -3,6 +3,9 @@ import {
 	Text, TouchableOpacity, Animated, Easing, Dimensions,
 } from 'react-native'
 
+// Modules
+import PropTypes from 'prop-types'
+
 // Assets
 import styles from './styles'
 
@@ -15,10 +18,10 @@ const TYPES_AND_COLORS = {
 	Trabalho: '#283',
 	Pessoal: '#45c',
 }
-const { height: screenHeight, width: screenWidth } = Dimensions.get('window')
+const { height: screenHeight } = Dimensions.get('window')
 const heightOfContainer = screenHeight * 0.45
 
-function SelectPiker(props) {
+function SelectPiker({ visible, selectItem }) {
 	const [pos] = useState(new Animated.Value(0))
 
 	function show() {
@@ -40,12 +43,12 @@ function SelectPiker(props) {
 	}
 
 	useEffect(() => {
-		if (props.visible) {
+		if (visible) {
 			hide()
 		} else {
 			show()
 		}
-	}, [props.visible])
+	}, [visible])
 
 	return (
 		<Animated.View
@@ -58,7 +61,7 @@ function SelectPiker(props) {
 
 			{Object.keys(TYPES_AND_COLORS).map((item) => (
 				<TouchableOpacity
-					onPress={() => props.selectItem(item)}
+					onPress={() => selectItem(item)}
 					key={item}
 					style={styles.selectItem}
 				>
@@ -68,6 +71,11 @@ function SelectPiker(props) {
 			))}
 		</Animated.View>
 	)
+}
+
+SelectPiker.propTypes = {
+	selectItem: PropTypes.func.isRequired,
+	visible: PropTypes.bool.isRequired,
 }
 
 export default SelectPiker

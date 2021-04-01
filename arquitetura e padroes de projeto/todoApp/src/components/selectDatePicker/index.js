@@ -13,7 +13,7 @@ import styles from './styles'
 const { height: screenHeight } = Dimensions.get('window')
 const heightOfContainer = screenHeight * 0.45
 
-function SelectDatePicker({ onCancel, visible, setDate }) {
+function SelectDatePicker({ visible, setDate }) {
 	const [datePicker, setDatePicker] = useState(new Date())
 	const [pos] = useState(new Animated.Value(0))
 
@@ -71,7 +71,6 @@ function SelectDatePicker({ onCancel, visible, setDate }) {
 }
 
 SelectDatePicker.propTypes = {
-	onCancel: PropTypes.func.isRequired,
 	setDate: PropTypes.func.isRequired,
 	visible: PropTypes.bool.isRequired,
 }
