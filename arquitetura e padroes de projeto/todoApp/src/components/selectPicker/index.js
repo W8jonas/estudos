@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-	View, Modal, Text, TouchableOpacity, Animated, Easing,
+	View, Modal, Text, TouchableOpacity, Animated, Easing, Dimensions,
 } from 'react-native'
 
 // Assets
@@ -15,6 +15,8 @@ const TYPES_AND_COLORS = {
 	Trabalho: '#283',
 	Pessoal: '#45c',
 }
+const { height: screenHeight, width: screenWidth } = Dimensions.get('window')
+const heightOfContainer = screenHeight * 0.45
 
 function SelectPiker(props) {
 	const pos = new Animated.Value(0)
@@ -23,7 +25,6 @@ function SelectPiker(props) {
 		<Animated.View
 			style={[
 				styles.container,
-				props.visible ? {} : { height: 0 },
 				{ transform: [{ translateY: pos }] },
 			]}
 		>

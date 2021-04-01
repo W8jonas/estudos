@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
 		position: 'relative',
 		left: -10,
 		bottom: -20,
-		height: screenHeight * 0.45,
 		width: screenWidth,
 		backgroundColor: '#FFF',
 		alignItems: 'center',
