@@ -2,14 +2,15 @@ import { StyleSheet, Dimensions } from 'react-native'
 
 import { colors } from '../../styles'
 
-const { height: screenHeight } = Dimensions.get('window')
+const { height: screenHeight, width: screenWidth } = Dimensions.get('window')
 
 const styles = StyleSheet.create({
-	transparentContainer: {
-		height: screenHeight * 0.5,
-	},
 	container: {
-		height: screenHeight * 0.5,
+		position: 'relative',
+		left: -10,
+		bottom: -20,
+		height: screenHeight * 0.45,
+		width: screenWidth,
 		backgroundColor: '#FFF',
 		alignItems: 'center',
 	},
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		paddingHorizontal: 40,
+		backgroundColor: '#0202',
 		width: '100%',
 		margin: 10,
 	},
