@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {
-	View, Modal, Text, TouchableOpacity, Animated, Easing, Dimensions,
+	Text, TouchableOpacity, Animated, Easing, Dimensions,
 } from 'react-native'
 
 // Assets
