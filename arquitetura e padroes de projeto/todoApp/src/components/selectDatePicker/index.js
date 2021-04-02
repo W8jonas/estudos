@@ -15,18 +15,9 @@ const heightOfContainer = screenHeight * 0.45
 
 function SelectDatePicker({ visible, setDate }) {
 	const [datePicker, setDatePicker] = useState(new Date())
-	const [pos] = useState(new Animated.Value(0))
+	const [pos] = useState(new Animated.Value(heightOfContainer))
 
 	function show() {
-		Animated.timing(pos, {
-			toValue: heightOfContainer,
-			useNativeDriver: true,
-			duration: 200,
-			easing: Easing.linear,
-		}).start()
-	}
-
-	function hide() {
 		Animated.timing(pos, {
 			toValue: 0,
 			useNativeDriver: true,
@@ -35,11 +26,20 @@ function SelectDatePicker({ visible, setDate }) {
 		}).start()
 	}
 
+	function hide() {
+		Animated.timing(pos, {
+			toValue: heightOfContainer,
+			useNativeDriver: true,
+			duration: 200,
+			easing: Easing.linear,
+		}).start()
+	}
+
 	useEffect(() => {
 		if (visible) {
-			hide()
-		} else {
 			show()
+		} else {
+			hide()
 		}
 	}, [visible])
 
