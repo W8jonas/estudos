@@ -98,30 +98,33 @@ function Input({ addTask }) {
 					onKeyPress={onKeyPress}
 				/>
 
-				<TouchableOpacity
-					style={[styles.touchCalendar, { opacity }]}
-					onPress={() => {
-						blurInput()
-						setShowDatePicker(true)
-					}}
-				>
-					<Icon name="calendar-today" size={20} color={colors.grayDark} />
-					{taskDate && (
-						<Circle size={6} color="#68f" extraStyle={{ position: 'absolute', top: 3, right: 3 }} />
-					)}
-				</TouchableOpacity>
+				<Animated.View style={{ flexDirection: 'row', opacity }}>
+					<TouchableOpacity
+						style={styles.touchCalendar}
+						onPress={() => {
+							blurInput()
+							setShowDatePicker(true)
+						}}
+					>
+						<Icon name="calendar-today" size={20} color={colors.grayDark} />
+						{taskDate && (
+							<Circle size={6} color="#68f" extraStyle={{ position: 'absolute', top: 3, right: 3 }} />
+						)}
+					</TouchableOpacity>
 
-				<TouchableOpacity
-					style={[styles.touchTypeOfTask, { opacity }]}
-					onPress={() => {
-						blurInput()
-						setShowSelectPicker(true)
-					}}
-				>
-					<Circle size={12} color={TYPES_AND_COLORS[taskType]} />
-					<Text style={styles.textTypeOfTask}>{taskType}</Text>
-					<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
-				</TouchableOpacity>
+					<TouchableOpacity
+						style={styles.touchTypeOfTask}
+						onPress={() => {
+							blurInput()
+							setShowSelectPicker(true)
+						}}
+					>
+						<Circle size={12} color={TYPES_AND_COLORS[taskType]} />
+						<Text style={styles.textTypeOfTask}>{taskType}</Text>
+						<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
+					</TouchableOpacity>
+				</Animated.View>
+
 			</Animated.View>
 
 			<SelectDatePicker

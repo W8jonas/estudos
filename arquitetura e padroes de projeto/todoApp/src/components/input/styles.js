@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 10,
 		paddingVertical: 5,
 		marginTop: 10,
-		marginBottom: 5,
+		marginBottom: 10,
 	},
 	textInput: {
 		width: widthContainer * 0.49,

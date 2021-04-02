@@ -3,6 +3,12 @@ import { StyleSheet } from 'react-native'
 import { colors } from '../../styles'
 
 const styles = StyleSheet.create({
+	container: {
+		paddingHorizontal: 10,
+		marginTop: 10,
+		flex: 1,
+		backgroundColor: '#eee',
+	},
 	touchContainer: {
 		width: '50%',
 		height: 54,
@@ -14,7 +20,7 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 10,
 		paddingVertical: 5,
 		marginTop: 10,
-		marginBottom: 5,
+		marginBottom: 10,
 		elevation: 5,
 	},
 })

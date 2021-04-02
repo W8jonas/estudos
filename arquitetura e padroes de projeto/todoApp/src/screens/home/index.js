@@ -54,7 +54,7 @@ function Home() {
 	}
 
 	return (
-		<View style={{ padding: 10, flex: 1, backgroundColor: '#eee' }}>
+		<View style={styles.container}>
 
 			<ScrollView>
 				{FAKE_DATA.map((task) => (
