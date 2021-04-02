@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
-	View, Text, TouchableOpacity, ScrollView,
+	Text, View, TouchableOpacity, ScrollView,
 } from 'react-native'
 
 // Modules
@@ -45,6 +45,8 @@ const FAKE_DATA = [
 ]
 
 function Home() {
+	const [focusOnInput, setFocusOnInput] = useState(false)
+
 	return (
 		<View style={{ padding: 10, flex: 1, backgroundColor: '#eee' }}>
 
@@ -54,7 +56,18 @@ function Home() {
 				))}
 			</ScrollView>
 
-			<Input />
+			<View style={{ alignItems: 'center', justifyContent: 'center' }}>
+				{focusOnInput
+					? <Input />
+					: (
+						<TouchableOpacity
+							onPress={() => setFocusOnInput(true)}
+						>
+							<Text>Digite uma nova tarefa</Text>
+						</TouchableOpacity>
+					)
+				}
+			</View>
 		</View>
 	)
 }
