@@ -4,16 +4,18 @@ import { colors } from '../../styles'
 
 const styles = StyleSheet.create({
 	touchContainer: {
-		backgroundColor: colors.fullWhite,
+		width: '50%',
+		height: 54,
 		flexDirection: 'row',
 		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: colors.fullWhite,
 		borderRadius: 22,
 		paddingHorizontal: 10,
 		paddingVertical: 5,
 		marginTop: 10,
 		marginBottom: 5,
-		width: '50%',
-		height: 54,
+		elevation: 5,
 	},
 })
 
