@@ -16,9 +16,11 @@ import { TYPES_AND_COLORS } from '../../configs/constants'
 import SelectDatePicker from '../selectDatePicker/index'
 import SelectPicker from '../selectPicker/index'
 
+const timer = null
+let counter = 0
+
 function Input() {
 	const inputRef = useRef(null)
-
 	const [showDatePicker, setShowDatePicker] = useState(false)
 	const [showSelectPicker, setShowSelectPicker] = useState(false)
 
@@ -34,11 +36,22 @@ function Input() {
 		inputRef.current.blur()
 	}
 
+	function createTask() {
+
+	}
+
 	function onKeyPress({ nativeEvent }) {
 		const { key } = nativeEvent
 		if (key === 'Enter') {
-			console.log(key)
+			counter += 1
+			setTimeout(() => {
+				if (counter >= 3) {
+					createTask()
+				}
+				counter = 0
+			}, 500)
 		}
+		console.log(counter)
 	}
 
 	return (
