@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import {
-	View, Text, TouchableOpacity, TextInput,
+	View, Text, TouchableOpacity, TextInput, Animated, Easing, Dimensions,
 } from 'react-native'
 
 // Modules
@@ -17,6 +17,9 @@ import Circle from '../circle/index'
 import SelectDatePicker from '../selectDatePicker/index'
 import SelectPicker from '../selectPicker/index'
 
+const { width: screenWidth } = Dimensions.get('window')
+const widthOfContainer = screenWidth - 2 * 10
+
 let counter = 0
 
 function Input() {
@@ -27,6 +30,8 @@ function Input() {
 	const [taskDate, setTaskDate] = useState(undefined)
 	const [taskType, setTaskType] = useState('Pessoal')
 	const [description, setDescription] = useState(undefined)
+
+	const [posWidth] = useState(new Animated.Value(widthOfContainer / 2))
 
 	function focusInput() {
 		inputRef.current.focus()
@@ -55,13 +60,18 @@ function Input() {
 
 	return (
 		<>
-			<View style={styles.container}>
+			<Animated.View
+				style={[
+					styles.container,
+					{ width: widthOfContainer },
+				]}
+			>
 				<TextInput
 					style={styles.textInput}
 					multiline
 					ref={inputRef}
 					onChangeText={(text) => setDescription(text)}
-					placeholder="Digite sua nova tarefa"
+					placeholder="Aperte espaço 3x para salvar"
 					onKeyPress={onKeyPress}
 				/>
 
@@ -89,7 +99,7 @@ function Input() {
 					<Text style={styles.textTypeOfTask}>{taskType}</Text>
 					<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
 				</TouchableOpacity>
-			</View>
+			</Animated.View>
 
 			<SelectDatePicker
 				onCancel={() => setShowDatePicker(false)}
