@@ -6,6 +6,7 @@ import {
 // Modules
 
 // Assets
+import styles from './styles'
 
 // Functions
 
@@ -47,6 +48,11 @@ const FAKE_DATA = [
 function Home() {
 	const [focusOnInput, setFocusOnInput] = useState(false)
 
+	function addTask(task) {
+		setFocusOnInput(false)
+		console.log('task: ', task)
+	}
+
 	return (
 		<View style={{ padding: 10, flex: 1, backgroundColor: '#eee' }}>
 
@@ -58,9 +64,10 @@ function Home() {
 
 			<View style={{ alignItems: 'center', justifyContent: 'center' }}>
 				{focusOnInput
-					? <Input />
+					? <Input addTask={addTask} />
 					: (
 						<TouchableOpacity
+							style={styles.touchContainer}
 							onPress={() => setFocusOnInput(true)}
 						>
 							<Text>Digite uma nova tarefa</Text>
