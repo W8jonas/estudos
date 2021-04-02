@@ -4,6 +4,7 @@ import {
 } from 'react-native'
 
 // Modules
+import PropTypes from 'prop-types'
 import IconAwesome from 'react-native-vector-icons/FontAwesome'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
@@ -22,7 +23,7 @@ const widthOfContainer = screenWidth - 2 * 10
 
 let counter = 0
 
-function Input() {
+function Input({ addTask }) {
 	const inputRef = useRef(null)
 	const [showDatePicker, setShowDatePicker] = useState(false)
 	const [showSelectPicker, setShowSelectPicker] = useState(false)
@@ -42,7 +43,8 @@ function Input() {
 	}
 
 	function createTask() {
-		console.log({ taskDate, taskType, description })
+		const task = { taskDate, taskType, description }
+		addTask(task)
 	}
 
 	function onKeyPress({ nativeEvent }) {
@@ -68,6 +70,7 @@ function Input() {
 	}
 
 	useEffect(() => {
+		focusInput()
 		show()
 	}, [])
 
@@ -135,6 +138,10 @@ function Input() {
 			/>
 		</>
 	)
+}
+
+Input.propTypes = {
+	addTask: PropTypes.func.isRequired,
 }
 
 export default Input
