@@ -8,11 +8,11 @@ Projeto criado para desenvolver minhas habilidades sobre Custom Hooks, padrões 
 - [x] Adicionar ESLint ao projeto
 - [x] Criar sistema de rotas da aplicação
 - [ ] Criar páginas do app:
-    - [ ] Página: Home
+    - [x] Página: Home
     - [ ] Página: FilterTasks
 - [ ] Criar componentes do app
     - [x] componente Task
-    - [ ] componente Add Task
+    - [x] componente Add Task
         - [x] datePicker
         - [x] Type of task select
     - [ ] componente Modal Filter
