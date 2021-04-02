@@ -32,7 +32,7 @@ function Input({ addTask }) {
 	const [taskType, setTaskType] = useState('Pessoal')
 	const [description, setDescription] = useState(undefined)
 
-	const [posWidth] = useState(new Animated.Value(widthOfContainer / 2))
+	const [opacity] = useState(new Animated.Value(widthOfContainer / 2))
 
 	function focusInput() {
 		inputRef.current.focus()
@@ -61,10 +61,12 @@ function Input({ addTask }) {
 	}
 
 	function show() {
-		Animated.timing(posWidth, {
-			toValue: widthOfContainer,
+		opacity.setValue(0)
+		Animated.timing(opacity, {
+			toValue: 1,
 			useNativeDriver: false,
-			duration: 500,
+			delay: 200,
+			duration: 3000,
 			easing: Easing.linear,
 		}).start()
 	}
@@ -74,14 +76,19 @@ function Input({ addTask }) {
 		show()
 	}, [])
 
+	const posWidth = opacity.interpolate({
+		inputRange: [0, 1],
+		outputRange: [widthOfContainer / 2, widthOfContainer],
+	})
+
+	const animatedStyle = [
+		styles.container,
+		{ width: posWidth },
+	]
+
 	return (
 		<>
-			<Animated.View
-				style={[
-					styles.container,
-					{ width: posWidth },
-				]}
-			>
+			<Animated.View style={animatedStyle}>
 				<TextInput
 					style={styles.textInput}
 					multiline
@@ -92,7 +99,7 @@ function Input({ addTask }) {
 				/>
 
 				<TouchableOpacity
-					style={styles.touchCalendar}
+					style={[styles.touchCalendar, { opacity }]}
 					onPress={() => {
 						blurInput()
 						setShowDatePicker(true)
@@ -105,7 +112,7 @@ function Input({ addTask }) {
 				</TouchableOpacity>
 
 				<TouchableOpacity
-					style={styles.touchTypeOfTask}
+					style={[styles.touchTypeOfTask, { opacity }]}
 					onPress={() => {
 						blurInput()
 						setShowSelectPicker(true)
