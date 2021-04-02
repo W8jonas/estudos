@@ -20,15 +20,23 @@ const styles = StyleSheet.create({
 	},
 })
 
-function Circle({ color, size }) {
+function Circle({ color, size, extraStyle }) {
 	return (
-		<View style={[styles.checkCircle, { borderColor: color, height: size, width: size }]} />
+		<View style={[styles.checkCircle, {
+			borderColor: color, height: size, width: size, ...extraStyle,
+		}]}
+		/>
 	)
+}
+
+Circle.defaultProps = {
+	extraStyle: {},
 }
 
 Circle.propTypes = {
 	color: PropTypes.string.isRequired,
 	size: PropTypes.number.isRequired,
+	extraStyle: PropTypes.shape({}),
 }
 
 export default Circle
