@@ -85,7 +85,7 @@ function Input() {
 						setShowSelectPicker(true)
 					}}
 				>
-					<View style={[styles.circle, { borderColor: TYPES_AND_COLORS[taskType] }]} />
+					<Circle size={12} color={TYPES_AND_COLORS[taskType]} />
 					<Text style={styles.textTypeOfTask}>{taskType}</Text>
 					<IconAwesome name="chevron-down" size={15} color={colors.blackDark} />
 				</TouchableOpacity>
