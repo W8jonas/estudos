@@ -13,10 +13,10 @@ import styles from './styles'
 
 // Components
 import { TYPES_AND_COLORS } from '../../configs/constants'
+import Circle from '../circle/index'
 import SelectDatePicker from '../selectDatePicker/index'
 import SelectPicker from '../selectPicker/index'
 
-const timer = null
 let counter = 0
 
 function Input() {
@@ -37,12 +37,12 @@ function Input() {
 	}
 
 	function createTask() {
-
+		console.log({ taskDate, taskType, description })
 	}
 
 	function onKeyPress({ nativeEvent }) {
 		const { key } = nativeEvent
-		if (key === 'Enter') {
+		if (key === ' ') {
 			counter += 1
 			setTimeout(() => {
 				if (counter >= 3) {
@@ -51,7 +51,6 @@ function Input() {
 				counter = 0
 			}, 500)
 		}
-		console.log(counter)
 	}
 
 	return (
@@ -74,6 +73,9 @@ function Input() {
 					}}
 				>
 					<Icon name="calendar-today" size={20} color={colors.grayDark} />
+					{taskDate && (
+						<Circle size={6} color="#68f" extraStyle={{ position: 'absolute', top: 3, right: 3 }} />
+					)}
 				</TouchableOpacity>
 
 				<TouchableOpacity
