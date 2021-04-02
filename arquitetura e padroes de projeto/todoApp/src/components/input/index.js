@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import {
 	View, Text, TouchableOpacity, TextInput, Animated, Easing, Dimensions,
 } from 'react-native'
@@ -58,12 +58,25 @@ function Input() {
 		}
 	}
 
+	function show() {
+		Animated.timing(posWidth, {
+			toValue: widthOfContainer,
+			useNativeDriver: false,
+			duration: 500,
+			easing: Easing.linear,
+		}).start()
+	}
+
+	useEffect(() => {
+		show()
+	}, [])
+
 	return (
 		<>
 			<Animated.View
 				style={[
 					styles.container,
-					{ width: widthOfContainer },
+					{ width: posWidth },
 				]}
 			>
 				<TextInput
