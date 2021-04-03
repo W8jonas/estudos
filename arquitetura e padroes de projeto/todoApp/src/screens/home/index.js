@@ -8,11 +8,12 @@ import {
 // Assets
 import styles from './styles'
 
-// Functions
-
 // Components
 import Input from '../../components/input'
 import Task from '../../components/task'
+
+// Functions
+import useTasks from '../../hooks/useTasks'
 
 const FAKE_DATA = [
 	{
@@ -47,6 +48,8 @@ const FAKE_DATA = [
 
 function Home() {
 	const [focusOnInput, setFocusOnInput] = useState(false)
+
+	const { task } = useTasks()
 
 	function addTask(task) {
 		setFocusOnInput(false)
