@@ -17,6 +17,12 @@ Projeto criado para desenvolver minhas habilidades sobre Custom Hooks, padrões 
         - [x] Type of task select
     - [ ] componente Modal Filter
 - [ ] Desenvolver parte lógica de tasks do app (CRUD)
+    - [ ] Adicionar tarefas
+    - [ ] Marcar tarefa concluída
+    - [ ] Deletar tarefa
+    - [ ] Modificar tarefa
+    - [ ] Filtrar tarefas
+
 - [ ] Desenvolver a documentação
 
 
