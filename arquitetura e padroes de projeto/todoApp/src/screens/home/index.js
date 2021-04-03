@@ -49,11 +49,12 @@ const FAKE_DATA = [
 function Home() {
 	const [focusOnInput, setFocusOnInput] = useState(false)
 
-	const { task } = useTasks()
+	const { tasks, addTask } = useTasks()
 
-	function addTask(task) {
+	function handleAddTask(taskToAdd) {
 		setFocusOnInput(false)
-		console.log('task: ', task)
+		console.log('task: ', taskToAdd)
+		addTask(taskToAdd)
 	}
 
 	return (
@@ -67,7 +68,7 @@ function Home() {
 
 			<View style={{ alignItems: 'center', justifyContent: 'center' }}>
 				{focusOnInput
-					? <Input addTask={addTask} />
+					? <Input handleAddTask={handleAddTask} />
 					: (
 						<TouchableOpacity
 							style={styles.touchContainer}
