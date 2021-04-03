@@ -66,7 +66,7 @@ function Input({ addTask }) {
 			toValue: 1,
 			useNativeDriver: false,
 			delay: 200,
-			duration: 3000,
+			duration: 300,
 			easing: Easing.linear,
 		}).start()
 	}
