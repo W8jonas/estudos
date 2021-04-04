@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import {
 	View, Text, TouchableOpacity, Animated, Easing,
 } from 'react-native'
@@ -18,12 +18,13 @@ function Task({
 	id, description, type, date, done, handleToggleTaskDone,
 }) {
 	const [opacity] = useState(new Animated.Value(0))
+	const [showOptions, setShowOptions] = useState(false)
 
 	function show() {
 		Animated.timing(opacity, {
 			toValue: 1,
 			useNativeDriver: true,
-			duration: 200,
+			duration: 300,
 			easing: Easing.linear,
 		}).start()
 	}
@@ -32,22 +33,30 @@ function Task({
 		Animated.timing(opacity, {
 			toValue: 0,
 			useNativeDriver: true,
-			duration: 200,
+			duration: 100,
 			easing: Easing.linear,
 		}).start()
 	}
 
-	useEffect(() => {
-		show()
-	}, [])
+	function showExtraOptions() {
+		if (!showOptions) {
+			setShowOptions(true)
+			show()
+		}
+	}
 
-	const posWidth = opacity.interpolate({
-		inputRange: [0, 1],
-		outputRange: [180, 0],
-	})
+	function hideExtraOptions() {
+		if (!showOptions) {
+			setShowOptions(false)
+			hide()
+		} else {
+			hide()
+			setShowOptions(false)
+		}
+	}
 
 	return (
-		<View style={styles.container}>
+		<TouchableOpacity style={styles.container} activeOpacity={1} onLongPress={showExtraOptions} onPress={hideExtraOptions}>
 			<TouchableOpacity
 				onPress={() => { handleToggleTaskDone(id) }}
 				style={[styles.checkCircle, { borderColor: TYPES_AND_COLORS[type] || colors.whiteDefault }]}
@@ -63,7 +72,6 @@ function Task({
 			<Animated.View
 				style={[
 					styles.deleteTaskContainer,
-					{ transform: [{ translateX: posWidth }] },
 					{ opacity },
 				]}
 			>
@@ -75,7 +83,6 @@ function Task({
 			<Animated.View
 				style={[
 					styles.editTaskContainer,
-					{ transform: [{ translateX: posWidth }] },
 					{ opacity },
 				]}
 			>
@@ -84,7 +91,7 @@ function Task({
 				</TouchableOpacity>
 			</Animated.View>
 
-		</View>
+		</TouchableOpacity>
 	)
 }
 
