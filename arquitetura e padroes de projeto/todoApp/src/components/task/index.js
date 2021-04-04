@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
 	View, Text, TouchableOpacity, Animated, Easing,
 } from 'react-native'
@@ -18,6 +18,29 @@ function Task({
 	id, description, type, date, done, handleToggleTaskDone,
 }) {
 	const [opacity] = useState(new Animated.Value(0))
+
+	function show() {
+		Animated.timing(opacity, {
+			toValue: 0,
+			useNativeDriver: true,
+			duration: 200,
+			easing: Easing.linear,
+		}).start()
+	}
+
+	function hide() {
+		Animated.timing(opacity, {
+			toValue: 1,
+			useNativeDriver: true,
+			duration: 200,
+			easing: Easing.linear,
+		}).start()
+	}
+
+	useEffect(() => {
+		show()
+	}, [])
+
 	const posWidth = opacity.interpolate({
 		inputRange: [0, 1],
 		outputRange: [0, 180],
@@ -37,7 +60,12 @@ function Task({
 				<Text style={styles.textDate}>{new Date(date).toISOString().substring(0, 19).replace('T', '\n')}</Text>
 			</View>
 
-			<Animated.View style={styles.deleteTaskContainer}>
+			<Animated.View
+				style={[
+					styles.deleteTaskContainer,
+					{ transform: [{ translateY: posWidth }] },
+				]}
+			>
 				<TouchableOpacity
 					style={styles.deleteTaskTouch}
 					activeOpacity={0.9}
@@ -46,7 +74,12 @@ function Task({
 				</TouchableOpacity>
 			</Animated.View>
 
-			<Animated.View style={styles.editTaskContainer}>
+			<Animated.View
+				style={[
+					styles.editTaskContainer,
+					{ transform: [{ translateY: posWidth }] },
+				]}
+			>
 				<TouchableOpacity style={styles.editTaskTouch} activeOpacity={0.9}>
 					<Text>Editar</Text>
 				</TouchableOpacity>
