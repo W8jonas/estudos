@@ -2,28 +2,28 @@ import { useState, useEffect } from 'react'
 
 const InitialState = [
 	{
-		id: '0',
+		id: 0,
 		description: 'Arrumar quarto',
 		type: '',
 		date: new Date('2021/03/29').getTime(),
 		done: false,
 	},
 	{
-		id: '1',
+		id: 1,
 		description: 'Terminar aplicativo',
 		type: 'Programação',
 		date: new Date('2021/04/16').getTime(),
 		done: false,
 	},
 	{
-		id: '2',
+		id: 2,
 		description: 'Fazer componente Tarefa',
 		type: 'Programação',
 		date: new Date('2021/03/27').getTime(),
 		done: true,
 	},
 	{
-		id: '3',
+		id: 3,
 		description: 'Estudar prova de Equações Diferenciais',
 		type: 'Faculdade',
 		date: new Date('2021/04/11').getTime(),
