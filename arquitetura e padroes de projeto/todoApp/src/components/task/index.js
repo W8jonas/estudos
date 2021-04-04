@@ -15,7 +15,7 @@ import styles from './styles'
 import { TYPES_AND_COLORS } from '../../configs/constants'
 
 function Task({
-	id, description, type, date, done, handleToggleTaskDone,
+	id, description, type, date, done, handleToggleTaskDone, handleDeleteTask,
 }) {
 	const [opacity] = useState(new Animated.Value(0))
 	const [showOptions, setShowOptions] = useState(false)
@@ -72,7 +72,7 @@ function Task({
 				<Text style={styles.textDate}>{new Date(date).toISOString().substring(0, 19).replace('T', '\n')}</Text>
 			</View>
 			<Animated.View style={[styles.deleteTaskContainer, { opacity, zIndex }]}>
-				<TouchableOpacity style={styles.deleteTaskTouch} activeOpacity={0.7}>
+				<TouchableOpacity style={styles.deleteTaskTouch} activeOpacity={0.7} onPress={() => { handleDeleteTask(id) }}>
 					<Text>Excluir</Text>
 				</TouchableOpacity>
 			</Animated.View>
@@ -94,6 +94,7 @@ Task.propTypes = {
 	id: PropTypes.number.isRequired,
 	done: PropTypes.bool.isRequired,
 	handleToggleTaskDone: PropTypes.func.isRequired,
+	handleDeleteTask: PropTypes.func.isRequired,
 }
 
 export default Task
