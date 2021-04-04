@@ -19,7 +19,7 @@ Projeto criado para desenvolver minhas habilidades sobre Custom Hooks, padrões 
 - [ ] Desenvolver parte lógica de tasks do app (CRUD)
     - [x] Adicionar tarefas
     - [x] Marcar tarefa concluída
-    - [ ] Deletar tarefa
+    - [x] Deletar tarefa
     - [ ] Modificar tarefa
     - [ ] Filtrar tarefas
 
