@@ -20,14 +20,18 @@ Task.propTypes = {
 	date: PropTypes.number.isRequired,
 	id: PropTypes.number.isRequired,
 	done: PropTypes.bool.isRequired,
+	handleToggleTaskDone: PropTypes.func.isRequired,
 }
 
 function Task({
-	id, description, type, date, done,
+	id, description, type, date, done, handleToggleTaskDone,
 }) {
 	return (
 		<View style={styles.container}>
-			<TouchableOpacity style={[styles.checkCircle, { borderColor: TYPES_AND_COLORS[type] || colors.whiteDefault }]}>
+			<TouchableOpacity
+				onPress={() => { handleToggleTaskDone(id) }}
+				style={[styles.checkCircle, { borderColor: TYPES_AND_COLORS[type] || colors.whiteDefault }]}
+			>
 				{ done && <Icon name="check" size={20} color={colors.greenDefault} />}
 			</TouchableOpacity>
 
