@@ -21,7 +21,7 @@ function Task({
 
 	function show() {
 		Animated.timing(opacity, {
-			toValue: 0,
+			toValue: 1,
 			useNativeDriver: true,
 			duration: 200,
 			easing: Easing.linear,
@@ -30,7 +30,7 @@ function Task({
 
 	function hide() {
 		Animated.timing(opacity, {
-			toValue: 1,
+			toValue: 0,
 			useNativeDriver: true,
 			duration: 200,
 			easing: Easing.linear,
@@ -43,7 +43,7 @@ function Task({
 
 	const posWidth = opacity.interpolate({
 		inputRange: [0, 1],
-		outputRange: [0, 180],
+		outputRange: [180, 0],
 	})
 
 	return (
@@ -63,13 +63,11 @@ function Task({
 			<Animated.View
 				style={[
 					styles.deleteTaskContainer,
-					{ transform: [{ translateY: posWidth }] },
+					{ transform: [{ translateX: posWidth }] },
+					{ opacity },
 				]}
 			>
-				<TouchableOpacity
-					style={styles.deleteTaskTouch}
-					activeOpacity={0.9}
-				>
+				<TouchableOpacity style={styles.deleteTaskTouch} activeOpacity={0.9}>
 					<Text>Excluir</Text>
 				</TouchableOpacity>
 			</Animated.View>
@@ -77,7 +75,8 @@ function Task({
 			<Animated.View
 				style={[
 					styles.editTaskContainer,
-					{ transform: [{ translateY: posWidth }] },
+					{ transform: [{ translateX: posWidth }] },
+					{ opacity },
 				]}
 			>
 				<TouchableOpacity style={styles.editTaskTouch} activeOpacity={0.9}>
