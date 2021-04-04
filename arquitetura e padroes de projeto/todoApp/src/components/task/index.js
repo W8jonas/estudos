@@ -1,5 +1,7 @@
-import React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import React, { useState } from 'react'
+import {
+	View, Text, TouchableOpacity, Animated, Easing,
+} from 'react-native'
 
 // Modules
 import PropTypes from 'prop-types'
@@ -15,6 +17,12 @@ import { TYPES_AND_COLORS } from '../../configs/constants'
 function Task({
 	id, description, type, date, done, handleToggleTaskDone,
 }) {
+	const [opacity] = useState(new Animated.Value(0))
+	const posWidth = opacity.interpolate({
+		inputRange: [0, 1],
+		outputRange: [0, 180],
+	})
+
 	return (
 		<View style={styles.container}>
 			<TouchableOpacity
@@ -29,20 +37,20 @@ function Task({
 				<Text style={styles.textDate}>{new Date(date).toISOString().substring(0, 19).replace('T', '\n')}</Text>
 			</View>
 
-			<View style={styles.deleteTaskContainer}>
+			<Animated.View style={styles.deleteTaskContainer}>
 				<TouchableOpacity
 					style={styles.deleteTaskTouch}
 					activeOpacity={0.9}
 				>
 					<Text>Excluir</Text>
 				</TouchableOpacity>
-			</View>
+			</Animated.View>
 
-			<View style={styles.editTaskContainer}>
+			<Animated.View style={styles.editTaskContainer}>
 				<TouchableOpacity style={styles.editTaskTouch} activeOpacity={0.9}>
 					<Text>Editar</Text>
 				</TouchableOpacity>
-			</View>
+			</Animated.View>
 
 		</View>
 	)
