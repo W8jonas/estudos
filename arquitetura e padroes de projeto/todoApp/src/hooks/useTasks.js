@@ -45,7 +45,24 @@ function useTasks() {
 		setTasks([...tasks, newTask])
 	}
 
-	return { tasks, addTask }
+	function toggleTaskDone(id) {
+		const taskSelected = tasks.map((task) => {
+			if (task.id === id) {
+				return {
+					...task,
+					done: !task.done,
+				}
+			}
+			return task
+		})
+		setTasks(taskSelected)
+	}
+
+	useEffect(() => {
+		console.log('tasks: ', tasks)
+	}, [tasks])
+
+	return { tasks, addTask, toggleTaskDone }
 }
 
 export default useTasks
