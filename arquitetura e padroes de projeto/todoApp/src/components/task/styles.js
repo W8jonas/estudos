@@ -40,6 +40,40 @@ const styles = StyleSheet.create({
 	textDate: {
 		width: '30%',
 	},
+	editTaskContainer: {
+		height: 60,
+		width: 90,
+		position: 'absolute',
+		top: 0,
+		right: 0,
+		backgroundColor: '#499',
+		borderTopEndRadius: 30,
+		borderBottomRightRadius: 30,
+	},
+	editTaskTouch: {
+		height: 60,
+		width: 90,
+		alignItems: 'center',
+		justifyContent: 'center',
+		borderTopEndRadius: 30,
+		borderBottomRightRadius: 30,
+		backgroundColor: '#499',
+	},
+	deleteTaskContainer: {
+		height: 60,
+		width: 90,
+		position: 'absolute',
+		top: 0,
+		right: 90,
+		backgroundColor: '#f79',
+	},
+	deleteTaskTouch: {
+		height: 60,
+		width: 90,
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: '#f79',
+	},
 })
 
 export default styles

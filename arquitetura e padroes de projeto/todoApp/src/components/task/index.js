@@ -29,44 +29,17 @@ function Task({
 				<Text style={styles.textDate}>{new Date(date).toISOString().substring(0, 19).replace('T', '\n')}</Text>
 			</View>
 
-			<View style={{
-				height: 60,
-				width: 90,
-				position: 'absolute',
-				top: 0,
-				right: 90,
-			}}
-			>
-				<TouchableOpacity style={{
-					height: 60,
-					width: 90,
-					alignItems: 'center',
-					justifyContent: 'center',
-					backgroundColor: '#f79',
-				}}
+			<View style={styles.deleteTaskContainer}>
+				<TouchableOpacity
+					style={styles.deleteTaskTouch}
+					activeOpacity={0.9}
 				>
 					<Text>Excluir</Text>
 				</TouchableOpacity>
 			</View>
 
-			<View style={{
-				height: 60,
-				width: 90,
-				position: 'absolute',
-				top: 0,
-				right: 0,
-			}}
-			>
-				<TouchableOpacity style={{
-					height: 60,
-					width: 90,
-					alignItems: 'center',
-					justifyContent: 'center',
-					borderTopEndRadius: 30,
-					borderBottomRightRadius: 30,
-					backgroundColor: '#499',
-				}}
-				>
+			<View style={styles.editTaskContainer}>
+				<TouchableOpacity style={styles.editTaskTouch} activeOpacity={0.9}>
 					<Text>Editar</Text>
 				</TouchableOpacity>
 			</View>
