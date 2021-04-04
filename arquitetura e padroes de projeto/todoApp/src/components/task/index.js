@@ -9,19 +9,8 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
 import { colors } from '../../styles'
 import styles from './styles'
 
-// Functions
-
 // Components
 import { TYPES_AND_COLORS } from '../../configs/constants'
-
-Task.propTypes = {
-	description: PropTypes.string.isRequired,
-	type: PropTypes.string.isRequired,
-	date: PropTypes.number.isRequired,
-	id: PropTypes.number.isRequired,
-	done: PropTypes.bool.isRequired,
-	handleToggleTaskDone: PropTypes.func.isRequired,
-}
 
 function Task({
 	id, description, type, date, done, handleToggleTaskDone,
@@ -39,8 +28,38 @@ function Task({
 				<Text style={styles.textDescription}>{description}</Text>
 				<Text style={styles.textDate}>{new Date(date).toISOString().substring(0, 19).replace('T', '\n')}</Text>
 			</View>
+
+			<View style={{
+				height: 60,
+				width: 90,
+				position: 'absolute',
+				top: 0,
+				right: 90,
+			}}
+			>
+				<TouchableOpacity style={{
+					backgroundColor: '#f79',
+					height: 60,
+					width: 90,
+					alignItems: 'center',
+					justifyContent: 'center',
+				}}
+				>
+					<Text>Excluir</Text>
+				</TouchableOpacity>
+			</View>
+
 		</View>
 	)
+}
+
+Task.propTypes = {
+	description: PropTypes.string.isRequired,
+	type: PropTypes.string.isRequired,
+	date: PropTypes.number.isRequired,
+	id: PropTypes.number.isRequired,
+	done: PropTypes.bool.isRequired,
+	handleToggleTaskDone: PropTypes.func.isRequired,
 }
 
 export default Task
