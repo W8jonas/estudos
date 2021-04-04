@@ -18,7 +18,7 @@ import useTasks from '../../hooks/useTasks'
 function Home() {
 	const [focusOnInput, setFocusOnInput] = useState(false)
 
-	const { tasks, addTask } = useTasks()
+	const { tasks, addTask, toggleTaskDone } = useTasks()
 
 	function handleAddTask(taskToAdd) {
 		setFocusOnInput(false)
@@ -30,7 +30,7 @@ function Home() {
 
 			<ScrollView>
 				{tasks.map((task) => (
-					<Task key={task.id} {...task} />
+					<Task key={task.id} handleToggleTaskDone={toggleTaskDone} {...task} />
 				))}
 			</ScrollView>
 
