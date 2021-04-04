@@ -19,6 +19,7 @@ function Task({
 }) {
 	const [opacity] = useState(new Animated.Value(0))
 	const [showOptions, setShowOptions] = useState(false)
+	const [zIndex, setZIndex] = useState(-3)
 
 	function show() {
 		Animated.timing(opacity, {
@@ -42,6 +43,7 @@ function Task({
 		if (!showOptions) {
 			setShowOptions(true)
 			show()
+			setZIndex(5)
 		}
 	}
 
@@ -52,11 +54,12 @@ function Task({
 		} else {
 			hide()
 			setShowOptions(false)
+			setZIndex(-3)
 		}
 	}
 
 	return (
-		<TouchableOpacity style={styles.container} activeOpacity={1} onLongPress={showExtraOptions} onPress={hideExtraOptions}>
+		<TouchableOpacity style={styles.container} onLongPress={showExtraOptions} onPress={hideExtraOptions} activeOpacity={0.4}>
 			<TouchableOpacity
 				onPress={() => { handleToggleTaskDone(id) }}
 				style={[styles.checkCircle, { borderColor: TYPES_AND_COLORS[type] || colors.whiteDefault }]}
@@ -68,30 +71,19 @@ function Task({
 				<Text style={styles.textDescription}>{description}</Text>
 				<Text style={styles.textDate}>{new Date(date).toISOString().substring(0, 19).replace('T', '\n')}</Text>
 			</View>
-
-			<Animated.View
-				style={[
-					styles.deleteTaskContainer,
-					{ opacity },
-				]}
-			>
-				<TouchableOpacity style={styles.deleteTaskTouch} activeOpacity={0.9}>
+			<Animated.View style={[styles.deleteTaskContainer, { opacity, zIndex }]}>
+				<TouchableOpacity style={styles.deleteTaskTouch} activeOpacity={0.7}>
 					<Text>Excluir</Text>
 				</TouchableOpacity>
 			</Animated.View>
 
-			<Animated.View
-				style={[
-					styles.editTaskContainer,
-					{ opacity },
-				]}
-			>
-				<TouchableOpacity style={styles.editTaskTouch} activeOpacity={0.9}>
+			<Animated.View style={[styles.editTaskContainer, { opacity, zIndex }]}>
+				<TouchableOpacity style={styles.editTaskTouch} activeOpacity={0.7}>
 					<Text>Editar</Text>
 				</TouchableOpacity>
 			</Animated.View>
-
 		</TouchableOpacity>
+
 	)
 }
 

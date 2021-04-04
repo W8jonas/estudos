@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
 		borderRadius: 30,
 		marginTop: 5,
 		marginBottom: 5,
+		zIndex: 3,
 	},
 	textContainer: {
 		flexDirection: 'row',
@@ -48,6 +49,7 @@ const styles = StyleSheet.create({
 		right: 0,
 		backgroundColor: '#499',
 		borderTopEndRadius: 30,
+		zIndex: -3,
 		borderBottomRightRadius: 30,
 	},
 	editTaskTouch: {
@@ -57,6 +59,7 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		borderTopEndRadius: 30,
 		borderBottomRightRadius: 30,
+		zIndex: -3,
 		backgroundColor: '#499',
 	},
 	deleteTaskContainer: {
@@ -65,6 +68,7 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		top: 0,
 		right: 90,
+		zIndex: -3,
 		backgroundColor: '#f79',
 	},
 	deleteTaskTouch: {
@@ -72,6 +76,7 @@ const styles = StyleSheet.create({
 		width: 90,
 		alignItems: 'center',
 		justifyContent: 'center',
+		zIndex: -3,
 		backgroundColor: '#f79',
 	},
 })
