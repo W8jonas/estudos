@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const FAKE_DATA = [
+const InitialState = [
 	{
 		id: '0',
 		description: 'Arrumar quarto',
@@ -32,7 +32,7 @@ const FAKE_DATA = [
 ]
 
 function useTasks() {
-	const [tasks, setTasks] = useState(FAKE_DATA)
+	const [tasks, setTasks] = useState(InitialState)
 
 	function addTask(taskToAdd) {
 		setTasks([...tasks, taskToAdd])

@@ -22,7 +22,6 @@ function Home() {
 
 	function handleAddTask(taskToAdd) {
 		setFocusOnInput(false)
-		console.log('task: ', taskToAdd)
 		addTask(taskToAdd)
 	}
 
