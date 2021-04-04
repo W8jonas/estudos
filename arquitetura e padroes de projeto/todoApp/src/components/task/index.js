@@ -12,23 +12,17 @@ import styles from './styles'
 // Functions
 
 // Components
-
-const TYPES_AND_COLORS = {
-	programação: '#f60',
-	Faculdade: '#848',
-	trabalho: '#283',
-	pessoal: '#45c',
-}
+import { TYPES_AND_COLORS } from '../../configs/constants'
 
 Task.propTypes = {
 	description: PropTypes.string.isRequired,
 	type: PropTypes.string.isRequired,
-	data: PropTypes.number.isRequired,
+	date: PropTypes.number.isRequired,
 	done: PropTypes.bool.isRequired,
 }
 
 function Task({
-	description, type, data, done,
+	description, type, date, done,
 }) {
 	return (
 		<View style={styles.container}>
@@ -38,7 +32,7 @@ function Task({
 
 			<View style={styles.textContainer}>
 				<Text style={styles.textDescription}>{description}</Text>
-				<Text style={styles.textDate}>{new Date(data).toISOString().substring(0, 19).replace('T', '\n')}</Text>
+				<Text style={styles.textDate}>{new Date(date).toISOString().substring(0, 19).replace('T', '\n')}</Text>
 			</View>
 		</View>
 	)
