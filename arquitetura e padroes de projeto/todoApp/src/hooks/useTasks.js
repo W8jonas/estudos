@@ -60,7 +60,15 @@ function useTasks() {
 		setTasks(taskSelected)
 	}
 
-	return { tasks, addTask, toggleTaskDone }
+	function deleteTask(id) {
+		const newTasks = tasks.filter((task) => task.id !== id)
+
+		setTasks(newTasks)
+	}
+
+	return {
+		tasks, addTask, toggleTaskDone, deleteTask,
+	}
 }
 
 export default useTasks
