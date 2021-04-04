@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 
 // Modules
 import PropTypes from 'prop-types'
@@ -18,17 +18,18 @@ Task.propTypes = {
 	description: PropTypes.string.isRequired,
 	type: PropTypes.string.isRequired,
 	date: PropTypes.number.isRequired,
+	id: PropTypes.number.isRequired,
 	done: PropTypes.bool.isRequired,
 }
 
 function Task({
-	description, type, date, done,
+	id, description, type, date, done,
 }) {
 	return (
 		<View style={styles.container}>
-			<View style={[styles.checkCircle, { borderColor: TYPES_AND_COLORS[type] || colors.whiteDefault }]}>
+			<TouchableOpacity style={[styles.checkCircle, { borderColor: TYPES_AND_COLORS[type] || colors.whiteDefault }]}>
 				{ done && <Icon name="check" size={20} color={colors.greenDefault} />}
-			</View>
+			</TouchableOpacity>
 
 			<View style={styles.textContainer}>
 				<Text style={styles.textDescription}>{description}</Text>
