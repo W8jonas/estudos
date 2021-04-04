@@ -35,11 +35,13 @@ function useTasks() {
 	const [tasks, setTasks] = useState(InitialState)
 
 	function addTask(taskToAdd) {
+		const date = taskToAdd.taskDate || new Date().getTime()
+
 		const newTask = {
-			date: taskToAdd.taskDate,
+			id: Math.random(),
 			type: taskToAdd.taskType,
 			description: taskToAdd.description,
-			id: Math.random(),
+			date,
 			done: false,
 		}
 		setTasks([...tasks, newTask])
@@ -57,10 +59,6 @@ function useTasks() {
 		})
 		setTasks(taskSelected)
 	}
-
-	useEffect(() => {
-		console.log('tasks: ', tasks)
-	}, [tasks])
 
 	return { tasks, addTask, toggleTaskDone }
 }
