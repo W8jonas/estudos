@@ -20,7 +20,7 @@ function Home() {
 	const [taskToUpdate, setTaskToUpdate] = useState(false)
 
 	const {
-		tasks, addTask, toggleTaskDone, deleteTask,
+		tasks, addTask, toggleTaskDone, deleteTask, updateTask,
 	} = useTasks()
 
 	function handleAddTask(taskToAdd) {
@@ -28,7 +28,7 @@ function Home() {
 		addTask(taskToAdd)
 	}
 
-	function updateTask(task) {
+	function gotoUpdateTask(task) {
 		setTaskToUpdate(task)
 		setFocusOnInput(true)
 	}
@@ -42,7 +42,7 @@ function Home() {
 						key={task.id}
 						handleToggleTaskDone={toggleTaskDone}
 						handleDeleteTask={deleteTask}
-						handleUpdateTask={updateTask}
+						handleUpdateTask={gotoUpdateTask}
 						{...task}
 					/>
 				))}
@@ -50,7 +50,7 @@ function Home() {
 
 			<View style={{ alignItems: 'center', justifyContent: 'center' }}>
 				{focusOnInput
-					? <Input addTask={handleAddTask} taskToUpdate={taskToUpdate} />
+					? <Input addTask={handleAddTask} taskToUpdate={taskToUpdate} handleUpdateTask={updateTask} />
 					: (
 						<TouchableOpacity
 							style={styles.touchContainer}
