@@ -76,6 +76,14 @@ function Input({ addTask, taskToUpdate }) {
 		show()
 	}, [])
 
+	useEffect(() => {
+		if (taskToUpdate) {
+			setDescription(taskToUpdate.description)
+			setTaskDate(taskToUpdate.date)
+			setTaskType(taskToUpdate.type)
+		}
+	}, [taskToUpdate])
+
 	const posWidth = opacity.interpolate({
 		inputRange: [0, 1],
 		outputRange: [widthOfContainer / 2, widthOfContainer],
@@ -95,6 +103,7 @@ function Input({ addTask, taskToUpdate }) {
 					ref={inputRef}
 					onChangeText={(text) => setDescription(text)}
 					placeholder="Aperte espaço 3x para salvar"
+					value={description}
 					onKeyPress={onKeyPress}
 				/>
 
