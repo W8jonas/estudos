@@ -23,7 +23,7 @@ const widthOfContainer = screenWidth - 2 * 10
 
 let counter = 0
 
-function Input({ addTask, taskToUpdate }) {
+function Input({ addTask, taskToUpdate, handleUpdateTask }) {
 	const inputRef = useRef(null)
 	const [showDatePicker, setShowDatePicker] = useState(false)
 	const [showSelectPicker, setShowSelectPicker] = useState(false)
@@ -44,7 +44,13 @@ function Input({ addTask, taskToUpdate }) {
 
 	function submitTask() {
 		const task = { taskDate, taskType, description }
-		addTask(task)
+
+		if (taskToUpdate) {
+			const updatedTask = { ...taskToUpdate, ...task }
+			handleUpdateTask(updatedTask)
+		} else {
+			addTask(task)
+		}
 	}
 
 	function onKeyPress({ nativeEvent }) {
@@ -171,6 +177,7 @@ Input.propTypes = {
 			done: PropTypes.bool,
 		}),
 	]),
+	handleUpdateTask: PropTypes.func.isRequired,
 }
 
 Input.defaultProps = {
