@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const InitialState = [
 	{
@@ -66,8 +66,25 @@ function useTasks() {
 		setTasks(newTasks)
 	}
 
+	function updateTask(taskToUpdate) {
+		const updatedTasks = tasks.map((task) => {
+			if (task.id === taskToUpdate.id) {
+				console.log('task atual:', task)
+				console.log('task atualizada:', taskToUpdate)
+				return {
+					...task,
+					type: taskToUpdate.taskType,
+					description: taskToUpdate.description,
+					date: taskToUpdate.date,
+				}
+			}
+			return task
+		})
+		setTasks(updatedTasks)
+	}
+
 	return {
-		tasks, addTask, toggleTaskDone, deleteTask,
+		tasks, addTask, toggleTaskDone, deleteTask, updateTask,
 	}
 }
 
