@@ -15,7 +15,7 @@ import styles from './styles'
 import { TYPES_AND_COLORS } from '../../configs/constants'
 
 function Task({
-	id, description, type, date, done, handleToggleTaskDone, handleDeleteTask,
+	id, description, type, date, done, handleToggleTaskDone, handleDeleteTask, handleUpdateTask,
 }) {
 	const [opacity] = useState(new Animated.Value(0))
 	const [showOptions, setShowOptions] = useState(false)
@@ -59,7 +59,7 @@ function Task({
 	}
 
 	return (
-		<TouchableOpacity style={styles.container} onLongPress={showExtraOptions} onPress={hideExtraOptions} activeOpacity={0.4}>
+		<TouchableOpacity style={styles.container} onLongPress={showExtraOptions} onPress={hideExtraOptions} activeOpacity={1}>
 			<TouchableOpacity
 				onPress={() => { handleToggleTaskDone(id) }}
 				style={[styles.checkCircle, { borderColor: TYPES_AND_COLORS[type] || colors.whiteDefault }]}
@@ -78,7 +78,13 @@ function Task({
 			</Animated.View>
 
 			<Animated.View style={[styles.editTaskContainer, { opacity, zIndex }]}>
-				<TouchableOpacity style={styles.editTaskTouch} activeOpacity={0.7}>
+				<TouchableOpacity
+					style={styles.editTaskTouch}
+					onPress={() => handleUpdateTask({
+						id, description, type, date, done,
+					})}
+					activeOpacity={0.7}
+				>
 					<Text>Editar</Text>
 				</TouchableOpacity>
 			</Animated.View>
@@ -95,6 +101,7 @@ Task.propTypes = {
 	done: PropTypes.bool.isRequired,
 	handleToggleTaskDone: PropTypes.func.isRequired,
 	handleDeleteTask: PropTypes.func.isRequired,
+	handleUpdateTask: PropTypes.func.isRequired,
 }
 
 export default Task
