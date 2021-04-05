@@ -23,7 +23,7 @@ const widthOfContainer = screenWidth - 2 * 10
 
 let counter = 0
 
-function Input({ addTask }) {
+function Input({ addTask, taskToUpdate }) {
 	const inputRef = useRef(null)
 	const [showDatePicker, setShowDatePicker] = useState(false)
 	const [showSelectPicker, setShowSelectPicker] = useState(false)
@@ -42,7 +42,7 @@ function Input({ addTask }) {
 		inputRef.current.blur()
 	}
 
-	function createTask() {
+	function submitTask() {
 		const task = { taskDate, taskType, description }
 		addTask(task)
 	}
@@ -53,7 +53,7 @@ function Input({ addTask }) {
 			counter += 1
 			setTimeout(() => {
 				if (counter >= 3) {
-					createTask()
+					submitTask()
 				}
 				counter = 0
 			}, 500)
@@ -152,6 +152,20 @@ function Input({ addTask }) {
 
 Input.propTypes = {
 	addTask: PropTypes.func.isRequired,
+	taskToUpdate: PropTypes.oneOfType([
+		PropTypes.bool,
+		PropTypes.shape({
+			id: PropTypes.number,
+			description: PropTypes.string,
+			type: PropTypes.string,
+			date: PropTypes.number,
+			done: PropTypes.bool,
+		}),
+	]),
+}
+
+Input.defaultProps = {
+	taskToUpdate: false,
 }
 
 export default Input
