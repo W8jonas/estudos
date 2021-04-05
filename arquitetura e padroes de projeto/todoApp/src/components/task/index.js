@@ -25,7 +25,7 @@ function Task({
 		Animated.timing(opacity, {
 			toValue: 1,
 			useNativeDriver: true,
-			duration: 300,
+			duration: 400,
 			easing: Easing.linear,
 		}).start()
 	}
@@ -34,7 +34,7 @@ function Task({
 		Animated.timing(opacity, {
 			toValue: 0,
 			useNativeDriver: true,
-			duration: 100,
+			duration: 300,
 			easing: Easing.linear,
 		}).start()
 	}
@@ -58,6 +58,18 @@ function Task({
 		}
 	}
 
+	function onDeleteTask() {
+		handleDeleteTask(id)
+		hideExtraOptions()
+	}
+
+	function onUpdateTask() {
+		handleUpdateTask({
+			id, description, type, date, done,
+		})
+		hideExtraOptions()
+	}
+
 	return (
 		<TouchableOpacity style={styles.container} onLongPress={showExtraOptions} onPress={hideExtraOptions} activeOpacity={1}>
 			<TouchableOpacity
@@ -72,7 +84,7 @@ function Task({
 				<Text style={styles.textDate}>{new Date(date).toISOString().substring(0, 19).replace('T', '\n')}</Text>
 			</View>
 			<Animated.View style={[styles.deleteTaskContainer, { opacity, zIndex }]}>
-				<TouchableOpacity style={styles.deleteTaskTouch} activeOpacity={0.7} onPress={() => { handleDeleteTask(id) }}>
+				<TouchableOpacity style={styles.deleteTaskTouch} activeOpacity={0.7} onPress={onDeleteTask}>
 					<Text>Excluir</Text>
 				</TouchableOpacity>
 			</Animated.View>
@@ -80,9 +92,7 @@ function Task({
 			<Animated.View style={[styles.editTaskContainer, { opacity, zIndex }]}>
 				<TouchableOpacity
 					style={styles.editTaskTouch}
-					onPress={() => handleUpdateTask({
-						id, description, type, date, done,
-					})}
+					onPress={onUpdateTask}
 					activeOpacity={0.7}
 				>
 					<Text>Editar</Text>
