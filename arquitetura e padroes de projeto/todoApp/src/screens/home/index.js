@@ -17,12 +17,20 @@ import useTasks from '../../hooks/useTasks'
 
 function Home() {
 	const [focusOnInput, setFocusOnInput] = useState(false)
+	const [taskToUpdate, setTaskToUpdate] = useState(false)
 
-	const { tasks, addTask, toggleTaskDone } = useTasks()
+	const {
+		tasks, addTask, toggleTaskDone, deleteTask,
+	} = useTasks()
 
 	function handleAddTask(taskToAdd) {
 		setFocusOnInput(false)
 		addTask(taskToAdd)
+	}
+
+	function updateTask(task) {
+		setTaskToUpdate(task)
+		setFocusOnInput(true)
 	}
 
 	return (
@@ -30,13 +38,19 @@ function Home() {
 
 			<ScrollView>
 				{tasks.map((task) => (
-					<Task key={task.id} handleToggleTaskDone={toggleTaskDone} {...task} />
+					<Task
+						key={task.id}
+						handleToggleTaskDone={toggleTaskDone}
+						handleDeleteTask={deleteTask}
+						handleUpdateTask={updateTask}
+						{...task}
+					/>
 				))}
 			</ScrollView>
 
 			<View style={{ alignItems: 'center', justifyContent: 'center' }}>
 				{focusOnInput
-					? <Input addTask={handleAddTask} />
+					? <Input addTask={handleAddTask} taskToUpdate={taskToUpdate} />
 					: (
 						<TouchableOpacity
 							style={styles.touchContainer}
