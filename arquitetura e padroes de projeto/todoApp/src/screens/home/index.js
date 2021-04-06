@@ -28,6 +28,11 @@ function Home() {
 		addTask(taskToAdd)
 	}
 
+	function handleUpdateTask(updatedTask) {
+		setFocusOnInput(false)
+		updateTask(updatedTask)
+	}
+
 	function gotoUpdateTask(task) {
 		setTaskToUpdate(task)
 		setFocusOnInput(true)
@@ -50,7 +55,7 @@ function Home() {
 
 			<View style={{ alignItems: 'center', justifyContent: 'center' }}>
 				{focusOnInput
-					? <Input addTask={handleAddTask} taskToUpdate={taskToUpdate} handleUpdateTask={updateTask} />
+					? <Input addTask={handleAddTask} taskToUpdate={taskToUpdate} handleUpdateTask={handleUpdateTask} />
 					: (
 						<TouchableOpacity
 							style={styles.touchContainer}
