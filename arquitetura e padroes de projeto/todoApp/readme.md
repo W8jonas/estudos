@@ -20,7 +20,7 @@ Projeto criado para desenvolver minhas habilidades sobre Custom Hooks, padrões 
     - [x] Adicionar tarefas
     - [x] Marcar tarefa concluída
     - [x] Deletar tarefa
-    - [ ] Modificar tarefa
+    - [x] Modificar tarefa
     - [ ] Filtrar tarefas
 
 - [ ] Desenvolver a documentação
