@@ -19,7 +19,7 @@ import SelectDatePicker from '../selectDatePicker/index'
 import SelectPicker from '../selectPicker/index'
 
 const { width: screenWidth } = Dimensions.get('window')
-const widthOfContainer = screenWidth - 2 * 10
+const widthOfContainer = screenWidth - 2 * 4
 
 let counter = 0
 
@@ -71,8 +71,8 @@ function Input({ addTask, taskToUpdate, handleUpdateTask }) {
 		Animated.timing(opacity, {
 			toValue: 1,
 			useNativeDriver: false,
-			delay: 200,
-			duration: 300,
+			delay: 900,
+			duration: 900,
 			easing: Easing.linear,
 		}).start()
 	}
@@ -121,7 +121,7 @@ function Input({ addTask, taskToUpdate, handleUpdateTask }) {
 							setShowDatePicker(true)
 						}}
 					>
-						<Icon name="calendar-today" size={20} color={colors.grayDark} />
+						<Icon name="calendar-today" size={18} color={colors.grayDark} />
 						{taskDate && (
 							<Circle size={6} color="#68f" extraStyle={{ position: 'absolute', top: 3, right: 3 }} />
 						)}
