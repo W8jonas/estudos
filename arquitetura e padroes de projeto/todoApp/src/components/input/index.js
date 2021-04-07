@@ -29,7 +29,7 @@ function Input({ addTask, taskToUpdate, handleUpdateTask }) {
 	const [showSelectPicker, setShowSelectPicker] = useState(false)
 
 	const [taskDate, setTaskDate] = useState(undefined)
-	const [taskType, setTaskType] = useState('Pessoal')
+	const [taskType, setTaskType] = useState('Trabalho')
 	const [description, setDescription] = useState(undefined)
 
 	const [opacity] = useState(new Animated.Value(widthOfContainer / 2))
@@ -71,8 +71,8 @@ function Input({ addTask, taskToUpdate, handleUpdateTask }) {
 		Animated.timing(opacity, {
 			toValue: 1,
 			useNativeDriver: false,
-			delay: 900,
-			duration: 900,
+			delay: 200,
+			duration: 300,
 			easing: Easing.linear,
 		}).start()
 	}
