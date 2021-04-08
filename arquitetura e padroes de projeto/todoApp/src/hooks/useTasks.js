@@ -4,7 +4,7 @@ const InitialState = [
 	{
 		id: 0,
 		description: 'Arrumar quarto',
-		type: '',
+		type: 'Pessoal',
 		date: new Date('2021/03/29').getTime(),
 		done: false,
 	},
