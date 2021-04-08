@@ -3,6 +3,7 @@
 #### Descrição
 Projeto criado para desenvolver minhas habilidades sobre Custom Hooks, padrões de projetos e clean architecture. A ideia é desenvolver o aplicativo com a arquitetura volta para Custom Hooks, sendo que a dinâmica do aplicativo deve ser toda desacoplada das suas funções, permitindo assim, que toda a parte lógica seja refeita de outra forma. 
 
+Link para o post completo com mais informações no LinkedIn [ctrl + click](https://www.linkedin.com/feed/update/urn:li:activity:6785647557260414976/) 
 
 #### To-Do:
 - [x] Adicionar ESLint ao projeto
