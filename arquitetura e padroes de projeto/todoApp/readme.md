@@ -37,8 +37,12 @@ Feita: Marcador de tarefa realizada - Booleano
 
 
 #### Documentação:
-``To-Do``
+###### Componente Task
+| Parâmetro | Obrigatório | Tipos aceitos | Valor default | Valores aceitos |
+| --------- | ----------- | ------------- | ------------- | --------------- |
+| id        | Sim         | Number        | Math.random() | Number          |
 
+<br>
 
 #### Referências:
 Referência que usei para layout do projeto:
