@@ -41,6 +41,11 @@ Feita: Marcador de tarefa realizada - Booleano
 | Parâmetro | Obrigatório | Tipos aceitos | Valor default | Valores aceitos |
 | --------- | ----------- | ------------- | ------------- | --------------- |
 | id        | Sim         | Number        | Math.random() | Number          |
+| description | Sim       | String        | --            | String          |
+| date      | Sim         | Number        | new Date().getTime() | Timestamp number |
+| type      | Sim         | String        | 'Pessoal' | 'Pessoal','Programação', 'Faculdade', 'Trabalho',  |
+| done        | Sim         | Boolean        | false | false, true          |
+
 
 <br>
 
