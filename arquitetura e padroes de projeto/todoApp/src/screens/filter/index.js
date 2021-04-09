@@ -1,7 +1,9 @@
 import React from 'react'
 import {
-	View, ScrollView,
+	View, ScrollView, TouchableOpacity,
 } from 'react-native'
+
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 // Components
 import Task from '../../components/task'
@@ -25,6 +27,21 @@ function Filter() {
 					/>
 				))}
 			</ScrollView>
+
+			<TouchableOpacity style={{
+				position: 'absolute',
+				height: 60,
+				width: 60,
+				backgroundColor: '#F80',
+				borderRadius: 60,
+				bottom: 50,
+				right: 50,
+				alignItems: 'center',
+				justifyContent: 'center',
+			}}
+			>
+				<Icon name="filter-plus-outline" size={30} color="#000" />
+			</TouchableOpacity>
 		</View>
 	)
 }
