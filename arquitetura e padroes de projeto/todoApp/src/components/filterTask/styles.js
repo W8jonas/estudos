@@ -11,7 +11,19 @@ const styles = StyleSheet.create({
 		backgroundColor: '#FFF',
 		alignItems: 'center',
 	},
+	selectItem: {
+		flexDirection: 'row',
 
+	},
+	selectText: {
+		fontSize: 14,
+		flexDirection: 'row',
+	},
+	exitButton: {
+		width: '50%',
+		backgroundColor: '#824',
+		marginVertical: 40,
+	},
 })
 
 export default styles
