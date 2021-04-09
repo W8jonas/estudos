@@ -20,29 +20,33 @@ function Filter() {
 	const [showFilterMenu, setShowFilterMenu] = useState(false)
 
 	return (
-		<View style={styles.container}>
-			<ScrollView>
-				{tasks.map((task) => (
-					<Task
-						key={task.id}
-						handleToggleTaskDone={toggleTaskDone}
-						handleDeleteTask={deleteTask}
-						handleUpdateTask={() => {}}
-						{...task}
-					/>
-				))}
-			</ScrollView>
+		<>
+			<View style={styles.container}>
+				<ScrollView>
+					{tasks.map((task) => (
+						<Task
+							key={task.id}
+							handleToggleTaskDone={toggleTaskDone}
+							handleDeleteTask={deleteTask}
+							handleUpdateTask={() => {}}
+							{...task}
+						/>
+					))}
+				</ScrollView>
 
-			<FilterTask visible={showFilterMenu} />
-
-			<TouchableOpacity
-				onPress={() => setShowFilterMenu(true)}
-				style={styles.touchContainer}
-				activeOpacity={0.7}
-			>
-				<Icon name="filter-plus-outline" size={30} color="#000" />
-			</TouchableOpacity>
-		</View>
+				<TouchableOpacity
+					onPress={() => setShowFilterMenu(!showFilterMenu)}
+					style={styles.touchContainer}
+					activeOpacity={0.7}
+				>
+					<Icon name="filter-plus-outline" size={30} color="#000" />
+				</TouchableOpacity>
+			</View>
+			<FilterTask
+				visible={showFilterMenu}
+				onCancel={() => setShowFilterMenu(false)}
+			/>
+		</>
 	)
 }
 
