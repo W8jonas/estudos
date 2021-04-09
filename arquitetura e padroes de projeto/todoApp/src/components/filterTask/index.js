@@ -14,7 +14,7 @@ const heightOfContainer = 400
 function FilterTask({ visible, onCancel, updateFilterParams }) {
 	const [pos] = useState(new Animated.Value(heightOfContainer))
 
-	const [taskType, setTaskType] = useState('')
+	const [selectedTaskTypes, setSelectedTaskTypes] = useState([])
 
 	function show() {
 		Animated.timing(pos, {
@@ -43,8 +43,18 @@ function FilterTask({ visible, onCancel, updateFilterParams }) {
 	}, [visible])
 
 	useEffect(() => {
-		updateFilterParams(taskType)
-	}, [taskType])
+		updateFilterParams(selectedTaskTypes)
+	}, [selectedTaskTypes])
+
+	function updateTaskType(typeOfTask) {
+		if (selectedTaskTypes.includes(typeOfTask)) {
+			const _selectedTaskTypes = selectedTaskTypes.filter((item) => item !== typeOfTask)
+			setSelectedTaskTypes(_selectedTaskTypes)
+		} else {
+			const _selectedTaskTypes = [...new Set([...selectedTaskTypes, typeOfTask])]
+			setSelectedTaskTypes(_selectedTaskTypes)
+		}
+	}
 
 	return (
 		<Animated.View
@@ -61,13 +71,20 @@ function FilterTask({ visible, onCancel, updateFilterParams }) {
 				{Object.keys(TYPES_AND_COLORS).map((typeOfTask) => (
 					<TouchableOpacity
 						key={typeOfTask}
-						onPress={() => setTaskType(typeOfTask)}
+						onPress={() => updateTaskType(typeOfTask)}
 						style={[
 							styles.selectItem,
-							{ backgroundColor: typeOfTask === taskType ? TYPES_AND_COLORS[typeOfTask] : '#FFF' },
+							{ backgroundColor: selectedTaskTypes.includes(typeOfTask) ? TYPES_AND_COLORS[typeOfTask] : '#FFF' },
 						]}
 					>
-						<Text style={[styles.selectText, typeOfTask === taskType ? { } : { color: '#000' }]}>{typeOfTask}</Text>
+						<Text
+							style={[
+								styles.selectText,
+								selectedTaskTypes.includes(typeOfTask) ? { } : { color: '#000' },
+							]}
+						>
+							{typeOfTask}
+						</Text>
 					</TouchableOpacity>
 				))}
 			</View>
