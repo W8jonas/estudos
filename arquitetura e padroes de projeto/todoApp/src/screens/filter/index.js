@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import {
-	View, Text, TouchableOpacity, ScrollView,
+	View, ScrollView,
 } from 'react-native'
 
 // Components
@@ -10,12 +10,10 @@ import Task from '../../components/task'
 import useTasks from '../../hooks/useTasks'
 
 function Filter() {
-	const {
-		tasks, addTask, toggleTaskDone, deleteTask, updateTask,
-	} = useTasks()
+	const { tasks, toggleTaskDone, deleteTask } = useTasks()
 
 	return (
-		<View>
+		<View style={{ flex: 1, padding: 10, backgroundColor: '#eee' }}>
 			<ScrollView>
 				{tasks.map((task) => (
 					<Task
