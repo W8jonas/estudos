@@ -62,9 +62,12 @@ function FilterTask({ visible, onCancel, updateFilterParams }) {
 					<TouchableOpacity
 						key={typeOfTask}
 						onPress={() => setTaskType(typeOfTask)}
-						style={[styles.selectItem, { backgroundColor: TYPES_AND_COLORS[typeOfTask] }]}
+						style={[
+							styles.selectItem,
+							{ backgroundColor: typeOfTask === taskType ? TYPES_AND_COLORS[typeOfTask] : '#FFF' },
+						]}
 					>
-						<Text style={styles.selectText}>{typeOfTask}</Text>
+						<Text style={[styles.selectText, typeOfTask === taskType ? { } : { color: '#000' }]}>{typeOfTask}</Text>
 					</TouchableOpacity>
 				))}
 			</View>
