@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, Animated } from 'react-native'
+
+import styles from './styles'
 
 function FilterTask() {
 	return (
-		<View>
+		<Animated.View
+			style={[
+				styles.container,
+			]}
+		>
 			<Text>FilterTask</Text>
-		</View>
+		</Animated.View>
 	)
 }
 
