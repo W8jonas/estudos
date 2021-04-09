@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
 	View, ScrollView, TouchableOpacity,
 } from 'react-native'
@@ -6,7 +6,7 @@ import {
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 // Assets
-import styles from '../../components/task/styles'
+import styles from './styles'
 
 // Components
 import FilterTask from '../../components/filterTask'
@@ -17,6 +17,7 @@ import useTasks from '../../hooks/useTasks'
 
 function Filter() {
 	const { tasks, toggleTaskDone, deleteTask } = useTasks()
+	const [showFilterMenu, setShowFilterMenu] = useState(false)
 
 	return (
 		<View style={styles.container}>
@@ -32,9 +33,10 @@ function Filter() {
 				))}
 			</ScrollView>
 
-			<FilterTask />
+			<FilterTask visible={showFilterMenu} />
 
 			<TouchableOpacity
+				onPress={() => setShowFilterMenu(true)}
 				style={styles.touchContainer}
 				activeOpacity={0.7}
 			>
