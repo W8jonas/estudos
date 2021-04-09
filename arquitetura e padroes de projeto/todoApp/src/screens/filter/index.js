@@ -5,7 +5,11 @@ import {
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
+// Assets
+import styles from '../../components/task/styles'
+
 // Components
+import FilterTask from '../../components/filterTask'
 import Task from '../../components/task'
 
 // Functions
@@ -15,7 +19,7 @@ function Filter() {
 	const { tasks, toggleTaskDone, deleteTask } = useTasks()
 
 	return (
-		<View style={{ flex: 1, padding: 10, backgroundColor: '#eee' }}>
+		<View style={styles.container}>
 			<ScrollView>
 				{tasks.map((task) => (
 					<Task
@@ -28,17 +32,11 @@ function Filter() {
 				))}
 			</ScrollView>
 
-			<TouchableOpacity style={{
-				position: 'absolute',
-				height: 60,
-				width: 60,
-				backgroundColor: '#F80',
-				borderRadius: 60,
-				bottom: 50,
-				right: 50,
-				alignItems: 'center',
-				justifyContent: 'center',
-			}}
+			<FilterTask />
+
+			<TouchableOpacity
+				style={styles.touchContainer}
+				activeOpacity={0.7}
 			>
 				<Icon name="filter-plus-outline" size={30} color="#000" />
 			</TouchableOpacity>
