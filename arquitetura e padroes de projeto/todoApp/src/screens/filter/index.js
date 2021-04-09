@@ -16,8 +16,14 @@ import Task from '../../components/task'
 import useTasks from '../../hooks/useTasks'
 
 function Filter() {
-	const { tasks, toggleTaskDone, deleteTask } = useTasks()
+	const {
+		tasks, toggleTaskDone, deleteTask, getTasksFiltered,
+	} = useTasks()
 	const [showFilterMenu, setShowFilterMenu] = useState(false)
+
+	function onFilterTask(queryParams) {
+		const _tasks = getTasksFiltered(queryParams)
+	}
 
 	return (
 		<>
@@ -42,9 +48,11 @@ function Filter() {
 					<Icon name="filter-plus-outline" size={30} color="#000" />
 				</TouchableOpacity>
 			</View>
+
 			<FilterTask
 				visible={showFilterMenu}
 				onCancel={() => setShowFilterMenu(false)}
+				updateFilterParams={onFilterTask}
 			/>
 		</>
 	)
