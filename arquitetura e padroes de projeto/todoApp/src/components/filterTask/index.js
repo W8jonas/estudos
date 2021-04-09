@@ -11,8 +11,10 @@ import styles from './styles'
 import { TYPES_AND_COLORS } from '../../configs/constants'
 
 const heightOfContainer = 400
-function FilterTask({ visible, onCancel }) {
+function FilterTask({ visible, onCancel, updateFilterParams }) {
 	const [pos] = useState(new Animated.Value(heightOfContainer))
+
+	const [taskType, setTaskType] = useState('')
 
 	function show() {
 		Animated.timing(pos, {
@@ -40,6 +42,10 @@ function FilterTask({ visible, onCancel }) {
 		}
 	}, [visible])
 
+	useEffect(() => {
+		updateFilterParams(taskType)
+	}, [taskType])
+
 	return (
 		<Animated.View
 			style={[
@@ -47,17 +53,18 @@ function FilterTask({ visible, onCancel }) {
 				{ transform: [{ translateY: pos }] },
 			]}
 		>
-			<Text>Selecione suas opções</Text>
+			<Text style={styles.title}>Selecione suas opções</Text>
 
-			<Text>Selecione os tipos que você deseja:</Text>
+			<Text style={styles.caption}>Selecione os tipos que você deseja visualizar:</Text>
 
 			<View style={styles.typesToSelectContainer}>
-				{Object.keys(TYPES_AND_COLORS).map((item) => (
+				{Object.keys(TYPES_AND_COLORS).map((typeOfTask) => (
 					<TouchableOpacity
-						key={item}
-						style={[styles.selectItem, { backgroundColor: TYPES_AND_COLORS[item] }]}
+						key={typeOfTask}
+						onPress={() => setTaskType(typeOfTask)}
+						style={[styles.selectItem, { backgroundColor: TYPES_AND_COLORS[typeOfTask] }]}
 					>
-						<Text style={styles.selectText}>{item}</Text>
+						<Text style={styles.selectText}>{typeOfTask}</Text>
 					</TouchableOpacity>
 				))}
 			</View>
