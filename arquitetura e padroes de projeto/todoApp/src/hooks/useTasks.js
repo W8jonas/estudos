@@ -83,8 +83,12 @@ function useTasks() {
 		setTasks(updatedTasks)
 	}
 
+	function getTasksFiltered(query) {
+		return tasks.filter((task) => query.includes(task.type))
+	}
+
 	return {
-		tasks, addTask, toggleTaskDone, deleteTask, updateTask,
+		tasks, addTask, toggleTaskDone, deleteTask, updateTask, getTasksFiltered,
 	}
 }
 
