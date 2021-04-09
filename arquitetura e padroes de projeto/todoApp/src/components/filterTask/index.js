@@ -51,10 +51,7 @@ function FilterTask({ visible, onCancel }) {
 
 			<Text>Selecione os tipos que você deseja:</Text>
 
-			<View style={{
-				flexDirection: 'row', width: 80, alignItems: 'center', justifyContent: 'center',
-			}}
-			>
+			<View style={styles.typesToSelectContainer}>
 				{Object.keys(TYPES_AND_COLORS).map((item) => (
 					<TouchableOpacity
 						key={item}
@@ -66,7 +63,7 @@ function FilterTask({ visible, onCancel }) {
 			</View>
 
 			<TouchableOpacity onPress={onCancel} style={styles.exitButton}>
-				<Text>Fechar</Text>
+				<Text style={styles.textExitButton}>Fechar</Text>
 			</TouchableOpacity>
 		</Animated.View>
 	)
