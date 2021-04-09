@@ -84,7 +84,10 @@ function useTasks() {
 	}
 
 	function getTasksFiltered(query) {
-		return tasks.filter((task) => query.includes(task.type))
+		if (query.length) {
+			return tasks.filter((task) => query.includes(task.type))
+		}
+		return tasks
 	}
 
 	return {
