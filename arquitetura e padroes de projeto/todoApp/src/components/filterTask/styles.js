@@ -10,6 +10,14 @@ const styles = StyleSheet.create({
 		backgroundColor: '#FFF',
 		alignItems: 'center',
 	},
+	title: {
+		marginTop: 10,
+		fontSize: 18,
+	},
+	caption: {
+		fontSize: 16,
+		marginTop: 10,
+	},
 	typesToSelectContainer: {
 		flexDirection: 'row',
 		alignItems: 'center',
@@ -22,7 +30,7 @@ const styles = StyleSheet.create({
 		padding: 5,
 	},
 	selectText: {
-		fontSize: 18,
+		fontSize: 15,
 		color: '#FFF',
 	},
 	exitButton: {
