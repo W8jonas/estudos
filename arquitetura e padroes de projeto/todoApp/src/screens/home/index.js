@@ -31,6 +31,7 @@ function Home() {
 	function handleUpdateTask(updatedTask) {
 		setFocusOnInput(false)
 		updateTask(updatedTask)
+		setTaskToUpdate(false)
 	}
 
 	function gotoUpdateTask(task) {
