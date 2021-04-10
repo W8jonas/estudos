@@ -1,38 +1,24 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const InitialState = [
-	{
-		id: 0,
-		description: 'Arrumar quarto',
-		type: 'Pessoal',
-		date: new Date('2021/03/29').getTime(),
-		done: false,
-	},
-	{
-		id: 1,
-		description: 'Terminar aplicativo',
-		type: 'Programação',
-		date: new Date('2021/04/16').getTime(),
-		done: false,
-	},
-	{
-		id: 2,
-		description: 'Fazer componente Tarefa',
-		type: 'Programação',
-		date: new Date('2021/03/27').getTime(),
-		done: true,
-	},
-	{
-		id: 3,
-		description: 'Estudar prova de Equações Diferenciais',
-		type: 'Faculdade',
-		date: new Date('2021/04/11').getTime(),
-		done: false,
-	},
-]
+import { useSelector, useDispatch } from 'react-redux'
 
-function useTasks() {
-	const [tasks, setTasks] = useState(InitialState)
+function useTasks(queryParamsToFilter) {
+	const dispatch = useDispatch()
+	const globalTasks = useSelector((state) => state)
+
+	const [tasks, setTasks] = useState(globalTasks)
+	const [tasksFiltered, setTasksFiltered] = useState(globalTasks)
+
+	useEffect(() => {
+		setTasks(globalTasks)
+		console.log('globalTasks: ', globalTasks)
+	}, [globalTasks])
+
+	useEffect(() => {
+		if (queryParamsToFilter) {
+			_getTasksFiltered(queryParamsToFilter, tasks)
+		}
+	}, [queryParamsToFilter, tasks])
 
 	function addTask(taskToAdd) {
 		const date = taskToAdd.taskDate || new Date().getTime()
@@ -44,7 +30,8 @@ function useTasks() {
 			date,
 			done: false,
 		}
-		setTasks([...tasks, newTask])
+		const newTasks = [...tasks, newTask]
+		dispatch({ type: 'SYNC_TODOS', payload: newTasks })
 	}
 
 	function toggleTaskDone(id) {
@@ -57,13 +44,13 @@ function useTasks() {
 			}
 			return task
 		})
-		setTasks(taskSelected)
+		dispatch({ type: 'SYNC_TODOS', payload: taskSelected })
 	}
 
 	function deleteTask(id) {
 		const newTasks = tasks.filter((task) => task.id !== id)
 
-		setTasks(newTasks)
+		dispatch({ type: 'SYNC_TODOS', payload: newTasks })
 	}
 
 	function updateTask(taskToUpdate) {
@@ -80,18 +67,19 @@ function useTasks() {
 			}
 			return task
 		})
-		setTasks(updatedTasks)
+		dispatch({ type: 'SYNC_TODOS', payload: updatedTasks })
 	}
 
-	function getTasksFiltered(query) {
+	function _getTasksFiltered(query, tasks) {
 		if (query.length) {
-			return tasks.filter((task) => query.includes(task.type))
+			const newTasks = tasks.filter((task) => query.includes(task.type))
+			setTasksFiltered(newTasks)
 		}
-		return tasks
+		setTasksFiltered(tasks)
 	}
 
 	return {
-		tasks, addTask, toggleTaskDone, deleteTask, updateTask, getTasksFiltered,
+		tasks, tasksFiltered, addTask, toggleTaskDone, deleteTask, updateTask,
 	}
 }
 
