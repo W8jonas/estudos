@@ -11,7 +11,6 @@ function useTasks(queryParamsToFilter) {
 
 	useEffect(() => {
 		setTasks(globalTasks)
-		console.log('globalTasks: ', globalTasks)
 	}, [globalTasks])
 
 	useEffect(() => {
@@ -56,8 +55,6 @@ function useTasks(queryParamsToFilter) {
 	function updateTask(taskToUpdate) {
 		const updatedTasks = tasks.map((task) => {
 			if (task.id === taskToUpdate.id) {
-				console.log('task atual:', task)
-				console.log('task atualizada:', taskToUpdate)
 				return {
 					...task,
 					type: taskToUpdate.taskType,
