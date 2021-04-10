@@ -70,12 +70,12 @@ function useTasks(queryParamsToFilter) {
 		dispatch({ type: 'SYNC_TODOS', payload: updatedTasks })
 	}
 
-	function _getTasksFiltered(query, tasks) {
+	function _getTasksFiltered(query, tasksToFilter) {
 		if (query.length) {
-			const newTasks = tasks.filter((task) => query.includes(task.type))
+			const newTasks = tasksToFilter.filter((task) => query.includes(task.type))
 			setTasksFiltered(newTasks)
 		}
-		setTasksFiltered(tasks)
+		setTasksFiltered(tasksToFilter)
 	}
 
 	return {
