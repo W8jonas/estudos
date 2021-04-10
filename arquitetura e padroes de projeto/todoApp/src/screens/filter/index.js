@@ -16,22 +16,22 @@ import Task from '../../components/task'
 import useTasks from '../../hooks/useTasks'
 
 function Filter() {
-	const {
-		toggleTaskDone, deleteTask, getTasksFiltered,
-	} = useTasks()
 	const [showFilterMenu, setShowFilterMenu] = useState(false)
-	const [filteredTasks, setFilteredTasks] = useState([])
+	const [filterOptions, setFilterOptions] = useState([])
 
 	function onFilterTask(queryParams) {
-		const _tasks = getTasksFiltered(queryParams)
-		setFilteredTasks(_tasks)
+		setFilterOptions(queryParams)
 	}
+
+	const {
+		toggleTaskDone, deleteTask, tasksFiltered,
+	} = useTasks(filterOptions)
 
 	return (
 		<>
 			<View style={styles.container}>
 				<ScrollView>
-					{filteredTasks.map((task) => (
+					{tasksFiltered.map((task) => (
 						<Task
 							key={task.id}
 							handleToggleTaskDone={toggleTaskDone}
