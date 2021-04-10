@@ -11,18 +11,18 @@ Link para o post completo com mais informações no LinkedIn [ctrl + click](http
 - [ ] Criar páginas do app:
     - [x] Página: Home
     - [ ] Página: FilterTasks
-- [ ] Criar componentes do app
+- [x] Criar componentes do app
     - [x] componente Task
     - [x] componente Add Task
         - [x] datePicker
         - [x] Type of task select
-    - [ ] componente Modal Filter
-- [ ] Desenvolver parte lógica de tasks do app (CRUD)
+    - [x] componente Modal Filter
+- [x] Desenvolver parte lógica de tasks do app (CRUD)
     - [x] Adicionar tarefas
     - [x] Marcar tarefa concluída
     - [x] Deletar tarefa
     - [x] Modificar tarefa
-    - [ ] Filtrar tarefas
+    - [x] Filtrar tarefas
 
 - [ ] Desenvolver a documentação
 
