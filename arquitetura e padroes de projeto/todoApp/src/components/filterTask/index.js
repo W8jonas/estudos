@@ -14,7 +14,7 @@ const heightOfContainer = 400
 function FilterTask({ visible, onCancel, updateFilterParams }) {
 	const [pos] = useState(new Animated.Value(heightOfContainer))
 
-	const [selectedTaskTypes, setSelectedTaskTypes] = useState([])
+	const [selectedTaskTypes, setSelectedTaskTypes] = useState(['Programação', 'Faculdade', 'Trabalho', 'Pessoal'])
 
 	function show() {
 		Animated.timing(pos, {
