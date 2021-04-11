@@ -15,7 +15,8 @@ function useTasks(queryParamsToFilter) {
 
 	useEffect(() => {
 		if (queryParamsToFilter) {
-			_getTasksFiltered(queryParamsToFilter, tasks)
+			const newTasks = _getTasksFiltered(queryParamsToFilter, tasks)
+			setTasksFiltered(newTasks)
 		}
 	}, [queryParamsToFilter, tasks])
 
@@ -70,9 +71,9 @@ function useTasks(queryParamsToFilter) {
 	function _getTasksFiltered(query, tasksToFilter) {
 		if (query.length) {
 			const newTasks = tasksToFilter.filter((task) => query.includes(task.type))
-			setTasksFiltered(newTasks)
+			return newTasks
 		}
-		setTasksFiltered(tasksToFilter)
+		return tasksToFilter
 	}
 
 	return {
