@@ -85,7 +85,7 @@ function Task({
 			</View>
 			<Animated.View style={[styles.deleteTaskContainer, { opacity, zIndex }]}>
 				<TouchableOpacity style={styles.deleteTaskTouch} activeOpacity={0.7} onPress={onDeleteTask}>
-					<Text>Excluir</Text>
+					<Text style={styles.textExtraOptions}>Excluir</Text>
 				</TouchableOpacity>
 			</Animated.View>
 
@@ -95,7 +95,7 @@ function Task({
 					onPress={onUpdateTask}
 					activeOpacity={0.7}
 				>
-					<Text>Editar</Text>
+					<Text style={styles.textExtraOptions}>Editar</Text>
 				</TouchableOpacity>
 			</Animated.View>
 		</TouchableOpacity>

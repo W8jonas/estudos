@@ -79,6 +79,10 @@ const styles = StyleSheet.create({
 		zIndex: -3,
 		backgroundColor: '#f79',
 	},
+	textExtraOptions: {
+		color: '#FFF',
+		fontSize: 18,
+	},
 })
 
 export default styles
