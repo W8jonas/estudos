@@ -1,7 +1,8 @@
 ### todoApp - Custom Hooks
 
 #### Descrição
-Projeto criado para desenvolver minhas habilidades sobre Custom Hooks, padrões de projetos e clean architecture. A ideia é desenvolver o aplicativo com a arquitetura volta para Custom Hooks, sendo que a dinâmica do aplicativo deve ser toda desacoplada das suas funções, permitindo assim, que toda a parte lógica seja refeita de outra forma. 
+Projeto criado para desenvolver minhas habilidades sobre Animações, User Experience, Custom Hooks e padrões de projetos. A ideia é desenvolver o aplicativo com a arquitetura volta para Custom Hooks, sendo que a dinâmica do aplicativo deve ser toda desacoplada das suas funções, permitindo assim, que toda a parte lógica seja refeita de outra forma. 
+Além disso as animações são voltadas para garantir uma melhor experiência de usuário e usabilidade do aplicativo.
 
 Link para o post completo com mais informações no LinkedIn [ctrl + click](https://www.linkedin.com/feed/update/urn:li:activity:6785647557260414976/) 
 
@@ -53,3 +54,4 @@ Feita: Marcador de tarefa realizada - Booleano
 Referência que usei para layout do projeto:
 Autor: Jakub Antalik - Product Designer jakubantalik.com
 Link para referência direta: https://dribbble.com/shots/14568765-Dona-mobile-composer-interactions 
+
