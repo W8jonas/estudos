@@ -6,6 +6,8 @@ Além disso as animações são voltadas para garantir uma melhor experiência d
 
 Link para o post completo com mais informações no LinkedIn [ctrl + click](https://www.linkedin.com/feed/update/urn:li:activity:6785647557260414976/) 
 
+### Prints do projeto no final do readme
+
 #### To-Do:
 - [x] Adicionar ESLint ao projeto
 - [x] Criar sistema de rotas da aplicação
@@ -54,4 +56,11 @@ Feita: Marcador de tarefa realizada - Booleano
 Referência que usei para layout do projeto:
 Autor: Jakub Antalik - Product Designer jakubantalik.com
 Link para referência direta: https://dribbble.com/shots/14568765-Dona-mobile-composer-interactions 
+
+
+## Abaixo seguem algumas fotos de todo o projeto
+
+![](fotos_do_projeto/Screenshot_1.png)  |  ![](fotos_do_projeto/Screenshot_2.png) |
+:---------------:|:----------------:|
+
 
