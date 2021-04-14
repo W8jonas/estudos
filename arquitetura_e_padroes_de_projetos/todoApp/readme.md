@@ -11,9 +11,9 @@ Link para o post completo com mais informações no LinkedIn [ctrl + click](http
 #### To-Do:
 - [x] Adicionar ESLint ao projeto
 - [x] Criar sistema de rotas da aplicação
-- [ ] Criar páginas do app:
+- [x] Criar páginas do app:
     - [x] Página: Home
-    - [ ] Página: FilterTasks
+    - [x] Página: FilterTasks
 - [x] Criar componentes do app
     - [x] componente Task
     - [x] componente Add Task
