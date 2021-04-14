@@ -58,10 +58,16 @@ Autor: Jakub Antalik - Product Designer jakubantalik.com
 Link para referência direta: https://dribbble.com/shots/14568765-Dona-mobile-composer-interactions 
 
 
+
 ## Abaixo seguem algumas fotos de todo o projeto
 
 ![](fotos_do_projeto/Screenshot_1.png)  |  ![](fotos_do_projeto/Screenshot_2.png) |
 :---------------:|:----------------:|
+
 <br>
+
+## Abaixo seguem algumas Gifs do app
+
 ![](fotos_do_projeto/gif1.gif)  |  ![](fotos_do_projeto/gif2.gif) |
 :---------------:|:----------------:|
+
