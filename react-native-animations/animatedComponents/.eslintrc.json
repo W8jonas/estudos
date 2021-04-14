@@ -1,0 +1,135 @@
+{
+	"parser": "babel-eslint",
+	"env": {
+		"browser": true,
+		"jest": true
+	},
+	"plugins": [
+		"react",
+		"jsx-a11y",
+		"import",
+		"react-hooks",
+		"eslint-plugin-import-helpers"
+	],
+	"extends": [
+		"airbnb",
+		"plugin:react/recommended"
+	],
+	"rules": {
+		"react/jsx-one-expression-per-line": "off",
+		"react/jsx-filename-extension": [
+			"error",
+			{
+				"extensions": [
+					".js",
+					".jsx"
+				]
+			}
+		],
+		"max-len": [
+			"error",
+			{
+				"code": 140,
+				"tabWidth": 4
+			}
+		],
+		"react/state-in-constructor": "off",
+		"react/static-property-placement": "off",
+		"react/jsx-props-no-spreading": "off",
+		"react/jsx-curly-newline": "off",
+		"no-underscore-dangle": "off",
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"react/jsx-indent": [
+			"warn",
+			"tab"
+		],
+		"react/jsx-indent-props": "off",
+		"react/jsx-uses-react": "error",
+		"react/jsx-uses-vars": "error",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "error",
+		"linebreak-style": "off",
+		"no-tabs": [
+			"error",
+			{
+				"allowIndentationTabs": true
+			}
+		],
+		"no-shadow": [
+			"error",
+			{
+				"hoist": "all"
+			}
+		],
+		"global-require": "off",
+		"import/prefer-default-export": "off",
+		"no-unused-expressions": [
+			"error",
+			{
+				"allowTaggedTemplates": true
+			}
+		],
+		"no-console": "off",
+		"semi": [
+			"error",
+			"never"
+		],
+		"react/prop-types": "off",
+		"react/destructuring-assignment": "off",
+		"no-plusplus": [
+			"error",
+			{
+				"allowForLoopAfterthoughts": true
+			}
+		],
+		"no-nested-ternary": "off",
+		"no-use-before-define": [
+			"error",
+			{
+				"functions": false,
+				"classes": true,
+				"variables": false
+			}
+		],
+		"import-helpers/order-imports": [
+			"error",
+			{
+				"newlinesBetween": "always",
+				"groups": [
+					[
+						"/react$/",
+						"/^react-native$/"
+					],
+					"module",
+					[
+						"/assets/",
+						"/styles/"
+					],
+					"/components/",
+					[
+						"/functions/",
+						"/utils/"
+					],
+					[
+						"sibling",
+						"parent",
+						"index"
+					]
+				],
+				"alphabetize": {
+					"order": "asc",
+					"ignoreCase": true
+				}
+			}
+		]
+	},
+	"globals": {
+		"__DEV__": true
+	}
+}
