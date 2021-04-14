@@ -62,5 +62,6 @@ Link para referência direta: https://dribbble.com/shots/14568765-Dona-mobile-co
 
 ![](fotos_do_projeto/Screenshot_1.png)  |  ![](fotos_do_projeto/Screenshot_2.png) |
 :---------------:|:----------------:|
-
-![](fotos_do_projeto/gif.gif)
+<br>
+![](fotos_do_projeto/gif1.gif)  |  ![](fotos_do_projeto/gif2.gif) |
+:---------------:|:----------------:|
