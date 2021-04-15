@@ -17,6 +17,8 @@ const styles = StyleSheet.create({
 		backgroundColor: '#fff',
 	},
 	iconContainer: {
+		height: 40,
+		width: 40,
 	},
 	textContainer: {
 		justifyContent: 'center',
