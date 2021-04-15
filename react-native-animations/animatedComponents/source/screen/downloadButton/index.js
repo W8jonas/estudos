@@ -14,10 +14,18 @@ function DownloadButton() {
 
 	const AnimationIcon = () => (
 		animationGlobal === 0
-			? <LottieView source={downloadAnimation} />
+			? <LottieView source={downloadAnimation} progress={0.58} />
 			: animationGlobal === 1
 				? <LottieView source={downloadAnimation} autoPlay loop speed={3} />
 				: <LottieView source={completedDownloadAnimation} autoPlay loop speed={3} />
+	)
+
+	const TextContent = () => (
+		animationGlobal === 0
+			? <Text style={styles.textContent}>Download</Text>
+			: animationGlobal === 1
+				? <Text style={styles.textContent}>Downloading</Text>
+				: <Text style={styles.textContent}>Finished</Text>
 	)
 
 	return (
@@ -27,7 +35,7 @@ function DownloadButton() {
 					<AnimationIcon />
 				</View>
 				<View style={styles.textContainer}>
-					<Text style={styles.textContent}>Downloading</Text>
+					<TextContent />
 				</View>
 			</View>
 		</View>
