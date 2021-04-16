@@ -51,4 +51,13 @@ const styles = StyleSheet.create({
 	},
 })
 
-export default styles
+const animatedStyles = StyleSheet.create({
+	greenBackground: {
+		...styles.buttonContainer,
+		position: 'absolute',
+		top: 0,
+		backgroundColor: colors.green,
+	},
+})
+
+export { styles, animatedStyles }
