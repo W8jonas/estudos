@@ -10,7 +10,7 @@ import LottieView from 'lottie-react-native'
 import completedDownloadAnimation from './assets/check-blue.json'
 import downloadAnimationBlack from './assets/download-ongoingBlack.json'
 import downloadAnimationwhite from './assets/download-ongoingWhite.json'
-import styles from './styles'
+import { styles, animatedStyles } from './styles'
 
 function DownloadButton() {
 	const [animationGlobal, setAnimationGlobal] = useState(0)
@@ -36,8 +36,9 @@ function DownloadButton() {
 	function animationToDownloading() {
 		Animated.timing(greenBackground, {
 			toValue: 80,
-			easing: Easing.back(),
-			duration: 2000,
+			easing: Easing.linear(),
+			duration: 200,
+			useNativeDriver: false,
 		}).start()
 	}
 
@@ -74,6 +75,15 @@ function DownloadButton() {
 				<View style={styles.textContainer}>
 					<TextContent />
 				</View>
+
+				<>
+					<Animated.View
+						style={[
+							animatedStyles.greenBackground,
+							{ height: greenBackground },
+						]}
+					/>
+				</>
 			</TouchableOpacity>
 		</View>
 	)
