@@ -15,12 +15,14 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		borderRadius: 12,
-		paddingHorizontal: 50,
+		paddingHorizontal: 60,
 		backgroundColor: '#fff',
+		zIndex: 1,
 	},
 	iconContainer: {
 		height: 40,
 		width: 40,
+		zIndex: 3,
 	},
 	animationContent: {
 		height: 89,
@@ -33,19 +35,20 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 		width: '90%',
+		zIndex: 3,
 	},
 	textContentDownload: {
-		fontSize: 20,
+		fontSize: 22,
 		fontWeight: 'bold',
 		color: colors.black,
 	},
 	textContentDownloading: {
-		fontSize: 20,
+		fontSize: 22,
 		fontWeight: 'bold',
 		color: colors.white,
 	},
 	textContentFinished: {
-		fontSize: 20,
+		fontSize: 22,
 		fontWeight: 'bold',
 		color: colors.white,
 	},
@@ -56,6 +59,7 @@ const animatedStyles = StyleSheet.create({
 		...styles.buttonContainer,
 		position: 'absolute',
 		top: 0,
+		zIndex: 2,
 		backgroundColor: colors.green,
 	},
 })

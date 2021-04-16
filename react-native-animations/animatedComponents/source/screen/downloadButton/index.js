@@ -37,9 +37,10 @@ function DownloadButton() {
 		Animated.timing(greenBackground, {
 			toValue: 80,
 			easing: Easing.linear(),
-			duration: 200,
+			duration: 300,
 			useNativeDriver: false,
 		}).start()
+		setAnimationGlobal(1)
 	}
 
 	function animationToFinished() {
