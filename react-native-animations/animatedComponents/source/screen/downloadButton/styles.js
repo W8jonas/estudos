@@ -69,6 +69,17 @@ const animatedStyles = StyleSheet.create({
 		zIndex: 2,
 		backgroundColor: colors.blue,
 	},
+	progressBar: {
+		marginHorizontal: 5,
+		height: 5,
+		width: 0,
+		position: 'absolute',
+		borderBottomRightRadius: 50,
+		borderBottomLeftRadius: 50,
+		bottom: 0,
+		zIndex: 2,
+		backgroundColor: colors.lightGreen,
+	},
 })
 
 export { styles, animatedStyles }
