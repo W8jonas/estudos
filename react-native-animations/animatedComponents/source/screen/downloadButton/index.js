@@ -16,6 +16,7 @@ function DownloadButton() {
 	const [animationGlobal, setAnimationGlobal] = useState(0)
 	const [greenBackground] = useState(new Animated.Value(0))
 	const [blueBackground] = useState(new Animated.Value(0))
+	const [progressBar] = useState(new Animated.Value(0))
 
 	function setAnimationTransition(nextAnimationState) {
 		if (nextAnimationState === 0) {
@@ -45,22 +46,36 @@ function DownloadButton() {
 				useNativeDriver: false,
 			}),
 		]).start()
-		  setAnimationGlobal(0)
+		setAnimationGlobal(0)
 	}
 
 	function animationToDownloading() {
-		Animated.timing(greenBackground, {
-			toValue: 80,
-			easing: Easing.linear(),
-			duration: 300,
-			useNativeDriver: false,
-		}).start()
+		Animated.sequence([
+			Animated.timing(greenBackground, {
+				toValue: 80,
+				easing: Easing.linear(),
+				duration: 300,
+				useNativeDriver: false,
+			}),
+			Animated.timing(progressBar, {
+				toValue: 300 - 2 * 5,
+				easing: Easing.linear(),
+				duration: 3800,
+				useNativeDriver: false,
+			}),
+		]).start()
 		setAnimationGlobal(1)
 
 		// for debug purposes
 		setTimeout(() => {
+			Animated.timing(progressBar, {
+				toValue: 0,
+				easing: Easing.linear(),
+				duration: 0,
+				useNativeDriver: false,
+			}).start()
 			setAnimationTransition(2)
-		}, 3000)
+		}, 4000)
 	}
 
 	function animationToFinished() {
@@ -122,6 +137,15 @@ function DownloadButton() {
 							{ height: blueBackground },
 						]}
 					/>
+
+					{progressBar && (
+						<Animated.View
+							style={[
+								animatedStyles.progressBar,
+								{ width: progressBar },
+							]}
+						/>
+					)}
 				</>
 			</TouchableOpacity>
 		</View>
