@@ -17,7 +17,7 @@ function DownloadButton() {
 			? <LottieView source={downloadAnimation} progress={0.58} />
 			: animationGlobal === 1
 				? <LottieView source={downloadAnimation} autoPlay loop speed={3} />
-				: <LottieView source={completedDownloadAnimation} autoPlay loop speed={3} />
+				: <LottieView source={completedDownloadAnimation} autoPlay loop={false} speed={1} style={styles.animationContent} />
 	)
 
 	const TextContent = () => (

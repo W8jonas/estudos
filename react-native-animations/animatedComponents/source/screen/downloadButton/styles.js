@@ -20,6 +20,13 @@ const styles = StyleSheet.create({
 		height: 40,
 		width: 40,
 	},
+	animationContent: {
+		height: 89,
+		width: 89,
+		position: 'relative',
+		top: -12,
+		left: -12,
+	},
 	textContainer: {
 		justifyContent: 'center',
 		alignItems: 'center',
