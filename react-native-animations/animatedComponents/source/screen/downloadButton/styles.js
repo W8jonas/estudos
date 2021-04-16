@@ -62,6 +62,13 @@ const animatedStyles = StyleSheet.create({
 		zIndex: 2,
 		backgroundColor: colors.green,
 	},
+	blueBackground: {
+		...styles.buttonContainer,
+		position: 'absolute',
+		top: 0,
+		zIndex: 2,
+		backgroundColor: colors.blue,
+	},
 })
 
 export { styles, animatedStyles }

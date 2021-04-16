@@ -7,7 +7,7 @@ import {
 import LottieView from 'lottie-react-native'
 
 // assets
-import completedDownloadAnimation from './assets/check-blue.json'
+import completedDownloadAnimation from './assets/download-check.json'
 import downloadAnimationBlack from './assets/download-ongoingBlack.json'
 import downloadAnimationwhite from './assets/download-ongoingWhite.json'
 import { styles, animatedStyles } from './styles'
@@ -15,6 +15,7 @@ import { styles, animatedStyles } from './styles'
 function DownloadButton() {
 	const [animationGlobal, setAnimationGlobal] = useState(0)
 	const [greenBackground] = useState(new Animated.Value(0))
+	const [blueBackground] = useState(new Animated.Value(0))
 
 	function setAnimationTransition(nextAnimationState) {
 		if (nextAnimationState === 0) {
@@ -30,7 +31,21 @@ function DownloadButton() {
 	}
 
 	function animationToReset() {
-
+		Animated.parallel([
+			Animated.timing(greenBackground, {
+				toValue: 0,
+				easing: Easing.linear(),
+				duration: 0,
+				useNativeDriver: false,
+			}),
+			Animated.timing(blueBackground, {
+				toValue: 0,
+				easing: Easing.linear(),
+				duration: 0,
+				useNativeDriver: false,
+			}),
+		]).start()
+		  setAnimationGlobal(0)
 	}
 
 	function animationToDownloading() {
@@ -41,10 +56,26 @@ function DownloadButton() {
 			useNativeDriver: false,
 		}).start()
 		setAnimationGlobal(1)
+
+		// for debug purposes
+		setTimeout(() => {
+			setAnimationTransition(2)
+		}, 3000)
 	}
 
 	function animationToFinished() {
+		Animated.timing(blueBackground, {
+			toValue: 80,
+			easing: Easing.linear(),
+			duration: 300,
+			useNativeDriver: false,
+		}).start()
+		setAnimationGlobal(2)
 
+		// for debug purposes
+		setTimeout(() => {
+			setAnimationTransition(0)
+		}, 3000)
 	}
 
 	const AnimationIcon = () => (
@@ -82,6 +113,13 @@ function DownloadButton() {
 						style={[
 							animatedStyles.greenBackground,
 							{ height: greenBackground },
+						]}
+					/>
+
+					<Animated.View
+						style={[
+							animatedStyles.blueBackground,
+							{ height: blueBackground },
 						]}
 					/>
 				</>
