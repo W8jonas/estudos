@@ -6,7 +6,8 @@ import LottieView from 'lottie-react-native'
 
 // assets
 import completedDownloadAnimation from './assets/check-blue.json'
-import downloadAnimation from './assets/download-ongoing.json'
+import downloadAnimationBlack from './assets/download-ongoingBlack.json'
+import downloadAnimationwhite from './assets/download-ongoingWhite.json'
 import styles from './styles'
 
 function DownloadButton() {
@@ -14,9 +15,9 @@ function DownloadButton() {
 
 	const AnimationIcon = () => (
 		animationGlobal === 0
-			? <LottieView source={downloadAnimation} progress={0.58} />
+			? <LottieView source={downloadAnimationBlack} progress={0.58} />
 			: animationGlobal === 1
-				? <LottieView source={downloadAnimation} autoPlay loop speed={3} />
+				? <LottieView source={downloadAnimationwhite} autoPlay loop speed={3} />
 				: <LottieView source={completedDownloadAnimation} autoPlay loop={false} speed={1} style={styles.animationContent} />
 	)
 
