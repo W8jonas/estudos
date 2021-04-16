@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native'
 
+import { colors } from './colors'
+
 const styles = StyleSheet.create({
 	screenContainer: {
 		flex: 1,
@@ -32,8 +34,20 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		width: '90%',
 	},
-	textContent: {
+	textContentDownload: {
 		fontSize: 20,
+		fontWeight: 'bold',
+		color: colors.black,
+	},
+	textContentDownloading: {
+		fontSize: 20,
+		fontWeight: 'bold',
+		color: colors.white,
+	},
+	textContentFinished: {
+		fontSize: 20,
+		fontWeight: 'bold',
+		color: colors.white,
 	},
 })
 

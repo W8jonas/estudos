@@ -11,7 +11,7 @@ import downloadAnimationwhite from './assets/download-ongoingWhite.json'
 import styles from './styles'
 
 function DownloadButton() {
-	const [animationGlobal, setAnimationGlobal] = useState(0)
+	const [animationGlobal, setAnimationGlobal] = useState(1)
 
 	const AnimationIcon = () => (
 		animationGlobal === 0
@@ -23,10 +23,10 @@ function DownloadButton() {
 
 	const TextContent = () => (
 		animationGlobal === 0
-			? <Text style={styles.textContent}>Download</Text>
+			? <Text style={styles.textContentDownload}>Download</Text>
 			: animationGlobal === 1
-				? <Text style={styles.textContent}>Downloading</Text>
-				: <Text style={styles.textContent}>Finished</Text>
+				? <Text style={styles.textContentDownloading}>Downloading</Text>
+				: <Text style={styles.textContentFinished}>Finished</Text>
 	)
 
 	return (
