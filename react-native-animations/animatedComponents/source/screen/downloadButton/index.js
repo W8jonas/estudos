@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 
 // Modules
 import LottieView from 'lottie-react-native'
@@ -11,7 +11,32 @@ import downloadAnimationwhite from './assets/download-ongoingWhite.json'
 import styles from './styles'
 
 function DownloadButton() {
-	const [animationGlobal, setAnimationGlobal] = useState(1)
+	const [animationGlobal, setAnimationGlobal] = useState(0)
+
+	function setAnimationTransition(nextAnimationState) {
+		if (nextAnimationState === 0) {
+			animationToReset()
+		}
+		if (nextAnimationState === 1) {
+			animationToDownloading()
+		}
+
+		if (nextAnimationState === 2) {
+			animationToFinished()
+		}
+	}
+
+	function animationToReset() {
+
+	}
+
+	function animationToDownloading() {
+
+	}
+
+	function animationToFinished() {
+
+	}
 
 	const AnimationIcon = () => (
 		animationGlobal === 0
@@ -31,14 +56,14 @@ function DownloadButton() {
 
 	return (
 		<View style={styles.screenContainer}>
-			<View style={styles.buttonContainer}>
+			<TouchableOpacity style={styles.buttonContainer} onPress={() => setAnimationTransition(1)} activeOpacity={0.8}>
 				<View style={styles.iconContainer}>
 					<AnimationIcon />
 				</View>
 				<View style={styles.textContainer}>
 					<TextContent />
 				</View>
-			</View>
+			</TouchableOpacity>
 		</View>
 	)
 }
