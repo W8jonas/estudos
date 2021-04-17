@@ -3,7 +3,7 @@ const cors = require('cors')
 
 const app = express()
 
-const IndexController = require('./index')
+const IndexController = require('./src/index')
 const working = require('./src/working')
 const bar = require('./bar')
 const anyChart = require('./src/anyChart')
@@ -18,6 +18,7 @@ app.get('/okBar', working.bar)
 app.get('/okStackedBar', working.stackedBar)
 app.get('/okPie', working.pie)
 app.get('/okLine', working.line)
+app.get('/okAll', working.all)
 
 app.get('/bar', bar.index)
 app.get('/anyChart', anyChart.index)
