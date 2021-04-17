@@ -2,6 +2,7 @@
 # Removendo arquivos de configuração do VScode
 .vscode/
 __pycache__/
-
+Abrir_emulador.bat
+react-native-animations/ideias.txt
 modeloMD.md
 
