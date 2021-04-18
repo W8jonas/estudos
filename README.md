@@ -5,6 +5,10 @@
 <br/>
 
 <p align="center">
+  <a href="https://badges.pufler.dev">
+    <img src="https://badges.pufler.dev/visits/W8jonas/estudos" alt="Visitors badge" />
+  </a>
+  
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/W8jonas/estudos?style=flat-square">
 
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/W8jonas/estudos?style=flat-square">
