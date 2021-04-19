@@ -157,4 +157,3 @@ async function Controller(request, response) {
 module.exports = {
     Controller
 }
-
