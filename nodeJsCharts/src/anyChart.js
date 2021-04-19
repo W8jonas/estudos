@@ -39,7 +39,7 @@ module.exports = {
 
     const svgFinal = 'chart'
 
-    fs.writeFileSync('anyChart.svg', svgFinal);
+    fs.writeFileSync('chartsCreated/anyChart.svg', svgFinal);
     return res.status(200).json({ result: "Gráfico anyChart", SVG: svgFinal })
   }
 }

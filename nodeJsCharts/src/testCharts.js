@@ -149,7 +149,7 @@ async function Controller(request, response) {
         
     const svgFinal = body.html()
 
-    fs.writeFileSync('out.svg', svgFinal)
+    fs.writeFileSync('chartsCreated/testCharts.svg', svgFinal)
 
     return response.status(200).json({result: "Gráfico FODA", SVG: svgFinal})
 }

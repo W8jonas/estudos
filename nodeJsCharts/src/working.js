@@ -47,7 +47,7 @@ async function simpleTest(req, res) {
     jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`\n  return `, '')
     jsCodeWithoutReactComponents = jsCodeWithoutReactComponents.replace(`;\n}\n\n`, '')
 
-    fs.writeFileSync('working.svg', svgFinal)
+    fs.writeFileSync('chartsCreated/simpleTest.svg', svgFinal)
     if (res){
         return res.status(200).json({ result: "Gráfico de padrao", SVG: jsCodeWithoutReactComponents })
     } else {
@@ -163,7 +163,7 @@ async function bar(req, res) {
     // console.log('jsCodeWithoutReactComponentString: ', jsCodeWithoutReactComponentString)
     const chartParsed = parse(jsCodeWithoutReactComponentString)
 
-    fs.writeFileSync('working-bar.svg', svgFinal)
+    fs.writeFileSync('chartsCreated/working-bar.svg', svgFinal)
     if (res){
         return res.status(200).json({ result: "Gráfico de barras", SVG: chartParsed })
     } else {
@@ -244,7 +244,7 @@ async function stackedBar(req, res) {
     const jsCodeWithoutReactComponentString = removeReactCompString(jsCode)
     const chartParsed = parse(jsCodeWithoutReactComponentString)
 
-    fs.writeFileSync('working-stackedBar.svg', svgFinal)
+    fs.writeFileSync('chartsCreated/working-stackedBar.svg', svgFinal)
     if (res){
         return res.status(200).json({ result: "Gráfico de barras empilhadas", SVG: chartParsed })
     } else {
@@ -434,7 +434,7 @@ async function line(req, res) {
     const jsCodeWithoutReactComponentString = removeReactCompString(jsCode)
     const chartParsed = parse(jsCodeWithoutReactComponentString)
 
-    fs.writeFileSync('line.svg', svgFinal)
+    fs.writeFileSync('chartsCreated/line.svg', svgFinal)
     if (res){
         return res.status(200).json({ result: "Gráfico de Linha", SVG: chartParsed })
     } else {
@@ -508,7 +508,7 @@ async function pie(req, res) {
     const jsCodeWithoutReactComponentString = removeReactCompString(jsCode)
     const chartParsed = parse(jsCodeWithoutReactComponentString)
 
-    fs.writeFileSync('pie.svg', svgFinal)
+    fs.writeFileSync('chartsCreated/pie.svg', svgFinal)
     if (res){
         return res.status(200).json({ result: "Gráfico de Pizza", SVG: chartParsed })
     } else {

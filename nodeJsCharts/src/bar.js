@@ -75,7 +75,7 @@ async function index(req, res) {
     
             const svgFinal = body.html()
     
-            fs.writeFileSync('bar.svg', svgFinal);
+            fs.writeFileSync('chartsCreated/bar.svg', svgFinal);
             return res.status(200).json({result: "Gráfico de barras", SVG: svgFinal})
         })
 }
