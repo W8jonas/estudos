@@ -1,16 +1,19 @@
 const express = require("express")
 const cors = require('cors')
 
-const app = express()
-
-const IndexController = require('./src/index')
-const working = require('./src/working')
-const bar = require('./bar')
+const testController = require('./src/testCharts')
+const bar = require('./src/bar')
 const anyChart = require('./src/anyChart')
+const working = require('./src/working')
+
+const app = express()
 
 app.use(cors())
 
-app.get('/', IndexController.Controller)
+app.get('/', testController.Controller)
+
+app.get('/bar', bar.index)
+app.get('/anyChart', anyChart.index)
 
 app.get('/ok', working.simpleTest)
 
@@ -20,7 +23,5 @@ app.get('/okPie', working.pie)
 app.get('/okLine', working.line)
 app.get('/okAll', working.all)
 
-app.get('/bar', bar.index)
-app.get('/anyChart', anyChart.index)
 
 app.listen(3333)
