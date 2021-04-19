@@ -60,7 +60,7 @@ function DownloadButton() {
 			Animated.timing(progressBar, {
 				toValue: 300 - 2 * 5,
 				easing: Easing.linear(),
-				duration: 3800,
+				duration: 4800,
 				useNativeDriver: false,
 			}),
 		]).start()
@@ -75,7 +75,7 @@ function DownloadButton() {
 				useNativeDriver: false,
 			}).start()
 			setAnimationTransition(2)
-		}, 4000)
+		}, 5000)
 	}
 
 	function animationToFinished() {
@@ -97,7 +97,7 @@ function DownloadButton() {
 		animationGlobal === 0
 			? <LottieView source={downloadAnimationBlack} progress={0.58} />
 			: animationGlobal === 1
-				? <LottieView source={downloadAnimationwhite} autoPlay loop speed={3} />
+				? <LottieView source={downloadAnimationwhite} autoPlay loop speed={2.5} />
 				: <LottieView source={completedDownloadAnimation} autoPlay loop={false} speed={1} style={styles.animationContent} />
 	)
 
