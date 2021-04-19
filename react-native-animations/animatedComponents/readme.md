@@ -1,5 +1,11 @@
 ### React-Native Components Animations
 
+<p align="center">
+  <a href="https://badges.pufler.dev">
+    <img src="https://badges.pufler.dev/visits/W8jonas/estudos/tree/master/react-native-animations/animatedComponents" alt="Visitors badge" />
+  </a>
+</p>
+
 #### Descrição
 Olá pessoal! Este repositório contem vários componentes individuais criados por mim contendo animações nativas do React-Native. Incluindo transições, efeitos, transformações e muitos outros. Todas são gratuitas e livres.
 
