@@ -4,6 +4,7 @@ import { Text, SafeAreaView, Image, TouchableOpacity, StyleSheet, Dimensions } f
 
 import wateringImg from '../assets/watering.png'
 import colors from '../styles/colors'
+import { Feather } from '@expo/vector-icons'
 
 export function Welcome() {
     return (
@@ -19,9 +20,7 @@ export function Welcome() {
             </Text>
 
             <TouchableOpacity style={styles.buttonContainer} activeOpacity={0.7}>
-                <Text style={styles.buttonContent}>
-                    >
-                </Text>
+                <Feather size={20} name="chevron-right" style={styles.buttonContent} />
             </TouchableOpacity>
         </SafeAreaView>
     )
@@ -56,7 +55,7 @@ const styles = StyleSheet.create({
     },
     buttonContent: {
         color: colors.white,
-        fontSize: 24,
+        fontSize: 32,
     },
     imageContent: {
         height: Dimensions.get('window').height * 0.4,
