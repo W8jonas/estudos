@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Text, SafeAreaView, Image, TouchableOpacity, StyleSheet } from 'react-native'
+import { Text, SafeAreaView, Image, TouchableOpacity, StyleSheet, Dimensions } from 'react-native'
 
 import wateringImg from '../assets/watering.png'
 import colors from '../styles/colors'
@@ -31,9 +31,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingVertical: 20,
-        paddingTop: 40,
+        justifyContent: 'space-around',
     },
     title: {
         fontSize: 32,
@@ -61,7 +59,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
     },
     imageContent: {
-        width: 292,
-        height: 284,
+        height: Dimensions.get('window').height * 0.4,
+        resizeMode: 'contain'
     }
 })
