@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Text, SafeAreaView,StyleSheet, View, TextInput, KeyboardAvoidingView, Platform } from 'react-native'
 
@@ -7,6 +7,17 @@ import fonts from '../styles/fonts'
 import { Button } from '../components/Button'
 
 export function UserIdentification() {
+    const [isFocused, setIsFocused] = useState(false)
+    const [name, setName] = useState<string>('')
+
+    function handleInputFocus() {
+        setIsFocused(true)
+    }
+
+    function handleInputBlur() {
+        setIsFocused(false)
+    }
+
     return (
         <SafeAreaView style={styles.container}>
             <KeyboardAvoidingView
@@ -15,21 +26,28 @@ export function UserIdentification() {
             >
                 <View style={styles.wrapper}>
                     <View style={styles.form}>
-                        <Text style={styles.emoji}>
-                            😃
-                        </Text>
-                        
-                        <Text style={styles.title}>
-                            Como podemos {'\n'} chamar você?
-                        </Text>
+
+                        <View style={styles.header}>
+                            <Text style={styles.emoji}>
+                                😃
+                            </Text>
+                            
+                            <Text style={styles.title}>
+                                Como podemos {'\n'} chamar você?
+                            </Text>
+
+                        </View>
 
                         <TextInput 
-                            style={styles.input}
+                            style={[styles.input, (isFocused || !!name) && {borderColor: colors.green}]}
                             placeholder="Digite seu nome"
+                            onFocus={handleInputFocus}
+                            onBlur={handleInputBlur}
+                            onChangeText={setName}
                         />
 
                         <View style={styles.footer}>
-                        <Button />
+                            <Button />
                         </View>
 
                     </View>
@@ -56,6 +74,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         paddingHorizontal: 54,
+    },
+    header: {
+        alignItems: 'center',
     },
     emoji: {
         fontSize: 44,
