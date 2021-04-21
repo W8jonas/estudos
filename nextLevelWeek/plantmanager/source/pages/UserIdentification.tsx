@@ -1,37 +1,41 @@
 import React from 'react'
 
-import { Text, SafeAreaView, Image, TouchableOpacity, StyleSheet, Dimensions, View, TextInput } from 'react-native'
+import { Text, SafeAreaView,StyleSheet, View, TextInput, KeyboardAvoidingView, Platform } from 'react-native'
 
-import wateringImg from '../assets/watering.png'
 import colors from '../styles/colors'
-import { Feather } from '@expo/vector-icons'
 import fonts from '../styles/fonts'
 import { Button } from '../components/Button'
 
 export function UserIdentification() {
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.wrapper}>
-                <View style={styles.form}>
-                    <Text style={styles.emoji}>
-                        😃
-                    </Text>
-                    
-                    <Text style={styles.title}>
-                        Como podemos {'\n'} chamar você?
-                    </Text>
+            <KeyboardAvoidingView
+                style={styles.container}
+                behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+            >
+                <View style={styles.wrapper}>
+                    <View style={styles.form}>
+                        <Text style={styles.emoji}>
+                            😃
+                        </Text>
+                        
+                        <Text style={styles.title}>
+                            Como podemos {'\n'} chamar você?
+                        </Text>
 
-                    <TextInput 
-                        style={styles.input}
-                    />
+                        <TextInput 
+                            style={styles.input}
+                            placeholder="Digite seu nome"
+                        />
 
-                    <View style={styles.footer}>
-                    <Button />
+                        <View style={styles.footer}>
+                        <Button />
+                        </View>
+
                     </View>
 
                 </View>
-
-            </View>
+            </KeyboardAvoidingView>
         </SafeAreaView>
     )
 }
