@@ -6,6 +6,7 @@ import wateringImg from '../assets/watering.png'
 import colors from '../styles/colors'
 import { Feather } from '@expo/vector-icons'
 import fonts from '../styles/fonts'
+import { Button } from '../components/Button'
 
 export function UserIdentification() {
     return (
@@ -23,13 +24,13 @@ export function UserIdentification() {
                     <TextInput 
                         style={styles.input}
                     />
+
+                    <View style={styles.footer}>
+                    <Button />
+                    </View>
+
                 </View>
 
-                <TouchableOpacity style={styles.buttonContainer} activeOpacity={0.7}>
-                    <Text>
-                        Confirmar
-                    </Text>
-                </TouchableOpacity>
             </View>
         </SafeAreaView>
     )
@@ -72,17 +73,9 @@ const styles = StyleSheet.create({
         padding: 10,
         textAlign: 'center',
     },
-    buttonContainer: {
-        backgroundColor: colors.green,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 16,
-        marginBottom: 10,
-        height: 56,
-        width: 56
-    },
-    buttonContent: {
-        color: colors.white,
-        fontSize: 32,
-    },
+    footer: {
+        marginTop: 40,
+        width: '100%',
+        paddingHorizontal: 20,
+    }
 })
