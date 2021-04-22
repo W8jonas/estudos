@@ -5,9 +5,14 @@ import {Button} from '../components/Button'
 import colors from '../styles/colors'
 import fonts from '../styles/fonts'
 
+import { Header } from '../components/Header'
+
 export function PlantSelect() {
     return (
         <SafeAreaView style={styles.container}>
+
+            <Header />
+
             <View style={styles.wrapper}>
                 <Text style={styles.emoji}>
                     😃
