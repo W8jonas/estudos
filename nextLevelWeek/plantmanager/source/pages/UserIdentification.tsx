@@ -5,10 +5,17 @@ import { Text, SafeAreaView,StyleSheet, View, TextInput, KeyboardAvoidingView, P
 import colors from '../styles/colors'
 import fonts from '../styles/fonts'
 import { Button } from '../components/Button'
+import { useNavigation } from '@react-navigation/native'
 
 export function UserIdentification() {
     const [isFocused, setIsFocused] = useState(false)
     const [name, setName] = useState<string>('')
+
+    const navigation = useNavigation()
+
+    function onNavigation() {
+        navigation.navigate('Confirmation')
+    }
 
     function handleInputFocus() {
         setIsFocused(true)
@@ -47,7 +54,7 @@ export function UserIdentification() {
                         />
 
                         <View style={styles.footer}>
-                            <Button />
+                            <Button title="Confirmar" onPress={onNavigation} />
                         </View>
 
                     </View>
