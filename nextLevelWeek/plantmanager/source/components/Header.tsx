@@ -11,7 +11,7 @@ import userImg from '../assets/image.png'
 export function Header() {
     return (
         <View style={styles.container}>
-            <View style={styles.content}>
+            <View>
                 <Text style={styles.text}>
                     Ola,
                 </Text>
@@ -31,11 +31,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row',
-        padding: 20,
-        marginTop: getStatusBarHeight()
-    },
-    content: {
-
+        marginTop: getStatusBarHeight(),
+        paddingVertical: 20,
     },
     image: {
         width: 70,
