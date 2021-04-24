@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Text, SafeAreaView, View, StyleSheet, FlatList } from 'react-native'
 
 import {Button} from '../components/Button'
@@ -7,8 +7,33 @@ import fonts from '../styles/fonts'
 
 import { Header } from '../components/Header'
 import { EnvironmentButton } from '../components/EnvironmentButton'
+import api from '../services/api'
+
+interface EnvironmentProps {
+    key: number,
+    title: string
+}
 
 export function PlantSelect() {
+    const [environment, setEnvironment] = useState<EnvironmentProps[]>([])
+
+
+    useEffect(()=>{
+        async function fetchEnvironment() {
+            const {data} = await api.get('plants_environments')
+            setEnvironment([
+                {
+                    key: 'all',
+                    title: 'Todos'
+                }, 
+                ...data
+            ])
+        }
+        
+        fetchEnvironment()
+    }, [])
+
+
     return (
         <SafeAreaView style={styles.container}>
 
@@ -26,11 +51,11 @@ export function PlantSelect() {
 
             <View>
                 <FlatList
-                data={[1, 2, 3, 4, 5, 6, 7 ]}
+                data={environment}
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 renderItem={( {item} ) => (
-                    <EnvironmentButton title="asas" active/>
+                    <EnvironmentButton title={item.title}/>
                 )}
                 contentContainerStyle={styles.EnvironmentList}
                 />
