@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Text, SafeAreaView, View, StyleSheet, FlatList } from 'react-native'
+import { Text, SafeAreaView, View, StyleSheet, FlatList, ActivityIndicator } from 'react-native'
 
 import colors from '../styles/colors'
 import fonts from '../styles/fonts'
@@ -43,7 +43,7 @@ export function PlantSelect() {
 
 
     async function fetchPlants() {
-        const {data} = await api.get(`plants?_sort=name&order=asc&_page=${page}&_limit=12`)
+        const {data} = await api.get(`plants?_sort=name&order=asc&_page=${page}&_limit=4`)
 
         if (!data) return setLoading(true)
 
@@ -144,6 +144,11 @@ export function PlantSelect() {
                     renderItem={( {item} ) => (
                         <PlantCardPrimary data={item}/>
                     )}
+                    ListFooterComponent={
+                        loadingMore 
+                        ? <ActivityIndicator color={colors.green} />
+                        : null
+                    }
                 />
             </View>
         </SafeAreaView>
