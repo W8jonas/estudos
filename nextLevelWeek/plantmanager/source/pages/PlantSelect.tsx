@@ -6,9 +6,10 @@ import fonts from '../styles/fonts'
 
 import { Header } from '../components/Header'
 import { EnvironmentButton } from '../components/EnvironmentButton'
-import api from '../services/api'
 import { PlantCardPrimary } from '../components/PlantCardPrimary'
 import { Load } from '../components/Load'
+
+import api from '../services/api'
 
 interface EnvironmentProps {
     key: string,
@@ -120,6 +121,7 @@ export function PlantSelect() {
             <View>
                 <FlatList
                     data={environments}
+                    keyExtractor={(item) => String(item.key)}
                     horizontal
                     showsHorizontalScrollIndicator={false}
                     renderItem={( {item} ) => (
@@ -136,6 +138,7 @@ export function PlantSelect() {
             <View style={styles.plants}>
                 <FlatList
                     data={filteredPlants}
+                    keyExtractor={(item) => String(item.id)}
                     showsHorizontalScrollIndicator={false}
                     numColumns={2}
                     contentContainerStyle={styles.plantsList}
