@@ -7,15 +7,17 @@ import fonts from '../styles/fonts'
 import { Button } from '../components/Button'
 import { useNavigation } from '@react-navigation/native'
 
+import AsyncStorage from '@react-native-async-storage/async-storage'
+
 export function UserIdentification() {
     const [isFocused, setIsFocused] = useState(false)
     const [name, setName] = useState<string>('')
 
     const navigation = useNavigation()
 
-    function onNavigation() {
+    async function onNavigation() {
         if(!name) return Alert.alert('Eii, espera!', '\nMe diga como chamar você 😥')
-        
+        await AsyncStorage.setItem('@plantmanager:user', name)
         navigation.navigate('Confirmation')
     }
 
