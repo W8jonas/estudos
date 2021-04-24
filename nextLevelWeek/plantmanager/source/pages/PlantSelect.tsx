@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Text, SafeAreaView, View, StyleSheet, FlatList } from 'react-native'
 
-import {Button} from '../components/Button'
 import colors from '../styles/colors'
 import fonts from '../styles/fonts'
 
@@ -38,6 +37,27 @@ export function PlantSelect() {
     const [plants, setPlants] = useState<PlantsProps[]>([])
     const [filteredPlants, setFilteredPlants] = useState<PlantsProps[]>([])
 
+    const [page, setPage] = useState(1)
+    const [loadingMore, setLoadingMore] = useState(false)
+    const [loadedAll, setLoadedAll] = useState(false)
+
+
+    async function fetchPlants() {
+        const {data} = await api.get(`plants?_sort=name&order=asc&_page=${page}&_limit=12`)
+
+        if (!data) return setLoading(true)
+
+        if (page > 1) {
+            setPlants(oldValues => [...oldValues, ...data])
+            setFilteredPlants(oldValues => [...oldValues, ...data])
+        } else {
+            setPlants(data)
+            setFilteredPlants(data)
+        }
+
+        setLoading(false)
+        setLoadingMore(false)
+    }
 
     useEffect(()=>{
         async function fetchEnvironment() {
@@ -55,16 +75,18 @@ export function PlantSelect() {
     }, [])
 
     useEffect(()=>{
-        async function fetchPlants() {
-            const {data} = await api.get('plants?_sort=name&order=asc')
-            setPlants(data)
-            setFilteredPlants(data)
-            setLoading(false)
-        }
-        
         fetchPlants()
     }, [])
 
+    function handleFetchMore(distance: number) {
+        if (distance < 1) {
+            return
+        }
+
+        setLoadingMore(true)
+        setPage(oldValue => oldValue + 1)
+        fetchPlants()
+    }
 
     function handleEnvironmentSelected(environment: string) {
         setEnvironmentSelected(environment)
@@ -116,16 +138,17 @@ export function PlantSelect() {
                     data={filteredPlants}
                     showsHorizontalScrollIndicator={false}
                     numColumns={2}
+                    contentContainerStyle={styles.plantsList}
+                    onEndReachedThreshold={0.1}
+                    onEndReached={({distanceFromEnd}) => handleFetchMore(distanceFromEnd)}
                     renderItem={( {item} ) => (
                         <PlantCardPrimary data={item}/>
                     )}
-                    contentContainerStyle={styles.plantsList}
                 />
             </View>
         </SafeAreaView>
     )
 }
-
 
 
 const styles = StyleSheet.create({
