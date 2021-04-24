@@ -8,15 +8,29 @@ import fonts from '../styles/fonts'
 import { Header } from '../components/Header'
 import { EnvironmentButton } from '../components/EnvironmentButton'
 import api from '../services/api'
+import { PlantCardPrimary } from '../components/PlantCardPrimary'
 
 interface EnvironmentProps {
     key: number,
     title: string
 }
 
+interface PlantsProps {
+    id: string,
+    name: string,
+    about: string,
+    water_tips: string,
+    photo: string,
+    environments: [string],
+    frequency: {
+      times: number,
+      repeat_every: string
+    }
+}
+
 export function PlantSelect() {
     const [environment, setEnvironment] = useState<EnvironmentProps[]>([])
-
+    const [plants, setPlants] = useState<PlantsProps[]>([])
 
     useEffect(()=>{
         async function fetchEnvironment() {
@@ -31,6 +45,15 @@ export function PlantSelect() {
         }
         
         fetchEnvironment()
+    }, [])
+
+    useEffect(()=>{
+        async function fetchPlants() {
+            const {data} = await api.get('plants')
+            setPlants(data)
+        }
+        
+        fetchPlants()
     }, [])
 
 
@@ -51,20 +74,26 @@ export function PlantSelect() {
 
             <View>
                 <FlatList
-                data={environment}
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                renderItem={( {item} ) => (
-                    <EnvironmentButton title={item.title}/>
-                )}
-                contentContainerStyle={styles.EnvironmentList}
+                    data={environment}
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    renderItem={( {item} ) => (
+                        <EnvironmentButton title={item.title}/>
+                    )}
+                    contentContainerStyle={styles.EnvironmentList}
                 />
             </View>
 
-            <View style={styles.wrapper}>
-                <View style={styles.footer}>
-                    <Button title="Começar"/>
-                </View>
+            <View style={styles.plants}>
+                <FlatList
+                    data={plants}
+                    showsHorizontalScrollIndicator={false}
+                    numColumns={2}
+                    renderItem={( {item} ) => (
+                        <PlantCardPrimary data={item}/>
+                    )}
+                    contentContainerStyle={styles.plantsList}
+                />
             </View>
         </SafeAreaView>
     )
@@ -80,13 +109,6 @@ const styles = StyleSheet.create({
     },
     header: {
         paddingHorizontal: 30,
-    },
-    wrapper: {
-        flex: 1,
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 30
     },
     EnvironmentList: {
         height: 40,
@@ -108,9 +130,12 @@ const styles = StyleSheet.create({
         color: colors.heading,
         fontFamily: fonts.heading,
     },
-    footer: {
-        width: '100%',
-        paddingHorizontal: 50,
-        marginTop: 20
+    plants: {
+        flex: 1,
+        paddingHorizontal: 16,
+        justifyContent: 'center',
+    },
+    plantsList: {
+        
     }
 })
