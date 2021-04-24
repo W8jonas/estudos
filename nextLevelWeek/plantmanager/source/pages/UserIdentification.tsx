@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Text, SafeAreaView,StyleSheet, View, TextInput, KeyboardAvoidingView, Platform } from 'react-native'
+import { Text, SafeAreaView,StyleSheet, View, TextInput, KeyboardAvoidingView, Platform, Alert } from 'react-native'
 
 import colors from '../styles/colors'
 import fonts from '../styles/fonts'
@@ -14,6 +14,8 @@ export function UserIdentification() {
     const navigation = useNavigation()
 
     function onNavigation() {
+        if(!name) return Alert.alert('Eii, espera!', '\nMe diga como chamar você 😥')
+        
         navigation.navigate('Confirmation')
     }
 
