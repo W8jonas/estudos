@@ -24,18 +24,15 @@ export function EnvironmentButton({title, active = false, ...props}: Environment
 
 const styles = StyleSheet.create({
     container: {
+        height: 40,
+        width: 76,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: colors.green,
-        borderRadius: 16,
-        marginBottom: 10,
-        height: 56,
+        borderRadius: 12,
+        backgroundColor: colors.shape,
     },
     text: {
-        color: colors.white,
-        fontSize: 16,
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontFamily: fonts.heading
+        color: colors.heading,
+        fontFamily: fonts.text
     },
 })
