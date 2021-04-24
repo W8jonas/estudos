@@ -1,11 +1,12 @@
 import React from 'react'
 
-import { Text, TouchableOpacity, StyleSheet} from 'react-native'
+import { Text, StyleSheet} from 'react-native'
 
 import colors from '../styles/colors'
 import fonts from '../styles/fonts'
 
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler'
+import {SvgFromUri} from 'react-native-svg'
 
 interface PlantCardPrimaryProps extends RectButtonProps {
     data: {
@@ -20,10 +21,11 @@ export function PlantCardPrimary({data, ...props}: PlantCardPrimaryProps) {
             style={styles.container} 
             {...props}
         >
-        <Text style={styles.text}>
-            {data.name}
-        </Text>
-    </RectButton>
+            <SvgFromUri uri={data.photo} width={'150%'}/>
+            <Text style={styles.text}>
+                {data.name}
+            </Text>
+        </RectButton>
     )
 }
 
