@@ -9,6 +9,7 @@ import { Header } from '../components/Header'
 import { EnvironmentButton } from '../components/EnvironmentButton'
 import api from '../services/api'
 import { PlantCardPrimary } from '../components/PlantCardPrimary'
+import { Load } from '../components/Load'
 
 interface EnvironmentProps {
     key: string,
@@ -29,6 +30,8 @@ interface PlantsProps {
 }
 
 export function PlantSelect() {
+    const [loading, setLoading] = useState(true)
+
     const [environments, setEnvironments] = useState<EnvironmentProps[]>([])
     const [environmentSelected, setEnvironmentSelected] = useState('all')
 
@@ -56,6 +59,7 @@ export function PlantSelect() {
             const {data} = await api.get('plants?_sort=name&order=asc')
             setPlants(data)
             setFilteredPlants(data)
+            setLoading(false)
         }
         
         fetchPlants()
@@ -72,6 +76,9 @@ export function PlantSelect() {
         setFilteredPlants(filtered)
     }
 
+    if(loading) {
+        return <Load />
+    }
 
     return (
         <SafeAreaView style={styles.container}>
