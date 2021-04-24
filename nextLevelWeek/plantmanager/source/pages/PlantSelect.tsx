@@ -11,7 +11,7 @@ import api from '../services/api'
 import { PlantCardPrimary } from '../components/PlantCardPrimary'
 
 interface EnvironmentProps {
-    key: number,
+    key: string,
     title: string
 }
 
@@ -29,13 +29,17 @@ interface PlantsProps {
 }
 
 export function PlantSelect() {
-    const [environment, setEnvironment] = useState<EnvironmentProps[]>([])
+    const [environments, setEnvironments] = useState<EnvironmentProps[]>([])
+    const [environmentSelected, setEnvironmentSelected] = useState('all')
+
     const [plants, setPlants] = useState<PlantsProps[]>([])
+    const [filteredPlants, setFilteredPlants] = useState<PlantsProps[]>([])
+
 
     useEffect(()=>{
         async function fetchEnvironment() {
             const {data} = await api.get('plants_environments?_sort=title&order=asc')
-            setEnvironment([
+            setEnvironments([
                 {
                     key: 'all',
                     title: 'Todos'
@@ -51,10 +55,22 @@ export function PlantSelect() {
         async function fetchPlants() {
             const {data} = await api.get('plants?_sort=name&order=asc')
             setPlants(data)
+            setFilteredPlants(data)
         }
         
         fetchPlants()
     }, [])
+
+
+    function handleEnvironmentSelected(environment: string) {
+        setEnvironmentSelected(environment)
+
+        if (environment === 'all') return setFilteredPlants(plants)
+
+        const filtered = plants.filter(plant => plant.environments.includes(environment))
+
+        setFilteredPlants(filtered)
+    }
 
 
     return (
@@ -74,11 +90,15 @@ export function PlantSelect() {
 
             <View>
                 <FlatList
-                    data={environment}
+                    data={environments}
                     horizontal
                     showsHorizontalScrollIndicator={false}
                     renderItem={( {item} ) => (
-                        <EnvironmentButton title={item.title}/>
+                        <EnvironmentButton
+                            title={item.title}
+                            active={item.key === environmentSelected}
+                            onPress={() => handleEnvironmentSelected(item.key)}
+                        />
                     )}
                     contentContainerStyle={styles.EnvironmentList}
                 />
@@ -86,7 +106,7 @@ export function PlantSelect() {
 
             <View style={styles.plants}>
                 <FlatList
-                    data={plants}
+                    data={filteredPlants}
                     showsHorizontalScrollIndicator={false}
                     numColumns={2}
                     renderItem={( {item} ) => (
