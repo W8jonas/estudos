@@ -48,7 +48,7 @@ export async function lodePlant() : Promise<PlantProps[]> {
         const data = await AsyncStorage.getItem('@plantmanager:plants')
         const plants = data ? (JSON.parse(data) as StoragePlantProps) : {}
 
-        const plantsSorted = Object().key(plants)
+        const plantsSorted = Object.keys(plants)
         .map((plant) => {
             return {
                 ...plants[plant].data,
