@@ -17,8 +17,14 @@ export function UserIdentification() {
 
     async function onNavigation() {
         if(!name) return Alert.alert('Eii, espera!', '\nMe diga como chamar você 😥')
-        await AsyncStorage.setItem('@plantmanager:user', name)
-        navigation.navigate('Confirmation')
+        
+        try {
+            await AsyncStorage.setItem('@plantmanager:user', name)
+            navigation.navigate('Confirmation')
+        } catch (error) {
+            Alert.alert('Eii, espera!', 'Tivemos um problema ao salvar seu nome, 😥\ntente novamente!')
+        }
+
     }
 
     function handleInputFocus() {
