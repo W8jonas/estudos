@@ -10,13 +10,14 @@ import { PlantCardPrimary } from '../components/PlantCardPrimary'
 import { Load } from '../components/Load'
 
 import api from '../services/api'
+import { useNavigation } from '@react-navigation/native'
 
 interface EnvironmentProps {
     key: string,
     title: string
 }
 
-interface PlantsProps {
+interface PlantProps {
     id: string,
     name: string,
     about: string,
@@ -30,17 +31,18 @@ interface PlantsProps {
 }
 
 export function PlantSelect() {
+    const navigation = useNavigation()
+
     const [loading, setLoading] = useState(true)
 
     const [environments, setEnvironments] = useState<EnvironmentProps[]>([])
     const [environmentSelected, setEnvironmentSelected] = useState('all')
 
-    const [plants, setPlants] = useState<PlantsProps[]>([])
-    const [filteredPlants, setFilteredPlants] = useState<PlantsProps[]>([])
+    const [plants, setPlants] = useState<PlantProps[]>([])
+    const [filteredPlants, setFilteredPlants] = useState<PlantProps[]>([])
 
     const [page, setPage] = useState(1)
     const [loadingMore, setLoadingMore] = useState(false)
-    const [loadedAll, setLoadedAll] = useState(false)
 
 
     async function fetchPlants() {
@@ -99,6 +101,11 @@ export function PlantSelect() {
         setFilteredPlants(filtered)
     }
 
+    function handlePlantSelect(plant: PlantProps) {
+        navigation.navigate('PlantSave')
+    }
+
+
     if(loading) {
         return <Load />
     }
@@ -145,7 +152,7 @@ export function PlantSelect() {
                     onEndReachedThreshold={0.1}
                     onEndReached={({distanceFromEnd}) => handleFetchMore(distanceFromEnd)}
                     renderItem={( {item} ) => (
-                        <PlantCardPrimary data={item}/>
+                        <PlantCardPrimary data={item} onPress={handlePlantSelect}/>
                     )}
                     ListFooterComponent={
                         loadingMore 
