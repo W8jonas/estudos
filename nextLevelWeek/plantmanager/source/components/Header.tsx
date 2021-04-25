@@ -27,7 +27,7 @@ export function Header() {
                     Ola,
                 </Text>
                 <Text style={styles.textName}>
-                    Jonas
+                    {userName}
                 </Text>
             </View>
 
