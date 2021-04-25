@@ -8,7 +8,7 @@ import fonts from '../styles/fonts'
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler'
 import {SvgFromUri} from 'react-native-svg'
 
-interface PlantCardSecondaryProps extends RectButtonProps {
+interface PlantProps extends RectButtonProps {
     data: {
         name: string,
         photo: string,
@@ -16,13 +16,13 @@ interface PlantCardSecondaryProps extends RectButtonProps {
     }
 }
 
-export function PlantCardSecondary({data, ...props}: PlantCardSecondaryProps) {
+export function PlantCardSecondary({data, ...props}: PlantProps) {
     return (
         <RectButton 
             style={styles.container} 
             {...props}
         >
-            <SvgFromUri uri={data.photo} width={'150%'}/>
+            <SvgFromUri uri={data.photo} width={50} height={50}/>
             
             <Text style={styles.text}>
                 {data.name}
@@ -56,6 +56,8 @@ const styles = StyleSheet.create({
         flex: 1,
         marginLeft: 10,
         fontFamily: fonts.heading,
+        fontSize: 17,
+        color: colors.heading
     },
     details: {
         alignItems: 'flex-end',

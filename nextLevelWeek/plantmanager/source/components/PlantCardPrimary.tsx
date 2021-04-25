@@ -8,14 +8,14 @@ import fonts from '../styles/fonts'
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler'
 import {SvgFromUri} from 'react-native-svg'
 
-interface PlantCardPrimaryProps extends RectButtonProps {
+interface PlantProps extends RectButtonProps {
     data: {
         name: string,
         photo: string
     }
 }
 
-export function PlantCardPrimary({data, ...props}: PlantCardPrimaryProps) {
+export function PlantCardPrimary({data, ...props}: PlantProps) {
     return (
         <RectButton 
             style={styles.container} 
