@@ -16,4 +16,29 @@ export interface PlantProps {
     dateTimeNotification: Date
 }
 
+interface StoragePlantProps {
+    [id: string]: {
+        data: PlantProps
+    }
+}
 
+
+export async function savePlant(plant: PlantProps) : Promise<void> {
+
+    try {
+        const data = await AsyncStorage.getItem('@plantmanager:plants')
+        const oldPlants = data ? (JSON.parse(data) as StoragePlantProps) : {}
+
+        const newPlant = {
+            [plant.id]: {
+                data: plant
+            }
+        }
+
+        await AsyncStorage.setItem('@plantmanager:plants', JSON.stringify({...newPlant, ...oldPlants}))
+
+    } catch (error) {
+        throw new Error(error)
+    }
+
+}
