@@ -9,20 +9,41 @@ import {SvgFromUri} from 'react-native-svg'
 import waterDrop from '../assets/waterdrop.png'
 import { Button } from '../components/Button'
 import { getBottomSpace } from 'react-native-iphone-x-helper'
+import { useRoute } from '@react-navigation/native'
+
+interface Params {
+    plant: {
+        id: string,
+        name: string,
+        about: string,
+        water_tips: string,
+        photo: string,
+        environments: [string],
+        frequency: {
+            times: number,
+            repeat_every: string
+        }
+    }
+}
 
 export function PlantSave() {
+
+    const route = useRoute()
+
+    const { plant } = route.params as Params 
+
+
     return (
         <View style={styles.container}>
             <View style={styles.plantInfo}>
-                <SvgFromUri uri="" width={150} height={150} />
+                <SvgFromUri uri={plant.photo} width={150} height={150} />
 
                 <Text style={styles.plantName}>
-                    Nome da planta
+                    {plant.name}
                 </Text>
 
                 <Text style={styles.plantAbout}>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio tempore magnam perspiciatis! 
-                    Nemo, dolore. Iusto, hic quis quo beatae voluptas quos adipisci velit
+                    {plant.about}
                 </Text>
             </View>
 
@@ -30,7 +51,7 @@ export function PlantSave() {
                 <View style={styles.tipContainer}>
                     <Image source={waterDrop} style={styles.tipImage} />
                     <Text style={styles.tipText}>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio tempore magnam perspiciatis! 
+                        {plant.water_tips}
                     </Text>
                 </View>
 
