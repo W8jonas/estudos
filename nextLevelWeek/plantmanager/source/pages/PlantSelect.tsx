@@ -102,7 +102,7 @@ export function PlantSelect() {
     }
 
     function handlePlantSelect(plant: PlantProps) {
-        navigation.navigate('PlantSave')
+        navigation.navigate('PlantSave', { plant })
     }
 
 
@@ -152,7 +152,7 @@ export function PlantSelect() {
                     onEndReachedThreshold={0.1}
                     onEndReached={({distanceFromEnd}) => handleFetchMore(distanceFromEnd)}
                     renderItem={( {item} ) => (
-                        <PlantCardPrimary data={item} onPress={handlePlantSelect}/>
+                        <PlantCardPrimary data={item} onPress={() => handlePlantSelect(item)}/>
                     )}
                     ListFooterComponent={
                         loadingMore 
