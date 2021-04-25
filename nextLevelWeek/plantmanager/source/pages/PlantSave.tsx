@@ -6,11 +6,11 @@ import fonts from '../styles/fonts'
 import waterDrop from '../assets/waterdrop.png'
 
 import { Button } from '../components/Button'
-import { PlantProps, savePlant } from '../libs/storage'
+import { lodePlant, PlantProps, savePlant } from '../libs/storage'
 
 import {SvgFromUri} from 'react-native-svg'
 import { getBottomSpace } from 'react-native-iphone-x-helper'
-import { useRoute } from '@react-navigation/native'
+import { useNavigation, useRoute } from '@react-navigation/native'
 import { isBefore } from 'date-fns'
 import DateTimePicker, { Event } from '@react-native-community/datetimepicker'
 import { format } from 'date-fns/esm'
@@ -23,7 +23,7 @@ interface Params {
 export function PlantSave() {
     const route = useRoute()
     const { plant } = route.params as Params 
-
+    const navigation = useNavigation()
     const [selectedDateTime, setSelectedDateTime] = useState(new Date())
     const [showDatePicker, setShowDatePicker] = useState(Platform.OS === 'ios')
 
@@ -46,12 +46,21 @@ export function PlantSave() {
         setShowDatePicker(oldState => !oldState)
     }
 
-    async function handleSave(){
+    async function handleSave() {
         try {
             await savePlant({
                 ...plant,
                 dateTimeNotification: selectedDateTime
             })
+
+            navigation.navigate('Confirmation', {
+                title: 'Tudo certo',
+                caption: 'Fique tranquilo que sempre vamos lembrar você de cuidar da sua plantinha com bastante amor.',
+                buttonTitle: 'Muito obrigado :D',
+                icon: 'hug',
+                nextScreen: 'MyPlants'
+            })
+
         } catch {
             Alert.alert('Eii, espera!', 'Não foi possível salvar. 😥\ntente novamente!')
         }
@@ -104,7 +113,7 @@ export function PlantSave() {
                         </TouchableOpacity>
                 )}
 
-                <Button title="Cadastrar planta" onPress={()=>{}}/>
+                <Button title="Cadastrar planta" onPress={handleSave}/>
             </View>
         </View>
     )
