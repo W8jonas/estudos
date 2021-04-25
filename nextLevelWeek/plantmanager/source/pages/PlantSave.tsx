@@ -6,7 +6,7 @@ import fonts from '../styles/fonts'
 import waterDrop from '../assets/waterdrop.png'
 
 import { Button } from '../components/Button'
-import { PlantProps } from '../libs/storage'
+import { PlantProps, savePlant } from '../libs/storage'
 
 import {SvgFromUri} from 'react-native-svg'
 import { getBottomSpace } from 'react-native-iphone-x-helper'
@@ -44,6 +44,17 @@ export function PlantSave() {
 
     function handleOpenDateTimePickerForAndroid() {
         setShowDatePicker(oldState => !oldState)
+    }
+
+    async function handleSave(){
+        try {
+            await savePlant({
+                ...plant,
+                dateTimeNotification: selectedDateTime
+            })
+        } catch {
+            Alert.alert('Eii, espera!', 'Não foi possível salvar. 😥\ntente novamente!')
+        }
     }
 
     return (
