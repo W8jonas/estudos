@@ -57,7 +57,6 @@ export function MyPlants() {
                         <PlantCardSecondary data={item}/>
                     )}
                     showsVerticalScrollIndicator={false}
-                    contentContainerStyle={{flex: 1}}
                 />
             </View>
         </View>
@@ -71,14 +70,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         paddingHorizontal: 30,
-        paddingTop: 50,
         backgroundColor: colors.background
     },
     spotlight: {
         backgroundColor: colors.blue_light,
         paddingHorizontal: 20,
         borderRadius: 20,
-        height: 110,
+        height: 100,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
