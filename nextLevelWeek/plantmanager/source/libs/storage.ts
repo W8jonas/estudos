@@ -68,3 +68,20 @@ export async function lodePlant() : Promise<PlantProps[]> {
         throw new Error(error)
     }
 }
+
+
+export async function deletePlant(id: string) : Promise<void> {
+    try {
+        const data = await AsyncStorage.getItem('@plantmanager:plants')
+        const plants = data ? (JSON.parse(data) as StoragePlantProps) : {}
+
+        delete plants[id]
+
+        await AsyncStorage.setItem('@plantmanager:plants', JSON.stringify(plants))
+
+    } catch (error) {
+        throw new Error(error)
+    }
+
+}
+
