@@ -6,7 +6,7 @@ import fonts from '../styles/fonts'
 import waterDrop from '../assets/waterdrop.png'
 
 import { Button } from '../components/Button'
-import { lodePlant, PlantProps, savePlant } from '../libs/storage'
+import { PlantProps, savePlant } from '../libs/storage'
 
 import {SvgFromUri} from 'react-native-svg'
 import { getBottomSpace } from 'react-native-iphone-x-helper'
