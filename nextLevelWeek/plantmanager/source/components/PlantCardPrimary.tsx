@@ -21,6 +21,7 @@ export function PlantCardPrimary({data, ...props}: PlantProps) {
             style={styles.container} 
             {...props}
         >
+            <Text> </Text>
             <SvgFromUri uri={data.photo} width={'150%'}/>
             <Text style={styles.text}>
                 {data.name}
@@ -34,11 +35,13 @@ const styles = StyleSheet.create({
         flex: 1,
         maxWidth: '45%',
         alignItems: 'center',
+        justifyContent: 'space-between',
         backgroundColor: colors.shape,
         borderRadius: 20,
         margin: 10,
     },
     text: {
+        justifyContent: 'flex-end',
         color: colors.green_dark,
         fontFamily: fonts.heading,
         marginVertical: 16,
