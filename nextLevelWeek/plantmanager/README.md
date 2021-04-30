@@ -29,3 +29,9 @@
 
 </details>
 
+
+## Etapas desenvolvidas:
+- [x] server
+- [x] web
+- [x] mobile
+- [x] funcionalidade avançadas
