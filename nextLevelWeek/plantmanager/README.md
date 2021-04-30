@@ -9,3 +9,23 @@
 </h3>
 
 <br/>
+
+
+<details>
+  <summary>Tecnologias detalhadas</summary>
+
+  - TypeScript
+  - Expo
+  - expo-notifications
+  - expo-vector-icons
+  - async-storage
+  - ESlint
+  - datetimepicker
+  - react-navigation
+  - react-native-svg
+  - reanimated
+  - lottie
+  - date-fns
+
+</details>
+
