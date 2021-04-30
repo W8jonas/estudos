@@ -1,3 +1,4 @@
+
 <h1 align="center">
     <img alt="Ecoleta" src="fotos_do_projeto/icon.png" width="150" />
     <br/>
@@ -10,25 +11,28 @@
 
 <br/>
 
+## Tecnologias
+Esse projeto foi desenvolvido utilizando como principal linguagem o **Typescript**, usando os frameworks o **React-Native**, na plataforma **Expo** e algumas libs extras, como vector-icons e notifications.
 
 <details>
   <summary>Tecnologias detalhadas</summary>
 
   - TypeScript
   - Expo
-  - expo-notifications
-  - expo-vector-icons
+  - Expo-notifications
+  - Expo-vector-icons
   - async-storage
   - ESlint
-  - datetimepicker
-  - react-navigation
-  - react-native-svg
-  - reanimated
-  - lottie
-  - date-fns
+  - Datetimepicker
+  - React-navigation
+  - React-native-svg
+  - Reanimated
+  - Lottie
+  - Date-fns
 
 </details>
 
+<br/>
 
 ## Etapas desenvolvidas:
 - [x] server
