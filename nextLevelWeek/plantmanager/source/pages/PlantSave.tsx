@@ -184,8 +184,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontFamily: fonts.complement,
         color: colors.heading,
-        fontSize: 12,
-        marginBottom: 5
+        fontSize: 18,
     },
     androidDateTimePickerButton: {
         width: '100%',
