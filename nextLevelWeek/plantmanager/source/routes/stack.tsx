@@ -31,7 +31,7 @@ const AppRoutes: React.FC = () => {
                 cardStyle: {backgroundColor: colors.white}
             }}
         >
-            {authenticated !== null ? (
+            {!authenticated ? (
                 <>
                     <StackRouts.Screen name="Welcome" component={Welcome} />
                     <StackRouts.Screen name="UserIdentification" component={UserIdentification} />
