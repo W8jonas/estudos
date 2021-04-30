@@ -20,6 +20,7 @@ export function UserIdentification() {
         
         try {
             await AsyncStorage.setItem('@plantmanager:user', name)
+            await AsyncStorage.setItem('@plantmanager:token', String(Math.random()))
             navigation.navigate('Confirmation', {
                 title: 'Prontinho',
                 caption: 'Agora vamos começar a cuidar das suas plantinhas com muito cuidado.',
