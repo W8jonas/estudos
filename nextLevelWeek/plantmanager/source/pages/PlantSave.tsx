@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
         padding: 20,
         borderRadius: 20,
         position: 'relative',
-        bottom: 60,
+        bottom: 40,
     },
     tipImage: {
         width: 56,
