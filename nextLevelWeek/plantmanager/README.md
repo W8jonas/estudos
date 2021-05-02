@@ -47,5 +47,5 @@ Esse projeto foi desenvolvido utilizando como principal linguagem o **Typescript
 
 ![](fotos_do_projeto/Screenshot_1.png)  |  ![](fotos_do_projeto/Screenshot_2.png) |  ![](fotos_do_projeto/Screenshot_3.png)  |
 |:---------------:|:----------------:|:-----------------:|
-![](fotos_do_projeto/Screenshot_4.png)  |  ![](fotos_do_projeto/Screenshot_5.png) |  ![](fotos_do_projeto/Screenshot_5.png)  |
+![](fotos_do_projeto/Screenshot_4.png)  |  ![](fotos_do_projeto/Screenshot_5.png) |  ![](fotos_do_projeto/Screenshot_6.png)  |
 
