@@ -39,3 +39,13 @@ Esse projeto foi desenvolvido utilizando como principal linguagem o **Typescript
 - [x] web
 - [x] mobile
 - [x] funcionalidade avançadas
+
+<br/>
+
+
+## Abaixo seguem algumas prints de todo o projeto
+
+![](fotos_do_projeto/Screenshot_1.png)  |  ![](fotos_do_projeto/Screenshot_2.png) |  ![](fotos_do_projeto/Screenshot_3.png)  |
+|:---------------:|:----------------:|:-----------------:|
+![](fotos_do_projeto/Screenshot_4.png)  |  ![](fotos_do_projeto/Screenshot_5.png) |  ![](fotos_do_projeto/Screenshot_5.png)  |
+
