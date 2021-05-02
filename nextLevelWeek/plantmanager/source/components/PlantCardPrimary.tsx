@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Text, StyleSheet} from 'react-native'
+import { Text, StyleSheet, View} from 'react-native'
 
 import colors from '../styles/colors'
 import fonts from '../styles/fonts'
@@ -21,8 +21,9 @@ export function PlantCardPrimary({data, ...props}: PlantProps) {
             style={styles.container} 
             {...props}
         >
-            <Text> </Text>
-            <SvgFromUri uri={data.photo} width={'150%'}/>
+            <View style={styles.imageContainer}>
+                <SvgFromUri uri={data.photo} width={'150%'}/>
+            </View>
             <Text style={styles.text}>
                 {data.name}
             </Text>
@@ -34,11 +35,18 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         maxWidth: '45%',
+        maxHeight: 290,
         alignItems: 'center',
         justifyContent: 'space-between',
         backgroundColor: colors.shape,
         borderRadius: 20,
         margin: 10,
+    },
+    imageContainer: {
+        width: '100%',
+        height: '80%',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     text: {
         justifyContent: 'flex-end',
