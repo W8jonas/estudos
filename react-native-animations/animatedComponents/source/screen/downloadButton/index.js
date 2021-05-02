@@ -12,7 +12,7 @@ import downloadAnimationBlack from './assets/download-ongoingBlack.json'
 import downloadAnimationwhite from './assets/download-ongoingWhite.json'
 import { styles, animatedStyles } from './styles'
 
-function DownloadButton() {
+export function DownloadButton() {
 	const [animationGlobal, setAnimationGlobal] = useState(0)
 	const [greenBackground] = useState(new Animated.Value(0))
 	const [blueBackground] = useState(new Animated.Value(0))
@@ -151,5 +151,3 @@ function DownloadButton() {
 		</View>
 	)
 }
-
-export default DownloadButton
