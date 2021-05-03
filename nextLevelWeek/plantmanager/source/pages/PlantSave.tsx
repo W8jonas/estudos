@@ -58,7 +58,8 @@ export function PlantSave() {
                 caption: 'Fique tranquilo que sempre vamos lembrar você de cuidar da sua plantinha com bastante amor.',
                 buttonTitle: 'Muito obrigado :D',
                 icon: 'hug',
-                nextScreen: 'MyPlants'
+                nextScreen: 'MyPlants',
+                nextScreenParameters: {screen: 'Minhas Plantas'}
             })
 
         } catch {

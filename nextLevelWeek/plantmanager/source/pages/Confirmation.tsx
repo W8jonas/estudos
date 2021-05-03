@@ -12,6 +12,7 @@ interface Params {
     buttonTitle: string,
     icon: 'smile' | 'hug',
     nextScreen: string,
+    nextScreenParameters: object
 }
 
 const emojis = {
@@ -30,10 +31,11 @@ export function Confirmation() {
         buttonTitle,
         icon,
         nextScreen,
+        nextScreenParameters
     } = routes.params as Params
 
     function onNavigation() {
-        navigation.navigate(nextScreen)
+        navigation.navigate(nextScreen, nextScreenParameters)
     }
 
     return (
