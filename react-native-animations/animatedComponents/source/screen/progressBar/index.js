@@ -6,14 +6,14 @@ import LottieView from 'lottie-react-native'
 
 // Assets
 import levelUpConfetti from './assets/level-up-confetti-animation.json'
-import upLevelStart from './assets/level-up-start.json'
 
-export function ProgressBar() {
+export function LevelUpCard() {
 	return (
 		<View style={styles.screenContainer}>
 			<View style={styles.container}>
-				<LottieView source={levelUpConfetti} autoPlay loop />
-				<Text style={styles.textLevel}>Parabéns!! Você upou para o próximo level!</Text>
+				<LottieView source={levelUpConfetti} autoPlay loop={false} />
+				<Text style={styles.textLevelTitle}>Parabéns!!</Text>
+				<Text style={styles.textLevelCaption}> Você alcançou o próximo level!</Text>
 			</View>
 		</View>
 	)
@@ -34,8 +34,14 @@ const styles = StyleSheet.create({
 		padding: 10,
 		backgroundColor: '#FFF',
 	},
-	textLevel: {
-		fontSize: 16,
+	textLevelTitle: {
+		fontSize: 20,
+		fontWeight: 'bold',
+		paddingTop: 10,
+	},
+	textLevelCaption: {
+		fontSize: 18,
+		fontWeight: 'bold',
 		paddingTop: 10,
 	},
 })
