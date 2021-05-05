@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 // Screens
 import { MainScreen } from './MainScreen'
 import { DownloadButton } from './screen/downloadButton/index'
-import { ProgressBar } from './screen/progressBar/index'
+import { LevelUpCard } from './screen/progressBar/index'
 
 const Stack = createStackNavigator()
 
@@ -32,7 +32,7 @@ function App() {
 
 				<Stack.Screen
 					name="ProgressBar"
-					component={ProgressBar}
+					component={LevelUpCard}
 					options={defaultConfigForScreens}
 				/>
 			</Stack.Navigator>
