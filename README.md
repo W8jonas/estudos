@@ -75,6 +75,7 @@ Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Serve
 
  - Alura
     - [Imersão React - AluraFlix](https://github.com/W8jonas/estudos/tree/master/Alura/imersaoReact/aluraflix)
+    - [Imersão Dados - Trabalhando com DataScience](https://github.com/W8jonas/estudos/tree/master/Alura/imersaoDados02)
     - [Imersão ReactNext - eletronicaquiz](https://github.com/W8jonas/estudos/tree/master/Alura/imersaoReactNextJs/eletronicaquiz)
 
  - [NextLevelWeek](https://github.com/W8jonas/estudos/tree/master/nextLevelWeek)
@@ -91,6 +92,8 @@ Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Serve
   - [rocketpay](https://github.com/W8jonas/estudos/tree/master/rocketpay)
 
  - [Erick Wendel - cloneZoom](https://github.com/W8jonas/estudos/tree/master/Erick%20Wendel/cloneZoom)
+
+ - [arquitetura e padrões de projetos - App de todo](https://github.com/W8jonas/estudos/tree/master/arquitetura_e_padroes_de_projetos/todoApp)
 
   - Eletronics, ESP, Arduino and IOT
     - [WiFiNetworkListWithESP32](https://github.com/W8jonas/estudos/tree/master/Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/WiFiNetworkListWithESP32)
