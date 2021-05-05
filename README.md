@@ -75,7 +75,7 @@ Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Serve
 
  - Alura
     - [Imersão React - AluraFlix](https://github.com/W8jonas/estudos/tree/master/Alura/imersaoReact/aluraflix)
-    - [Imersão Dados - Trabalhando com DataScience](https://github.com/W8jonas/estudos/tree/master/Alura/imersaoDados02)
+    - [Imersão Dados - Trabalhando com Data science](https://github.com/W8jonas/estudos/tree/master/Alura/imersaoDados02)
     - [Imersão ReactNext - eletronicaquiz](https://github.com/W8jonas/estudos/tree/master/Alura/imersaoReactNextJs/eletronicaquiz)
 
  - [NextLevelWeek](https://github.com/W8jonas/estudos/tree/master/nextLevelWeek)
@@ -87,19 +87,23 @@ Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Serve
  - [SemanaOmniStack](https://github.com/W8jonas/estudos/tree/master/semanaOmniStack)
     - [Semana 11 - Be The Hero](https://github.com/W8jonas/estudos/tree/master/semanaOmniStack/semana11)
 
-  - [chartcoronavirus](https://github.com/W8jonas/estudos/tree/master/chartcoronavirus/web)
+ - [Chartcoronavirus](https://github.com/W8jonas/estudos/tree/master/chartcoronavirus/web)
 
-  - [rocketpay](https://github.com/W8jonas/estudos/tree/master/rocketpay)
+ - [Rocketpay](https://github.com/W8jonas/estudos/tree/master/rocketpay)
+
+ - [NodeJs SVG Charts](https://github.com/W8jonas/estudos/tree/master/nodeJsCharts)
+
+ - [Imersão data science](https://github.com/W8jonas/estudos/tree/master/dataScience)
 
  - [Erick Wendel - cloneZoom](https://github.com/W8jonas/estudos/tree/master/Erick%20Wendel/cloneZoom)
 
  - [arquitetura e padrões de projetos - App de todo](https://github.com/W8jonas/estudos/tree/master/arquitetura_e_padroes_de_projetos/todoApp)
 
-  - Eletronics, ESP, Arduino and IOT
+ - Eletronics, ESP, Arduino and IOT
     - [WiFiNetworkListWithESP32](https://github.com/W8jonas/estudos/tree/master/Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/WiFiNetworkListWithESP32)
     - [CommunicationWithSocket_ESP32_to_ESP8266](https://github.com/W8jonas/estudos/tree/master/Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/ComunicationWithSocket_ESP32_to_ESP8266)
     - [studyingPointersToCommunication](https://github.com/W8jonas/estudos/tree/master/Eletronics%2C%20ESP%2C%20Arduino%20and%20IOT/studyingPointersToCommunication)
 
- - ESP32BLE_to_RN_APP
+ - ESP32 Bluetooth communication to React-Native APP
     - [Aplicativo](https://github.com/W8jonas/estudos/tree/master/ESP32BLE_to_RN_APP/mobile)
     - [ESP32ServerBLE](https://github.com/W8jonas/estudos/tree/master/ESP32BLE_to_RN_APP/ESP32ServerBLE)
