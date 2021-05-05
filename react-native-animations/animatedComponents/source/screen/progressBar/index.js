@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 
 // Modules
 
@@ -11,8 +11,26 @@ import { View, Text, TouchableOpacity } from 'react-native'
 
 export function ProgressBar() {
 	return (
-		<View>
-			<Text>ProgressBar</Text>
+		<View style={styles.screenContainer}>
+			<View style={styles.container}>
+				<Text>ProgressBar</Text>
+			</View>
 		</View>
 	)
 }
+
+const styles = StyleSheet.create({
+	screenContainer: {
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: '#000',
+	},
+	container: {
+		width: '80%',
+		height: '70%',
+		borderRadius: 40,
+		padding: 10,
+		backgroundColor: '#FFF',
+	},
+})
