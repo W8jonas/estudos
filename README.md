@@ -89,6 +89,8 @@ Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Serve
 
  - [Chartcoronavirus](https://github.com/W8jonas/estudos/tree/master/chartcoronavirus/web)
 
+ - [React Native animations](https://github.com/W8jonas/estudos/tree/master/react-native-animations/animatedComponents)
+
  - [Rocketpay](https://github.com/W8jonas/estudos/tree/master/rocketpay)
 
  - [NodeJs SVG Charts](https://github.com/W8jonas/estudos/tree/master/nodeJsCharts)
@@ -109,6 +111,6 @@ Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Serve
     - [ESP32ServerBLE](https://github.com/W8jonas/estudos/tree/master/ESP32BLE_to_RN_APP/ESP32ServerBLE)
 
  - Projetos de video-aulas do youtube
-    - [CRUD Code Drops #65](https://github.com/W8jonas/estudos/tree/master/youtube/CRUD%20code%20drops%20#65)
+    - [CRUD Code Drops #65](https://github.com/W8jonas/estudos/tree/master/youtube/CRUD%20code%20drops%20%2365)
     - [estrutura de dados usando C - Fabio Akita](https://github.com/W8jonas/estudos/tree/master/youtube/estrutura%20de%20dados%20usando%20C%20-%20Fabio%20Akita)
     - [pseudo objetos - Fabio Akita - Entendendo C](https://github.com/W8jonas/estudos/tree/master/youtube/pseudo%20objetos%20-%20Fabio%20Akita%20-%20Entendendo%20C)
