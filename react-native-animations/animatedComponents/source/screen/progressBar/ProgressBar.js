@@ -1,20 +1,34 @@
-import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import React, { useEffect } from 'react'
+import { View, StyleSheet, Animated } from 'react-native'
 
 const BAR_PROGRESS_WIDTH = 220
-const INITIAL_PROGRESS = 10
-const GAIN = 60
+const INITIAL_PROGRESS = 30
+const GAIN = 50
 const TOTAL_PROGRESS = INITIAL_PROGRESS + GAIN
 
 export function ProgressBar() {
+	const progress = new Animated.Value(INITIAL_PROGRESS)
+
+	function animation() {
+		Animated.timing(progress, {
+			toValue: ((TOTAL_PROGRESS * BAR_PROGRESS_WIDTH) / 100),
+			duration: 2000,
+			useNativeDriver: false,
+		}).start()
+	}
+
+	useEffect(() => {
+		animation()
+	}, [])
+
 	return (
 		<View style={styles.container}>
 			<View
 				style={styles.progressBar}
 			/>
 
-			<View
-				style={[styles.fluidBar, { width: ((TOTAL_PROGRESS * BAR_PROGRESS_WIDTH) / 100) }]}
+			<Animated.View
+				style={[styles.fluidBar, { width: progress }]}
 			/>
 		</View>
 	)
