@@ -107,3 +107,8 @@ Esse projeto trata de um sistema de comunicação WiFi Client (ESP8266) to Serve
  - ESP32 Bluetooth communication to React-Native APP
     - [Aplicativo](https://github.com/W8jonas/estudos/tree/master/ESP32BLE_to_RN_APP/mobile)
     - [ESP32ServerBLE](https://github.com/W8jonas/estudos/tree/master/ESP32BLE_to_RN_APP/ESP32ServerBLE)
+
+ - Projetos de video-aulas do youtube
+    - [CRUD Code Drops #65](https://github.com/W8jonas/estudos/tree/master/youtube/CRUD%20code%20drops%20#65)
+    - [estrutura de dados usando C - Fabio Akita](https://github.com/W8jonas/estudos/tree/master/youtube/estrutura%20de%20dados%20usando%20C%20-%20Fabio%20Akita)
+    - [pseudo objetos - Fabio Akita - Entendendo C](https://github.com/W8jonas/estudos/tree/master/youtube/pseudo%20objetos%20-%20Fabio%20Akita%20-%20Entendendo%20C)
