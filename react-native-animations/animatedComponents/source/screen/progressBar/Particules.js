@@ -4,14 +4,14 @@ import { StyleSheet, Animated } from 'react-native'
 export function Particules({ amount }) {
 	const particlesArray = Array(amount).fill(0).map(() => ({
 		id: Math.random(),
-		initialLocation: new Animated.ValueXY(),
+		positionXY: new Animated.ValueXY(),
 		size: 0,
 		opacity: 1,
 	}))
 
 	useEffect(() => {
 		function animation(partcile) {
-			Animated.timing(partcile.initialLocation, {
+			Animated.timing(partcile.positionXY, {
 				toValue: { x: 40, y: 30 },
 				duration: 1200,
 				useNativeDriver: false,
@@ -26,7 +26,7 @@ export function Particules({ amount }) {
 			{particlesArray.map((particle) => (
 				<Animated.View
 					key={particle.id}
-					style={[styles.container, particle.initialLocation.getLayout()]}
+					style={[styles.container, particle.positionXY.getLayout()]}
 				/>
 			))}
 		</>
