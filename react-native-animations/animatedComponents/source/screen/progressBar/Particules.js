@@ -1,12 +1,17 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, Animated } from 'react-native'
 
 export function Particules({ amount }) {
-	const particlesArray = Array(amount).fill(0).map(() => Math.random())
+	const particlesArray = Array(amount).fill(0).map(() => ({
+		id: Math.random(),
+		initialLocation: new Animated.ValueXY(),
+		size: 0,
+		opacity: 1,
+	}))
 
 	return (
 		<>
-			{particlesArray.map((particle) => <View key={particle} style={styles.container} />)}
+			{particlesArray.map((particle) => <View key={particle.id} style={styles.container} />)}
 		</>
 	)
 }
