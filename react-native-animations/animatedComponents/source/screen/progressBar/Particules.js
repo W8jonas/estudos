@@ -1,9 +1,13 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
-export function Particules() {
+export function Particules({ amount }) {
+	const particlesArray = Array(amount).fill(0).map(() => Math.random())
+
 	return (
-		<View style={styles.container} />
+		<>
+			{particlesArray.map((particle) => <View key={particle} style={styles.container} />)}
+		</>
 	)
 }
 
