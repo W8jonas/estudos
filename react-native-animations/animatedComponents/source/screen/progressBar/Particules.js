@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { StyleSheet, Animated } from 'react-native'
 
-export function Particules({ amount }) {
+export function Particules({ amount, initialPosition }) {
 	const particlesArray = Array(amount).fill(0).map(() => ({
 		id: Math.random(),
-		positionXY: new Animated.ValueXY(),
+		positionXY: new Animated.ValueXY(initialPosition),
 		size: 0,
 		opacity: 1,
 	}))
@@ -19,7 +19,7 @@ export function Particules({ amount }) {
 		}
 
 		particlesArray.map((partcile) => animation(partcile))
-	}, [])
+	}, [particlesArray])
 
 	return (
 		<>
