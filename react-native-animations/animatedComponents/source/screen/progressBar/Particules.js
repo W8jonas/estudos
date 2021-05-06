@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StyleSheet, Animated } from 'react-native'
 
 export function Particules({ amount }) {
@@ -8,6 +8,18 @@ export function Particules({ amount }) {
 		size: 0,
 		opacity: 1,
 	}))
+
+	useEffect(() => {
+		function animation(partcile) {
+			Animated.timing(partcile.initialLocation, {
+				toValue: { x: 40, y: 30 },
+				duration: 1200,
+				useNativeDriver: false,
+			}).start()
+		}
+
+		particlesArray.map((partcile) => animation(partcile))
+	}, [])
 
 	return (
 		<>
