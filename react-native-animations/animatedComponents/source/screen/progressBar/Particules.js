@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
-import { StyleSheet, Animated } from 'react-native'
+import { StyleSheet, Animated, Easing } from 'react-native'
+
+import { getRandomPosition } from './utils/getRandomPosition'
 
 export function Particules({ amount, initialPosition }) {
 	const particlesArray = Array(amount).fill(0).map(() => ({
@@ -12,9 +14,10 @@ export function Particules({ amount, initialPosition }) {
 	useEffect(() => {
 		function animation(partcile) {
 			Animated.timing(partcile.positionXY, {
-				toValue: { x: 40, y: 30 },
+				toValue: getRandomPosition({ x: 40, y: 40 }),
 				duration: 1200,
 				useNativeDriver: false,
+				easing: Easing.linear,
 			}).start()
 		}
 
