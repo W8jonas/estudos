@@ -39,7 +39,12 @@ export function ProgressBar() {
 			<Animated.View
 				style={[styles.fluidBar, { width: progress }]}
 			>
-				{showParticules && <Particules /> }
+				{showParticules && (
+					<Particules
+						amount={3}
+						initialPosition={{ x: progress.__getValue(), y: 0 }}
+					/>
+				)}
 			</Animated.View>
 		</View>
 	)
