@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { View, StyleSheet, Animated } from 'react-native'
+
+import { Particules } from './Particules'
 
 const BAR_PROGRESS_WIDTH = 220
 const INITIAL_PROGRESS = 30
@@ -7,7 +9,8 @@ const GAIN = 50
 const TOTAL_PROGRESS = INITIAL_PROGRESS + GAIN
 
 export function ProgressBar() {
-	const progress = new Animated.Value(INITIAL_PROGRESS)
+	const [progress] = useState(new Animated.Value(INITIAL_PROGRESS))
+	const [showParticules, setShowParticules] = useState(false)
 
 	function animation() {
 		Animated.timing(progress, {
@@ -16,6 +19,12 @@ export function ProgressBar() {
 			useNativeDriver: false,
 		}).start()
 	}
+
+	progress.addListener((prog) => {
+		if (prog.value > BAR_PROGRESS_WIDTH * 0.6) {
+			setShowParticules(true)
+		}
+	})
 
 	useEffect(() => {
 		animation()
@@ -29,7 +38,9 @@ export function ProgressBar() {
 
 			<Animated.View
 				style={[styles.fluidBar, { width: progress }]}
-			/>
+			>
+				{showParticules && <Particules /> }
+			</Animated.View>
 		</View>
 	)
 }
