@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, Animated } from 'react-native'
+import { StyleSheet, Animated } from 'react-native'
 
 export function Particules({ amount }) {
 	const particlesArray = Array(amount).fill(0).map(() => ({
@@ -11,7 +11,12 @@ export function Particules({ amount }) {
 
 	return (
 		<>
-			{particlesArray.map((particle) => <View key={particle.id} style={styles.container} />)}
+			{particlesArray.map((particle) => (
+				<Animated.View
+					key={particle.id}
+					style={[styles.container, particle.initialLocation.getLayout()]}
+				/>
+			))}
 		</>
 	)
 }
