@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react'
-import { Animated, Easing } from 'react-native'
-
-import { getRandomPosition } from './utils/getRandomPosition'
+import React from 'react'
+import { Animated } from 'react-native'
 
 import { Particle } from './Particle'
 
@@ -12,19 +10,6 @@ export function Particules({ amount, initialPosition }) {
 		size: 0,
 		opacity: 1,
 	}))
-
-	useEffect(() => {
-		function animation(particle) {
-			Animated.timing(particle.positionXY, {
-				toValue: getRandomPosition({ x: 40, y: 40 }),
-				duration: 1200,
-				useNativeDriver: false,
-				easing: Easing.linear,
-			}).start()
-		}
-
-		particlesArray.map((particle) => animation(particle))
-	}, [particlesArray])
 
 	return (
 		<>
