@@ -6,6 +6,7 @@ import { getRandomPosition } from './utils/getRandomPosition'
 
 export function Particle({ particle }) {
 	const [scale] = useState(new Animated.Value(1))
+	const rotate = new Animated.Value(0)
 
 	useEffect(() => {
 		function animation(_particle) {
@@ -22,11 +23,27 @@ export function Particle({ particle }) {
 					useNativeDriver: false,
 					easing: Easing.linear,
 				}),
+				Animated.timing(rotate, {
+					toValue: 1,
+					duration: 3000,
+					useNativeDriver: false,
+					easing: Easing.linear,
+				}),
 			]).start()
 		}
 
 		animation(particle)
-	}, [particle, scale])
+	}, [particle, scale, rotate])
+
+	const opacity = scale.interpolate({
+		inputRange: [0, 1],
+		outputRange: [0, 1],
+	})
+
+	const spin = rotate.interpolate({
+		inputRange: [0, 1],
+		outputRange: ['0deg', '360deg'],
+	})
 
 	return (
 		<Animated.View
@@ -34,8 +51,8 @@ export function Particle({ particle }) {
 				styles.container,
 				particle.positionXY.getLayout(),
 				{
-					opacity: particle.opacity,
-					transform: [{ scale }],
+					opacity,
+					transform: [{ rotate: spin }],
 				},
 			]}
 		/>
@@ -48,7 +65,6 @@ const styles = StyleSheet.create({
 		top: 0,
 		height: 12,
 		width: 12,
-		borderRadius: 12,
 		backgroundColor: '#F5f9',
 	},
 })
