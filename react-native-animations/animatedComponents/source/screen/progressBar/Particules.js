@@ -12,8 +12,8 @@ export function Particules({ amount, initialPosition }) {
 	}))
 
 	useEffect(() => {
-		function animation(partcile) {
-			Animated.timing(partcile.positionXY, {
+		function animation(particle) {
+			Animated.timing(particle.positionXY, {
 				toValue: getRandomPosition({ x: 40, y: 40 }),
 				duration: 1200,
 				useNativeDriver: false,
@@ -21,7 +21,7 @@ export function Particules({ amount, initialPosition }) {
 			}).start()
 		}
 
-		particlesArray.map((partcile) => animation(partcile))
+		particlesArray.map((particle) => animation(particle))
 	}, [particlesArray])
 
 	return (
