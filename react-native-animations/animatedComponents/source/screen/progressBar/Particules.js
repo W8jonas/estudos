@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
-import { StyleSheet, Animated, Easing } from 'react-native'
+import { Animated, Easing } from 'react-native'
 
 import { getRandomPosition } from './utils/getRandomPosition'
+
+import { Particle } from './Particle'
 
 export function Particules({ amount, initialPosition }) {
 	const particlesArray = Array(amount).fill(0).map(() => ({
@@ -26,23 +28,7 @@ export function Particules({ amount, initialPosition }) {
 
 	return (
 		<>
-			{particlesArray.map((particle) => (
-				<Animated.View
-					key={particle.id}
-					style={[styles.container, particle.positionXY.getLayout()]}
-				/>
-			))}
+			{particlesArray.map((particle) => <Particle key={particle.id} particle={particle} />)}
 		</>
 	)
 }
-
-const styles = StyleSheet.create({
-	container: {
-		position: 'absolute',
-		top: 0,
-		height: 12,
-		width: 12,
-		borderRadius: 12,
-		backgroundColor: '#F5f9',
-	},
-})
