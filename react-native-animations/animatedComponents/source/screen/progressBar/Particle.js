@@ -1,15 +1,23 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, Animated } from 'react-native'
-
-// Modules
-
-// Assets
+import { StyleSheet, Animated, Easing } from 'react-native'
 
 // Functions
-
-// Components
+import { getRandomPosition } from './utils/getRandomPosition'
 
 export function Particle({ particle }) {
+	useEffect(() => {
+		function animation(_particle) {
+			Animated.timing(_particle.positionXY, {
+				toValue: getRandomPosition({ x: 40, y: 40 }),
+				duration: 1200,
+				useNativeDriver: false,
+				easing: Easing.linear,
+			}).start()
+		}
+
+		animation(particle)
+	}, [particle])
+
 	return (
 		<Animated.View
 			style={[styles.container, particle.positionXY.getLayout()]}
