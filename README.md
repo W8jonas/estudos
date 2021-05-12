@@ -41,6 +41,14 @@ Projeto desenvolvido na **Next Level Week**, contendo backend, frontend web e ap
 ![](nextLevelWeek/Ecoleta/screenshots/Screenshot_1.png)  |  ![](nextLevelWeek/Ecoleta/screenshots/Screenshot_2.png) |  ![](nextLevelWeek/Ecoleta/screenshots/Screenshot_3.png)  | 
 :---------------:|:----------------:|:-----------------:|
 
+#### [TodoApp](https://github.com/W8jonas/estudos/tree/master/arquitetura_e_padroes_de_projetos/todoApp)
+
+Projeto criado para desenvolver minhas habilidades sobre Animações, User Experience, Custom Hooks e padrões de projetos. A ideia é desenvolver o aplicativo com a arquitetura volta para Custom Hooks, sendo que a dinâmica do aplicativo deve ser toda desacoplada das suas funções, permitindo assim, que toda a parte lógica seja refeita de outra forma. 
+Além disso as animações são voltadas para garantir uma melhor experiência de usuário e usabilidade do aplicativo.
+
+![](arquitetura_e_padroes_de_projetos/todoApp/fotos_do_projeto/gif1.gif)  |  ![](arquitetura_e_padroes_de_projetos/todoApp/fotos_do_projeto/gif2.gif) |
+:---------------:|:----------------:|
+
 #### [PlantManager](https://github.com/W8jonas/estudos/tree/master/nextLevelWeek/plantmanager)
 
 Projeto desenvolvido na **Next Level Week**. É uma aplicação mobile completa, utilizando a stack **React-Native**. A proposta do projeto é lhe ajudar a cuidar melhor de suas plantinhas. O aplicativo fornece várias plantas como opção para serem cadastradas num sistema de push-notifications que lhe avisa quando é o dia e momento para regar sua planta. Para o sistema de notificações funcionar, ele consulta uma API fake contendo o banco de dados com todas as plantas do projeto, onde constam as demais descrições de cada planta.  
