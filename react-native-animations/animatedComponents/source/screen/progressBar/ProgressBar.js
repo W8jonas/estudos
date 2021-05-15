@@ -42,7 +42,8 @@ export function ProgressBar() {
 			>
 				{showParticules && (
 					<Particules
-						amount={totalParticles}
+						totalParticlesToGen={totalParticles}
+						totalParticlesAtSameTime={3}
 						initialPosition={{ x: 44, y: 0 }}
 						finalPosition={{ x: BAR_PROGRESS_WIDTH, y: 0 }}
 					/>
