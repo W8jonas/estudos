@@ -7,6 +7,16 @@ let timeInterval = null
 
 const DELAY_CYCLE = 1000
 
+/**
+ * Para cada ciclo de delay, o valor de progresso deve sair de initialPosition para finalPosition
+ *
+ *        |--------------------------------------------|
+ *  initialPosition     |         |               finalPosition
+ *            |         |         |
+ *            |_________|_________| ....
+ *           progress = getPosition()
+ * A distância a cada nova chamada do getPosition é medida através da variável stepX
+ */
 export function Particules({
 	totalParticlesToGen, totalParticlesAtSameTime, initialPosition, finalPosition,
 }) {
