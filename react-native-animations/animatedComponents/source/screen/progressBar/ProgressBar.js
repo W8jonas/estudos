@@ -7,6 +7,7 @@ const BAR_PROGRESS_WIDTH = 220
 const INITIAL_PROGRESS = 30
 const GAIN = 50
 const TOTAL_PROGRESS = INITIAL_PROGRESS + GAIN
+const totalParticles = 30
 
 export function ProgressBar() {
 	const [progress] = useState(new Animated.Value(INITIAL_PROGRESS))
@@ -41,7 +42,7 @@ export function ProgressBar() {
 			>
 				{showParticules && (
 					<Particules
-						amount={3}
+						amount={totalParticles}
 						initialPosition={{ x: progress.__getValue(), y: 0 }}
 					/>
 				)}
