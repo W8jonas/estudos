@@ -5,36 +5,52 @@ import { Particle } from './Particle'
 
 let timeInterval = null
 
-export function Particules({ amount, initialPosition, finalPosition }) {
-	const particlesArray = Array(amount).fill(0).map(() => ({
-		id: Math.random(),
-		positionXY: new Animated.ValueXY(initialPosition),
-		finalPosition,
-		size: 0,
-		opacity: 1,
-	}))
+const DELAY_CYCLE = 1000
 
+export function Particules({
+	totalParticlesToGen, totalParticlesAtSameTime, initialPosition, finalPosition,
+}) {
+	const [particlesArrayToShow, setParticlesArrayToShow] = useState([])
 	const [totalParticlesToShow, setTotalParticlesToShow] = useState(1)
 
 	useEffect(() => {
 		timeInterval = setInterval(() => {
 			setTotalParticlesToShow((state) => state + 1)
-		}, 1000)
+		}, DELAY_CYCLE)
 	}, [])
 
 	useEffect(() => {
-		if (totalParticlesToShow >= amount) {
-			clearInterval(timeInterval)
+		function getPosition(_initialPosition, _totalParticlesToGen, _totalParticlesToShow, _finalPosition) {
+			if (_totalParticlesToShow === 1) {
+				return _initialPosition
+			}
+			const distanceX = (_finalPosition.x * _totalParticlesToShow) / _totalParticlesToGen
+			return { x: distanceX, y: 0 }
 		}
-	}, [totalParticlesToShow, amount])
+
+		if (totalParticlesToShow >= totalParticlesToGen) {
+			clearInterval(timeInterval)
+		} else {
+			const particlesArray = Array(totalParticlesAtSameTime).fill(0).map(() => ({
+				id: Math.random(),
+				positionXY: new Animated.ValueXY(getPosition(initialPosition, totalParticlesToGen, totalParticlesToShow, finalPosition)),
+				size: 0,
+				opacity: 1,
+			}))
+
+			setParticlesArrayToShow((state) => [...state, ...particlesArray])
+		}
+	}, [totalParticlesToShow, totalParticlesToGen, initialPosition, finalPosition, totalParticlesAtSameTime])
+
+	useEffect(() => {
+		console.log(particlesArrayToShow.length)
+	}, [particlesArrayToShow])
 
 	return (
 		<>
-			{particlesArray.map((particle, index) => (
+			{particlesArrayToShow.map((particle, index) => (
 				totalParticlesToShow >= index ? (
-					<Animated.View key={particle.id}>
-						<Particle particle={particle} />
-					</Animated.View>
+					<Particle key={particle.id} particle={particle} />
 				)
 					: null
 			))}
