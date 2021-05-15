@@ -3,6 +3,8 @@ import { Animated } from 'react-native'
 
 import { Particle } from './Particle'
 
+let timeInterval = null
+
 export function Particules({ amount, initialPosition }) {
 	const particlesArray = Array(amount).fill(0).map(() => ({
 		id: Math.random(),
@@ -14,10 +16,16 @@ export function Particules({ amount, initialPosition }) {
 	const [totalParticlesToShow, setTotalParticlesToShow] = useState(1)
 
 	useEffect(() => {
-		setInterval(() => {
+		timeInterval = setInterval(() => {
 			setTotalParticlesToShow((state) => state + 1)
 		}, 1000)
 	}, [])
+
+	useEffect(() => {
+		if (totalParticlesToShow >= 30) {
+			clearInterval(timeInterval)
+		}
+	}, [totalParticlesToShow])
 
 	return (
 		<>
