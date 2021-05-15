@@ -6,7 +6,7 @@ import { getRandomPosition } from './utils/getRandomPosition'
 
 export function Particle({ particle }) {
 	const [scale] = useState(new Animated.Value(1))
-	const rotate = new Animated.Value(0)
+	const [rotate] = useState(new Animated.Value(0))
 
 	useEffect(() => {
 		function animation(_particle) {
