@@ -7,23 +7,12 @@ let timeInterval = null
 
 const DELAY_CYCLE = 1000
 
-/**
- *
- * Para cada ciclo de delay, o valor de progresso deve sair de initialPosition para finalPosition
- *
- *        |--------------------------------------------|
- *  initialPosition     |       |                 finalPosition
- *            |         |       |
- *            |_________|_______| ....
- *           progress = getPosition()
- *
- *
- */
 export function Particules({
 	totalParticlesToGen, totalParticlesAtSameTime, initialPosition, finalPosition,
 }) {
 	const [particlesArrayToShow, setParticlesArrayToShow] = useState([])
-	const [totalParticlesToShow, setTotalParticlesToShow] = useState(1)
+	const [totalParticlesToShow, setTotalParticlesToShow] = useState(0)
+	const stepX = ((finalPosition.x - initialPosition.x) / 30) / 2
 
 	useEffect(() => {
 		timeInterval = setInterval(() => {
@@ -33,10 +22,10 @@ export function Particules({
 
 	useEffect(() => {
 		function getPosition(_initialPosition, _totalParticlesToGen, _totalParticlesToShow, _finalPosition) {
-			if (_totalParticlesToShow === 1) {
+			if (_totalParticlesToShow === 0) {
 				return _initialPosition
 			}
-			const distanceX = (_finalPosition.x * _totalParticlesToShow) / _totalParticlesToGen
+			const distanceX = (_finalPosition.x * stepX * _totalParticlesToShow) / _totalParticlesToGen
 			return { x: distanceX, y: 0 }
 		}
 
