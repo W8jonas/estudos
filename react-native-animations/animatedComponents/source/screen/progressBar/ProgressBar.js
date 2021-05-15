@@ -22,7 +22,7 @@ export function ProgressBar() {
 	}
 
 	progress.addListener((prog) => {
-		if (prog.value > BAR_PROGRESS_WIDTH * 0.6) {
+		if (prog.value > BAR_PROGRESS_WIDTH * 0.2) {
 			setShowParticules(true)
 		}
 	})
@@ -44,6 +44,7 @@ export function ProgressBar() {
 					<Particules
 						amount={totalParticles}
 						initialPosition={{ x: progress.__getValue(), y: 0 }}
+						finalPosition={{ x: BAR_PROGRESS_WIDTH, y: 0 }}
 					/>
 				)}
 			</Animated.View>
