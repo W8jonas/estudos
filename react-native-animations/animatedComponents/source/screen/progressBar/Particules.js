@@ -7,6 +7,18 @@ let timeInterval = null
 
 const DELAY_CYCLE = 1000
 
+/**
+ *
+ * Para cada ciclo de delay, o valor de progresso deve sair de initialPosition para finalPosition
+ *
+ *        |--------------------------------------------|
+ *  initialPosition     |       |                 finalPosition
+ *            |         |       |
+ *            |_________|_______| ....
+ *           progress = getPosition()
+ *
+ *
+ */
 export function Particules({
 	totalParticlesToGen, totalParticlesAtSameTime, initialPosition, finalPosition,
 }) {
