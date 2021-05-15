@@ -5,10 +5,11 @@ import { Particle } from './Particle'
 
 let timeInterval = null
 
-export function Particules({ amount, initialPosition }) {
+export function Particules({ amount, initialPosition, finalPosition }) {
 	const particlesArray = Array(amount).fill(0).map(() => ({
 		id: Math.random(),
 		positionXY: new Animated.ValueXY(initialPosition),
+		finalPosition,
 		size: 0,
 		opacity: 1,
 	}))
@@ -22,15 +23,20 @@ export function Particules({ amount, initialPosition }) {
 	}, [])
 
 	useEffect(() => {
-		if (totalParticlesToShow >= 30) {
+		if (totalParticlesToShow >= amount) {
 			clearInterval(timeInterval)
 		}
-	}, [totalParticlesToShow])
+	}, [totalParticlesToShow, amount])
 
 	return (
 		<>
 			{particlesArray.map((particle, index) => (
-				totalParticlesToShow >= index ? <Particle key={particle.id} particle={particle} /> : null
+				totalParticlesToShow >= index ? (
+					<Animated.View key={particle.id}>
+						<Particle particle={particle} />
+					</Animated.View>
+				)
+					: null
 			))}
 		</>
 	)
