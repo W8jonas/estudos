@@ -43,7 +43,7 @@ export function ProgressBar() {
 				{showParticules && (
 					<Particules
 						amount={totalParticles}
-						initialPosition={{ x: progress.__getValue(), y: 0 }}
+						initialPosition={{ x: 44, y: 0 }}
 						finalPosition={{ x: BAR_PROGRESS_WIDTH, y: 0 }}
 					/>
 				)}
