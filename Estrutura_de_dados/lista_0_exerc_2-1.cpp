@@ -1,3 +1,24 @@
+/*
+ 
+  Autor: Jonas Henrique
+  Data: 21/05/2021
+  
+  Enunciado do exercício:
+  
+  A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando 
+  dados sobre o salário e número de filhos. A prefeitura deseja saber:
+
+    i. média do salário da população;
+    ii. média do número de filhos;
+    iii. maior salário;
+    iv. percentual de pessoas com salário até R$100,00;
+
+  Desenvolver um programa que calcule e imprima as informações acima. 
+  O final da leitura de dados se dará com a entrada de um salário negativo.
+
+ */
+
+
 #include <iostream>
 
 using namespace std;
