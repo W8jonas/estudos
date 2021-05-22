@@ -45,7 +45,7 @@ int main()
     cout << "Media de salario da populacao: " << allSalary / counterPeople << endl;
     cout << "Media de numero de filhos: " << allChildren / counterPeople << endl;
     cout << "Maior salario: " << bestSalary << endl;
-    cout << "Percentual de pessoas com salario maior que R$100,00: " << (counterSalary/counterPeople)*100 << "%" << endl;
+    cout << "Percentual de pessoas com salario maior que R$100,00: " << (float(counterSalary)/float(counterPeople))*100 << "%" << endl;
     cout << "\n\n";
 
     return 0;
