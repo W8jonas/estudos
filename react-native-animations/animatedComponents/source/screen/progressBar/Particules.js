@@ -5,7 +5,7 @@ import { Particle } from './Particle'
 
 let timeInterval = null
 
-const DELAY_CYCLE = 1000
+const DELAY_CYCLE = 100
 
 /**
  * Para cada ciclo de delay, o valor de progresso deve sair de initialPosition para finalPosition
@@ -32,29 +32,31 @@ export function Particules({
 
 	useEffect(() => {
 		function getPosition(_initialPosition, _totalParticlesToGen, _totalParticlesToShow, _finalPosition) {
-			if (_totalParticlesToShow === 0) {
+			if (_totalParticlesToShow <= 1) {
 				return _initialPosition
 			}
-			const distanceX = (_finalPosition.x * stepX * _totalParticlesToShow) / _totalParticlesToGen
-			return { x: distanceX, y: 0 }
+			const distanceX = (_finalPosition.x * stepX * _totalParticlesToShow / 2) / _totalParticlesToGen
+			return { x: distanceX, y: 0, text: `(${_finalPosition.x} * ${stepX} * ${_totalParticlesToShow / 2}) / ${_totalParticlesToGen}` }
 		}
 
 		if (totalParticlesToShow >= totalParticlesToGen) {
 			clearInterval(timeInterval)
 		} else {
-			const particlesArray = Array(totalParticlesAtSameTime).fill(0).map(() => ({
+			const positionVector = getPosition(initialPosition, totalParticlesToGen, totalParticlesToShow, finalPosition)
+			const particlesArray = Array(1).fill(0).map(() => ({
 				id: Math.random(),
-				positionXY: new Animated.ValueXY(getPosition(initialPosition, totalParticlesToGen, totalParticlesToShow, finalPosition)),
+				...positionVector,
+				positionXY: new Animated.ValueXY(positionVector),
 				size: 0,
 				opacity: 1,
 			}))
 
 			setParticlesArrayToShow((state) => [...state, ...particlesArray])
 		}
-	}, [totalParticlesToShow, totalParticlesToGen, initialPosition, finalPosition, totalParticlesAtSameTime])
+	}, [totalParticlesToShow, totalParticlesToGen, initialPosition, finalPosition, totalParticlesAtSameTime, stepX])
 
 	useEffect(() => {
-		console.log(particlesArrayToShow.length)
+		console.log('particlesArrayToShow: ', stepX, particlesArrayToShow)
 	}, [particlesArrayToShow])
 
 	return (
