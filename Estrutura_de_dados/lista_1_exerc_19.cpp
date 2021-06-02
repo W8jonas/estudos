@@ -54,7 +54,7 @@ int main() {
 
     cout << "Media e: " << media << endl;
 
-    delete array;
+    delete [] array;
 
     return 0;
 }
