@@ -19,10 +19,9 @@ using namespace std;
 
 float** alocaMatrizF(int columnCount, int lineCount){
     float **column = new float *[columnCount];
-    float *line = new float [lineCount];
 
     for (int i = 0; i < lineCount; i++) {
-        *(column + i) = line;
+        *(column + i) = new float [lineCount];
     }
 
     for (int i = 0; i < lineCount; i++) {
