@@ -22,11 +22,10 @@ int main() {
 
     int resposta = inteiroParaBinario(numeroEmBinario, numeroDecimal, 0);
 
-    cout << "O resultado eh: " << resposta << endl;
-
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i <= resposta; i++) {
         cout << numeroEmBinario[i] << ", ";
     }
+    delete [] numeroEmBinario;
 
     return 0;
 }
