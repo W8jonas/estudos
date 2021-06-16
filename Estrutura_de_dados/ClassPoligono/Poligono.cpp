@@ -1,4 +1,6 @@
 #include "Poligono.h"
+#include <math.h>
+
 
 Poligono::Poligono(int _numLados, float _tamanhoLado)
 {
@@ -6,9 +8,7 @@ Poligono::Poligono(int _numLados, float _tamanhoLado)
     setTamanhoLado(_tamanhoLado);
 }
 
-Poligono::~Poligono()
-{
-}
+Poligono::~Poligono() {}
 
 void Poligono::setNumLados(int _numLados) {
     if (_numLados > 3) {
@@ -26,3 +26,10 @@ void Poligono::setTamanhoLado(float _tamanhoLado) {
     }
 }
 
+float Poligono::getArea(){
+    return numLados*pow(tamanhoLado, 2) / (4 * tan(3.1416/numLados));
+}
+
+float Poligono::getPerimetro() {
+    return numLados*tamanhoLado;
+}
