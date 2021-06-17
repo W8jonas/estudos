@@ -16,8 +16,11 @@ int main() {
 
     Poligono poli(quantidadeDeLadosDoPoligono, tamadoDosLadosDoPoligono);
 
-    cout << "resultado do produto dos valores do vetor: " << poli.getArea() << endl;
-    cout << "resultado do produto dos valores do vetor: " << poli.getPerimetro() << endl;
+    cout << "Resultado da area do poligono: " << poli.getArea() << endl;
+    cout << "Resultado do perimetro do poligono: " << poli.getPerimetro() << endl;
 
+    // CIN para evitar que o terminal feche depois da execução do programa
+    int garbage;
+    cin >> garbage;
     return 0;
 }
