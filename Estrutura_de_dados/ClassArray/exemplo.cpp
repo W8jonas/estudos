@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 int main() {
     Array vetor(10);
 
@@ -15,7 +14,7 @@ int main() {
     
 
     for (int i = 0; i < 10; i++) {
-        cout << vetor.set(i) << ", ";
+        cout << vetor.get(i) << ", ";
     }
     cout << endl;
 
