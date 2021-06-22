@@ -12,7 +12,9 @@ Array::Array(int tam) {
     
 }
 
-Array::~Array() {}
+Array::~Array() {
+    delete [] vet;
+}
 
 void Array::set(int indice, float valor) {
     
