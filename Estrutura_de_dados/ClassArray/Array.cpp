@@ -25,5 +25,8 @@ float Array::get(int indice) {
 }
 
 bool Array::verifica(int indice){
-
+    if (indice >= 0 && indice < n) {
+        return true;
+    }
+    return false;
 }
