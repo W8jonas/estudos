@@ -17,7 +17,9 @@ Array::~Array() {
 }
 
 void Array::set(int indice, float valor) {
-    
+    if (verifica(indice)) {
+        vet[indice] = valor;
+    }
 }
 
 float Array::get(int indice) {
