@@ -1,10 +1,15 @@
 #include "Array.h"
 #include <math.h>
 
+Array::Array(int tam) {
+    int n = tam < 0 ? 0 : tam;
 
-Array::Array(int tam)
-{
+    vet = new float [n];
 
+    for (int i = 0; i < n; i++) {
+        vet[i] = 0.0;
+    }
+    
 }
 
 Array::~Array() {}
