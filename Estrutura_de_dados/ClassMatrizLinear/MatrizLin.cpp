@@ -18,7 +18,10 @@ void MatrizLin::set(int _line, int _column, float valor) {
 }
 
 float MatrizLin::get(int _line, int _column) {
-
+    int index = getIndex(_line, _column);
+    if (index != -1) {
+        return vet[index];
+    }
 }
 
 int MatrizLin::getIndex(int _line, int _column){
