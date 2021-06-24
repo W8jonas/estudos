@@ -2,7 +2,6 @@
 #include <math.h>
 
 MatrizLin::MatrizLin(int _line, int _column) {
-
     length = _line * _column;
 
     vet = new float [length];
@@ -14,14 +13,19 @@ MatrizLin::~MatrizLin() {
     delete [] vet;
 }
 
-void MatrizLin::set(int line, int column, float valor) {
+void MatrizLin::set(int _line, int _column, float valor) {
 
 }
 
-float MatrizLin::get(int line, int column) {
+float MatrizLin::get(int _line, int _column) {
 
 }
 
-bool MatrizLin::detInd(int indice){
+int MatrizLin::getIndex(int _line, int _column){
 
+    if (_line >= 0 && _line < numLine && _column >= 0 && _column < numColumn) {
+        return numColumn * _line + _column;
+    }
+
+    return -1;
 }

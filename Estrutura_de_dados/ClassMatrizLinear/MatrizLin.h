@@ -3,7 +3,7 @@ class MatrizLin {
         int numLine;
         int numColumn;
         float *vet;
-        bool detInd(int index);
+        int getIndex(int _line, int _column);
         int length;
 
     public:
