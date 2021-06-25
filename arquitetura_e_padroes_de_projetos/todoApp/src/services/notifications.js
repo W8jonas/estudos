@@ -1,29 +1,14 @@
+import { Platform } from 'react-native'
+
 import PushNotification, { Importance } from 'react-native-push-notification'
 
 const pushNotificationConfigure = () => PushNotification.configure({
-
-	// (required) Called when a remote is received or opened, or local notification is opened
+	// (required) Called when a remote or local notification is opened or received
 	onNotification(notification) {
-		console.log('NOTIFICATION:', notification)
-		// process the notification
-		// (required) Called when a remote is received or opened, or local notification is opened
+		console.log('LOCAL NOTIFICATION ==>', notification)
 	},
-
-	// (optional) Called when Registered Action is pressed and invokeApp is false, if true onNotification will be called (Android)
-	onAction(notification) {
-		console.log('ACTION:', notification.action)
-		console.log('NOTIFICATION:', notification)
-		// process the action
-	},
-
-	permissions: {
-		alert: true,
-		badge: true,
-		sound: true,
-	},
-
+	requestPermissions: Platform.OS === 'ios',
 	popInitialNotification: true,
-	requestPermissions: true,
 })
 
 const pushNotificationCreateChannel = () => PushNotification.createChannel(
