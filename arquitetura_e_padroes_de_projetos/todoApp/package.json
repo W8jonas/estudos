@@ -18,6 +18,7 @@
     "react-native-action-button": "^2.8.5",
     "react-native-date-picker": "^3.2.10",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-push-notification": "^7.3.1",
     "react-native-reanimated": "1.9.0",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^2.18.1",
