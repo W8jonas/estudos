@@ -14,4 +14,5 @@ class MatrizLin {
         void set(int line, int column, float val);
         int getLength();
         bool isSymmetrical();
+        MatrizLin* getTransposed();
 };

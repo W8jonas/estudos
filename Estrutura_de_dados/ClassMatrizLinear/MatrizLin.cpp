@@ -48,3 +48,17 @@ bool MatrizLin::isSymmetrical(){
 
     return true;
 }
+
+MatrizLin* MatrizLin::getTransposed(){
+
+    MatrizLin *transp = new MatrizLin(numColumn, numLine);
+
+    for(int i = 0; i < numColumn; i++) {
+        for(int j = 0; j < numLine; j++) {
+            float val1 = get(i, j);
+            transp->set(j, i, val1);            
+        }
+    }
+
+    return transp;
+}
