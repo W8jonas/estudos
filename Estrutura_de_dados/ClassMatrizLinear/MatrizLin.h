@@ -13,4 +13,5 @@ class MatrizLin {
         float get(int line, int column);
         void set(int line, int column, float val);
         int getLength();
+        bool isSymmetrical();
 };

@@ -35,3 +35,16 @@ int MatrizLin::getIndex(int _line, int _column){
 
     return -1;
 }
+
+bool MatrizLin::isSymmetrical(){
+
+    for(int i = 0; i < numColumn; i++) {
+        for(int j = 0; j < numLine; j++) {
+            float val1 = get(i, j);
+            float val2 = get(i, j);
+            if (val1 != val2) return false;
+        }
+    }
+
+    return true;
+}
