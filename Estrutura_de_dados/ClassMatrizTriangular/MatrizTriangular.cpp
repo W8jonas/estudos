@@ -1,7 +1,7 @@
 #include "MatrizTriangular.h"
 #include <math.h>
-#include<string.h>
-#include<iostream>
+#include <string.h>
+#include <iostream>
 
 
 using namespace std;
@@ -21,33 +21,37 @@ MatrizTriangular::~MatrizTriangular() {
 
 void MatrizTriangular::set(int _line, int _column, float valor) {
     int index = getIndex(_line, _column);
-    if (index != -1 && index != -2) {
+    if (index >= 0) {
         vet[index] = valor;
     }
 }
 
 float MatrizTriangular::get(int _line, int _column) {
     int index = getIndex(_line, _column);
-    if (index != -2) {
+    if (index < 0) {
         return 0;
     }
-    if (index != -1) {
-        return vet[index];
-    }
+    return vet[index];
 }
 
-int MatrizTriangular::getIndex(int _line, int _column){
+int MatrizTriangular::getIndex(int _line, int _column) {
 
     if (_line >= 0 && _line < dimensions && _column >= 0 && _column < dimensions) {
 
-        if ( strcmpi(type, "upper") == 0 ) {
-            if (_line <= _column) return -2;
+        if ( strcmp(type, "upper") == 0 ) {
+            if (_line <= _column) {
                 return _line * (_line + 1) / 2 + _column;
+            } else {
+                return -2;
+            }
         }
     
-        if ( strcmpi(type, "lower") == 0) {
-            if (_line >= _column) return -2;
+        if ( strcmp(type, "lower") == 0) {
+            if (_line >= _column) {
                 return _line * (_line + 1) / 2 + _column;
+            } else {
+                return -2;
+            }
         }
 
         return -1;
