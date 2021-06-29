@@ -10,7 +10,7 @@ int main() {
     for(int i = 0; i < m; i++)
         for(int j = 0; j < n; j++)
         {
-            float val = j + n*i; /// sequencia numerica no intervalo 0..(m*n-1)
+            float val = j + n*i;
             matriz.set(i, j, val);
         }
 
