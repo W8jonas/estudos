@@ -6,13 +6,19 @@ import '../styles/auth.scss'
 import { Button } from '../components/Button'
 
 import {useHistory} from 'react-router-dom'
+import {auth, firebase} from '../services/firebase'
 
 export function Home() {
 
     const history = useHistory()
 
-    function navigateToNewRoom() {
-        history.push('/rooms/new')
+    function handleCreatRoom() {
+        const provider = new firebase.auth.GoogleAuthProvider()
+
+        auth.signInWithPopup(provider).then(result => {
+            console.log(result)
+            history.push('/rooms/new')
+        })
     }
 
     return (
@@ -32,7 +38,7 @@ export function Home() {
                         src={logoImg} 
                         alt="Letmeask"
                     />
-                    <button className='create-room' onClick={navigateToNewRoom}>
+                    <button className='create-room' onClick={handleCreatRoom}>
                         <img 
                             src={googleIconImg} 
                             alt="Logo do Google"
