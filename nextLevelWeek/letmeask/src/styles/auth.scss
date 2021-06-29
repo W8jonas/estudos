@@ -55,6 +55,12 @@
             align-self: center;
         }
 
+        h2 {
+            font-size: 24px;
+            margin: 64px 0 24px;
+            font-family: 'Poppins', Sans-serif;
+        }
+
         form {
             input {
                 height: 50px;
@@ -74,6 +80,14 @@
 
         }
 
+        p {
+            font-size: 14px;
+            color: #737380;
+            margin-top: 16px;
+            a {
+                color: #e559f9;
+            }
+        }
     }
     
     .create-room {
