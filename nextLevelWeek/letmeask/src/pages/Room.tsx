@@ -2,6 +2,8 @@ import logoImg from '../assets/images/logo.svg'
 
 import {Button} from '../components/Button'
 
+import '../styles/room.scss'
+
 export function Room() {
     
     return (
@@ -13,7 +15,7 @@ export function Room() {
                 </div>
             </header>
 
-            <main className="content">
+            <main>
                 <div className="room-title">
                     <h1>
                         Sala React
