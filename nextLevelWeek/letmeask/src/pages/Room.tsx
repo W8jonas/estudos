@@ -12,7 +12,7 @@ export function Room() {
             <header>
                 <div className="content">
                     <img src={logoImg} alt="LetMeAsk" />
-                    <RoomCode />
+                    <RoomCode code={"-Md_D_FAbOShTeYEEas8?"} />
                 </div>
             </header>
 
