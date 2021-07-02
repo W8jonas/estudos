@@ -7,11 +7,14 @@ import { Button } from '../components/Button'
 
 import {useHistory} from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
+import { FormEvent, useState } from 'react'
 
 export function Home() {
     const {signInWithGoogle, user} = useAuth()
 
     const history = useHistory()
+
+    const [roomCode, setRoomCode] = useState('')
 
     function handleCreatRoom() {
         if (!user) {
@@ -19,6 +22,13 @@ export function Home() {
         }
         history.push('/rooms/new')
     }
+
+    function handleJoinRoom(event: FormEvent) {
+        event.preventDefault()
+
+        
+    }
+
 
     return (
         <div id="page-auth">
@@ -50,6 +60,7 @@ export function Home() {
                         <input
                             type="text"
                             placeholder="Digite o código da sala"
+                            onSubmit={handleJoinRoom}
                         />
                         <Button type='submit'>
                             Entrar na sala
