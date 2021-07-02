@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
 	Text, View, TouchableOpacity, ScrollView,
 } from 'react-native'
@@ -14,6 +14,7 @@ import Task from '../../components/task'
 
 // Functions
 import useTasks from '../../hooks/useTasks'
+import { createLocalPushNotification } from '../../services/notifications'
 
 function Home() {
 	const [focusOnInput, setFocusOnInput] = useState(false)
@@ -38,6 +39,10 @@ function Home() {
 		setTaskToUpdate(task)
 		setFocusOnInput(true)
 	}
+
+	useEffect(() => {
+		createLocalPushNotification({ id: 123, title: 'titulo qualquer', message: 'qqalquqer coisas' })
+	}, [])
 
 	return (
 		<View style={styles.container}>
