@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
 
+import { createLocalPushNotification, createLocalPushNotificationSchedule } from '../services/notifications'
+
 function useTasks(queryParamsToFilter) {
 	const dispatch = useDispatch()
 	const globalTasks = useSelector((state) => state)
@@ -22,16 +24,27 @@ function useTasks(queryParamsToFilter) {
 
 	function addTask(taskToAdd) {
 		const date = taskToAdd.taskDate || new Date().getTime()
+		const timeOfADayInMilliseconds = 24 * 60 * 60 * 1000
+		console.log('date: ', date)
+		console.log('date: ', date - timeOfADayInMilliseconds)
 
 		const newTask = {
-			id: Math.random(),
+			id: Math.round(Math.random() * 100000),
 			type: taskToAdd.taskType,
 			description: taskToAdd.description,
 			date,
 			done: false,
 		}
+
 		const newTasks = [...tasks, newTask]
 		dispatch({ type: 'SYNC_TODOS', payload: newTasks })
+
+		createLocalPushNotificationSchedule({
+			id: newTask.id,
+			title: 'Sua tarefa é amanhã!',
+			message: newTask.description,
+			date: new Date((newTask.date - timeOfADayInMilliseconds)),
+		})
 	}
 
 	function toggleTaskDone(id) {
