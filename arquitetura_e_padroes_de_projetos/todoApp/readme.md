@@ -28,7 +28,9 @@ Link para o post completo com mais informações no LinkedIn [ctrl + click](http
     - [x] Filtrar tarefas
 
 - [ ] Desenvolver a documentação
-
+- [ ] Adicionar local push-notifications
+    - [ ] Criar notificação ao add tarefa
+    - [ ] Deletar notificação ao deletar tarefa ou conclui-la.
 
 #### Anotações extras:
 Cada Tarefa terá as seguintes propriedades:
