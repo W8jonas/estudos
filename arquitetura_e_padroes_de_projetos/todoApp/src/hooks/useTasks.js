@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
 
-import { TYPES_AND_COLORS } from '../configs/constants'
-import { createLocalPushNotification, createLocalPushNotificationSchedule } from '../services/notifications'
+import { createLocalPushNotificationSchedule, deleteLocalPushNotification } from '../services/notifications'
 
 function useTasks(queryParamsToFilter) {
 	const dispatch = useDispatch()
@@ -63,6 +62,7 @@ function useTasks(queryParamsToFilter) {
 		const newTasks = tasks.filter((task) => task.id !== id)
 
 		dispatch({ type: 'SYNC_TODOS', payload: newTasks })
+		deleteLocalPushNotification(id)
 	}
 
 	function updateTask(taskToUpdate) {
