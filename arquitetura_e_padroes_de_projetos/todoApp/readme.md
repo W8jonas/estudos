@@ -31,6 +31,9 @@ Link para o post completo com mais informações no LinkedIn [ctrl + click](http
 - [ ] Adicionar local push-notifications
     - [x] Criar notificação ao add tarefa
     - [ ] Deletar notificação ao deletar tarefa ou conclui-la.
+- [ ] Colocar Swipe na tarefa para poder edita-la ou exclui-la.
+- [ ] Armazenar Tasks localmente utilizando async storage.
+
 
 
 #### Anotações extras:
