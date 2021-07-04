@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
-	View, Text, TouchableOpacity, Animated, Easing,
+	View, Text, TouchableOpacity, Animated,
 } from 'react-native'
 
 // Modules
@@ -18,60 +18,19 @@ function Task({
 	id, description, type, date, done, handleToggleTaskDone, handleDeleteTask, handleUpdateTask,
 }) {
 	const [opacity] = useState(new Animated.Value(0))
-	const [showOptions, setShowOptions] = useState(false)
-	const [zIndex, setZIndex] = useState(-3)
-
-	function show() {
-		Animated.timing(opacity, {
-			toValue: 1,
-			useNativeDriver: true,
-			duration: 400,
-			easing: Easing.linear,
-		}).start()
-	}
-
-	function hide() {
-		Animated.timing(opacity, {
-			toValue: 0,
-			useNativeDriver: true,
-			duration: 300,
-			easing: Easing.linear,
-		}).start()
-	}
-
-	function showExtraOptions() {
-		if (!showOptions) {
-			setShowOptions(true)
-			show()
-			setZIndex(5)
-		}
-	}
-
-	function hideExtraOptions() {
-		if (!showOptions) {
-			setShowOptions(false)
-			hide()
-		} else {
-			hide()
-			setShowOptions(false)
-			setZIndex(-3)
-		}
-	}
 
 	function onDeleteTask() {
 		handleDeleteTask(id)
-		hideExtraOptions()
 	}
 
 	function onUpdateTask() {
 		handleUpdateTask({
 			id, description, type, date, done,
 		})
-		hideExtraOptions()
 	}
 
 	return (
-		<TouchableOpacity style={styles.container} onLongPress={showExtraOptions} onPress={hideExtraOptions} activeOpacity={1}>
+		<View style={styles.container}>
 			<TouchableOpacity
 				onPress={() => { handleToggleTaskDone(id) }}
 				style={[styles.checkCircle, { borderColor: TYPES_AND_COLORS[type] || colors.whiteDefault }]}
@@ -83,23 +42,7 @@ function Task({
 				<Text style={styles.textDescription}>{description}</Text>
 				<Text style={styles.textDate}>{new Date(date).toISOString().substring(0, 19).replace('T', '\n')}</Text>
 			</View>
-			<Animated.View style={[styles.deleteTaskContainer, { opacity, zIndex }]}>
-				<TouchableOpacity style={styles.deleteTaskTouch} activeOpacity={0.7} onPress={onDeleteTask}>
-					<Text style={styles.textExtraOptions}>Excluir</Text>
-				</TouchableOpacity>
-			</Animated.View>
-
-			<Animated.View style={[styles.editTaskContainer, { opacity, zIndex }]}>
-				<TouchableOpacity
-					style={styles.editTaskTouch}
-					onPress={onUpdateTask}
-					activeOpacity={0.7}
-				>
-					<Text style={styles.textExtraOptions}>Editar</Text>
-				</TouchableOpacity>
-			</Animated.View>
-		</TouchableOpacity>
-
+		</View>
 	)
 }
 
