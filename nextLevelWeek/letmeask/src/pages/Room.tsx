@@ -7,42 +7,22 @@ import {Button} from '../components/Button'
 import { Question } from '../components/Question'
 import {RoomCode} from '../components/RoomCode'
 import { useAuth } from '../hooks/useAuth'
+import { useRoom } from '../hooks/useRoom'
 import { database } from '../services/firebase'
 
 import '../styles/room.scss'
 
-type FirebaseQuestions = Record<string, {
-    author: {
-        name: string,
-        avatar: string
-    }
-    content: string,
-    isAnswered: boolean,
-    isHighlighted: boolean,
-}>
-
 type RoomParams = {
     id: string
-}
-
-type Questions = {
-    id: string
-    author: {
-        name: string,
-        avatar: string
-    }
-    content: string,
-    isAnswered: boolean,
-    isHighlighted: boolean,
 }
 
 export function Room() {
     const params = useParams<RoomParams>()
     const roomId = params.id
     const [newQuestion, setNewQuestion] = useState('')
-    const [questions, setQuestions] = useState<Questions[]>([])
-    const [title, setTitle] = useState('')
 
+    const {questions, title} = useRoom(roomId)
+    
     const {user} = useAuth()
 
     async function handleSendQuestion(event: FormEvent) {
@@ -69,28 +49,6 @@ export function Room() {
 
         setNewQuestion('')
     }
-
-    useEffect(() => {
-        const roomRef = database.ref(`rooms/${roomId}`)
-
-        roomRef.on('value', room => {
-            const databaseRoom = room.val()
-            const firebaseQuestions: FirebaseQuestions = databaseRoom.questions ?? {}
-
-            const parsedQuestions = Object.entries(firebaseQuestions).map(([key, value]) => {
-                return {
-                    id: key,
-                    author: value.author,
-                    content: value.content,
-                    isAnswered: value.isAnswered,
-                    isHighlighted: value.isHighlighted,
-                }
-            })
-            setTitle(databaseRoom.title)
-            setQuestions(parsedQuestions)
-        })
-        
-    }, [roomId])
 
     return (
         <div id="page-room">
