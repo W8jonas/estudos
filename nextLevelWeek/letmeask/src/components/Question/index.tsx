@@ -1,4 +1,6 @@
 
+import './styles.scss'
+
 type QuestionProps = {
     content: string;
     author: {
@@ -6,6 +8,7 @@ type QuestionProps = {
         avatar: string;
     }
 }
+
 
 export function Question(props: QuestionProps) {
     return (
