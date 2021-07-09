@@ -20,6 +20,7 @@ Link para o post completo com mais informações no LinkedIn [ctrl + click](http
         - [x] datePicker
         - [x] Type of task select
     - [x] componente Modal Filter
+    - [ ] Colocar Swipe na tarefa para poder edita-la ou exclui-la.
 - [x] Desenvolver parte lógica de tasks do app (CRUD)
     - [x] Adicionar tarefas
     - [x] Marcar tarefa concluída
@@ -28,11 +29,12 @@ Link para o post completo com mais informações no LinkedIn [ctrl + click](http
     - [x] Filtrar tarefas
 
 - [ ] Desenvolver a documentação
-- [ ] Adicionar local push-notifications
+- [x] Adicionar local push-notifications
     - [x] Criar notificação ao add tarefa
-    - [ ] Deletar notificação ao deletar tarefa ou conclui-la.
-- [ ] Colocar Swipe na tarefa para poder edita-la ou exclui-la.
+    - [x] Deletar notificação ao deletar tarefa ou conclui-la.
+
 - [ ] Armazenar Tasks localmente utilizando async storage.
+- [ ] Colocar error Boundary no app
 
 
 
