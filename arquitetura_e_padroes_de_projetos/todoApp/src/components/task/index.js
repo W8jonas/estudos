@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
 	View, Text, TouchableOpacity, Animated,
 } from 'react-native'
 
 // Modules
 import PropTypes from 'prop-types'
+import Swipeable from 'react-native-gesture-handler/Swipeable'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 // Assets
@@ -17,8 +18,6 @@ import { TYPES_AND_COLORS } from '../../configs/constants'
 function Task({
 	id, description, type, date, done, handleToggleTaskDone, handleDeleteTask, handleUpdateTask,
 }) {
-	const [opacity] = useState(new Animated.Value(0))
-
 	function onDeleteTask() {
 		handleDeleteTask(id)
 	}
@@ -30,19 +29,41 @@ function Task({
 	}
 
 	return (
-		<View style={styles.container}>
-			<TouchableOpacity
-				onPress={() => { handleToggleTaskDone(id) }}
-				style={[styles.checkCircle, { borderColor: TYPES_AND_COLORS[type] || colors.whiteDefault }]}
-			>
-				{ done && <Icon name="check" size={20} color={colors.greenDefault} />}
-			</TouchableOpacity>
+		<Swipeable
+			overshootRight={false}
+			renderRightActions={() => (
+				<Animated.View>
+					<TouchableOpacity style={styles.deleteTaskTouch} activeOpacity={0.7} onPress={onDeleteTask}>
+						<Text style={styles.textExtraOptions}>Excluir</Text>
+					</TouchableOpacity>
+				</Animated.View>
+			)}
+			renderLeftActions={() => (
+				<Animated.View>
+					<TouchableOpacity
+						style={styles.editTaskTouch}
+						onPress={onUpdateTask}
+						activeOpacity={0.7}
+					>
+						<Text style={styles.textExtraOptions}>Editar</Text>
+					</TouchableOpacity>
+				</Animated.View>
+			)}
+		>
+			<View style={styles.container}>
+				<TouchableOpacity
+					onPress={() => { handleToggleTaskDone(id) }}
+					style={[styles.checkCircle, { borderColor: TYPES_AND_COLORS[type] || colors.whiteDefault }]}
+				>
+					{ done && <Icon name="check" size={20} color={colors.greenDefault} />}
+				</TouchableOpacity>
 
-			<View style={styles.textContainer}>
-				<Text style={styles.textDescription}>{description}</Text>
-				<Text style={styles.textDate}>{new Date(date).toISOString().substring(0, 19).replace('T', '\n')}</Text>
+				<View style={styles.textContainer}>
+					<Text style={styles.textDescription}>{description}</Text>
+					<Text style={styles.textDate}>{new Date(date).toISOString().substring(0, 19).replace('T', '\n')}</Text>
+				</View>
 			</View>
-		</View>
+		</Swipeable>
 	)
 }
 
