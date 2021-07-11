@@ -1,7 +1,6 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, Text, Button } from 'react-native'
 
-import { func } from 'prop-types'
 import ErrorBoundary from 'react-native-error-boundary'
 
 import BottomTabNavigator from './routes'
@@ -14,11 +13,21 @@ function errorHandler(error, stackTrace) {
 	console.log('Error: ', stackTrace)
 }
 
+function CustomFallback({ error, resetError }) {
+	return (
+		<View>
+			<Text>Something happened!</Text>
+			<Text>{error.toString()}</Text>
+			<Button onPress={resetError} title="Try again" />
+		</View>
+	)
+}
+
 function App() {
 	return (
 
 		<View style={{ flex: 1, backgroundColor: '#FFF' }}>
-			<ErrorBoundary onError={errorHandler}>
+			<ErrorBoundary FallbackComponent={CustomFallback} onError={errorHandler}>
 				<BottomTabNavigator />
 			</ErrorBoundary>
 		</View>
