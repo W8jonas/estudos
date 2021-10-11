@@ -6,6 +6,7 @@ import {
 export function MainScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
+			<Text style={styles.title}>Welcome to Animated Components!</Text>
 
 			<TouchableOpacity
 				style={styles.buttonContainer}
@@ -21,6 +22,20 @@ export function MainScreen({ navigation }) {
 				<Text style={styles.buttonContent}>ProgressBar</Text>
 			</TouchableOpacity>
 
+			<TouchableOpacity
+				style={styles.buttonContainer}
+				onPress={() => navigation.navigate('GradientBorder')}
+			>
+				<Text style={styles.buttonContent}>Gradient Border</Text>
+			</TouchableOpacity>
+
+			<TouchableOpacity
+				style={styles.buttonContainer}
+				onPress={() => navigation.navigate('LightShimmerEffect')}
+			>
+				<Text style={styles.buttonContent}>Light Shimmer Effect</Text>
+			</TouchableOpacity>
+
 		</View>
 	)
 }
@@ -29,8 +44,8 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		padding: 20,
-		flexWrap: 'wrap',
 		backgroundColor: '#FFF',
+		alignItems: 'center',
 	},
 	buttonContainer: {
 		width: 140,
@@ -41,6 +56,10 @@ const styles = StyleSheet.create({
 		marginLeft: 20,
 		borderRadius: 16,
 		backgroundColor: '#E1E2E7',
+	},
+	title: {
+		fontSize: 18,
+		color: '#1E1E1F',
 	},
 	buttonContent: {
 		fontSize: 16,
