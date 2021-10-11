@@ -39,6 +39,12 @@ function App() {
 				/>
 
 				<Stack.Screen
+					name="ProgressBar"
+					component={LevelUpCard}
+					options={defaultConfigForScreens}
+				/>
+
+				<Stack.Screen
 					name="LightShimmerEffect"
 					component={LightShimmerEffect}
 					options={defaultConfigForScreens}
