@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TouchableOpacity } from 'react-native'
+import { Text, TouchableOpacity, StyleSheet } from 'react-native'
 
 // Modules
 
@@ -12,23 +12,17 @@ import { Text, TouchableOpacity } from 'react-native'
 export function Button({ label, onPress }) {
 	return (
 		<TouchableOpacity
-			style={styles.buttonContainer}
+			style={styles.container}
 			onPress={onPress}
 		>
-			<Text style={styles.buttonContent}>{label}</Text>
+			<Text style={styles.content}>{label}</Text>
 		</TouchableOpacity>
 	)
 }
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		padding: 20,
-		backgroundColor: '#FFF',
-		alignItems: 'center',
-	},
-	buttonContainer: {
-		width: 140,
+		width: 180,
 		height: 50,
 		justifyContent: 'center',
 		alignItems: 'center',
@@ -37,11 +31,7 @@ const styles = StyleSheet.create({
 		borderRadius: 16,
 		backgroundColor: '#E1E2E7',
 	},
-	title: {
-		fontSize: 18,
-		color: '#1E1E1F',
-	},
-	buttonContent: {
+	content: {
 		fontSize: 16,
 		color: '#1E1E1F',
 	},
