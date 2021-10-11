@@ -6,6 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 // Screens
 import { MainScreen } from './MainScreen'
 import { DownloadButton } from './screen/downloadButton/index'
+import { GradientBorder } from './screen/gradientBorder/index'
+import { LightShimmerEffect } from './screen/LightShimmerEffect/index'
 import { LevelUpCard } from './screen/progressBar/index'
 
 const Stack = createStackNavigator()
@@ -31,8 +33,14 @@ function App() {
 				/>
 
 				<Stack.Screen
-					name="ProgressBar"
-					component={LevelUpCard}
+					name="GradientBorder"
+					component={GradientBorder}
+					options={defaultConfigForScreens}
+				/>
+
+				<Stack.Screen
+					name="LightShimmerEffect"
+					component={LightShimmerEffect}
 					options={defaultConfigForScreens}
 				/>
 			</Stack.Navigator>
