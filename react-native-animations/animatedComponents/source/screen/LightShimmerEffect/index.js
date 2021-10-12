@@ -9,13 +9,24 @@ import { View, Text, StyleSheet } from 'react-native'
 
 // Components
 import { Shimmer } from './Shimmer'
+import { ShimmerView } from './ShimmerView'
 
 export function LightShimmerEffect() {
 	return (
 		<View style={styles.container}>
-			<Shimmer width={200} height={200} />
-			<View style={styles.content}>
-				<Text>Light Shimmer Effect</Text>
+			<View>
+				<Shimmer width={200} height={200} />
+				<View style={styles.content}>
+					<Text>Light Shimmer Effect</Text>
+				</View>
+			</View>
+
+			<View>
+				<ShimmerView style={styles.content}>
+					<View>
+						<Text>Light Shimmer Effect</Text>
+					</View>
+				</ShimmerView>
 			</View>
 		</View>
 	)
@@ -25,7 +36,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		alignItems: 'center',
-		justifyContent: 'center',
+		justifyContent: 'space-around',
 		backgroundColor: '#000',
 	},
 	content: {
@@ -34,6 +45,6 @@ const styles = StyleSheet.create({
 		borderRadius: 20,
 		alignItems: 'center',
 		justifyContent: 'center',
-		backgroundColor: '#fff',
+		backgroundColor: '#ddd',
 	},
 })
