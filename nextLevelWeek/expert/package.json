@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/http/server"
+    "dev": "tsx watch src/http/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.9.1",
-    "fastify": "^4.26.0"
+    "fastify": "^4.26.0",
+    "zod": "^3.22.4"
   }
 }
