@@ -20,7 +20,8 @@ export async function getPoll(app: FastifyInstance) {
             include: {
                 options: {
                     select: {
-                        title: true
+                        title: true,
+                        id: true,
                     }
                 }
             }
